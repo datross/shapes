@@ -7,6 +7,7 @@
 #include "selection.h"
 #include "modifier_rotation.h"
 #include "ofxLeapMotion2.h"
+#include "ofApp.h"
 
 class ofApp : public ofBaseApp{
 
@@ -32,6 +33,8 @@ class ofApp : public ofBaseApp{
 		
 		ofxLeapMotion leap;
 		vector <ofxLeapMotionSimpleHand> simpleHands;
+		
+		ofxAbletonLive live;
 		
 		ofPoint cursor;
 };

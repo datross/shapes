@@ -31,6 +31,8 @@ Project{
 
         of.addons: [
             'ofxLeapMotion2',
+            'ofxAbletonLive',
+            'ofxOsc',
         ]
 
         // additional flags for the project. the of module sets some
