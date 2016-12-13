@@ -356,7 +356,28 @@ obj/linux/Release/src/main.o: \
  /home/datross/depots/of_v0.9.3_linux_release/apps/myApps/shapes/src/modifier.h \
  /home/datross/depots/of_v0.9.3_linux_release/addons/ofxLeapMotion2/src/ofxLeapMotion2.h \
  /home/datross/depots/of_v0.9.3_linux_release/addons/ofxLeapMotion2/libs/include/Leap.h \
- /home/datross/depots/of_v0.9.3_linux_release/addons/ofxLeapMotion2/libs/include/LeapMath.h
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxLeapMotion2/libs/include/LeapMath.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLive.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOsc.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscArg.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscMessage.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscSender.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscException.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscBundle.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscReceiver.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLiveParameter.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLiveDevice.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLiveClip.h \
+ /home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLiveTrack.h
 
 /home/datross/depots/of_v0.9.3_linux_release/libs/openFrameworks/ofMain.h:
 
@@ -1105,3 +1126,45 @@ obj/linux/Release/src/main.o: \
 /home/datross/depots/of_v0.9.3_linux_release/addons/ofxLeapMotion2/libs/include/Leap.h:
 
 /home/datross/depots/of_v0.9.3_linux_release/addons/ofxLeapMotion2/libs/include/LeapMath.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLive.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOsc.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscArg.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscMessage.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscSender.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscException.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscBundle.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/src/ofxOscReceiver.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLiveParameter.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLiveDevice.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLiveClip.h:
+
+/home/datross/depots/of_v0.9.3_linux_release/addons/ofxAbletonLive/src/ofxAbletonLiveTrack.h:

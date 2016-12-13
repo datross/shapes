@@ -24,10 +24,14 @@ void ofApp::setup(){
 	}
 	
 	leap.open();
+	/*live.setup("192.168.1.105");
+	live.setup("192.168.1.105");*/
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	//live.update();
+	
 	world_transformed = world;
 	
 	Selection selection;
@@ -66,16 +70,16 @@ void ofApp::draw(){
 	
 	fingerType fingerTypes[] = {THUMB, INDEX, MIDDLE, RING, PINKY};
 	
-	cout << "hands number : " << simpleHands.size() << endl;
+	//cout << "hands number : " << simpleHands.size() << endl;
 	
 	for(int i = 0; i < simpleHands.size(); i++){
 		bool isLeft        = simpleHands[i].isLeft;
 		ofPoint handPos    = simpleHands[i].handPos;
 		ofPoint handNormal = simpleHands[i].handNormal;
 		
-		cout << "isLeft : " << isLeft << endl;
+		/*cout << "isLeft : " << isLeft << endl;
 		cout << "position : " << handPos<< endl;
-		cout << "normal : " << handNormal << endl;
+		cout << "normal : " << handNormal << endl;*/
 		
 		/*for (int f=0; f<5; f++) {
 			ofPoint mcp = simpleHands[i].fingers[ fingerTypes[f] ].mcp;  // metacarpal
@@ -83,12 +87,15 @@ void ofApp::draw(){
 			ofPoint dip = simpleHands[i].fingers[ fingerTypes[f] ].dip;  // distal
 			ofPoint tip = simpleHands[i].fingers[ fingerTypes[f] ].tip;  // fingertip
 		}*/
-	}
+	}	
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+	/*live.setup("192.168.1.105");
+	live.update();
+	live.setTempo(75);
+	live.printAll();*/
 }
 
 //--------------------------------------------------------------

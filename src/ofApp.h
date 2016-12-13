@@ -7,7 +7,7 @@
 #include "selection.h"
 #include "modifier_rotation.h"
 #include "ofxLeapMotion2.h"
-#include "ofApp.h"
+#include "ofxAbletonLive.h"
 
 class ofApp : public ofBaseApp{
 
