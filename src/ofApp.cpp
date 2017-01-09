@@ -16,7 +16,7 @@ void ofApp::setup(){
 		for(unsigned y = 0; y < nb_y; ++y) {
 			Shape shape;
 			shape.path.rectangle(0,0,20,20);
-			shape.path.setColor(ofColor(255,30,60));
+			shape.path.setColor(ofColor(0,100,150));
 			shape.position = ofVec2f(x * ofGetWidth() / nb_x, y * ofGetHeight() / nb_y);
 			
 			world.shapes.push_back(shape);
@@ -77,25 +77,25 @@ void ofApp::draw(){
 		ofPoint handPos    = simpleHands[i].handPos;
 		ofPoint handNormal = simpleHands[i].handNormal;
 		
-		/*cout << "isLeft : " << isLeft << endl;
+		cout << "isLeft : " << isLeft << endl;
 		cout << "position : " << handPos<< endl;
-		cout << "normal : " << handNormal << endl;*/
+		cout << "normal : " << handNormal << endl;
 		
-		/*for (int f=0; f<5; f++) {
+		for (int f=0; f<5; f++) {
 			ofPoint mcp = simpleHands[i].fingers[ fingerTypes[f] ].mcp;  // metacarpal
 			ofPoint pip = simpleHands[i].fingers[ fingerTypes[f] ].pip;  // proximal
 			ofPoint dip = simpleHands[i].fingers[ fingerTypes[f] ].dip;  // distal
 			ofPoint tip = simpleHands[i].fingers[ fingerTypes[f] ].tip;  // fingertip
-		}*/
+		}
 	}	
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	/*live.setup("192.168.1.105");
+	live.setup("192.168.1.105");
 	live.update();
 	live.setTempo(75);
-	live.printAll();*/
+	//live.printAll();
 }
 
 //--------------------------------------------------------------
