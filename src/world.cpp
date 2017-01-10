@@ -12,12 +12,12 @@ Shape & World::currentShape() {
 	return *selector;
 }
 
-bool World::isCurrentShape()
+bool World::endShape()
 {
 	return selector != shapes.end();
 }
 
-bool World::selectFirstShape()
+bool World::firstShape()
 {
 	if(shapes.empty())
 		return false;
@@ -25,18 +25,10 @@ bool World::selectFirstShape()
 	return true;
 }
 
-bool World::selectLastShape()
-{
-	if(shapes.empty())
-		return false;
-	selector = shapes.end();
-	return true;
-}
-
-bool World::selectNextShape()
+bool World::nextShape()
 {
 	++selector;
-	return isCurrentShape();
+	return currentShape();
 }
 
 

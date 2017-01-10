@@ -7,6 +7,7 @@ namespace idl {
 
 struct Shape {
 	ofVec2f position;
+	ofVec2f speed;
 	ofVec2f scale;
 	float rotation;
 	
