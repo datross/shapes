@@ -55,10 +55,13 @@
     <ClCompile Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp">
       <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
     </ClCompile>
+    <ClCompile Include="src\DependenteModifier.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\modifier.cpp">
+    <ClCompile Include="src\Modifier.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\modifier_color.cpp">
@@ -67,13 +70,22 @@
     <ClCompile Include="src\modifier_rotation.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\modifierSelection.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Seed.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\selection.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\shape.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SoundModifier.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\view.cpp">
@@ -131,6 +143,9 @@
     </Filter>
     <Filter Include="addons\ofxOsc\libs\oscpack\src\osc">
       <UniqueIdentifier>{EDACB89C-9768-9551-4D41-B590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers">
+      <UniqueIdentifier>{68a59954-4cba-4810-91d9-448faad4b38a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -218,32 +233,41 @@
     <ClInclude Include="..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h">
       <Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
     </ClInclude>
-    <ClInclude Include="src\modifier.h">
-      <Filter>src</Filter>
+    <ClInclude Include="src\Modifier.h">
+      <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="src\modifier_color.h">
-      <Filter>src</Filter>
+      <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="src\modifier_rotation.h">
-      <Filter>src</Filter>
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modifierSelection.h">
+      <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="src\ofApp.h">
-      <Filter>src</Filter>
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Seed.h">
+      <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="src\selection.h">
-      <Filter>src</Filter>
+      <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="src\shape.h">
-      <Filter>src</Filter>
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SoundModifier.h">
+      <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="src\view.h">
-      <Filter>src</Filter>
+      <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="src\world.h">
-      <Filter>src</Filter>
+      <Filter>headers</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="icon.rc" />
+    <ClInclude Include="src\DependenteModifier.h">
+      <Filter>headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

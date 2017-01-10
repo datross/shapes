@@ -2,7 +2,7 @@
 #define MODIFIER_ROTATION_H
 
 #include "ofMain.h"
-#include "modifier.h"
+#include "modifierSelection.h"
 
 namespace idl {
 	

@@ -3,7 +3,7 @@
 using namespace idl;
 
 Rotator::Rotator(Selection& selection, float _angle, bool _individual_origin, ofPoint _pivot)
-	: Modifier(selection), angle(_angle), individual_origin(_individual_origin), pivot(_pivot)
+	: ModifierSelection(selection), angle(_angle), individual_origin(_individual_origin), pivot(_pivot)
 {
 }
 

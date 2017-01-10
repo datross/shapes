@@ -2,11 +2,11 @@
 #define MODIFIER_ROTATION_H
 
 #include "ofMain.h"
-#include "modifier.h"
+#include "modifierSelection.h"
 
 namespace idl {
 	
-struct Rotator : public Modifier{
+struct Rotator : public ModifierSelection{
 	float angle;
 	bool individual_origin;
 	ofPoint pivot;

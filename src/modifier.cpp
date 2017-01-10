@@ -1,15 +1,12 @@
-#include "modifier.h"
+#include "Modifier.h"
 
 using namespace idl;
 
-Modifier::Modifier(Selection& _selection)
-	: selection(_selection)
+Modifier::Modifier()
 {
-
 }
 
-void Modifier::apply()
+
+Modifier::~Modifier()
 {
-
 }
-

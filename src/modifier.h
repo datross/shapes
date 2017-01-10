@@ -1,16 +1,16 @@
 #ifndef MODIFIER_H
 #define MODIFIER_H
 
-#include "selection.h"
-
 namespace idl {
 
-struct Modifier {
-	Selection & selection;
-	Modifier(Selection&);
-	virtual void apply();
-};
-	
+	class Modifier {
+
+	public:
+		Modifier();
+		~Modifier();
+		virtual void apply() = 0;
+	};
+
 }
 
 #endif
