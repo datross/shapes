@@ -1,7 +1,4 @@
-﻿     Création de la bibliothèque bin\Delaunay.lib et de l'objet bin\Delaunay.exp
-  LINK : /LTCG spécifié mais aucune génération de code requise ; supprimez /LTCG de la ligne de commande de l'édition de liens pour améliorer les performances de l'éditeur de liens
-  Delaunay.vcxproj -> D:\Documents\IMAC2\OFX_Visual\apps\myApps\Delaunay\bin\Delaunay.exe
+﻿  Delaunay.vcxproj -> D:\PROJECTS\OFX PROJECTS\of_v0.9.3_vs_release\apps\myApps\shapes\bin\Delaunay.exe
   
-  	                   9	D:\Documents\IMAC2\OFX_Visual\export\vs\x64\
-  	  *Fichier SUPPL.		 1266176	D:\Documents\IMAC2\OFX_Visual\apps\myApps\Delaunay\bin\fmodex.dll
-  	  *Fichier SUPPL.		 1312768	D:\Documents\IMAC2\OFX_Visual\apps\myApps\Delaunay\bin\fmodexL.dll
+  	                   9	D:\PROJECTS\OFX PROJECTS\of_v0.9.3_vs_release\export\vs\x64\
+  	  *Fichier SUPPL.		 1898288	D:\PROJECTS\OFX PROJECTS\of_v0.9.3_vs_release\apps\myApps\shapes\bin\Leap.dll

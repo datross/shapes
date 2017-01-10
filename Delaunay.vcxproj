@@ -225,6 +225,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>$(ProjectDir)\..\..\..\addons\ofxLeapMotion2\libs\lib\winvs\Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>$(ProjectDir)\..\..\..\addons\ofxLeapMotion2\libs\lib\winvs\Leap.dll</DelayLoadDLLs>
     </Link>
     <PostBuildEvent />
   </ItemDefinitionGroup>
