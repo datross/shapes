@@ -1,23 +1,4 @@
-﻿  ofApp.cpp
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(152): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(153): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(161): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(162): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(169): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(170): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(203): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(204): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(230): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(231): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-d:\documents\imac2\ofx_visual\addons\ofxosc\src\ofxOscBundle.h(52): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
-d:\documents\imac2\ofx_visual\addons\ofxosc\src\ofxOscBundle.h(53): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
-     Création de la bibliothèque bin\Delaunay.lib et de l'objet bin\Delaunay.exp
+﻿     Création de la bibliothèque bin\Delaunay.lib et de l'objet bin\Delaunay.exp
   LINK : /LTCG spécifié mais aucune génération de code requise ; supprimez /LTCG de la ligne de commande de l'édition de liens pour améliorer les performances de l'éditeur de liens
   Delaunay.vcxproj -> D:\Documents\IMAC2\OFX_Visual\apps\myApps\Delaunay\bin\Delaunay.exe
   
