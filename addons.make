@@ -1,3 +1,3 @@
-ofxLeapMotion2
-ofxAbletonLive
 ofxOsc
+ofxAbletonLive
+ofxLeapMotion2

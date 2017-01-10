@@ -24,8 +24,8 @@ void ofApp::setup(){
 	}
 	
 	leap.open();
-	/*live.setup("192.168.1.105");
-	live.setup("192.168.1.105");*/
+	live.setup();
+	//live.setup("192.168.1.105");*/
 }
 
 //--------------------------------------------------------------
@@ -92,10 +92,13 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	live.setup("192.168.1.105");
+	//live.setup();
 	live.update();
-	live.setTempo(75);
-	//live.printAll();
+	live.printAll();
+	//live.setTempo(75);
+	live.play();	
+	
+	
 }
 
 //--------------------------------------------------------------
