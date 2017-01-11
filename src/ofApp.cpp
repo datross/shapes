@@ -31,7 +31,8 @@ void ofApp::update(){
 	auto gestures = deviceListener.getGesture();
 	
 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
-		it->print();
+		if(it->getType() == GestureTap)
+			it->print();
 	}
 	
 // 	// leapmotion

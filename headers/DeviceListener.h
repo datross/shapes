@@ -11,6 +11,7 @@ namespace idl {
 /* In order to access protected members */
 class LeapDevice : public ofxLeapMotion {
 private:
+// 	float ofVec2 hand_pos_prec[2];
 public:
 	LeapDevice();
 

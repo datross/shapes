@@ -31,25 +31,35 @@ bool hasHand(HandList hands, unsigned handId){
 }
 
 bool LeapDevice::tapped(unsigned hand) {
-	auto gestures = lastFrame.gestures();
+	auto gestures = ourController->frame().gestures();
 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
 		auto hands = (*it).hands();
-		if(((*it).type() == Leap::Gesture::TYPE_SCREEN_TAP) && hasHand(hands, hand))
+		cout << (*it).type() << endl;
+		if(((*it).type() == Leap::Gesture::TYPE_SCREEN_TAP) && hasHand(hands, hand)) {
 			return true ;
+		}
 	}
 	return false;
 }
 
 float LeapDevice::xMove(unsigned hand) {
+	if(hand > hands.size())
+		return 0;
 	
+	return hands[hand].palmPosition().x;
 }
 float LeapDevice::yMove(unsigned hand) {
+	if(hand > hands.size())
+		return 0;
+	
+	return hands[hand].palmPosition().y;
 }
 
 /* --------------------- DeviceListener -------------------------- */
 
 DeviceListener::DeviceListener() {
 	leapDevice.open();
+	leapDevice.setupGestures();
 }
 DeviceListener::~DeviceListener() {
 }
@@ -68,6 +78,21 @@ vector<idl::Gesture> DeviceListener::getGesture()
 		if (leapDevice.pinchStrength(nbHands) > 0.1) {
 			idl::Gesture pinchGesture = idl::Gesture(it->isLeft, GesturePinch, leapDevice.pinchStrength(nbHands));
 			gestures.push_back(pinchGesture);
+		}
+		
+		if (leapDevice.tapped(nbHands)) {
+			idl::Gesture tapGesture = idl::Gesture(it->isLeft, GestureTap, leapDevice.tapped(nbHands));
+			gestures.push_back(tapGesture);			
+		}
+		
+		if (abs(leapDevice.xMove(nbHands)) > 0.01) {
+			idl::Gesture xMoveGesture = idl::Gesture(it->isLeft, GestureXMove, leapDevice.xMove(nbHands));
+			gestures.push_back(xMoveGesture);			
+		}
+		
+		if (abs(leapDevice.yMove(nbHands)) > 0.01) {
+			idl::Gesture yMoveGesture = idl::Gesture(it->isLeft, GestureYMove, leapDevice.yMove(nbHands));
+			gestures.push_back(yMoveGesture);			
 		}
 	}
 	return gestures;

@@ -28,6 +28,7 @@ public:
 	~Gesture();
 
 	bool isRight() const{return !isLeft;}
+	GestureType getType() { return type; }
 	
 	/* debug */
 	void print() {
