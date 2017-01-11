@@ -10,13 +10,13 @@ Selection::Selection()
 
 void Selection::uniform(World& world, float weight)
 {
-	for(world.selectFirstShape(); world.isCurrentShape(); world.selectNextShape()) {
+	for(world.firstShape(); !world.endShape(); world.nextShape()) {
 		weights.push_back(ShapeSelected(&world.currentShape(), weight));
 	}
 }
 
 void Selection::distance(World & world, float weight, ofPoint point, float radius) {
-	for(world.selectFirstShape(); world.isCurrentShape(); world.selectNextShape()) {
+	for(world.firstShape(); !world.endShape(); world.nextShape()) {
 		float dist = (point - world.currentShape().position).length();
 		float w;
 		if(dist > radius) {

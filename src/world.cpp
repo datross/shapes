@@ -14,7 +14,7 @@ Shape & World::currentShape() {
 
 bool World::endShape()
 {
-	return selector != shapes.end();
+	return selector == shapes.end();
 }
 
 bool World::firstShape()
@@ -28,7 +28,7 @@ bool World::firstShape()
 bool World::nextShape()
 {
 	++selector;
-	return currentShape();
+	return !endShape();
 }
 
 
