@@ -1,10 +1,90 @@
 ﻿  DependenteModifier.cpp
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  main.cpp
+  modifierSelection.cpp
+  modifier_color.cpp
+  modifier_rotation.cpp
+  ofApp.cpp
+  selection.cpp
+  view.cpp
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_rotation.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_rotation.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\DependenteModifier.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\DependenteModifier.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_rotation.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_rotation.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_rotation.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_rotation.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\DependenteModifier.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\DependenteModifier.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\DependenteModifier.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\DependenteModifier.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifierSelection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifierSelection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_color.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_color.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifierSelection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifierSelection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifierSelection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifierSelection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\view.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\view.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_color.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_color.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_color.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\modifier_color.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\view.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\view.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\view.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\view.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\selection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\selection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\selection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\selection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\selection.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\selection.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(152): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(153): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(161): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(162): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(169): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(170): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(203): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(204): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(230): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(231): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(152): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(153): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(161): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(162): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(169): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(170): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(203): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(204): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(230): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+D:\Documents\IMAC2\OFX_Visual\addons\ofxLeapMotion2\src\ofxLeapMotion2.h(231): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+d:\documents\imac2\ofx_visual\addons\ofxosc\src\ofxOscBundle.h(52): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+d:\documents\imac2\ofx_visual\addons\ofxosc\src\ofxOscBundle.h(53): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\main.cpp)
+d:\documents\imac2\ofx_visual\addons\ofxosc\src\ofxOscBundle.h(52): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+d:\documents\imac2\ofx_visual\addons\ofxosc\src\ofxOscBundle.h(53): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\ofApp.cpp)
+  world.cpp
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(320): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\world.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(325): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\world.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(969): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\world.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(970): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\world.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(971): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\world.cpp)
+D:\Documents\IMAC2\OFX_Visual\libs\openFrameworks\math\ofMatrix4x4.h(972): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données (compilation du fichier source src\world.cpp)
      Création de la bibliothèque bin\Delaunay.lib et de l'objet bin\Delaunay.exp
   LINK : /LTCG spécifié mais aucune génération de code requise ; supprimez /LTCG de la ligne de commande de l'édition de liens pour améliorer les performances de l'éditeur de liens
 LINK : warning LNK4199: /DELAYLOAD:D:\Documents\IMAC2\OFX_Visual\apps\myApps\Delaunay\\..\..\..\addons\ofxLeapMotion2\libs\lib\winvs\Leap.dll ignoré ; aucune importation trouvée à partir de D:\Documents\IMAC2\OFX_Visual\apps\myApps\Delaunay\\..\..\..\addons\ofxLeapMotion2\libs\lib\winvs\Leap.dll

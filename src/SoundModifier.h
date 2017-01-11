@@ -3,12 +3,18 @@
 
 
 #include "Modifier.h"
+#include "ofxAbletonLive.h"
+
 namespace idl {
 
 	class SoundModifier : public Modifier {
+		
+		ofxAbletonLive live;
+
 	public:
 		SoundModifier();
 		~SoundModifier();
+		virtual void apply() = 0;
 	};
 
 }

@@ -12,8 +12,3 @@ void ModifierSelection::setSelection(Selection & s){
 	selection = s;
 }
 
-void ModifierSelection::apply()
-{
-
-}
-

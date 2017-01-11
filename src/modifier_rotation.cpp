@@ -7,8 +7,7 @@ Rotator::Rotator(Selection& selection, float _angle, bool _individual_origin, of
 {
 }
 
-void Rotator::apply()
-{
+void Rotator::apply() {
 	if(individual_origin) {
 		for(std::vector< ShapeSelected >::iterator it = selection.weights.begin();
 			it != selection.weights.end(); ++it) {

@@ -3,14 +3,10 @@
 using namespace idl;
 
 
-DependenteModifier::DependenteModifier(Selection & s, Seed seed) : ModifierSelection(s){
+DependenteModifier::DependenteModifier(Selection & s, Seed & _seed) : ModifierSelection(s), seed(_seed){
 	
 }	
 
 DependenteModifier::~DependenteModifier() {
-
-}
-
-void DependenteModifier::apply() {
 
 }

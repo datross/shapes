@@ -9,14 +9,16 @@
 
 namespace idl {
 
-struct World {
+class World {
 	std::vector<Shape> shapes;
 	std::vector<Shape>::iterator selector;
 	
+public:
 	World();
 	
 	/* accessors */
 	Shape & currentShape();
+	void setup();
 	bool isCurrentShape();
 	bool selectFirstShape();
 	bool selectLastShape();

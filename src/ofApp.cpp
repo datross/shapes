@@ -10,27 +10,13 @@ void ofApp::setup(){
 	ofSetFrameRate(60);
 	
 	
-	const int nb_x = 46,
-			  nb_y = 32;
-	for(unsigned x = 0; x < nb_x; ++x) {
-		for(unsigned y = 0; y < nb_y; ++y) {
-			Shape shape;
-			shape.path.rectangle(0,0,20,20);
-			shape.path.setColor(ofColor(0,100,150));
-			shape.position = ofVec2f(x * ofGetWidth() / nb_x, y * ofGetHeight() / nb_y);
-			
-			world.shapes.push_back(shape);
-		}
-	}
-	
+	world.setup();
 	leap.open();
 	live.setup();
-	//live.setup("192.168.1.105");*/
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	//live.update();
 	
 	world_transformed = world;
 	

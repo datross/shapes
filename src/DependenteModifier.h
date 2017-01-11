@@ -7,11 +7,13 @@
 namespace idl {
 	class DependenteModifier : public ModifierSelection{
 	public:
-		DependenteModifier(Selection& s, Seed seed);
+		
+		DependenteModifier(Selection & s, Seed & _seed);
 		~DependenteModifier();
-		virtual void apply();
-	private:
-
+		virtual void apply()=0;
+	
+	protected:
+		Seed &seed;
 	};
 }
 

@@ -28,9 +28,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+private:
 		idl::World world, world_transformed;
 		idl::View view;
-		
 		ofxLeapMotion leap;
 		vector <ofxLeapMotionSimpleHand> simpleHands;
 		
