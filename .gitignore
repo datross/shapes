@@ -32,3 +32,6 @@
 .vs/Delaunay/v14/.suo
 *.opendb
 *.db
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
