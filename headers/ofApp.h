@@ -9,6 +9,8 @@
 #include "ofxLeapMotion2.h"
 #include "ofxAbletonLive.h"
 
+#include "DeviceListener.h"
+
 class ofApp : public ofBaseApp {
 public:
     void setup();
@@ -30,7 +32,8 @@ public:
 private:
     idl::World world, world_transformed;
     idl::View view;
-    ofxLeapMotion leap;
+//     ofxLeapMotion leap;
+	idl::DeviceListener deviceListener;
     vector <ofxLeapMotionSimpleHand> simpleHands;
     
     ofxAbletonLive live;
