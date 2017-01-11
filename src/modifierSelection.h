@@ -2,7 +2,7 @@
 #define MODIFIER_SELECTION_H
 
 #include "selection.h"
-#include "Modifier.h"
+#include "modifier.h"
 
 namespace idl {
 

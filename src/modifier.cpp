@@ -1,4 +1,4 @@
-#include "Modifier.h"
+#include "modifier.h"
 
 using namespace idl;
 

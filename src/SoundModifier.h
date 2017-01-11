@@ -2,7 +2,7 @@
 #define SOUDN_MODIFIER_H
 
 
-#include "Modifier.h"
+#include "modifier.h"
 #include "ofxAbletonLive.h"
 
 namespace idl {
