@@ -28,7 +28,7 @@
 *.out
 *.app
 *.db
-*.db
 *.suo
 .vs/Delaunay/v14/.suo
 *.opendb
+*.db
