@@ -37,3 +37,4 @@
 *.vcxproj.user
 bin/*
 obj/*
+*.exp
