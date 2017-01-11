@@ -31,3 +31,4 @@
 *.db
 *.suo
 .vs/Delaunay/v14/.suo
+*.opendb

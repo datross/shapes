@@ -12,7 +12,7 @@ Shape & World::currentShape() {
 	return *selector;
 }
 
-void idl::World::setup(){
+void World::setup(){
 	const int nb_x = 46,
 		nb_y = 32;
 	for (unsigned x = 0; x < nb_x; ++x) {
@@ -27,11 +27,13 @@ void idl::World::setup(){
 	}
 }
 
-bool World::isCurrentShape(){
-	return selector != shapes.end();
+
+bool World::endShape()
+{
+	return selector == shapes.end();
 }
 
-bool World::selectFirstShape()
+bool World::firstShape()
 {
 	if(shapes.empty())
 		return false;
@@ -39,18 +41,10 @@ bool World::selectFirstShape()
 	return true;
 }
 
-bool World::selectLastShape()
-{
-	if(shapes.empty())
-		return false;
-	selector = shapes.end();
-	return true;
-}
-
-bool World::selectNextShape()
+bool World::nextShape()
 {
 	++selector;
-	return isCurrentShape();
+	return !endShape();
 }
 
 

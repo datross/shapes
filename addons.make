@@ -1,3 +1,3 @@
-ofxOsc
 ofxAbletonLive
 ofxLeapMotion2
+ofxOsc

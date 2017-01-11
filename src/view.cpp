@@ -21,7 +21,7 @@ void View::drawShape(Shape& shape)
 
 void View::drawWorld(World & world)
 {
-	for(world.selectFirstShape(); world.isCurrentShape(); world.selectNextShape()) {
+	for(world.firstShape(); !world.endShape(); world.nextShape()) {
 		drawShape(world.currentShape());
 	}
 }
