@@ -9,6 +9,9 @@
 #include "ofxLeapMotion2.h"
 #include "ofxAbletonLive.h"
 
+#include "DeviceListener.h"
+#include "SoundListener.h"
+
 class ofApp : public ofBaseApp {
 public:
     void setup();
@@ -26,11 +29,25 @@ public:
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
+	
+	void audioIn(ofSoundBuffer &buffer) {
+		buf = buffer;
+	}
+	void audioOut(ofSoundBuffer &buffer) {
+			buffer.fillWithTone();
+// 		buffer = buf;
+	}
+	
+	ofSoundBuffer buf;
+	float env;
+	
+	idl::SoundListener soundListener;
     
 private:
     idl::World world, world_transformed;
     idl::View view;
-    ofxLeapMotion leap;
+//     ofxLeapMotion leap;
+	idl::DeviceListener deviceListener;
     vector <ofxLeapMotionSimpleHand> simpleHands;
     
     ofxAbletonLive live;

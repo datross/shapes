@@ -7,44 +7,70 @@ using namespace std;
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofBackground(255,255,255);	
-	ofSetFrameRate(60);
-	
+	ofSetFrameRate(60);	
+
 	
 	world.setup();
-	leap.open();
+// 	leap.open();
 	live.setup();
+	
+	
+	/* open audio channels */
+	ofSoundStreamSetup(2, 2, 44100, BUFFER_SIZE, 4);
+
+	/* start channels */
+	ofSoundStreamStart();
+	
+	/* pre-allocate global buffer */
+	buf.allocate(BUFFER_SIZE, 2);
+	
+	/* soundListener points toward the global sound buffer */
+	soundListener.setInputBuffer(&buf);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	soundListener.analyze();
+	float env_bis = soundListener.getData().enveloppe;
+
+	env -= 0.015;
+	env = max(env, env_bis);
 	
 	world_transformed = world;
 	
 	Selection selection;
 	selection.distance(world_transformed, 1, cursor, 200);
-	Rotator rotator(selection, 30, false, cursor);
+	Rotator rotator(selection, env * 180., false, cursor);
 	rotator.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
 	
-	// leapmotion
-	simpleHands = leap.getSimpleHands();
-	if(leap.isFrameNew()) {
-		
-		leap.setMappingX(-230, 230, 0, ofGetWidth());
-		leap.setMappingY(90, 490, ofGetHeight(), 0);
-		leap.setMappingZ(-150, 150, -200, 200);
-		
-		simpleHands.clear();
-		simpleHands = leap.getSimpleHands();
-		
-		if(!simpleHands.empty()) {
-			cursor.x = simpleHands[0].handPos.x;
-			cursor.y = simpleHands[0].handPos.y;
-		}
-		
-		leap.markFrameAsOld();
+	
+	auto gestures = deviceListener.getGesture();
+	
+	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
+		if(it->getType() == GestureTap)
+			it->print();
 	}
+	
+// 	// leapmotion
+// 	simpleHands = leap.getSimpleHands();
+// 	if(leap.isFrameNew()) {
+// 		
+// 		leap.setMappingX(-230, 230, 0, ofGetWidth());
+// 		leap.setMappingY(90, 490, ofGetHeight(), 0);
+// 		leap.setMappingZ(-150, 150, -200, 200);
+// 		
+// 		simpleHands.clear();
+// 		simpleHands = leap.getSimpleHands();
+// 		
+// 		if(!simpleHands.empty()) {
+// 			cursor.x = simpleHands[0].handPos.x;
+// 			cursor.y = simpleHands[0].handPos.y;
+// 		}
+// 		
+// 		leap.markFrameAsOld();
+// 	}
 }
 
 //--------------------------------------------------------------
@@ -52,9 +78,11 @@ void ofApp::draw(){
 	ofFill();
 	view.drawWorld(world_transformed);
 	
+	
+	
 	// leapmotion
 	
-	fingerType fingerTypes[] = {THUMB, INDEX, MIDDLE, RING, PINKY};
+/*	fingerType fingerTypes[] = {THUMB, INDEX, MIDDLE, RING, PINKY};
 	
 	//cout << "hands number : " << simpleHands.size() << endl;
 	
@@ -73,7 +101,7 @@ void ofApp::draw(){
 			ofPoint dip = simpleHands[i].fingers[ fingerTypes[f] ].dip;  // distal
 			ofPoint tip = simpleHands[i].fingers[ fingerTypes[f] ].tip;  // fingertip
 		}
-	}	
+	}*/	
 }
 
 //--------------------------------------------------------------
