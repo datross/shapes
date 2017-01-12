@@ -10,6 +10,7 @@
 #include "ofxAbletonLive.h"
 
 #include "DeviceListener.h"
+#include "SoundListener.h"
 
 class ofApp : public ofBaseApp {
 public:
@@ -39,6 +40,8 @@ public:
 	
 	ofSoundBuffer buf;
 	float env;
+	
+	idl::SoundListener soundListener;
     
 private:
     idl::World world, world_transformed;

@@ -7,21 +7,32 @@ using namespace std;
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofBackground(255,255,255);	
-	ofSetFrameRate(60);
-	
+	ofSetFrameRate(60);	
+
 	
 	world.setup();
 // 	leap.open();
 	live.setup();
 	
-	ofSoundStreamSetup(2, 2, 44100, 256, 4);
+	
+	/* open audio channels */
+	ofSoundStreamSetup(2, 2, 44100, BUFFER_SIZE, 4);
+
+	/* start channels */
 	ofSoundStreamStart();
+	
+	/* pre-allocate global buffer */
+	buf.allocate(BUFFER_SIZE, 2);
+	
+	/* soundListener points toward the global sound buffer */
+	soundListener.setInputBuffer(&buf);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	float env_bis = buf.getRMSAmplitude();
-	
+	soundListener.analyze();
+	float env_bis = soundListener.getData().enveloppe;
+
 	env -= 0.015;
 	env = max(env, env_bis);
 	
