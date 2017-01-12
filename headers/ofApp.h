@@ -28,6 +28,17 @@ public:
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
+	
+	void audioIn(ofSoundBuffer &buffer) {
+		buf = buffer;
+	}
+	void audioOut(ofSoundBuffer &buffer) {
+// 			buffer.fillWithTone();
+		buffer = buf;
+	}
+	
+	ofSoundBuffer buf;
+	float env;
     
 private:
     idl::World world, world_transformed;
