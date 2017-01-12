@@ -15,9 +15,9 @@ class World {
 	
 public:
 	World();
-        
-        void setup();
-        
+		
+		void setup();
+		
 	/* Returns a reference to the current shape. */
 	Shape & currentShape();
 	/* Returns true if selector is at the end. */

@@ -7,11 +7,11 @@
 namespace idl {
 	
 struct Rotator : public ModifierSelection {
-    float angle;
-    bool individual_origin;
-    ofPoint pivot;
-    Rotator(Selection&, float angle, bool individual_origin, ofPoint pivot = ofPoint(0,0));
-    virtual void apply();
+	float angle;
+	bool individual_origin;
+	ofPoint pivot;
+	Rotator(Selection&, float angle, bool individual_origin, ofPoint pivot = ofPoint(0,0));
+	virtual void apply();
 };
 
 }
