@@ -13,16 +13,23 @@ void ofApp::setup(){
 	world.setup();
 // 	leap.open();
 	live.setup();
+	
+	ofSoundStreamSetup(2, 2, 44100, 256, 4);
+	ofSoundStreamStart();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	float env_bis = buf.getRMSAmplitude();
+	
+	env -= 0.015;
+	env = max(env, env_bis);
 	
 	world_transformed = world;
 	
 	Selection selection;
 	selection.distance(world_transformed, 1, cursor, 200);
-	Rotator rotator(selection, 30, false, cursor);
+	Rotator rotator(selection, env * 180., false, cursor);
 	rotator.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
@@ -59,6 +66,8 @@ void ofApp::update(){
 void ofApp::draw(){
 	ofFill();
 	view.drawWorld(world_transformed);
+	
+	
 	
 	// leapmotion
 	

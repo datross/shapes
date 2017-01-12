@@ -12,9 +12,15 @@ Project{
         name: { return FileInfo.baseName(path) }
 
         files: [
+            'src/DependenteModifier.cpp',
+            'src/DeviceListener.cpp',
+            'src/Gesture.cpp',
+            'src/Seed.cpp',
+            'src/SoundModifier.cpp',
             'src/main.cpp',
             'src/modifier.cpp',
             'src/modifier.h',
+            'src/modifierSelection.cpp',
             'src/modifier_color.cpp',
             'src/modifier_color.h',
             'src/modifier_rotation.cpp',
@@ -35,6 +41,7 @@ Project{
             'ofxAbletonLive',
             'ofxLeapMotion2',
             'ofxOsc',
+            'ofxFft',
         ]
 
         // additional flags for the project. the of module sets some
