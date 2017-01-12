@@ -12,7 +12,7 @@ void ofApp::setup(){
 	
 	world.setup();
 // 	leap.open();
-	live.setup();
+	abletonSet.setup();
 	
 	
 	/* open audio channels */
@@ -22,10 +22,10 @@ void ofApp::setup(){
 	ofSoundStreamStart();
 	
 	/* pre-allocate global buffer */
-	buf.allocate(BUFFER_SIZE, 2);
+	generalInputBuffer.allocate(BUFFER_SIZE, 2);
 	
 	/* soundListener points toward the global sound buffer */
-	soundListener.setInputBuffer(&buf);
+	soundListener.setInputBuffer(&generalInputBuffer);
 }
 
 //--------------------------------------------------------------
@@ -107,10 +107,10 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 	//live.setup();
-	live.update();
-	live.printAll();
+	abletonSet.update();
+	abletonSet.printAll();
 	//live.setTempo(75);
-	live.play();	
+	abletonSet.play();	
 	
 	
 }
@@ -163,4 +163,16 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+void ofApp::executeActions() {
+	for(auto it = actions.begin(); it != actions.end(); ++it) {
+		/* need to delete the action */
+		auto next_it = it;
+		++next_it;
+		if(!(*it)->execute()) {
+			actions.erase(it);
+			it = next_it;
+		}
+	}
 }

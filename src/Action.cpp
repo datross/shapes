@@ -2,17 +2,18 @@
 
 using namespace idl;
 
-Action::Action(int d) : duration(d){
+Action::Action(unsigned _duration) : duration(_duration){
+	birthTime = clock();
 }
 
 Action::~Action(){
 }
 
 bool Action::execute(){
-	age += clock();
-	if (age > duration)
-		return false; //to delete the action
-	return apply();
+	if (clock() - birthTime > duration)
+		return false; /* to delete the action */
+	apply();
+	return true;
 }
 
 

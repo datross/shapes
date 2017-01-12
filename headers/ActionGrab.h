@@ -6,9 +6,9 @@
 namespace idl {
 	class ActionGrab : public Action{
 	public:
-		ActionGrab(int d);
+		ActionGrab(unsigned);
 		~ActionGrab();
-		virtual bool apply();
+		virtual void apply();
 	private:
 
 	};
