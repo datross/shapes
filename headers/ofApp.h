@@ -33,8 +33,8 @@ public:
 		buf = buffer;
 	}
 	void audioOut(ofSoundBuffer &buffer) {
-// 			buffer.fillWithTone();
-		buffer = buf;
+			buffer.fillWithTone();
+// 		buffer = buf;
 	}
 	
 	ofSoundBuffer buf;

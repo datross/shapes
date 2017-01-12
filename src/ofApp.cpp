@@ -22,7 +22,7 @@ void ofApp::setup(){
 void ofApp::update(){
 	float env_bis = buf.getRMSAmplitude();
 	
-	env -= 0.005;
+	env -= 0.015;
 	env = max(env, env_bis);
 	
 	world_transformed = world;

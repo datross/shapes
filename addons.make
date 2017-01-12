@@ -1,4 +1,3 @@
 ofxAbletonLive
 ofxLeapMotion2
 ofxOsc
-ofxFft
