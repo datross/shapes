@@ -15,8 +15,10 @@
 #include "SoundListener.h"
 #include "Seed.h"
 #include "SeedConstant.h"
+#include "SeedFunctor.h"
 
 #include <list>
+#include <memory>
 
 class ofApp : public ofBaseApp {
 public:
@@ -57,6 +59,7 @@ private:
     vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;
 	float env;
+	std::shared_ptr<idl::Seed> seed;
 	
 	/* -------------- members -------------- */
 	

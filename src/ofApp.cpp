@@ -1,5 +1,8 @@
 #include "ofApp.h"
 #include <iostream>
+#include <cmath>
+
+#include "Utility.h"
 
 using namespace idl;
 using namespace std;
@@ -10,6 +13,12 @@ void ofApp::setup(){
 	ofSetFrameRate(60);	
 
 	
+	seed = shared_ptr<idl::Seed>(new idl::SeedFunctor( [](){
+		float v = sign<float>(cos(5.*ofGetElapsedTimef()));
+		return ofVec3f(v, v, 0); 
+	} 
+	)
+	);
 	world.setup();
 // 	leap.open();
 	abletonSet.setup();
@@ -36,10 +45,12 @@ void ofApp::update(){
 
 	env -= 0.015;
 	env = max(env, env_bis);
+	env *= 2;
+	env = 0.5;
 	
 	Selection selection;
 	selection.distance(world, 1, cursor, 200);
-	Scalator scalator(selection, ofVec2f(env * 0.01, env * 0.01), true, cursor);
+	Scalator scalator(selection, ofVec2f(env, env), true, cursor, seed);
 	scalator.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
