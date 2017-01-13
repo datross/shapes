@@ -9,8 +9,18 @@
 #include "ofxLeapMotion2.h"
 #include "ofxAbletonLive.h"
 
+
+#include "Action.h"
+#include "DeviceListener.h"
+#include "SoundListener.h"
+
+#include <list>
+
 class ofApp : public ofBaseApp {
 public:
+	
+	/* ------------- openFrameWorks relative ------------- */
+	
     void setup();
     void update();
     void draw();
@@ -26,14 +36,45 @@ public:
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
-    
+	
+	void audioIn(ofSoundBuffer &buffer) {
+		generalInputBuffer = buffer;
+	}
+	void audioOut(ofSoundBuffer &buffer) {
+			buffer.fillWithTone();
+// 		buffer = buf;
+	}
+	
+	/* ------------- Delaunay Interactive relative ------------- */
+	
+	
 private:
+	// TODO check these
     idl::World world, world_transformed;
     idl::View view;
-    ofxLeapMotion leap;
     vector <ofxLeapMotionSimpleHand> simpleHands;
+	ofPoint cursor;
+	float env;
+	
+	/* -------------- members -------------- */
+	
+	/* stands for the leapmotion (or a mouse, keyboard etc..) */
+	idl::DeviceListener deviceListener;
     
-    ofxAbletonLive live;
-    
-    ofPoint cursor;
+	/* process input sound */
+	idl::SoundListener soundListener;
+	
+	/* sound buffer storing the input sound */
+	ofSoundBuffer generalInputBuffer;
+	
+	/* interface with Ableton */
+    ofxAbletonLive abletonSet;
+	
+	/* Actions to apply next update */
+	std::list<idl::Action*> actions;
+	
+	/* -------------- methods -------------- */
+	
+	/* execute every actions, and delete the outdated ones */
+	void executeActions();
 };

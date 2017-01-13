@@ -11,14 +11,14 @@ namespace idl {
 	class Action {
 
 	public:
-		Action(int _duration);
+		Action(unsigned _duration);
 		~Action();
 		bool execute();
-		virtual bool apply() = 0;
+		virtual void apply() = 0;
 
 	protected:
-		int duration;	
-		clock_t age;
+		unsigned duration;
+		unsigned birthTime;
 		std::vector<Modifier> modifers;
 	};
 

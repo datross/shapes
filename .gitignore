@@ -38,4 +38,4 @@ bin/*
 obj/*
 *.exp
 *.suo
-*.exp
+*.kdev4*

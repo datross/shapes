@@ -2,14 +2,13 @@
 
 using namespace idl;
 
-ActionGrab::ActionGrab(int duration) : Action(duration){
-	age = clock();
+ActionGrab::ActionGrab(unsigned duration) : Action(duration) {
 }
 
 ActionGrab::~ActionGrab(){
 	
 }
 
-bool ActionGrab::apply(){
-	return true;
+void ActionGrab::apply(){
+	return;
 }
