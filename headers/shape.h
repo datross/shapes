@@ -17,9 +17,16 @@ namespace idl {
 		Shape();
 		Shape(ofVec2f & pos, ofPath & path, ofVec2f & _speed, ofVec2f & _scale, float r);
 		Shape(ofVec2f & pos, ofPath & path);
+		
 		void addRotation(float);
-		ofVec2f getPosition() { return position; }
+		void addScale(ofVec2f s);
+		void addSpeed(ofVec2f v);
 		void rotatePosition(float r, ofVec3f pivot);
+		
+		ofVec2f getPosition() { return position; }
+		
+		void update();
+		
 		void draw();
 	};
 

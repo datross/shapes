@@ -9,10 +9,14 @@ class Seed {
 public:
     Seed();
     ~Seed();
-    virtual ofVec3f get() = 0;
-
+    ofVec3f current() const;
+	ofVec3f prec() const;
+	ofVec3f step() const;
+	
+	void update();
 private:
-
+	virtual ofVec3f getValue() = 0;
+	ofVec3f valuePrec, valueCurrent;
 };
 
 }

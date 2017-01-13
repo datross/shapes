@@ -48,4 +48,10 @@ bool World::nextShape()
 	return !endShape();
 }
 
+void World::update() {
+	for(firstShape(); !endShape(); nextShape()) {
+		currentShape().update();
+	}
+}
+
 

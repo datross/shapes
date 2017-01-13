@@ -3,6 +3,7 @@
 
 #include <time.h>
 #include <vector>
+#include <memory>
 
 #include "modifier.h"
 
@@ -11,15 +12,15 @@ namespace idl {
 	class Action {
 
 	public:
-		Action(unsigned _duration);
+		Action(unsigned _duration, std::vector< std::shared_ptr<Modifier> > modifers);
 		~Action();
 		bool execute();
-		virtual void apply() = 0;
+		void apply();
 
 	protected:
 		unsigned duration;
 		unsigned birthTime;
-		std::vector<Modifier> modifers;
+		std::vector< std::shared_ptr<Modifier> > modifiers;
 	};
 
 }

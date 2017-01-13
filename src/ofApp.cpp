@@ -37,12 +37,10 @@ void ofApp::update(){
 	env -= 0.015;
 	env = max(env, env_bis);
 	
-	world_transformed = world;
-	
 	Selection selection;
-	selection.distance(world_transformed, 1, cursor, 200);
-	Rotator rotator(selection, env * 180., false, cursor);
-	rotator.apply();
+	selection.distance(world, 1, cursor, 200);
+	Scalator scalator(selection, ofVec2f(env * 0.01, env * 0.01), true, cursor);
+	scalator.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
 	
@@ -53,6 +51,8 @@ void ofApp::update(){
 		if(it->getType() == GestureTap)
 			it->print();
 	}
+	
+	world.update();
 	
 // 	// leapmotion
 // 	simpleHands = leap.getSimpleHands();
@@ -77,7 +77,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 	ofFill();
-	view.drawWorld(world_transformed);
+	view.drawWorld(world);
 	
 	
 	

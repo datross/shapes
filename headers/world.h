@@ -26,6 +26,9 @@ public:
 	bool firstShape();
 	/* Select next shape. Returns false of end is reached. */
 	bool nextShape();
+	
+	/* updates the whole world logic */
+	void update();
 };
 
 }

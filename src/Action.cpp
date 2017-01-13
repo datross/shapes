@@ -2,7 +2,7 @@
 
 using namespace idl;
 
-Action::Action(unsigned _duration) : duration(_duration){
+Action::Action(unsigned _duration,  std::vector< std::shared_ptr<Modifier> > _modifiers) : duration(_duration), modifiers(_modifiers) {
 	birthTime = clock();
 }
 
@@ -14,5 +14,12 @@ bool Action::execute(){
 		return false; /* to delete the action */
 	apply();
 	return true;
+}
+
+void Action::apply()
+{
+	for(auto it = modifiers.begin(); it != modifiers.end(); ++it) {
+		(*it)->apply();
+	}
 }
 

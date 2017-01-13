@@ -2,17 +2,19 @@
 
 #include "ofMain.h"
 
+#include "ofxLeapMotion2.h"
+#include "ofxAbletonLive.h"
+
 #include "world.h"
 #include "view.h"
 #include "selection.h"
 #include "modifier_rotation.h"
-#include "ofxLeapMotion2.h"
-#include "ofxAbletonLive.h"
-
-
+#include "ModifierScale.h"
 #include "Action.h"
 #include "DeviceListener.h"
 #include "SoundListener.h"
+#include "Seed.h"
+#include "SeedConstant.h"
 
 #include <list>
 
@@ -41,7 +43,7 @@ public:
 		generalInputBuffer = buffer;
 	}
 	void audioOut(ofSoundBuffer &buffer) {
-			buffer.fillWithTone();
+// 			buffer.fillWithTone();
 // 		buffer = buf;
 	}
 	
@@ -50,7 +52,7 @@ public:
 	
 private:
 	// TODO check these
-    idl::World world, world_transformed;
+    idl::World world;
     idl::View view;
     vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;
