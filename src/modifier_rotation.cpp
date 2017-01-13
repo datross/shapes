@@ -1,4 +1,5 @@
 #include "modifier_rotation.h"
+#include "shape.h"
 
 using namespace idl;
 
@@ -11,12 +12,12 @@ void Rotator::apply() {
 	if(individual_origin) {
 		for(std::vector< ShapeSelected >::iterator it = selection.weights.begin();
 			it != selection.weights.end(); ++it) {
-			it->first->rotation += it->second * angle;
+			it->first->addRotation(it->second * angle);
 			}
 	} else {
 		for(std::vector< ShapeSelected >::iterator it = selection.weights.begin();
 			it != selection.weights.end(); ++it) {
-			it->first->position.rotate(it->second * angle, ofVec3f(pivot.x, pivot.y, 1));
+			it->first->rotatePosition(it->second * angle, ofVec3f(pivot.x, pivot.y, 1));
 		}
 	}
 }

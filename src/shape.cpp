@@ -3,7 +3,44 @@
 using namespace idl;
 //using namespace std;
 
+static const ofVec2f DEFAULT_POS(0, 0);
+static const ofVec2f DEFAULT_SPEED(0, 0);
+static const ofVec2f DEFAULT_SCALE= ofVec2f(1, 1);
+static const float DEFAULT_ROTATION = 0.;
+
 Shape::Shape()
-	: position(0,0), speed(0,0), scale(1,1), rotation(0)
+	: position(DEFAULT_POS), 
+	speed(DEFAULT_SPEED), 
+	scale(DEFAULT_SCALE), 
+	rotation(DEFAULT_ROTATION)
 {
+}
+
+Shape::Shape(ofVec2f & pos, ofPath & _path, ofVec2f & _speed, ofVec2f & _scale, float r)
+	: position(pos), speed(_speed), scale(_scale), rotation(r), path(_path){
+}
+
+Shape::Shape(ofVec2f & pos, ofPath & _path) : Shape(){
+	position = pos;
+	path = _path;
+}
+
+
+void Shape::addRotation(float r){
+	rotation += r;
+}
+
+void Shape::rotatePosition(float r, ofVec3f pivot){
+	position.rotate(r, pivot);
+}
+
+void Shape::draw(){
+	ofPushMatrix();
+	ofTranslate(position.x, position.y, 0.);
+	ofRotate(rotation);
+	ofScale(scale.x, scale.y, 1.);
+
+	path.draw();
+
+	ofPopMatrix();
 }

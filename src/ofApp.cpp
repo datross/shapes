@@ -17,7 +17,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	
+	live.update();
 	world_transformed = world;
 	
 	Selection selection;
@@ -79,10 +79,13 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 	//live.setup();
-	live.update();
-	live.printAll();
+	//live.update();
+	if(key == OF_KEY_RETURN)
+		live.printAll();
+	else
+		live.play();	
 	//live.setTempo(75);
-	live.play();	
+	
 	
 	
 }

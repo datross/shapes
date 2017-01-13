@@ -14,5 +14,3 @@ bool Action::execute(){
 		return false; //to delete the action
 	return apply();
 }
-
-

@@ -17,7 +17,7 @@ void Selection::uniform(World& world, float weight)
 
 void Selection::distance(World & world, float weight, ofPoint point, float radius) {
 	for(world.firstShape(); !world.endShape(); world.nextShape()) {
-		float dist = (point - world.currentShape().position).length();
+		float dist = (point - world.currentShape().getPosition()).length();
 		float w;
 		if(dist > radius) {
 			w = 0;

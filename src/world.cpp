@@ -17,12 +17,13 @@ void World::setup(){
 		nb_y = 32;
 	for (unsigned x = 0; x < nb_x; ++x) {
 		for (unsigned y = 0; y < nb_y; ++y) {
-			Shape shape;
-			shape.path.rectangle(0, 0, 20, 20);
-			shape.path.setColor(ofColor(0, 100, 150));
-			shape.position = ofVec2f(x * ofGetWidth() / nb_x, y * ofGetHeight() / nb_y);
-
+			ofPath p; 
+			p.rectangle(0, 0, 20, 20);
+			p.setColor(ofColor(0, 100, 150));
+			ofVec2f pos(x * ofGetWidth() / nb_x, y * ofGetHeight() / nb_y);
+			Shape shape(pos, p);
 			shapes.push_back(shape);
+			
 		}
 	}
 }

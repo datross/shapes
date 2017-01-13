@@ -6,21 +6,12 @@ View::View()
 {
 }
 
-void View::drawShape(Shape& shape)
-{
-	ofPushMatrix();
-	ofTranslate(shape.position.x, shape.position.y, 0.);
-	ofRotate(shape.rotation);
-	ofScale(shape.scale.x, shape.scale.y, 1.);
-	
-	shape.path.draw();
-	
-	ofPopMatrix();
+void View::drawShape(Shape& shape) {
+	shape.draw();
 }
 
 
-void View::drawWorld(World & world)
-{
+void View::drawWorld(World & world) {
 	for(world.firstShape(); !world.endShape(); world.nextShape()) {
 		drawShape(world.currentShape());
 	}
