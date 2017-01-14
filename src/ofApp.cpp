@@ -3,6 +3,7 @@
 #include <cmath>
 
 #include "Utility.h"
+#include "SeedFactory.h"
 
 using namespace idl;
 using namespace std;
@@ -22,6 +23,9 @@ void ofApp::setup(){
 	} 
 	)
 	);
+
+	SeedFactory::getInstance().createSeed("s");
+
 
 	//loading ableton
 	abletonSet.setup();

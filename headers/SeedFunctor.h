@@ -13,7 +13,7 @@ private:
 public:	
 	SeedFunctor(std::function<ofVec3f()> functor);
 };
-	
+
 }
 
 #endif
