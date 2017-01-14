@@ -14,7 +14,7 @@ using namespace std;
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofBackground(255,255,255);	
-	ofSetFrameRate(60);	
+	ofSetFrameRate(60);
 
 	
 	seed = shared_ptr<idl::Seed>(new idl::SeedFunctor( [](){
@@ -29,9 +29,11 @@ void ofApp::setup(){
 
 	//loading ableton
 	abletonSet.setup();
+#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
 	while (!abletonSet.isLoaded()) { 
 		abletonSet.update();
 	}
+#endif
 
 	deviceListener.setup();
 	world.setup();
