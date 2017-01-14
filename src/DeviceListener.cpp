@@ -34,7 +34,7 @@ bool LeapDevice::tapped(unsigned hand) {
 	auto gestures = ourController->frame().gestures();
 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
 		auto hands = (*it).hands();
-		cout << (*it).type() << endl;
+		//cout << (*it).type() << endl;
 		if(((*it).type() == Leap::Gesture::TYPE_SCREEN_TAP) && hasHand(hands, hand)) {
 			return true ;
 		}
@@ -58,9 +58,13 @@ float LeapDevice::yMove(unsigned hand) {
 /* --------------------- DeviceListener -------------------------- */
 
 DeviceListener::DeviceListener() {
+}
+
+void DeviceListener::setup() {
 	leapDevice.open();
 	leapDevice.setupGestures();
 }
+
 DeviceListener::~DeviceListener() {
 }
 

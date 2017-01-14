@@ -23,14 +23,16 @@ public:
 	float yMove(unsigned hand);
 };
 
-class DeviceListener
-{
-public:
+class DeviceListener{
 	LeapDevice leapDevice;
+public:
+	
 
 	DeviceListener();
 	~DeviceListener();
 
+	void setup();
+	LeapDevice& getLeap(){ return leapDevice; }
 	std::vector<Gesture> getGesture();
 	bool connectLeap();
 };

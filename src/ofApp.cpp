@@ -7,6 +7,9 @@
 using namespace idl;
 using namespace std;
 
+
+
+
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofBackground(255,255,255);	
@@ -14,16 +17,21 @@ void ofApp::setup(){
 
 	
 	seed = shared_ptr<idl::Seed>(new idl::SeedFunctor( [](){
-		float v = sign<float>(cos(5.*ofGetElapsedTimef()));
+		float v = cos(5.*ofGetElapsedTimef());
 		return ofVec3f(v, v, 0); 
 	} 
 	)
 	);
-	world.setup();
-// 	leap.open();
+
+	//loading ableton
 	abletonSet.setup();
-	
-	
+	while (!abletonSet.isLoaded()) { 
+		abletonSet.update();
+	}
+
+	deviceListener.setup();
+	world.setup();
+
 	/* open audio channels */
 	ofSoundStreamSetup(2, 2, 44100, BUFFER_SIZE, 4);
 
@@ -40,6 +48,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	abletonSet.update();
+	
 	soundListener.analyze();
 	float env_bis = soundListener.getData().enveloppe;
 
@@ -65,24 +74,25 @@ void ofApp::update(){
 	
 	world.update();
 	
-// 	// leapmotion
-// 	simpleHands = leap.getSimpleHands();
-// 	if(leap.isFrameNew()) {
-// 		
-// 		leap.setMappingX(-230, 230, 0, ofGetWidth());
-// 		leap.setMappingY(90, 490, ofGetHeight(), 0);
-// 		leap.setMappingZ(-150, 150, -200, 200);
-// 		
-// 		simpleHands.clear();
-// 		simpleHands = leap.getSimpleHands();
-// 		
-// 		if(!simpleHands.empty()) {
-// 			cursor.x = simpleHands[0].handPos.x;
-// 			cursor.y = simpleHands[0].handPos.y;
-// 		}
-// 		
-// 		leap.markFrameAsOld();
-// 	}
+	// leapmotion
+	ofxLeapMotion &leap = deviceListener.getLeap();
+	simpleHands = leap.getSimpleHands();
+	if(leap.isFrameNew()) {
+		
+		leap.setMappingX(-230, 230, 0, ofGetWidth());
+		leap.setMappingY(90, 490, ofGetHeight(), 0);
+		leap.setMappingZ(-150, 150, -200, 200);
+		
+		simpleHands.clear();
+		simpleHands = leap.getSimpleHands();
+		
+		if(!simpleHands.empty()) {
+			cursor.x = simpleHands[0].handPos.x;
+			cursor.y = simpleHands[0].handPos.y;
+		}
+		
+		leap.markFrameAsOld();
+	}
 }
 
 //--------------------------------------------------------------
@@ -118,10 +128,14 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	//live.setup();
-	//live.update();
-	if(key == OF_KEY_RETURN)
+		
+	if (key == OF_KEY_RETURN) {
 		abletonSet.printAll();
+		return;
+	}
+	if (key == OF_KEY_DOWN ) {
+		abletonSet.stop();
+	}
 	else
 		abletonSet.play();	
 	//live.setTempo(75);

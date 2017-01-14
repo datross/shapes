@@ -7,9 +7,9 @@ namespace idl {
 
 class Seed {
 public:
-    Seed();
-    ~Seed();
-    ofVec3f current() const;
+	Seed();
+	~Seed();
+	ofVec3f current() const;
 	ofVec3f prec() const;
 	ofVec3f step() const;
 	

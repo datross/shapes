@@ -25,21 +25,21 @@ public:
 	
 	/* ------------- openFrameWorks relative ------------- */
 	
-    void setup();
-    void update();
-    void draw();
+	void setup();
+	void update();
+	void draw();
 
-    void keyPressed(int key);
-    void keyReleased(int key);
-    void mouseMoved(int x, int y );
-    void mouseDragged(int x, int y, int button);
-    void mousePressed(int x, int y, int button);
-    void mouseReleased(int x, int y, int button);
-    void mouseEntered(int x, int y);
-    void mouseExited(int x, int y);
-    void windowResized(int w, int h);
-    void dragEvent(ofDragInfo dragInfo);
-    void gotMessage(ofMessage msg);
+	void keyPressed(int key);
+	void keyReleased(int key);
+	void mouseMoved(int x, int y );
+	void mouseDragged(int x, int y, int button);
+	void mousePressed(int x, int y, int button);
+	void mouseReleased(int x, int y, int button);
+	void mouseEntered(int x, int y);
+	void mouseExited(int x, int y);
+	void windowResized(int w, int h);
+	void dragEvent(ofDragInfo dragInfo);
+	void gotMessage(ofMessage msg);
 	
 	void audioIn(ofSoundBuffer &buffer) {
 		generalInputBuffer = buffer;
@@ -54,9 +54,9 @@ public:
 	
 private:
 	// TODO check these
-    idl::World world;
-    idl::View view;
-    vector <ofxLeapMotionSimpleHand> simpleHands;
+	idl::World world;
+	idl::View view;
+	vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;
 	float env;
 	std::shared_ptr<idl::Seed> seed;
@@ -65,7 +65,7 @@ private:
 	
 	/* stands for the leapmotion (or a mouse, keyboard etc..) */
 	idl::DeviceListener deviceListener;
-    
+	
 	/* process input sound */
 	idl::SoundListener soundListener;
 	
@@ -73,7 +73,7 @@ private:
 	ofSoundBuffer generalInputBuffer;
 	
 	/* interface with Ableton */
-    ofxAbletonLive abletonSet;
+	ofxAbletonLive abletonSet;
 	
 	/* Actions to apply next update */
 	std::list<idl::Action*> actions;
