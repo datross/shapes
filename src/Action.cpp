@@ -1,16 +1,18 @@
 #include "Action.h"
 
+#include "ofMain.h"
+
 using namespace idl;
 
 Action::Action(unsigned _duration,  std::vector< std::shared_ptr<Modifier> > _modifiers) : duration(_duration), modifiers(_modifiers) {
-	birthTime = clock();
+	birthTime = ofGetElapsedTimef();
 }
 
 Action::~Action(){
 }
 
 bool Action::execute(){
-	if (clock() - birthTime > duration)
+	if (ofGetElapsedTimef()- birthTime > duration)
 		return false; /* to delete the action */
 	apply();
 	return true;
