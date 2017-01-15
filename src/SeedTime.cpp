@@ -3,7 +3,8 @@
 
 using namespace idl;
 
-SeedTime::SeedTime() {
+SeedTime::SeedTime(std::vector<Setting> _settings)
+	: settings(_settings) {
 	start();
 }
 
@@ -15,4 +16,10 @@ float SeedTime::getStartTime() {
 	return startTime;
 }
 
+float& SeedTime::getSetting(unsigned i) {
+	return settings[i];
+}
 
+unsigned SeedTime::getSettingsCount() {
+	return settings.size();
+}

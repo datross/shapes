@@ -1,10 +1,15 @@
 #ifndef SEED_FACTORY_H
 #define SEED_FACTORY_H
 
+#include <utility>
 #include <map>
 #include <string>
 #include <functional>
+#include <memory>
+#include <iostream>
 #include "Seed.h"
+#include "SeedTime.h"
+#include "SeedTimeFunctor.h"
 
 
 namespace idl {
@@ -17,19 +22,19 @@ namespace idl {
 	public:
 		
 		/**
-		 * @brief Creates a seed and returns it, according to the passed string.
+		 * @brief Creates new seed and returns a pointer to it, according to the passed string.
 		 * 
 		 * @param type e.g "transition easy"
-		 * @return Seed& Corresponding created seed.
+		 * @return std::shared_ptr<Seed> Corresponding created seed.
 		 */
-		Seed& createSeed(std::string type) const;
+		std::shared_ptr<Seed> createSeed(std::string type);
 		
 		/**
 		 * @brief Returns the singleton instance of the factory.
 		 * 
 		 * @return const idl::SeedFactory& A reference to the singleton instance
 		 */
-		static const SeedFactory& getInstance();
+		static SeedFactory& getInstance();
 	private:
 		SeedFactory();
 		~SeedFactory();
@@ -41,15 +46,16 @@ namespace idl {
 		 * 
 		 * @param type Function's key.
 		 * @param f Function
+		 * @param defaultsSettings Default settings for the future seed.
 		 * @return void
 		 */
-		void addFunction(std::string type, function<ofVec3f()> f);
+		void addFunction(std::string type, function<ofVec3f(SeedTime&)> f, std::vector<Setting> defaultsSettings= {});
 
 		/**
 		 * @brief Stores std::functions with their key. The functions are defined in seedFunctions.h .
 		 * 
 		 */
-		std::map<std::string, std::function<ofVec3f()> > functions;
+		std::map<std::string, std::pair<std::function<ofVec3f(SeedTime&)>, std::vector<Setting> > > functions;
 	};
 }
 #endif // !SEED_FACTORY_H

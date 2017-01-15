@@ -17,14 +17,8 @@ void ofApp::setup(){
 	ofSetFrameRate(60);
 
 	
-	seed = shared_ptr<idl::Seed>(new idl::SeedFunctor( [](){
-		float v = cos(5.*ofGetElapsedTimef());
-		return ofVec3f(v, v, 0); 
-	} 
-	)
-	);
-
-	SeedFactory::getInstance().createSeed("s");
+	s1 = SeedFactory::getInstance().createSeed("time sinusoide");
+	s2 = SeedFactory::getInstance().createSeed("time sinusoide");
 
 
 	//loading ableton
@@ -65,8 +59,10 @@ void ofApp::update(){
 	
 	Selection selection;
 	selection.distance(world, 1, cursor, 200);
-	Scalator scalator(selection, ofVec2f(env, env), true, cursor, seed);
-	scalator.apply();
+	Scalator m1(selection, ofVec2f(env, env), true, cursor, s1);
+	Rotator m2(selection, 10, false, cursor, s2);
+	m1.apply();
+	m2.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
 	

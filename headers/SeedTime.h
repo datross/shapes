@@ -5,8 +5,10 @@
 
 namespace idl {
 	
+	typedef float Setting;
+	
 	/**
-	 * @brief Seed wich depends on time.
+	 * @brief Seed wich depends on time, and wich holds settings for its configuration.
 	 */
 	class SeedTime : public Seed {
 	private:
@@ -14,8 +16,18 @@ namespace idl {
 		 * @brief Time when the seed was started.
 		 */
 		float startTime;
+		
+		/**
+		 * @brief Stores values used as settings of the seed.
+		 */
+		std::vector<Setting> settings;
 	public:
-		SeedTime();
+		/**
+		 * @brief Build the seed with the given settings.
+		 * 
+		 * @param settings
+		 */
+		SeedTime(std::vector<Setting> settings);
 		
 		/**
 		 * @brief Makes the seed start from now. This function is called from SeedTime() .
@@ -30,6 +42,21 @@ namespace idl {
 		 * @return float
 		 */
 		float getStartTime();
+		
+		/**
+		 * @brief Returns the seed settings.
+		 * 
+		 * @param i Index of the setting.
+		 * @return float& A reference to the corresponding setting.
+		 */
+		Setting& getSetting(unsigned i);
+		
+		/**
+		 * @brief Returns the settings number.
+		 * 
+		 * @return unsigned int
+		 */
+		unsigned getSettingsCount();
 	};
 	
 }

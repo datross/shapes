@@ -12,7 +12,11 @@ private:
 	bool individual_origin;
 	ofPoint pivot;
 public:
-	Rotator(Selection&, float angle, bool individual_origin, ofPoint pivot = ofPoint(0,0), std::shared_ptr<Seed> seed =  std::shared_ptr<Seed>(new SeedConstant()));
+	Rotator(Selection&, 
+			float angle, 
+			bool individual_origin, 
+			ofPoint pivot = ofPoint(0,0), 
+			std::shared_ptr<Seed> seed =  std::shared_ptr<Seed>(new SeedConstant()));
 	virtual void apply();
 };
 

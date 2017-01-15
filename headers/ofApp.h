@@ -15,7 +15,7 @@
 #include "SoundListener.h"
 #include "Seed.h"
 #include "SeedConstant.h"
-#include "SeedFunctor.h"
+#include "SeedTimeFunctor.h"
 
 #include <list>
 #include <memory>
@@ -59,7 +59,7 @@ private:
 	vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;
 	float env;
-	std::shared_ptr<idl::Seed> seed;
+	std::shared_ptr<idl::Seed> s1, s2;
 	
 	/* -------------- members -------------- */
 	
