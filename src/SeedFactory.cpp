@@ -11,14 +11,14 @@ SeedFactory::SeedFactory(){
 	//addSeed("sin", )
 }	
 
-void SeedFactory::addSeed(string type, function<ofVec3f()> f) {
-	seeds[type] = f;
+void SeedFactory::addFunction(string type, function<ofVec3f()> f) {
+	functions[type] = f;
 }
 
 SeedFactory::~SeedFactory(){
 }
 
-void idl::SeedFactory::createSeed(string type) const
+Seed& SeedFactory::createSeed(string type) const
 {
 }
 
