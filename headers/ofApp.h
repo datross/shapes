@@ -1,4 +1,5 @@
-#pragma once
+#ifndef OF_APP_H
+#define OF_APP_H
 
 #include "ofMain.h"
 
@@ -83,3 +84,5 @@ private:
 	/* execute every actions, and delete the outdated ones */
 	void executeActions();
 };
+
+#endif
