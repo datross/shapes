@@ -17,6 +17,7 @@
 #include "Seed.h"
 #include "SeedConstant.h"
 #include "SeedTimeFunctor.h"
+#include "DreamBuilder.h"
 
 #include <list>
 #include <memory>

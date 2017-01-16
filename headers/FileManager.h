@@ -3,6 +3,7 @@
 
 #include <string>
 #include <json.hpp>
+#include <ofxSvg.h>
 
 using json = nlohmann::json;
 
@@ -52,12 +53,20 @@ namespace idl {
 		static FileManager & getInstance(std::string path = "");
 		
 		/**
-		 * @brief Load a file in the dream directory.
+		 * @brief Loads a file in the dream directory.
 		 * 
 		 * @param path File name.
 		 * @return json
 		 */
-		json loadFile(std::string path);
+		json loadJSONFile(std::string path);
+		
+		/**
+		 * @brief Loads an SVG file in the dream directory
+		 * 
+		 * @param path File name.
+		 * @return ofxSVG
+		 */
+		ofxSVG loadSVGFile(std::string path);
 	};
 	
 }

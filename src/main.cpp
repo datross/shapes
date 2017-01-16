@@ -13,7 +13,7 @@ int main(int argc, char * argv[]){
 	/* Init FileManager */
 	
 	/* Default path */
-	std::string path = argv[0];
+	string path = "../dreams";
 	
 	/* else we take first argument of command line */
 	if(argc > 1) {
@@ -21,7 +21,7 @@ int main(int argc, char * argv[]){
 	}
 	
 	cout << "Directory path :" << path << endl;
-	idl::FileManager::init(path);
+	FileManager::init(path);
 
 	// this kicks off the running of my app
 	// can be OF_WINDOW or OF_FULLSCREEN

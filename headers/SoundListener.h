@@ -3,10 +3,10 @@
 
 #include "ofxFft.h"
 
-#include "vector"
+#include <vector>
 
 /* buffer size for the application */
-#define BUFFER_SIZE 256
+#define IDL_BUFFER_SIZE 256
 
 namespace idl {
 

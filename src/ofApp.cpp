@@ -21,24 +21,26 @@ void ofApp::setup(){
 	}
 #endif
 
-	ofBackground(255,255,255);	
+	ofBackground(255,255,255);
 	ofSetFrameRate(60);
 
+	DreamBuilder dreamBuilder;
+	dreamBuilder.setDream("childish");
+	dreamBuilder.buildWorld(world);
 	
 	s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 
 	deviceListener.setup();
-	world.setup();
 
 	/* open audio channels */
-	ofSoundStreamSetup(2, 2, 44100, BUFFER_SIZE, 4);
+	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
 
 	/* start channels */
 	ofSoundStreamStart();
 	
 	/* pre-allocate global buffer */
-	generalInputBuffer.allocate(BUFFER_SIZE, 2);
+	generalInputBuffer.allocate(IDL_BUFFER_SIZE, 2);
 	
 	/* soundListener points toward the global sound buffer */
 	soundListener.setInputBuffer(&generalInputBuffer);

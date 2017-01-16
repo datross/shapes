@@ -4,7 +4,7 @@ using namespace idl;
 
 SoundListener::SoundListener() {			
 	/* setup fft object */
-	fft = ofxFft::create(BUFFER_SIZE, OF_FFT_WINDOW_HAMMING);
+	fft = ofxFft::create(IDL_BUFFER_SIZE, OF_FFT_WINDOW_HAMMING);
 	
 	/* allocate array for sound data */
 	data.spectrum.resize(fft->getBinSize());

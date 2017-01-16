@@ -8,6 +8,10 @@ World::World()
 
 }
 
+void World::clear() {
+	shapes.clear();
+}
+
 Shape & World::currentShape() {
 	return *selector;
 }
@@ -21,7 +25,7 @@ void World::setup(){
 			p.rectangle(0, 0, 20, 20);
 			p.setColor(ofColor(0, 100, 150));
 			ofVec2f pos(x * ofGetWidth() / nb_x, y * ofGetHeight() / nb_y);
-			Shape shape(pos, p);
+			Shape shape(p, pos);
 			shapes.push_back(shape);
 			
 		}
@@ -52,6 +56,10 @@ void World::update() {
 	for(firstShape(); !endShape(); nextShape()) {
 		currentShape().update();
 	}
+}
+
+void World::addShape(Shape& shape) {
+	shapes.push_front(shape);
 }
 
 
