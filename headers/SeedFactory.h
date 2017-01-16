@@ -49,13 +49,13 @@ namespace idl {
 		 * @param defaultsSettings Default settings for the future seed.
 		 * @return void
 		 */
-		void addFunction(std::string type, function<ofVec3f(Seed&)> f, std::vector<Setting> defaultsSettings= {});
+		void addFunction(std::string type, function<ofVec3f(SeedTime&)> f, std::vector<Setting> defaultsSettings= {});
 
 		/**
 		 * @brief Stores std::functions with their key. The functions are defined in seedFunctions.h .
 		 * 
 		 */
-		std::map<std::string, std::pair<std::function<ofVec3f(Seed&)>, std::vector<Setting> > > functions;
+		std::map<std::string, std::pair<std::function<ofVec3f(SeedTime&)>, std::vector<Setting> > > functions;
 	};
 }
 #endif // !SEED_FACTORY_H

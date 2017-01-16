@@ -6,18 +6,31 @@ using namespace idl;
 using namespace std;
 
 
-
 SeedFactory::SeedFactory(){
 	/* Adding every function to the map. */
 	
-	addFunction("time sinusoide", sinusoide, {1,1,0});
+	addFunction("sinusoide", sinusoide, {1,1,0});
 }	
 
-void SeedFactory::addFunction(string type, function<ofVec3f(Seed&)> f,  std::vector<Setting> defaultsSettings) {
+void SeedFactory::addFunction(string type, function<ofVec3f(SeedTime&)> f,  std::vector<Setting> defaultsSettings) {
 	functions[type] = make_pair(f, defaultsSettings);
 }
 
 SeedFactory::~SeedFactory(){
+}
+
+/**
+ * @brief Allows to convert an array of string to a Settings array.
+ * 
+ * @param vecStr String array.
+ * @return Settings array.
+ */
+vector<Setting> parseSettings(vector<string> vecStr) {
+	vector<Setting> settings;
+	for(auto it = vecStr.begin(); it != vecStr.end(); ++it) {
+		settings.push_back(convert<Setting, string>(*it));
+	}
+	return settings;
 }
 
 shared_ptr<Seed> SeedFactory::createSeed(string type) {
@@ -32,9 +45,14 @@ shared_ptr<Seed> SeedFactory::createSeed(string type) {
 			return nullptr;
 		}
 		
-		return shared_ptr<Seed>(new SeedTimeFunctor(fct->second.first, fct->second.second));
+		vector<Setting> settings = fct->second.second;
+		/* if parameters are detailed in the request */
+		if(arguments.size() > 2) {
+			settings = parseSettings(vector<string>(arguments.begin()+2, arguments.end()));
+		}
+		return shared_ptr<Seed>(new SeedTimeFunctor(fct->second.first, settings));
 	}
-	
+
 	return nullptr;
 }
 
