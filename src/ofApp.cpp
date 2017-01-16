@@ -13,21 +13,20 @@ using namespace std;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	//loading ableton
+	abletonSet.setup();
+#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
+	while (!abletonSet.isLoaded()) {
+		abletonSet.update();
+	}
+#endif
+
 	ofBackground(255,255,255);	
 	ofSetFrameRate(60);
 
 	
-	s1 = SeedFactory::getInstance().createSeed("time sinusoide");
-	s2 = SeedFactory::getInstance().createSeed("time sinusoide");
-
-
-	//loading ableton
-	abletonSet.setup();
-#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
-	while (!abletonSet.isLoaded()) { 
-		abletonSet.update();
-	}
-#endif
+	s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
+	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 
 	deviceListener.setup();
 	world.setup();
@@ -55,13 +54,13 @@ void ofApp::update(){
 	env -= 0.015;
 	env = max(env, env_bis);
 	env *= 2;
-	env = 0.5;
+	env = 30;
 	
 	Selection selection;
 	selection.distance(world, 1, cursor, 200);
-	Scalator m1(selection, ofVec2f(env, env), true, cursor, s1);
+	Scalator m1(selection, ofVec2f(env, env), false, cursor, s1);
 	Rotator m2(selection, 10, false, cursor, s2);
-	m1.apply();
+	//m1.apply();
 	m2.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
