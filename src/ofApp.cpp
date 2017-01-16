@@ -13,21 +13,20 @@ using namespace std;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	//loading ableton
+	abletonSet.setup();
+#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
+	while (!abletonSet.isLoaded()) {
+		abletonSet.update();
+	}
+#endif
+
 	ofBackground(255,255,255);	
 	ofSetFrameRate(60);
 
 	
 	s1 = SeedFactory::getInstance().createSeed("time sinusoide");
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide");
-
-
-	//loading ableton
-	abletonSet.setup();
-#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
-	while (!abletonSet.isLoaded()) { 
-		abletonSet.update();
-	}
-#endif
 
 	deviceListener.setup();
 	world.setup();

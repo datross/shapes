@@ -10,10 +10,10 @@ using namespace std;
 SeedFactory::SeedFactory(){
 	/* Adding every function to the map. */
 	
-	addFunction("sinusoide", sinusoide, {1,1,0});
+	addFunction("time sinusoide", sinusoide, {1,1,0});
 }	
 
-void SeedFactory::addFunction(string type, function<ofVec3f(SeedTime&)> f,  std::vector<Setting> defaultsSettings) {
+void SeedFactory::addFunction(string type, function<ofVec3f(Seed&)> f,  std::vector<Setting> defaultsSettings) {
 	functions[type] = make_pair(f, defaultsSettings);
 }
 
