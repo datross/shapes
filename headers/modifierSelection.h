@@ -6,8 +6,11 @@
 
 namespace idl {
 
-struct ModifierSelection : public Modifier {
+class ModifierSelection : public Modifier {
+protected :
 	Selection & selection;
+
+public:
 	ModifierSelection(Selection&);
 	void setSelection(Selection& s);
 	virtual void apply() = 0;

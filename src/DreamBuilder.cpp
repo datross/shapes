@@ -38,14 +38,4 @@ void DreamBuilder::buildWorld(World& world) {
 	}
 }
 
-float DreamBuilder::parseFloat(string s) {
-	return convert<float, string>(s);
-}
-
-ofVec2f DreamBuilder::parseVec2(string s) {
-	auto v = split(s, ' ');
-	return ofVec2f(convert<float, string>(v[0]),
-				   convert<float, string>(v[1]));
-}
-
 

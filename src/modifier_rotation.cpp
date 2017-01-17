@@ -1,4 +1,4 @@
-#include "modifier_rotation.h"
+#include "ModifierRotation.h"
 #include "shape.h"
 
 using namespace idl;

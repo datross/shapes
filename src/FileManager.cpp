@@ -38,6 +38,10 @@ ofxSVG FileManager::loadSVGFile(string path) {
 	return svg;
 }
 
+void FileManager::initActions(std::map<std::string, json>& actions){
+	
+}
+
 
 std::string FileManager::getPath(std::string file) {
 	return dirPath + "/" + 	file + ".json";

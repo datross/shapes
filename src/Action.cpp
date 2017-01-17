@@ -18,8 +18,7 @@ bool Action::execute(){
 	return true;
 }
 
-void Action::apply()
-{
+void Action::apply(){
 	for(auto it = modifiers.begin(); it != modifiers.end(); ++it) {
 		(*it)->apply();
 	}

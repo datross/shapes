@@ -67,6 +67,14 @@ namespace idl {
 		 * @return ofxSVG
 		 */
 		ofxSVG loadSVGFile(std::string path);
+
+
+		/**
+		* @brief File a actions' map with namefile and his corresponding json action
+		* 
+		* @param actions Map to fill
+		*/
+		void initActions(std::map<std::string, json>& actions);
 	};
 	
 }
