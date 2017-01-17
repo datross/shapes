@@ -2,8 +2,9 @@
 #define FILE_MANAGER_H
 
 #include <string>
-#include <json.hpp>
-#include <ofxSvg.h>
+#include "json.hpp"
+#include "ofxSvg.h"
+#include "ofMain.h"
 
 using json = nlohmann::json;
 
@@ -22,17 +23,9 @@ namespace idl {
 		/**
 		 * @brief Path to the directory containing the dream files.
 		 */
-		std::string dirPath;
+		ofDirectory sessionDirectory;
 		
 		FileManager(std::string path);
-		
-		/**
-		 * @brief Returns the path of the file, according to dirPath and some conventions.
-		 * 
-		 * @param file Name of the file, or "module". It hasn't any extension.
-		 * @return Absolute path to the file.
-		 */
-		std::string getPath(std::string file);
 	public:
 		
 		/**
