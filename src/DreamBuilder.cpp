@@ -1,6 +1,7 @@
 #include "ofxSvg.h"
 #include "DreamBuilder.h"
 #include "Utility.h"
+#include "ActionFactory.h"
 
 using namespace idl;
 
@@ -36,6 +37,9 @@ void DreamBuilder::buildWorld(World& world) {
 		Shape shape = parseShape(*it);
 		world.addShape(shape);
 	}
+
+	/*Laod all Actions*/
+	ActionFactory::getInstance();
 }
 
 

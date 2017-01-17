@@ -20,12 +20,10 @@ ModifierFactory & idl::ModifierFactory::getInstance(){
 }
 
 shared_ptr<Modifier> ModifierFactory::create(json jModifier) {
-	string seedType = jModifier["seed"].get<string>();
-	shared_ptr<Seed> seed = SeedFactory::getInstance().createSeed(seedType);
 	string type = jModifier["type"];
 	auto args = split(type, ' ');
 	if (args[0] == "selection") {
-		if (args[1] == "dependente") {
+		if (args[1] == "dependante") {
 			if (args[2] == "rotation") {
 				shared_ptr<Selection> select =  SelectionFactory::getInstance().create(jModifier["selection"]);
 				float angle = jModifier["angle"].get<float>();
