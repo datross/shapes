@@ -1,4 +1,4 @@
-#include "modifier_color.h"
+#include "ModifierColor.h"
 
 using namespace idl;
 
