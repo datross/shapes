@@ -8,16 +8,14 @@
 using namespace idl;
 using namespace std;
 
-
-
-
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofBackground(255,255,255);	
 	ofSetFrameRate(60);
 
 	
-	s1 = SeedFactory::getInstance().createSeed("time sinusoide");
+	//s1 = SeedFactory::getInstance().createSeed("time sinusoide");
+	s1 = shared_ptr<Seed>(new SeedSoundSpectrum(soundListener, 0,0.1,0.1,1));
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide");
 
 
@@ -31,12 +29,11 @@ void ofApp::setup(){
 
 	deviceListener.setup();
 	world.setup();
+	
+	
 
 	/* open audio channels */
 	ofSoundStreamSetup(2, 2, 44100, BUFFER_SIZE, 4);
-
-	/* start channels */
-	ofSoundStreamStart();
 	
 	/* pre-allocate global buffer */
 	generalInputBuffer.allocate(BUFFER_SIZE, 2);
@@ -58,11 +55,11 @@ void ofApp::update(){
 	env = 0.5;
 	
 	Selection selection;
-	selection.distance(world, 1, cursor, 200);
-	Scalator m1(selection, ofVec2f(env, env), true, cursor, s1);
+	selection.distance(world, 1, cursor, 500);
+	Scalator m1(selection, ofVec2f(-1, -1), true, cursor, s1);
 	Rotator m2(selection, 10, false, cursor, s2);
 	m1.apply();
-	m2.apply();
+	//m2.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
 	
@@ -96,13 +93,10 @@ void ofApp::update(){
 		leap.markFrameAsOld();
 	}
 }
-
 //--------------------------------------------------------------
 void ofApp::draw(){
 	ofFill();
 	view.drawWorld(world);
-	
-	
 	
 	// leapmotion
 	

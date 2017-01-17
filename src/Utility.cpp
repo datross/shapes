@@ -11,3 +11,11 @@ vector<string> split(const string& str, char separator) {
 		v.push_back(slice);
 	return v;
 }
+
+float energy(const std::vector<float> signal) {
+	float e = 0;
+	for(auto it = signal.begin(); it != signal.end(); ++it) {
+		e += (*it) * (*it);
+	}
+	return e;
+}

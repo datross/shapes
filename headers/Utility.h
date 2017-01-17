@@ -51,4 +51,11 @@ dst convert(src s) {
  */
 std::vector<std::string> split(const std::string& str, char separator = ' ');
 
+/**
+ * @brief Computes energy of the signal.
+ * 
+ * @param signal Array of float.
+ */
+float energy(const std::vector<float> signal);
+
 #endif

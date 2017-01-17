@@ -17,6 +17,8 @@
 #include "Seed.h"
 #include "SeedConstant.h"
 #include "SeedTimeFunctor.h"
+#include "SeedSoundEnvelope.h"
+#include "SeedSoundSpectrum.h"
 
 #include <list>
 #include <memory>
@@ -51,7 +53,6 @@ public:
 	}
 	
 	/* ------------- Delaunay Interactive relative ------------- */
-	
 	
 private:
 	// TODO check these
