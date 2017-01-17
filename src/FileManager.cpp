@@ -6,7 +6,10 @@ using namespace idl;
 using namespace std;
 
 FileManager::FileManager(string path)
-	: dirPath(path) {
+	: sessionDirectory(path) {
+	if(!sessionDirectory.exists()) {
+		cerr << "Error this directory doesn't exist : " << sessionDirectory.getAbsolutePath() << endl;
+	}
 }
 
 
@@ -20,11 +23,12 @@ void FileManager::init(string path) {
 }
 
 json FileManager::loadJSONFile(string path) {
-	cout << "Loading file : " << getPath(path) << endl;
-	ifstream file(getPath(path));
+	path = sessionDirectory.getAbsolutePath() + "/" + path + ".json";
+	cout << "Loading file : " << path << endl;
+	ifstream file(path);
 	json j;
 	if(!file) {
-		cerr << "Cannot open file : " << getPath(path) << endl;
+		cerr << "Cannot open file : " << path << endl;
 		return j;
 	}
 	j << file;
@@ -33,16 +37,13 @@ json FileManager::loadJSONFile(string path) {
 
 ofxSVG FileManager::loadSVGFile(string path) {
 	ofxSVG svg;
-	cout << "Loading file : " << dirPath + "/" + path << endl;
-	svg.load(dirPath + "/" + path);
+	path =  sessionDirectory.getAbsolutePath() + "/" + path + ".svg";
+	cout << "Loading file : " << path << endl;
+	svg.load(path);
 	return svg;
 }
 
 void FileManager::initActions(std::map<std::string, json>& actions){
-	
+	//TODO !!
 }
 
-
-std::string FileManager::getPath(std::string file) {
-	return dirPath + "/" + 	file + ".json";
-}
