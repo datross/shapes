@@ -1,4 +1,5 @@
 #include "FileManager.h"
+#include "Utility.h"
 #include <fstream>
 #include <iostream>
 
@@ -22,8 +23,9 @@ void FileManager::init(string path) {
 	getInstance(path);
 }
 
-json FileManager::loadJSONFile(string path) {
-	path = sessionDirectory.getAbsolutePath() + "/" + path + ".json";
+json FileManager::loadJSONFile(string path, bool addPath) {
+	if (addPath)
+		path = sessionDirectory.getAbsolutePath() + "/" + path + ".json";
 	cout << "Loading file : " << path << endl;
 	ifstream file(path);
 	json j;
@@ -44,6 +46,11 @@ ofxSVG FileManager::loadSVGFile(string path) {
 }
 
 void FileManager::initActions(std::map<std::string, json>& actions){
-	//TODO !!
+	ofDirectory dir(sessionDirectory.getAbsolutePath() + "/actions");
+	auto files = dir.getFiles();
+	for (auto& f : files) {
+		auto fileName = split(f.getFileName(), '.')[0];
+		actions[fileName] = loadJSONFile(f.path(), false);
+	}
 }
 

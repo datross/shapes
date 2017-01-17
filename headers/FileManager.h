@@ -51,7 +51,7 @@ namespace idl {
 		 * @param path File name.
 		 * @return json
 		 */
-		json loadJSONFile(std::string path);
+		json loadJSONFile(std::string path, bool extension = true);
 		
 		/**
 		 * @brief Loads an SVG file in the dream directory
