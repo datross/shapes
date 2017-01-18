@@ -1,0 +1,23 @@
+{
+	"duration": "15000",
+
+	"modifier" :
+	[ 
+	    {	
+	        "type" : "selection dependante rotation",
+		    "selection" : "",
+		    "angle" : "45",
+		    "individual_origin" : "1",
+		    "pivot" : "1, 1", 
+		    "seed" : "time sinusoide 1 50 0"
+    	},
+    	{	
+	        "type" : "selection dependante rotation",
+		    "selection" : "",
+		    "angle" : "45",
+		    "individual_origin" : "1",
+		    "pivot" : "1, 1", 
+		    "seed" : "time sinusoide 1 50 0"
+    	}
+	]
+}

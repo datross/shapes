@@ -1,6 +1,7 @@
 #include "ofxSvg.h"
 #include "DreamBuilder.h"
 #include "Utility.h"
+#include "ActionFactory.h"
 
 using namespace idl;
 
@@ -41,16 +42,9 @@ void DreamBuilder::buildWorld(World& world) {
 		Shape shape = parseShape(*it);
 		world.addShape(shape);
 	}
-}
 
-float DreamBuilder::parseFloat(string s) {
-	return convert<float, string>(s);
-}
-
-ofVec2f DreamBuilder::parseVec2(string s) {
-	auto v = split(s, ' ');
-	return ofVec2f(convert<float, string>(v[0]),
-				   convert<float, string>(v[1]));
+	/*Laod all Actions*/
+	ActionFactory::getInstance();
 }
 
 

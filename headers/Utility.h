@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <ofMain.h>
 
 /**
  * @file Utility.h 
@@ -50,5 +51,39 @@ dst convert(src s) {
  * @return std::vector<std::string>
  */
 std::vector<std::string> split(const std::string& str, char separator = ' ');
+
+
+/**
+* @brief Parse a string to a float
+*
+* @param s ...
+* @return float
+*/
+float parseFloat(std::string s);
+
+/**
+* @brief Parse a string to an ofVec2f.
+*
+* @param s ...
+* @return ofVec2f
+*/
+ofVec2f parseVec2(std::string s);
+
+/**
+* @brief Parse a string to an ofVec3f.
+*
+* @param s ...
+* @return ofVec3f
+*/
+ofVec3f parseVec3(string s);
+
+
+/**
+* @brief Parse a string to an ofVec3f.
+*
+* @param s ...
+* @return ofVec3f
+*/
+ofPoint parsePoint(string s);
 
 #endif

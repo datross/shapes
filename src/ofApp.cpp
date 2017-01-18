@@ -15,11 +15,11 @@ using namespace std;
 void ofApp::setup(){
 	//loading ableton
 	abletonSet.setup();
-#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
-	while (!abletonSet.isLoaded()) {
-		abletonSet.update();
-	}
-#endif
+//#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
+//	while (!abletonSet.isLoaded()) {
+//		abletonSet.update();
+//	}
+//#endif
 
 	ofBackground(255,255,255);
 	ofSetFrameRate(60);

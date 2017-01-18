@@ -51,7 +51,7 @@ namespace idl {
 		 * @param path File name.
 		 * @return json
 		 */
-		json loadJSONFile(std::string path);
+		json loadJSONFile(std::string path, bool extension = true);
 		
 		/**
 		 * @brief Loads an SVG file in the dream directory
@@ -60,6 +60,14 @@ namespace idl {
 		 * @return ofxSVG
 		 */
 		ofxSVG loadSVGFile(std::string path);
+
+
+		/**
+		* @brief File a actions' map with namefile and his corresponding json action
+		* 
+		* @param actions Map to fill
+		*/
+		void initActions(std::map<std::string, json>& actions);
 	};
 	
 }

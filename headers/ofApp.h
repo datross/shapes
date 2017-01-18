@@ -9,7 +9,7 @@
 #include "world.h"
 #include "view.h"
 #include "selection.h"
-#include "modifier_rotation.h"
+#include "ModifierRotation.h"
 #include "ModifierScale.h"
 #include "Action.h"
 #include "DeviceListener.h"

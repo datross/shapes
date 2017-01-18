@@ -23,22 +23,7 @@ namespace idl {
 		 * @brief Corresponds to the dream subdirectory
 		 */
 		std::string currentDream;
-		
-		/**
-		 * @brief Parse a string to a float
-		 * 
-		 * @param s ...
-		 * @return float
-		 */
-		float parseFloat(std::string s);
-		
-		/**
-		 * @brief Parse a string to an ofVec2f.
-		 * 
-		 * @param s ...
-		 * @return ofVec2f
-		 */
-		ofVec2f parseVec2(std::string s);
+
 	public:
 		DreamBuilder();
 		
