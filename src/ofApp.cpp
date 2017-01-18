@@ -48,9 +48,6 @@ void ofApp::setup(){
 
 	/* open audio channels */
 	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
-
-	/* start channels */
-	ofSoundStreamStart();
 	
 	/* pre-allocate global buffer */
 	generalInputBuffer.allocate(IDL_BUFFER_SIZE, 2);
