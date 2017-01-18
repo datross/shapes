@@ -52,8 +52,7 @@ void FileManager::initActions(std::map<std::string, json>& actions){
 	auto files = dir.getFiles();
 	for (auto& f : files) {
 		auto fileName = split(f.getFileName(), '.')[0];
-// 		actions[fileName] = loadJSONFile(f.path(), false);
-		actions[fileName] = loadJSONFile(fileName);
+		actions[fileName] = loadJSONFile("actions/" + fileName);
 	}
 }
 

@@ -8,10 +8,10 @@ namespace idl {
 
 class ModifierSelection : public Modifier {
 protected :
-	Selection & selection;
+	std::shared_ptr<Selection> selection;
 
 public:
-	ModifierSelection(Selection&);
+	ModifierSelection(std::shared_ptr<Selection>);
 	virtual void apply() = 0;
 };
 	

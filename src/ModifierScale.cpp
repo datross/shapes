@@ -6,7 +6,7 @@ using namespace std;
 
 using namespace idl;
 
-Scalator::Scalator(Selection& _selection, ofVec2f _scale, bool _individual_origin, ofPoint _pivot, std::shared_ptr<Seed> _seed)
+Scalator::Scalator(shared_ptr<Selection> _selection, ofVec2f _scale, bool _individual_origin, ofPoint _pivot, std::shared_ptr<Seed> _seed)
 	: DependenteModifier(_selection, _seed), scale(_scale), individual_origin(_individual_origin), pivot(_pivot) {
 }
 
@@ -20,13 +20,13 @@ void Scalator::apply() {
 	ofVec2f tmp, move;
 	
 	if(individual_origin) {
-		for(auto it = selection.getShapes().begin(); it != selection.getShapes().end(); ++it) {
+		for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
 			tmp.x = seed->step().x * it->second * scale.x;
 			tmp.y = seed->step().y * it->second * scale.y;
 			it->first->addScale(tmp);
 		}
 	} else {
-		for(auto it = selection.getShapes().begin(); it != selection.getShapes().end(); ++it) {
+		for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
 			move = getMoveScale(*(it->first));
 			tmp.x = seed->step().x * it->second * scale.x * move.x;
 			tmp.y = seed->step().y * it->second * scale.y * move.y;

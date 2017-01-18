@@ -29,6 +29,7 @@ shared_ptr<Action> ActionFactory::create(string type){
 			if (!m) continue;
 			modifiers.push_back(m);
 		}
+		cout << "NB MODIFIER" << modifiers.size() << endl;
 		unsigned duration = jAction["duration"].get<unsigned>();
 		return shared_ptr<Action>(new Action(duration, modifiers));
 	}

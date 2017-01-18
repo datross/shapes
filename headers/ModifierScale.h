@@ -15,7 +15,7 @@ private:
 	ofVec2f getMoveScale(Shape & s);
 	
 public:
-	Scalator(Selection&, ofVec2f scale, bool individual_origin, ofPoint pivot = ofPoint(0,0), std::shared_ptr<Seed> seed =  std::shared_ptr<Seed>(new SeedConstant()));
+	Scalator(shared_ptr<Selection>, ofVec2f scale, bool individual_origin, ofPoint pivot = ofPoint(0,0), std::shared_ptr<Seed> seed =  std::shared_ptr<Seed>(new SeedConstant()));
 	virtual void apply();
 };
 	

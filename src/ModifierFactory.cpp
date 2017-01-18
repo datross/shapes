@@ -38,7 +38,7 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 						seed = SeedFactory::getInstance().
 							createSeed(jModifier["seed"].get<string>());
 					}
-					return shared_ptr<Modifier>(new Rotator(*select, angle, indiv, pivot, seed));
+					return shared_ptr<Modifier>(new Rotator(select, angle, indiv, pivot, seed));
 				}
 				if (args[2] == "scale") {
 

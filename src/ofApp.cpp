@@ -35,7 +35,9 @@ void ofApp::setup(){
 	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
 
-	actions.push_front(ActionFactory::getInstance().create("grab"));
+	shared_ptr<Action> action = ActionFactory::getInstance().create("grab");
+	if(action)
+		actions.push_front(action);
 
 	deviceListener.setup();
 	
@@ -69,10 +71,10 @@ void ofApp::update(){
 	env *= 2;
 	env = 30;
 
-	Selection selection;
+	/*Selection selection;
 	selection.radial(1, cursor, 200);
 	Scalator m1(selection, ofVec2f(env, env), false, cursor, s1);
-	Rotator m2(selection, 10, false, cursor, s2);
+	Rotator m2(selection, 10, false, cursor, s2);*/
 	//m1.apply();
 	//m2.apply();
 	
