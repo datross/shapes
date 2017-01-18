@@ -62,8 +62,8 @@ void ofApp::update(){
 	selection.distance(world, 1, cursor, 200);
 	Scalator m1(selection, ofVec2f(env, env), false, cursor, s1);
 	Rotator m2(selection, 10, false, cursor, s2);
-	//m1.apply();
-	m2.apply();
+	m1.apply();
+	//m2.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
 	
@@ -164,7 +164,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+	cout << " x:" << x << "y:" << y << endl;
 }
 
 //--------------------------------------------------------------
