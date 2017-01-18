@@ -1,5 +1,5 @@
 {
-	"duration" : 15,
+	"duration" : 100,
 
 	"modifiers" :
 	[ 
@@ -9,10 +9,10 @@
 				"type" : "uniform", 
 				"weight" : 1
 			},
-		    "angle" : 45,
-		    "individual_origin" : true,
-		    "pivot" : "1, 1", 
-		    "seed" : "time sinusoide 1 50 0"
+		    "angle" : 90,
+		    "individual_origin" : false,
+		    "pivot" : "200 200", 
+		    "seed" : "time sinusoide 1 3 0"
     	}
 	]
 }

@@ -6,6 +6,8 @@
 #include "SeedFactory.h"
 #include "ActionFactory.h"
 
+#include "Hud.h"
+
 using namespace idl;
 using namespace std;
 
@@ -55,6 +57,9 @@ void ofApp::setup(){
 	
 	/* soundListener points toward the global sound buffer */
 	soundListener.setInputBuffer(&generalInputBuffer);
+	
+	/* hud is hidden by default */
+	toggleHud = false;
 }
 
 //--------------------------------------------------------------
@@ -95,7 +100,7 @@ void ofApp::update(){
 		actions.push_front(*a);
 	}
 	
-	cout << actions.size() << endl;
+	Hud::getInstance().addEntry("Nb actions", actions.size());
 	
 	executeActions();
 	
@@ -152,24 +157,26 @@ void ofApp::draw(){
 			ofPoint tip = simpleHands[i].fingers[ fingerTypes[f] ].tip;  // fingertip
 		}
 	}*/	
+
+	Hud::getInstance().draw(toggleHud);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-		
-	if (key == OF_KEY_RETURN) {
-		abletonSet.printAll();
-		return;
-	}
-	if (key == OF_KEY_DOWN ) {
-		abletonSet.stop();
-	}
-	else
-		abletonSet.play();	
-	//live.setTempo(75);
-	
-	
-	
+	if(key == 'h') {
+		toggleHud = !toggleHud;
+	} else {
+		if (key == OF_KEY_RETURN) {
+			abletonSet.printAll();
+			return;
+		}
+		if (key == OF_KEY_DOWN ) {
+			abletonSet.stop();
+		}
+		else
+			abletonSet.play();	
+		//live.setTempo(75);
+	}	
 }
 
 //--------------------------------------------------------------

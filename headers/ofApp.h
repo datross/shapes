@@ -64,6 +64,9 @@ private:
 	
 	/* -------------- members -------------- */
 	
+	/* HUD visibility, press 'h' to toggle it. */
+	bool toggleHud;
+	
 	/* stands for the leapmotion (or a mouse, keyboard etc..) */
 	idl::DeviceListener deviceListener;
 	
