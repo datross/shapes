@@ -1,3 +1,7 @@
 {
-	"grab" : "grab"
+	"grab" : "grab",
+	"xmove" : "", 
+	"ymove" : "",
+	"top" : "",
+	"pinch" : ""
 }

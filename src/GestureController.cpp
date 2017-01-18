@@ -7,12 +7,12 @@ GestureController::GestureController(DeviceListener & _deviceListener)
 	: deviceListener(_deviceListener), linkTable(FileManager::getInstance().loadJSONFile("gestureMapping", true)) {
 }
 
-shared_ptr<Action> GestureController::ComputeAction(Gesture gesture) {
+shared_ptr<Action> GestureController::ComputeAction(idl::Gesture gesture) {
 	string request;
-	json tmp = linkTable[gesture.getTypeString()];
-	if(!tmp)
+	auto tmp = linkTable.find(gesture.getTypeString());
+	if(tmp == linkTable.end())
 		return nullptr;
-	return ActionFactory::getInstance().create(tmp.get<string>());
+	return ActionFactory::getInstance().create(tmp->get<string>());
 }
 
 vector<shared_ptr<Action > > GestureController::ComputeActions() {
@@ -24,5 +24,6 @@ vector<shared_ptr<Action > > GestureController::ComputeActions() {
 			actions.push_back(ptr);
 		}
 	}
+	return actions;
 }
 
