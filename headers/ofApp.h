@@ -79,7 +79,7 @@ private:
 	ofxAbletonLive abletonSet;
 	
 	/* Actions to apply next update */
-	std::list<idl::Action*> actions;
+	std::list<std::shared_ptr<idl::Action> > actions;
 	
 	/* Gesture Controller */
 	std::shared_ptr<idl::GestureController> gestureController;

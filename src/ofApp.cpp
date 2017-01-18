@@ -72,12 +72,24 @@ void ofApp::update(){
 	cursor = ofPoint(mouseX, mouseY);
 	
 	
-	auto gestures = deviceListener.getGestures();
+// 	auto gestures = deviceListener.getGestures();
+// 	
+// 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
+// 		if(it->getType() == GestureTap)
+// 			it->print();
+// 	}
 	
-	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
-		if(it->getType() == GestureTap)
-			it->print();
+	cout << "-1" << endl;
+	auto act = gestureController->ComputeActions();
+	cout << "0" << endl;
+	for(auto a = act.begin(); a != act.end(); ++a) {
+// 		if(!(*a)) cout << "pb" << endl;
+// 		actions.push_front(*a);
 	}
+	
+	cout << "1" << endl;
+	executeActions();
+	cout << "2" << endl;
 	
 	world.update();
 	
