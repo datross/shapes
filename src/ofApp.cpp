@@ -68,7 +68,7 @@ void ofApp::update(){
 	cursor = ofPoint(mouseX, mouseY);
 	
 	
-	auto gestures = deviceListener.getGesture();
+	auto gestures = deviceListener.getGestures();
 	
 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
 		if(it->getType() == GestureTap)

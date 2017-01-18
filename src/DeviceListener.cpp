@@ -68,7 +68,7 @@ void DeviceListener::setup() {
 DeviceListener::~DeviceListener() {
 }
 
-vector<idl::Gesture> DeviceListener::getGesture()
+vector<idl::Gesture> DeviceListener::getGestures()
 {
 	vector<idl::Gesture> gestures;
 	vector<ofxLeapMotionSimpleHand> hands = leapDevice.getSimpleHands();
