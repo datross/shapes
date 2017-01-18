@@ -9,7 +9,7 @@ namespace idl {
 	class ModifierFactory {
 	public:
 		static ModifierFactory& getInstance();
-		shared_ptr<Modifier> create(json jModifier);
+		shared_ptr<Modifier> create(json& jModifier);
 		
 
 	private:

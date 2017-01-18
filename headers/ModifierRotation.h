@@ -3,6 +3,7 @@
 
 #include "DependenteModifier.h"
 #include "SeedConstant.h"
+#include <memory>
 
 namespace idl {
 	
@@ -12,7 +13,7 @@ private:
 	bool individual_origin;
 	ofPoint pivot;
 public:
-	Rotator(Selection&, 
+	Rotator(std::shared_ptr<Selection>, 
 			float angle, 
 			bool individual_origin, 
 			ofPoint pivot = ofPoint(0,0), 

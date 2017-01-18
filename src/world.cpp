@@ -8,6 +8,11 @@ World::World()
 
 }
 
+World & idl::World::getInstance(){
+	static World instance;
+	return instance;
+}
+
 void World::clear() {
 	shapes.clear();
 }

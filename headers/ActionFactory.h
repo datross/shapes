@@ -17,7 +17,6 @@ namespace idl {
 		ActionFactory();
 		~ActionFactory();
 		std::map<std::string, json> actions;
-
 	};
 }
 

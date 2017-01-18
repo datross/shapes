@@ -4,6 +4,7 @@
 
 #include "Utility.h"
 #include "SeedFactory.h"
+#include "ActionFactory.h"
 
 using namespace idl;
 using namespace std;
@@ -21,17 +22,27 @@ void ofApp::setup(){
 //	}
 //#endif
 
+	World& world = World::getInstance();
+
 	ofBackground(255,255,255);
 	ofSetFrameRate(60);
+	
+	FileManager::getInstance().setCurrentDream("childish");
 
 	DreamBuilder dreamBuilder;
-	dreamBuilder.setDream("childish");
 	dreamBuilder.buildWorld(world);
 	
-	s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
-	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
+	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
+	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
+
+	shared_ptr<Action> action = ActionFactory::getInstance().create("grab");
+	if(action)
+		actions.push_front(action);
 
 	deviceListener.setup();
+	
+	/* allocate gesture controller */
+	gestureController.reset(new GestureController(deviceListener));
 
 	/* open audio channels */
 	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
@@ -49,6 +60,8 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	abletonSet.update();
+
+	World& world = World::getInstance();
 	
 	soundListener.analyze();
 	float env_bis = soundListener.getData().enveloppe;
@@ -57,23 +70,34 @@ void ofApp::update(){
 	env = max(env, env_bis);
 	env *= 2;
 	env = 30;
-	
-	Selection selection;
-	selection.distance(world, 1, cursor, 200);
+
+	/*Selection selection;
+	selection.radial(1, cursor, 200);
 	Scalator m1(selection, ofVec2f(env, env), false, cursor, s1);
-	Rotator m2(selection, 10, false, cursor, s2);
+	Rotator m2(selection, 10, false, cursor, s2);*/
 	//m1.apply();
-	m2.apply();
+	//m2.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
 	
 	
-	auto gestures = deviceListener.getGesture();
+// 	auto gestures = deviceListener.getGestures();
+// 	
+// 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
+// 		if(it->getType() == GestureTap)
+// 			it->print();
+// 	}
 	
-	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
-		if(it->getType() == GestureTap)
-			it->print();
+	auto act = gestureController->ComputeActions();
+
+	for(auto a = act.begin(); a != act.end(); ++a) {
+// 		if(!(*a)) cout << "pb" << endl;
+		actions.push_front(*a);
 	}
+	
+	cout << actions.size() << endl;
+	
+	executeActions();
 	
 	world.update();
 	
@@ -100,6 +124,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	World& world = World::getInstance();
 	ofFill();
 	view.drawWorld(world);
 	
@@ -164,7 +189,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+	cout << " x:" << x << "y:" << y << endl;
 }
 
 //--------------------------------------------------------------

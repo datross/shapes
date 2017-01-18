@@ -22,7 +22,12 @@ Shape DreamBuilder::parseShape(json j) {
 ofPath DreamBuilder::pathFromSvg(std::string path) {
 	ofxSVG svg = FileManager::getInstance().loadSVGFile(path);
 	/* TODO for the moment path to load is the first one */
-	return svg.getPathAt(0);
+	ofPath pathSvg = svg.getPathAt(0);
+	for (int i = 1; i < svg.getNumPath(); i++){
+		pathSvg.newSubPath();
+		pathSvg.append(svg.getPathAt(i));
+	}
+	return pathSvg;
 }
 	
 void DreamBuilder::buildWorld(World& world) {
@@ -30,7 +35,7 @@ void DreamBuilder::buildWorld(World& world) {
 	world.clear();
 	
 	/* loading shapes file. */
-	json worldJson = FileManager::getInstance().loadJSONFile(currentDream + '/' + "world");
+	json worldJson = FileManager::getInstance().loadJSONFile("world", true);
 	
 	json & shapesJson = worldJson["shapes"];
 	for(auto it = shapesJson.begin(); it != shapesJson.end(); ++it) {

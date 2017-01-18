@@ -23,17 +23,19 @@ void FileManager::init(string path) {
 	getInstance(path);
 }
 
-json FileManager::loadJSONFile(string path, bool addPath) {
-	if (addPath)
-		path = sessionDirectory.getAbsolutePath() + "/" + path + ".json";
+json FileManager::loadJSONFile(string file, bool dreamDir) {
+	string path = sessionDirectory.getAbsolutePath();
+	if (dreamDir)
+		path += "/" + currentDream;
+	path += "/" + file + ".json";
 	cout << "Loading file : " << path << endl;
-	ifstream file(path);
+	ifstream fileStream(path);
 	json j;
-	if(!file) {
+	if(!fileStream) {
 		cerr << "Cannot open file : " << path << endl;
 		return j;
 	}
-	j << file;
+	j << fileStream;
 	return j;
 }
 
@@ -50,7 +52,12 @@ void FileManager::initActions(std::map<std::string, json>& actions){
 	auto files = dir.getFiles();
 	for (auto& f : files) {
 		auto fileName = split(f.getFileName(), '.')[0];
-		actions[fileName] = loadJSONFile(f.path(), false);
+		actions[fileName] = loadJSONFile("actions/" + fileName);
 	}
 }
+
+void FileManager::setCurrentDream(string _currentDream) {
+	currentDream = _currentDream;
+}
+
 

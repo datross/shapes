@@ -18,6 +18,7 @@
 #include "SeedConstant.h"
 #include "SeedTimeFunctor.h"
 #include "DreamBuilder.h"
+#include "GestureController.h"
 
 #include <list>
 #include <memory>
@@ -26,7 +27,6 @@ class ofApp : public ofBaseApp {
 public:
 	
 	/* ------------- openFrameWorks relative ------------- */
-	
 	void setup();
 	void update();
 	void draw();
@@ -56,7 +56,6 @@ public:
 	
 private:
 	// TODO check these
-	idl::World world;
 	idl::View view;
 	vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;
@@ -78,7 +77,10 @@ private:
 	ofxAbletonLive abletonSet;
 	
 	/* Actions to apply next update */
-	std::list<idl::Action*> actions;
+	std::list<std::shared_ptr<idl::Action> > actions;
+	
+	/* Gesture Controller */
+	std::shared_ptr<idl::GestureController> gestureController;
 	
 	/* -------------- methods -------------- */
 	
