@@ -35,7 +35,7 @@ void ofApp::setup(){
 	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
 
-	ActionFactory::getInstance().create("grab");
+	actions.push_front(ActionFactory::getInstance().create("grab"));
 
 	deviceListener.setup();
 	
@@ -92,6 +92,8 @@ void ofApp::update(){
 // 		if(!(*a)) cout << "pb" << endl;
 		actions.push_front(*a);
 	}
+	
+	cout << actions.size() << endl;
 	
 	executeActions();
 	
