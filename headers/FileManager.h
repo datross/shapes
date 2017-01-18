@@ -25,6 +25,11 @@ namespace idl {
 		 */
 		ofDirectory sessionDirectory;
 		
+		/**
+		 * @brief Name of the dream currently loaded.
+		 */
+		std::string currentDream;
+		
 		FileManager(std::string path);
 	public:
 		
@@ -49,9 +54,10 @@ namespace idl {
 		 * @brief Loads a file in the dream directory.
 		 * 
 		 * @param path File name.
+		 * @param dreamDir If true, the file is loading in the currentDream directory.
 		 * @return json
 		 */
-		json loadJSONFile(std::string path, bool extension = true);
+		json loadJSONFile(std::string path, bool dreamDir = false);
 		
 		/**
 		 * @brief Loads an SVG file in the dream directory
@@ -68,6 +74,13 @@ namespace idl {
 		* @param actions Map to fill
 		*/
 		void initActions(std::map<std::string, json>& actions);
+		
+		/**
+		 * @brief Simple setter.
+		 * 
+		 * @param currentDream Name of the dream
+		 */
+		void setCurrentDream(std::string currentDream);
 	};
 	
 }

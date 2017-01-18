@@ -4,6 +4,7 @@
 #include "FileManager.h"
 #include "shape.h"
 #include "world.h"
+#include "GestureController.h"
 
 namespace idl {
 
@@ -18,21 +19,15 @@ namespace idl {
 		 * @return ofPath
 		 */
 		ofPath pathFromSvg(std::string path);
-		
-		/**
-		 * @brief Corresponds to the dream subdirectory
-		 */
-		std::string currentDream;
 
 	public:
 		DreamBuilder();
 		
 		void buildWorld(World& world);
 		
-		/* TODO probablement temporaire */
-		void setDream(std::string dream) {
-			currentDream = dream;
-		}
+// 		/**
+// 		 * @brief 
+// 		void initGestureController(GestureController & gestureController);
 	};
 	
 }

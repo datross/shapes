@@ -30,7 +30,7 @@ void DreamBuilder::buildWorld(World& world) {
 	world.clear();
 	
 	/* loading shapes file. */
-	json worldJson = FileManager::getInstance().loadJSONFile(currentDream + '/' + "world");
+	json worldJson = FileManager::getInstance().loadJSONFile("world", true);
 	
 	json & shapesJson = worldJson["shapes"];
 	for(auto it = shapesJson.begin(); it != shapesJson.end(); ++it) {

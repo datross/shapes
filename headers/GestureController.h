@@ -19,11 +19,16 @@ namespace idl {
 		/**
 		 * @brief Stores links between gestures and actions.
 		 */
-		json linktable;
-	public:
-		GestureController(DeviceListener & deviceListener, json linkTable);
+		json linkTable;
 		
-		std::vector<std::shared_ptr<Action> > ComputeAction();
+		/**
+		 * @brief Computes the action according to the gesture, and returns a pointer toward it.
+		 */
+		std::shared_ptr<Action> ComputeAction(Gesture gesture);
+	public:
+		GestureController(DeviceListener & deviceListener);
+		
+		std::vector<std::shared_ptr<Action> > ComputeActions();
 	};
 }
 

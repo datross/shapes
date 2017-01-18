@@ -30,6 +30,8 @@ public:
 	bool isRight() const{return !isLeft;}
 	GestureType getType() { return type; }
 	
+	std::string getTypeString();
+	
 	/* debug */
 	void print() {
 		std::cout << "hand : " << isLeft ? "Left" : "Right";

@@ -18,6 +18,7 @@
 #include "SeedConstant.h"
 #include "SeedTimeFunctor.h"
 #include "DreamBuilder.h"
+#include "GestureController.h"
 
 #include <list>
 #include <memory>
@@ -79,6 +80,9 @@ private:
 	
 	/* Actions to apply next update */
 	std::list<idl::Action*> actions;
+	
+	/* Gesture Controller */
+	std::shared_ptr<idl::GestureController> gestureController;
 	
 	/* -------------- methods -------------- */
 	

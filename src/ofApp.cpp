@@ -23,15 +23,19 @@ void ofApp::setup(){
 
 	ofBackground(255,255,255);
 	ofSetFrameRate(60);
+	
+	FileManager::getInstance().setCurrentDream("childish");
 
 	DreamBuilder dreamBuilder;
-	dreamBuilder.setDream("childish");
 	dreamBuilder.buildWorld(world);
 	
 	s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 
 	deviceListener.setup();
+	
+	/* allocate gesture controller */
+	gestureController.reset(new GestureController(deviceListener));
 
 	/* open audio channels */
 	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
