@@ -6,10 +6,12 @@
 
 namespace idl {
 
-struct ModifierSelection : public Modifier {
-	Selection & selection;
-	ModifierSelection(Selection&);
-	void setSelection(Selection& s);
+class ModifierSelection : public Modifier {
+protected :
+	std::shared_ptr<Selection> selection;
+
+public:
+	ModifierSelection(std::shared_ptr<Selection>);
 	virtual void apply() = 0;
 };
 	

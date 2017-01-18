@@ -2,7 +2,9 @@
 #define FILE_MANAGER_H
 
 #include <string>
-#include <json.hpp>
+#include "json.hpp"
+#include "ofxSvg.h"
+#include "ofMain.h"
 
 using json = nlohmann::json;
 
@@ -21,17 +23,14 @@ namespace idl {
 		/**
 		 * @brief Path to the directory containing the dream files.
 		 */
-		std::string dirPath;
-		
-		FileManager(std::string path);
+		ofDirectory sessionDirectory;
 		
 		/**
-		 * @brief Returns the path of the file, according to dirPath and some conventions.
-		 * 
-		 * @param file Name of the file, or "module". It hasn't any extension.
-		 * @return Absolute path to the file.
+		 * @brief Name of the dream currently loaded.
 		 */
-		std::string getPath(std::string file);
+		std::string currentDream;
+		
+		FileManager(std::string path);
 	public:
 		
 		/**
@@ -52,12 +51,36 @@ namespace idl {
 		static FileManager & getInstance(std::string path = "");
 		
 		/**
-		 * @brief Load a file in the dream directory.
+		 * @brief Loads a file in the dream directory.
 		 * 
 		 * @param path File name.
+		 * @param dreamDir If true, the file is loading in the currentDream directory.
 		 * @return json
 		 */
-		json loadFile(std::string path);
+		json loadJSONFile(std::string path, bool dreamDir = false);
+		
+		/**
+		 * @brief Loads an SVG file in the dream directory
+		 * 
+		 * @param path File name.
+		 * @return ofxSVG
+		 */
+		ofxSVG loadSVGFile(std::string path);
+
+
+		/**
+		* @brief File a actions' map with namefile and his corresponding json action
+		* 
+		* @param actions Map to fill
+		*/
+		void initActions(std::map<std::string, json>& actions);
+		
+		/**
+		 * @brief Simple setter.
+		 * 
+		 * @param currentDream Name of the dream
+		 */
+		void setCurrentDream(std::string currentDream);
 	};
 	
 }

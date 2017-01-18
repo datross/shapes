@@ -10,7 +10,7 @@ namespace idl {
 
 class DependenteModifier : public ModifierSelection {
 public:
-        DependenteModifier(Selection & s, std::shared_ptr<Seed> _seed);
+        DependenteModifier(std::shared_ptr<Selection> s, std::shared_ptr<Seed> _seed);
         ~DependenteModifier();
         virtual void apply() = 0;
 

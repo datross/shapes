@@ -1,0 +1,18 @@
+{ "shapes" :
+	[ 
+	    {	
+	        "path" : "star.svg",
+		    "position" : "100 20",
+		    "scale" : "1 1",
+		    "rotation" : "3",
+		    "speed" : "0 0"
+    	},
+    	{
+	        "path" : "star.svg",
+		    "position" : "300 200",
+		    "speed" : "2 1",
+		    "scale" : "1 3",
+		    "rotation" : "0"
+		}
+	]
+}

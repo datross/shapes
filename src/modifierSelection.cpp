@@ -2,13 +2,12 @@
 
 using namespace idl;
 
-ModifierSelection::ModifierSelection(Selection& _selection)
-	: selection(_selection)
-{
+ModifierSelection::ModifierSelection(std::shared_ptr<Selection> _selection)
+	: selection(_selection){
 
 }
 
-void ModifierSelection::setSelection(Selection & s){
-	selection = s;
-}
+//void ModifierSelection::setSelection(Selection *s){
+//	selection = s;
+//}
 

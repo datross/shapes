@@ -9,7 +9,7 @@
 #include "world.h"
 #include "view.h"
 #include "selection.h"
-#include "modifier_rotation.h"
+#include "ModifierRotation.h"
 #include "ModifierScale.h"
 #include "Action.h"
 #include "DeviceListener.h"
@@ -19,7 +19,8 @@
 #include "SeedTimeFunctor.h"
 #include "SeedSoundEnvelope.h"
 #include "SeedSoundSpectrum.h"
-
+#include "DreamBuilder.h"
+#include "GestureController.h"
 #include <list>
 #include <memory>
 
@@ -27,7 +28,6 @@ class ofApp : public ofBaseApp {
 public:
 	
 	/* ------------- openFrameWorks relative ------------- */
-	
 	void setup();
 	void update();
 	void draw();
@@ -56,7 +56,6 @@ public:
 	
 private:
 	// TODO check these
-	idl::World world;
 	idl::View view;
 	vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;
@@ -64,6 +63,9 @@ private:
 	std::shared_ptr<idl::Seed> s1, s2;
 	
 	/* -------------- members -------------- */
+	
+	/* HUD visibility, press 'h' to toggle it. */
+	bool toggleHud;
 	
 	/* stands for the leapmotion (or a mouse, keyboard etc..) */
 	idl::DeviceListener deviceListener;
@@ -78,7 +80,10 @@ private:
 	ofxAbletonLive abletonSet;
 	
 	/* Actions to apply next update */
-	std::list<idl::Action*> actions;
+	std::list<std::shared_ptr<idl::Action> > actions;
+	
+	/* Gesture Controller */
+	std::shared_ptr<idl::GestureController> gestureController;
 	
 	/* -------------- methods -------------- */
 	

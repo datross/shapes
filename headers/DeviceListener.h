@@ -33,7 +33,7 @@ public:
 
 	void setup();
 	LeapDevice& getLeap(){ return leapDevice; }
-	std::vector<Gesture> getGesture();
+	std::vector<Gesture> getGestures();
 	bool connectLeap();
 };
 }

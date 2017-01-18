@@ -1,11 +1,16 @@
 #include "FileManager.h"
+#include "Utility.h"
 #include <fstream>
+#include <iostream>
 
 using namespace idl;
 using namespace std;
 
 FileManager::FileManager(string path)
-	: dirPath(path) {
+	: sessionDirectory(path) {
+	if(!sessionDirectory.exists()) {
+		cerr << "Error this directory doesn't exist : " << sessionDirectory.getAbsolutePath() << endl;
+	}
 }
 
 
@@ -18,13 +23,41 @@ void FileManager::init(string path) {
 	getInstance(path);
 }
 
-json FileManager::loadFile(string path) {
-	ifstream file(getPath(path));
+json FileManager::loadJSONFile(string file, bool dreamDir) {
+	string path = sessionDirectory.getAbsolutePath();
+	if (dreamDir)
+		path += "/" + currentDream;
+	path += "/" + file + ".json";
+	cout << "Loading file : " << path << endl;
+	ifstream fileStream(path);
 	json j;
-	j << file;
+	if(!fileStream) {
+		cerr << "Cannot open file : " << path << endl;
+		return j;
+	}
+	j << fileStream;
 	return j;
 }
 
-std::string FileManager::getPath(std::string file) {
-	return dirPath + "/" + 	file + ".json";
+ofxSVG FileManager::loadSVGFile(string path) {
+	ofxSVG svg;
+	path =  sessionDirectory.getAbsolutePath() + "/" + path + ".svg";
+	cout << "Loading file : " << path << endl;
+	svg.load(path);
+	return svg;
 }
+
+void FileManager::initActions(std::map<std::string, json>& actions){
+	ofDirectory dir(sessionDirectory.getAbsolutePath() + "/actions");
+	auto files = dir.getFiles();
+	for (auto& f : files) {
+		auto fileName = split(f.getFileName(), '.')[0];
+		actions[fileName] = loadJSONFile("actions/" + fileName);
+	}
+}
+
+void FileManager::setCurrentDream(string _currentDream) {
+	currentDream = _currentDream;
+}
+
+

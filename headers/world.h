@@ -13,9 +13,14 @@ class World {
 	std::list<Shape> shapes;
 	std::list<Shape>::iterator selector;
 	
-public:
 	World();
+public:
+	static World& getInstance();
+	
+	/* Makes the world empty */
+	void clear();
 		
+	/* TODO remove this */
 	void setup();
 		
 	/* Returns a reference to the current shape. */
@@ -26,6 +31,8 @@ public:
 	bool firstShape();
 	/* Select next shape. Returns false of end is reached. */
 	bool nextShape();
+	/* Add a shape to the world. */
+	void addShape(Shape& shape);
 	
 	/* updates the whole world logic */
 	void update();

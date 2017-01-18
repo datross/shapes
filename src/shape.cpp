@@ -16,13 +16,13 @@ Shape::Shape()
 {
 }
 
-Shape::Shape(ofVec2f & pos, ofPath & _path, ofVec2f & _speed, ofVec2f & _scale, float r)
+Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r)
 	: position(pos), speed(_speed), scale(_scale), rotation(r), path(_path){
 }
 
-Shape::Shape(ofVec2f & pos, ofPath & _path) : Shape(){
+Shape::Shape(ofPath& path, ofVec2f pos) : Shape(){
 	position = pos;
-	path = _path;
+	path = path;
 }
 
 

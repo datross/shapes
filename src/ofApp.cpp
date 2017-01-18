@@ -4,6 +4,9 @@
 
 #include "Utility.h"
 #include "SeedFactory.h"
+#include "ActionFactory.h"
+
+#include "Hud.h"
 
 using namespace idl;
 using namespace std;
@@ -21,37 +24,52 @@ void ofApp::setup(){
 
 	//loading ableton
 	abletonSet.setup();
-#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
-	while (!abletonSet.isLoaded()) {
-		abletonSet.update();
-	}
-#endif
+//#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
+//	while (!abletonSet.isLoaded()) {
+//		abletonSet.update();
+//	}
+//#endif
 
-	ofBackground(255,255,255);	
+	World& world = World::getInstance();
+
+	ofBackground(255,255,255);
 	ofSetFrameRate(60);
-
 	
-	s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
-	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
+	FileManager::getInstance().setCurrentDream("childish");
+
+	DreamBuilder dreamBuilder;
+	dreamBuilder.buildWorld(world);
+	
+	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
+	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
+
+	shared_ptr<Action> action = ActionFactory::getInstance().create("grab");
+	if(action)
+		actions.push_front(action);
 
 	deviceListener.setup();
-	world.setup();
 	
-	
+	/* allocate gesture controller */
+	gestureController.reset(new GestureController(deviceListener));
 
 	/* open audio channels */
-	ofSoundStreamSetup(2, 2, 44100, BUFFER_SIZE, 4);
+	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
 	
 	/* pre-allocate global buffer */
-	generalInputBuffer.allocate(BUFFER_SIZE, 2);
+	generalInputBuffer.allocate(IDL_BUFFER_SIZE, 2);
 	
 	/* soundListener points toward the global sound buffer */
 	soundListener.setInputBuffer(&generalInputBuffer);
+	
+	/* hud is hidden by default */
+	toggleHud = false;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 	abletonSet.update();
+
+	World& world = World::getInstance();
 	
 	soundListener.analyze();
 	float env_bis = soundListener.getData().enveloppe;
@@ -60,23 +78,34 @@ void ofApp::update(){
 	env = max(env, env_bis);
 	env *= 2;
 	env = 30;
-	
-	Selection selection;
-	selection.distance(world, 1, cursor, 500);
-	Scalator m1(selection, ofVec2f(-1, -1), true, cursor, s1);
-	Rotator m2(selection, 10, false, cursor, s2);
-	m1.apply();
+
+	/*Selection selection;
+	selection.radial(1, cursor, 200);
+	Scalator m1(selection, ofVec2f(env, env), false, cursor, s1);
+	Rotator m2(selection, 10, false, cursor, s2);*/
+	//m1.apply();
 	//m2.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
 	
 	
-	auto gestures = deviceListener.getGesture();
+// 	auto gestures = deviceListener.getGestures();
+// 	
+// 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
+// 		if(it->getType() == GestureTap)
+// 			it->print();
+// 	}
 	
-	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
-		if(it->getType() == GestureTap)
-			it->print();
+	auto act = gestureController->ComputeActions();
+
+	for(auto a = act.begin(); a != act.end(); ++a) {
+// 		if(!(*a)) cout << "pb" << endl;
+		actions.push_front(*a);
 	}
+	
+	Hud::getInstance().addEntry("Nb actions", actions.size());
+	
+	executeActions();
 	
 	world.update();
 	
@@ -102,6 +131,7 @@ void ofApp::update(){
 }
 //--------------------------------------------------------------
 void ofApp::draw(){
+	World& world = World::getInstance();
 	ofFill();
 	view.drawWorld(world);
 	
@@ -127,24 +157,26 @@ void ofApp::draw(){
 			ofPoint tip = simpleHands[i].fingers[ fingerTypes[f] ].tip;  // fingertip
 		}
 	}*/	
+
+	Hud::getInstance().draw(toggleHud);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-		
-	if (key == OF_KEY_RETURN) {
-		abletonSet.printAll();
-		return;
-	}
-	if (key == OF_KEY_DOWN ) {
-		abletonSet.stop();
-	}
-	else
-		abletonSet.play();	
-	//live.setTempo(75);
-	
-	
-	
+	if(key == 'h') {
+		toggleHud = !toggleHud;
+	} else {
+		if (key == OF_KEY_RETURN) {
+			abletonSet.printAll();
+			return;
+		}
+		if (key == OF_KEY_DOWN ) {
+			abletonSet.stop();
+		}
+		else
+			abletonSet.play();	
+		//live.setTempo(75);
+	}	
 }
 
 //--------------------------------------------------------------
@@ -164,7 +196,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+	cout << " x:" << x << "y:" << y << endl;
 }
 
 //--------------------------------------------------------------
