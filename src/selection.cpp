@@ -3,19 +3,17 @@
 using namespace idl;
 using namespace std;
 
-Selection::Selection()
-{
-
+Selection::Selection(): world(World::getInstance()) {
+	
 }
 
-void Selection::uniform(World& world, float weight)
-{
+void Selection::uniform(float weight){
 	for(world.firstShape(); !world.endShape(); world.nextShape()) {
-		weights.push_back(ShapeSelected(&world.currentShape(), weight));
+		shapes.push_back(ShapeSelected(&world.currentShape(), weight));
 	}
 }
 
-void Selection::distance(World & world, float weight, ofPoint point, float radius) {
+void Selection::radial(float weight, ofPoint point, float radius){
 	for(world.firstShape(); !world.endShape(); world.nextShape()) {
 		float dist = (point - world.currentShape().getPosition()).length();
 		float w;
@@ -24,6 +22,6 @@ void Selection::distance(World & world, float weight, ofPoint point, float radiu
 		} else {
 			w = (1 - dist / radius) * weight;
 		}
-		weights.push_back(ShapeSelected(&world.currentShape(), w));
+		shapes.push_back(ShapeSelected(&world.currentShape(), w));
 	}
 }

@@ -12,7 +12,6 @@ protected :
 
 public:
 	ModifierSelection(Selection&);
-	void setSelection(Selection& s);
 	virtual void apply() = 0;
 };
 	

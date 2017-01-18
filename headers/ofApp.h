@@ -26,7 +26,6 @@ class ofApp : public ofBaseApp {
 public:
 	
 	/* ------------- openFrameWorks relative ------------- */
-	
 	void setup();
 	void update();
 	void draw();
@@ -56,7 +55,6 @@ public:
 	
 private:
 	// TODO check these
-	idl::World world;
 	idl::View view;
 	vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;

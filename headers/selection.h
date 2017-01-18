@@ -12,15 +12,17 @@ namespace idl {
 	
 typedef std::pair<Shape*, float> ShapeSelected;
 
-struct Selection {
-	std::vector<ShapeSelected> weights;
-	
+
+class Selection {
+	std::vector<ShapeSelected> shapes;
+	World& world;
+public:
 	Selection();
 	
-	
+	std::vector<ShapeSelected>& getShapes() { return shapes; }
 	// TODO gérer proprement la construction
-	void uniform(World & world, float weight);
-	void distance(World & world, float weight, ofPoint point, float radius);
+	void uniform(float weight);
+	void radial(float weight, ofPoint point, float radius);
 };
 
 }

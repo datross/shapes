@@ -11,13 +11,13 @@ Rotator::Rotator(Selection& _selection, float _angle, bool _individual_origin, o
 void Rotator::apply() {
 	seed->update();
 	if(individual_origin) {
-		for(std::vector< ShapeSelected >::iterator it = selection.weights.begin();
-			it != selection.weights.end(); ++it) {
+		for(std::vector< ShapeSelected >::iterator it = selection.getShapes().begin();
+			it != selection.getShapes().end(); ++it) {
 			it->first->addRotation(it->second * angle * seed->step().x);
 		}
 	} else {
-		for(std::vector< ShapeSelected >::iterator it = selection.weights.begin();
-			it != selection.weights.end(); ++it) {
+		for(std::vector< ShapeSelected >::iterator it = selection.getShapes().begin();
+			it != selection.getShapes().end(); ++it) {
 			it->first->rotatePosition(it->second * angle * seed->step().x, ofVec3f(pivot.x, pivot.y, 1));
 		}
 	}
