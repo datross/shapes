@@ -13,8 +13,9 @@ class World {
 	std::list<Shape> shapes;
 	std::list<Shape>::iterator selector;
 	
-public:
 	World();
+public:
+	static World& getInstance();
 	
 	/* Makes the world empty */
 	void clear();

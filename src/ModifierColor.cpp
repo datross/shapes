@@ -9,8 +9,8 @@ using namespace idl;
 
 void Colorizer::apply()
 {
-	for(std::vector< ShapeSelected >::iterator it = selection.weights.begin();
-			it != selection.weights.end(); ++it) {
+	for(std::vector< ShapeSelected >::iterator it = selection.getShapes().begin();
+			it != selection.getShapes().end(); ++it) {
 			it->first->path.setColor((1 - it->second) * it->first->path.getColor() + it->second * color);
 	}
 }*/

@@ -10,7 +10,7 @@ namespace idl {
 	{
 	public:
 		static SelectionFactory& getInstance();
-		shared_ptr<Selection> create(json jSelection);
+		shared_ptr<Selection> create(json& jSelection);
 
 	private:
 		SelectionFactory();

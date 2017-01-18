@@ -4,6 +4,7 @@
 
 #include "Utility.h"
 #include "SeedFactory.h"
+#include "ActionFactory.h"
 
 using namespace idl;
 using namespace std;
@@ -21,6 +22,8 @@ void ofApp::setup(){
 //	}
 //#endif
 
+	World& world = World::getInstance();
+
 	ofBackground(255,255,255);
 	ofSetFrameRate(60);
 	
@@ -29,8 +32,10 @@ void ofApp::setup(){
 	DreamBuilder dreamBuilder;
 	dreamBuilder.buildWorld(world);
 	
-	s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
-	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
+	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
+	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
+
+	ActionFactory::getInstance().create("grab");
 
 	deviceListener.setup();
 	
@@ -53,6 +58,8 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	abletonSet.update();
+
+	World& world = World::getInstance();
 	
 	soundListener.analyze();
 	float env_bis = soundListener.getData().enveloppe;
@@ -61,12 +68,12 @@ void ofApp::update(){
 	env = max(env, env_bis);
 	env *= 2;
 	env = 30;
-	
+
 	Selection selection;
-	selection.distance(world, 1, cursor, 200);
+	selection.radial(1, cursor, 200);
 	Scalator m1(selection, ofVec2f(env, env), false, cursor, s1);
 	Rotator m2(selection, 10, false, cursor, s2);
-	m1.apply();
+	//m1.apply();
 	//m2.apply();
 	
 	cursor = ofPoint(mouseX, mouseY);
@@ -116,6 +123,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	World& world = World::getInstance();
 	ofFill();
 	view.drawWorld(world);
 	
