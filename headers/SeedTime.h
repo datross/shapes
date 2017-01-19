@@ -43,6 +43,15 @@ namespace idl {
 		 */
 		float getStartTime();
 		
+		
+		/**
+		 * @brief return age of the seed
+		 * 
+		 * @return float
+		 * 
+		 */
+		float getAge();
+		
 		/**
 		 * @brief Returns the seed settings.
 		 * 

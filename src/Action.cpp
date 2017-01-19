@@ -11,10 +11,12 @@ Action::Action(float _duration,  std::vector< std::shared_ptr<Modifier> > _modif
 Action::~Action(){
 }
 
-bool Action::execute(){
+bool Action::execute() {
+	/* the order is important. If animation duration is 0, then it would be 
+	 * applied once. */
+	apply();
 	if (ofGetElapsedTimef()- birthTime > duration)
 		return false; /* to delete the action */
-	apply();
 	return true;
 }
 
