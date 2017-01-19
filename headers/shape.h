@@ -7,9 +7,12 @@ namespace idl {
 
 	class Shape{
 		ofVec2f position;
+		ofVec2f positionOrigin;
 		ofVec2f speed;
 		ofVec2f scale;
+		ofVec2f scaleOrigin;
 		float rotation;
+		float rotationOrigin;
 	
 		ofPath path;
 	public:
@@ -25,6 +28,7 @@ namespace idl {
 		ofVec2f getPosition() { return position; }
 		
 		void update();
+		void resetTransform();
 		
 		void draw();
 	};

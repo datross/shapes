@@ -10,7 +10,7 @@
 namespace idl {
 
 	/**
-	 * @brief Computes action according to gesture sent by deviceListener.
+	 * @brief Computes action according to gestures sent by deviceListener.
 	 */
 	class GestureController {
 	private:

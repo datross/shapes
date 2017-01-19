@@ -14,12 +14,16 @@ using namespace std;
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofBackground(255,255,255);	
-	ofSetFrameRate(60);
+// 	ofSetFrameRate(60);
+	
+	ofSetWindowTitle("Interactive Delaunay");
+	
+	view.setOfApp(this);
 
 	
 	//s1 = SeedFactory::getInstance().createSeed("time sinusoide");
-	s1 = shared_ptr<Seed>(new SeedSoundSpectrum(soundListener, 0,0.1,0.1,1));
-	s2 = SeedFactory::getInstance().createSeed("time sinusoide");
+// 	s1 = shared_ptr<Seed>(new SeedSoundSpectrum(soundListener, 0,0.1,0.1,1));
+// 	s2 = SeedFactory::getInstance().createSeed("time sinusoide");
 
 
 	//loading ableton
@@ -60,56 +64,42 @@ void ofApp::setup(){
 	
 	/* soundListener points toward the global sound buffer */
 	soundListener.setInputBuffer(&generalInputBuffer);
-	
-	/* hud is hidden by default */
-	toggleHud = false;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	/* update Ableton connection */
 	abletonSet.update();
 
 	World& world = World::getInstance();
 	
+	/* analyze audio IN */
 	soundListener.analyze();
-	float env_bis = soundListener.getData().enveloppe;
-
-	env -= 0.015;
-	env = max(env, env_bis);
-	env *= 2;
-	env = 30;
-
-	/*Selection selection;
-	selection.radial(1, cursor, 200);
-	Scalator m1(selection, ofVec2f(env, env), false, cursor, s1);
-	Rotator m2(selection, 10, false, cursor, s2);*/
-	//m1.apply();
-	//m2.apply();
 	
+	/* TODO to remove */
 	cursor = ofPoint(mouseX, mouseY);
 	
-	
-// 	auto gestures = deviceListener.getGestures();
-// 	
-// 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
-// 		if(it->getType() == GestureTap)
-// 			it->print();
-// 	}
-	
+	/* adds actions created by leap gestures */
 	auto act = gestureController->ComputeActions();
-
 	for(auto a = act.begin(); a != act.end(); ++a) {
-// 		if(!(*a)) cout << "pb" << endl;
 		actions.push_front(*a);
 	}
 	
+	/* TODO debug : prints number of actions */
 	Hud::getInstance().addEntry("Nb actions", actions.size());
 	
+	/* reset world transform before executing actions */
+	world.resetTransform();
+	
+	/* execute the action list on the world */
 	executeActions();
 	
+	/* update every world's element */
 	world.update();
 	
-	// leapmotion
+	
+	
+	/* TODO this should be removed */
 	ofxLeapMotion &leap = deviceListener.getLeap();
 	simpleHands = leap.getSimpleHands();
 	if(leap.isFrameNew()) {
@@ -132,51 +122,35 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 	World& world = World::getInstance();
+	
+	/* clear the buffer */
 	ofFill();
+	
+	/* draw world elements */
 	view.drawWorld(world);
-	
-	// leapmotion
-	
-/*	fingerType fingerTypes[] = {THUMB, INDEX, MIDDLE, RING, PINKY};
-	
-	//cout << "hands number : " << simpleHands.size() << endl;
-	
-	for(int i = 0; i < simpleHands.size(); i++){
-		bool isLeft        = simpleHands[i].isLeft;
-		ofPoint handPos    = simpleHands[i].handPos;
-		ofPoint handNormal = simpleHands[i].handNormal;
-		
-		cout << "isLeft : " << isLeft << endl;
-		cout << "position : " << handPos<< endl;
-		cout << "normal : " << handNormal << endl;
-		
-		for (int f=0; f<5; f++) {
-			ofPoint mcp = simpleHands[i].fingers[ fingerTypes[f] ].mcp;  // metacarpal
-			ofPoint pip = simpleHands[i].fingers[ fingerTypes[f] ].pip;  // proximal
-			ofPoint dip = simpleHands[i].fingers[ fingerTypes[f] ].dip;  // distal
-			ofPoint tip = simpleHands[i].fingers[ fingerTypes[f] ].tip;  // fingertip
-		}
-	}*/	
 
-	Hud::getInstance().draw(toggleHud);
+	/* draw HUD */
+	view.drawHud();
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 	if(key == 'h') {
-		toggleHud = !toggleHud;
-	} else {
-		if (key == OF_KEY_RETURN) {
-			abletonSet.printAll();
-			return;
-		}
-		if (key == OF_KEY_DOWN ) {
-			abletonSet.stop();
-		}
-		else
-			abletonSet.play();	
-		//live.setTempo(75);
-	}	
+		view.toggleHud();
+	}
+	if(key == 'f') {
+		view.toggleFullScreen();
+	}
+	if (key == OF_KEY_RETURN) {
+		abletonSet.printAll();
+		return;
+	}
+	if (key == OF_KEY_DOWN ) {
+		abletonSet.stop();
+	}
+	else
+		abletonSet.play();	
+	//live.setTempo(75);
 }
 
 //--------------------------------------------------------------

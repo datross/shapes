@@ -36,6 +36,9 @@ public:
 	
 	/* updates the whole world logic */
 	void update();
+	
+	/* reset every fields that have an original value */
+	void resetTransform();
 };
 
 }

@@ -21,15 +21,15 @@ void Scalator::apply() {
 	
 	if(individual_origin) {
 		for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
-			tmp.x = seed->step().x * it->second * scale.x;
-			tmp.y = seed->step().y * it->second * scale.y;
+			tmp.x = seed->current().x * it->second * scale.x;
+			tmp.y = seed->current().y * it->second * scale.y;
 			it->first->addScale(tmp);
 		}
 	} else {
 		for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
 			move = getMoveScale(*(it->first));
-			tmp.x = seed->step().x * it->second * scale.x * move.x;
-			tmp.y = seed->step().y * it->second * scale.y * move.y;
+			tmp.x = seed->current().x * it->second * scale.x * move.x;
+			tmp.y = seed->current().y * it->second * scale.y * move.y;
 			it->first->addSpeed(tmp);
 		}
 	}

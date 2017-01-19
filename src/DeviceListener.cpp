@@ -42,13 +42,13 @@ bool LeapDevice::tapped(unsigned hand) {
 	return false;
 }
 
-float LeapDevice::xMove(unsigned hand) {
+float LeapDevice::xPos(unsigned hand) {
 	if(hand > hands.size())
 		return 0;
 	
 	return hands[hand].palmPosition().x;
 }
-float LeapDevice::yMove(unsigned hand) {
+float LeapDevice::yPos(unsigned hand) {
 	if(hand > hands.size())
 		return 0;
 	
@@ -74,12 +74,12 @@ vector<idl::Gesture> DeviceListener::getGestures()
 	vector<ofxLeapMotionSimpleHand> hands = leapDevice.getSimpleHands();
 	unsigned nbHands = 0;
 	for (auto it = hands.begin(); it != hands.end() && nbHands < 2; ++it, ++nbHands) {
-		if (leapDevice.grabStrength(nbHands) > 0.1) {
+		if (leapDevice.grabStrength(nbHands) > THRESHOLD_GRAB) {
 			idl::Gesture grabGesture = idl::Gesture(it->isLeft, GestureGrab, leapDevice.grabStrength(nbHands));
 			gestures.push_back(grabGesture);
 		}
 
-		if (leapDevice.pinchStrength(nbHands) > 0.1) {
+		if (leapDevice.pinchStrength(nbHands) > THRESHOLD_PINCH) {
 			idl::Gesture pinchGesture = idl::Gesture(it->isLeft, GesturePinch, leapDevice.pinchStrength(nbHands));
 			gestures.push_back(pinchGesture);
 		}
@@ -89,13 +89,13 @@ vector<idl::Gesture> DeviceListener::getGestures()
 			gestures.push_back(tapGesture);			
 		}
 		
-		if (abs(leapDevice.xMove(nbHands)) > 0.01) {
-			idl::Gesture xMoveGesture = idl::Gesture(it->isLeft, GestureXMove, leapDevice.xMove(nbHands));
+		if (abs(leapDevice.xPos(nbHands)) > 0.01) {
+			idl::Gesture xMoveGesture = idl::Gesture(it->isLeft, GestureXMove, leapDevice.xPos(nbHands));
 			gestures.push_back(xMoveGesture);			
 		}
 		
-		if (abs(leapDevice.yMove(nbHands)) > 0.01) {
-			idl::Gesture yMoveGesture = idl::Gesture(it->isLeft, GestureYMove, leapDevice.yMove(nbHands));
+		if (abs(leapDevice.yPos(nbHands)) > 0.01) {
+			idl::Gesture yMoveGesture = idl::Gesture(it->isLeft, GestureYMove, leapDevice.yPos(nbHands));
 			gestures.push_back(yMoveGesture);			
 		}
 	}
@@ -105,6 +105,6 @@ vector<idl::Gesture> DeviceListener::getGestures()
 bool DeviceListener::connectLeap()
 {
 	leapDevice.open();
-
+	// TODO
 	return true;
 }
