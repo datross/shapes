@@ -43,7 +43,7 @@ void DreamBuilder::buildWorld(World& world) {
 		world.addShape(shape);
 	}
 
-	/*Laod all Actions*/
+	/*Loading all Actions*/
 	ActionFactory::getInstance();
 }
 

@@ -100,24 +100,24 @@ void ofApp::update(){
 	
 	
 	/* TODO this should be removed */
-	ofxLeapMotion &leap = deviceListener.getLeap();
-	simpleHands = leap.getSimpleHands();
-	if(leap.isFrameNew()) {
-		
-		leap.setMappingX(-230, 230, 0, ofGetWidth());
-		leap.setMappingY(90, 490, ofGetHeight(), 0);
-		leap.setMappingZ(-150, 150, -200, 200);
-		
-		simpleHands.clear();
-		simpleHands = leap.getSimpleHands();
-		
-		if(!simpleHands.empty()) {
-			cursor.x = simpleHands[0].handPos.x;
-			cursor.y = simpleHands[0].handPos.y;
-		}
-		
-		leap.markFrameAsOld();
-	}
+	//ofxLeapMotion &leap = deviceListener.getLeap();
+	//simpleHands = leap.getSimpleHands();
+	//if(leap.isFrameNew()) {
+	//	
+	//	leap.setMappingX(-230, 230, 0, ofGetWidth());
+	//	leap.setMappingY(90, 490, ofGetHeight(), 0);
+	//	leap.setMappingZ(-150, 150, -200, 200);
+	//	
+	//	simpleHands.clear();
+	//	simpleHands = leap.getSimpleHands();
+	//	
+	//	if(!simpleHands.empty()) {
+	//		cursor.x = simpleHands[0].handPos.x;
+	//		cursor.y = simpleHands[0].handPos.y;
+	//	}
+	//	
+	//	leap.markFrameAsOld();
+	//}
 }
 //--------------------------------------------------------------
 void ofApp::draw(){
