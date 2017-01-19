@@ -21,7 +21,7 @@ namespace idl {
 	 * @return ofVec3f
 	 */
 	ofVec3f sinusoide(SeedTime& seed) {
-	float v = seed.getSetting(0) * sin(seed.getSetting(1) * ofGetElapsedTimef() + seed.getSetting(2));
+	float v = seed.getSetting(0) * sin(seed.getSetting(1) * seed.getAge() + seed.getSetting(2));
 	return ofVec3f(v);
 }
 
