@@ -16,6 +16,10 @@ float SeedTime::getStartTime() {
 	return startTime;
 }
 
+float SeedTime::getAge(){
+	return ofGetElapsedTimef() - startTime;
+}
+
 float& SeedTime::getSetting(unsigned i) {
 	return settings[i];
 }

@@ -47,7 +47,7 @@ void ofApp::setup(){
 	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
 
-	shared_ptr<Action> action = ActionFactory::getInstance().create("grab");
+	shared_ptr<Action> action = ActionFactory::getInstance().create("deepRotation");
 	if(action)
 		actions.push_front(action);
 
@@ -204,13 +204,24 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 void ofApp::executeActions() {
-	for(auto it = actions.begin(); it != actions.end(); ++it) {
+// 	for(auto it = actions.begin(); it != actions.end(); ++it) {
+// 		/* need to delete the action */
+// 		auto next_it = it;
+// 		++next_it;
+// 		if(!(*it)->execute()) {
+// 			actions.erase(it);
+// 			//it = next_it;
+// 		}
+// 	}
+	
+	auto it = actions.begin();
+	while(it != actions.end()) {
 		/* need to delete the action */
-		auto next_it = it;
-		++next_it;
 		if(!(*it)->execute()) {
-			actions.erase(it);
-			it = next_it;
+			actions.erase(it++);
+			//it = next_it;
+		}else{
+			++it;
 		}
 	}
 }

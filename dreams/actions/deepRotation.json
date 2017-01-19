@@ -1,0 +1,18 @@
+{
+	"duration" : -1,
+
+	"modifiers" :
+	[ 
+	    {	
+	        "type" : "selection dependante rotation",
+		    "selection" : {
+				"type" : "uniform", 
+				"weight" : 1
+			},
+		    "angle" : 5,
+		    "individual_origin" : true,
+		    "pivot" : "200 200", 
+		    "seed" : "time sinusoide 1 0.5 0"
+    	}
+	]
+}

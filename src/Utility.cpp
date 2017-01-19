@@ -1,4 +1,5 @@
 #include "Utility.h"
+#include <limits>
 
 using namespace std;
 
@@ -21,6 +22,8 @@ float energy(const std::vector<float> signal) {
 }
 
 float parseFloat(string s) {
+	if(s == "inf")
+		return numeric_limits<float>::infinity();
 	return convert<float, string>(s);
 }
 
