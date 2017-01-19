@@ -5,7 +5,7 @@ using namespace std;
 
 Hud::Hud() 
 	: timePrec(0) {
-	font.load("../resources/verdana.ttf", 9);
+	font.load(ofFilePath::getCurrentExeDir()+"../resources/verdana.ttf", 9);
 }
 
 Hud& Hud::getInstance() {
