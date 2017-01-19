@@ -21,6 +21,11 @@ Shape & World::currentShape() {
 	return *selector;
 }
 
+ofVideoPlayer& World::currentBackground() {
+	return background;
+}
+
+
 void World::setup(){
 	const int nb_x = 46,
 		nb_y = 32;
@@ -61,10 +66,14 @@ void World::update() {
 	for(firstShape(); !endShape(); nextShape()) {
 		currentShape().update();
 	}
+	background.update();
 }
 
 void World::addShape(Shape& shape) {
 	shapes.push_front(shape);
 }
 
+void World::addBackground(ofVideoPlayer& video) {
+	background = video;
+}
 

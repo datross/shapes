@@ -43,6 +43,13 @@ void DreamBuilder::buildWorld(World& world) {
 		world.addShape(shape);
 	}
 
+	json & backgroundJson = worldJson["background"];
+
+	ofVideoPlayer background;
+	background.load(FileManager::getInstance().loadMovBackground(backgroundJson["path"]));
+	background.play();
+	world.addBackground(background);
+
 	/*Laod all Actions*/
 	ActionFactory::getInstance();
 }

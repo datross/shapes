@@ -9,6 +9,7 @@ namespace idl {
 struct View {	
 	View();
 	void drawShape(Shape&);
+	void drawBackground(ofVideoPlayer&);
 	void drawWorld(World&);
 };
 	

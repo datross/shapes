@@ -67,6 +67,13 @@ namespace idl {
 		 */
 		ofxSVG loadSVGFile(std::string path);
 
+		/**
+		 * @brief Loads an background video (.mov) file in the dream directory
+		 *
+		* @param path File name.
+		* @return ofVideoPlayer
+		*/
+		string loadMovBackground(std::string path);
 
 		/**
 		* @brief File a actions' map with namefile and his corresponding json action

@@ -13,6 +13,9 @@ class World {
 	std::list<Shape> shapes;
 	std::list<Shape>::iterator selector;
 	
+	std::list<ofPath> masks;
+	ofVideoPlayer background;
+
 	World();
 public:
 	static World& getInstance();
@@ -25,6 +28,10 @@ public:
 		
 	/* Returns a reference to the current shape. */
 	Shape & currentShape();
+
+	/*Returns a reference to the background*/
+	ofVideoPlayer& currentBackground();
+
 	/* Returns true if selector is at the end. */
 	bool endShape();
 	/* Select the first shape. Returns false if there isn't one. */
@@ -34,8 +41,12 @@ public:
 	/* Add a shape to the world. */
 	void addShape(Shape& shape);
 	
+	/* Add a background video to the world */
+	void addBackground(ofVideoPlayer& video);
+
 	/* updates the whole world logic */
 	void update();
+
 };
 
 }
