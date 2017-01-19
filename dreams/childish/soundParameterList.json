@@ -1,0 +1,49 @@
+{
+  "left-freq": {
+    "track" : "BassDrumFxTrack",
+    "device" : "masterRack",
+    "parameter" : "FREQ"
+  },
+
+    "left-rev": {
+    "track" : "BassDrumFxTrack",
+    "device" : "masterRack",
+    "parameter" : "REV"
+  },
+
+    "left-dly": {
+    "track" : "BassDrumFxTrack",
+    "device" : "masterRack",
+    "parameter" : "DLY"
+  },
+
+    "left-repeat": {
+    "track" : "BassDrumFxTrack",
+    "device" : "masterRack",
+    "parameter" : "REPEAT"
+  },
+
+    "right-freq": {
+    "track" : "HighsFxTrack",
+    "device" : "masterRack",
+    "parameter" : "FREQ"
+  },
+
+    "right-rev": {
+    "track" : "HighsFxTrack",
+    "device" : "masterRack",
+    "parameter" : "REV"
+  },
+
+    "right-dly": {
+    "track" : "HighsFxTrack",
+    "device" : "masterRack",
+    "parameter" : "DLY"
+  },
+
+    "right-repeat": {
+    "track" : "HighsFxTrack",
+    "device" : "masterRack",
+    "parameter" : "REPEAT"
+  }
+}
