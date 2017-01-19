@@ -1,9 +1,9 @@
 #include "ActionFactory.h"
 #include "ModifierFactory.h"
-
+#include <limits>
 
 using namespace idl;
-
+using namespace std;
 
 ActionFactory::ActionFactory(){
 	FileManager fileManager = FileManager::getInstance();
@@ -31,6 +31,8 @@ shared_ptr<Action> ActionFactory::create(string type){
 		}
 		cout << "NB MODIFIER" << modifiers.size() << endl;
 		float duration = jAction["duration"].get<float>();
+		/* if duration < 0, then it infinite */
+		duration = duration < 0 ? numeric_limits<float>::infinity() : duration;
 		return shared_ptr<Action>(new Action(duration, modifiers));
 	}
 	catch (exception& e) {

@@ -47,7 +47,7 @@ void ofApp::setup(){
 	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
 
-	shared_ptr<Action> action = ActionFactory::getInstance().create("grab");
+	shared_ptr<Action> action = ActionFactory::getInstance().create("deepRotation");
 	if(action)
 		actions.push_front(action);
 
