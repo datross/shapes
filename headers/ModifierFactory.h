@@ -3,7 +3,7 @@
 
 #include <memory>
 #include "FileManager.h"
-#include "modifier.h"
+#include "Modifier.h"
 
 namespace idl {
 	class ModifierFactory {

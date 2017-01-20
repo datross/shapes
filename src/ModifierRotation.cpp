@@ -1,6 +1,9 @@
 #include "ModifierRotation.h"
 #include "shape.h"
 
+#include <iostream>
+
+using namespace std;
 
 using namespace idl;
 
