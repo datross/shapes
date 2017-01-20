@@ -6,8 +6,11 @@
 
 namespace idl {
 	class ModifierSoundSetter : public SoundModifier {
+		float value, origalValue;
+		string parametre;
+
 	public:
-		ModifierSoundSetter(shared_ptr<Seed>, OscWrapper &osc);
+		ModifierSoundSetter(shared_ptr<Seed>, OscWrapper &osc, float v, string p);
 		~ModifierSoundSetter();
 		virtual void apply();
 	};

@@ -12,9 +12,12 @@ class OscWrapper
 private:
 	ofxAbletonLive *oscInterface;
 	json soundParameterList;
+	std::map<string, float> originalValues;
+
 public:
 	OscWrapper();
 	~OscWrapper();
+	float getOriginValue(string p);
 	void sendValue(string parameter, float value);
 
 	void setOSCInterface(ofxAbletonLive * live);
