@@ -1,13 +1,13 @@
 #ifndef MODIFIER_ROTATION_H
 #define MODIFIER_ROTATION_H
 
-#include "DependenteModifier.h"
+#include "DependanteSelectionModifier.h"
 #include "SeedConstant.h"
 #include <memory>
 
 namespace idl {
 	
-class Rotator : public DependenteModifier {
+class Rotator : public DependanteSelectionModifier {
 private:
 	float angle;
 	bool individual_origin;

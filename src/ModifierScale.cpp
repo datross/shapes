@@ -7,7 +7,7 @@ using namespace std;
 using namespace idl;
 
 Scalator::Scalator(shared_ptr<Selection> _selection, ofVec2f _scale, bool _individual_origin, ofPoint _pivot, std::shared_ptr<Seed> _seed)
-	: DependenteModifier(_selection, _seed), scale(_scale), individual_origin(_individual_origin), pivot(_pivot) {
+	: DependanteSelectionModifier(_selection, _seed), scale(_scale), individual_origin(_individual_origin), pivot(_pivot) {
 }
 
 

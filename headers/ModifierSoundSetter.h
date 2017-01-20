@@ -4,11 +4,12 @@
 
 #include "SoundModifier.h"
 
-class ModifierSoundSetter : public SoundModifier
-{
-public:
-	ModifierSoundSetter();
-	~ModifierSoundSetter();
-};
-
+namespace idl {
+	class ModifierSoundSetter : public SoundModifier {
+	public:
+		ModifierSoundSetter(shared_ptr<Seed>, OscWrapper &osc);
+		~ModifierSoundSetter();
+		virtual void apply();
+	};
+}
 #endif MODIFIER_SOUND_SETTER_H

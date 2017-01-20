@@ -5,7 +5,7 @@
 using namespace idl;
 
 Rotator::Rotator(std::shared_ptr<Selection> _selection, float _angle, bool _individual_origin, ofPoint _pivot, std::shared_ptr<Seed> _seed)
-	: DependenteModifier(_selection, _seed), angle(_angle), individual_origin(_individual_origin), pivot(_pivot)
+	: DependanteSelectionModifier(_selection, _seed), angle(_angle), individual_origin(_individual_origin), pivot(_pivot)
 {
 }
 

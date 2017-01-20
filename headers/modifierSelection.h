@@ -6,7 +6,7 @@
 
 namespace idl {
 
-class ModifierSelection : public Modifier {
+class ModifierSelection : public virtual Modifier {
 protected :
 	std::shared_ptr<Selection> selection;
 

@@ -2,8 +2,8 @@
 
 using namespace idl;
 
-SoundModifier::SoundModifier()
-{
+SoundModifier::SoundModifier(shared_ptr<Seed> s, OscWrapper &_osc) : DependanteModifier(s), osc(_osc){
+
 }
 
 
