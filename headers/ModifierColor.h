@@ -1,5 +1,5 @@
-#ifndef MODIFIER_ROTATION_H
-#define MODIFIER_ROTATION_H
+#ifndef MODIFIER_COLOR_H
+#define MODIFIER_COLOR_H
 
 #include "ofMain.h"
 #include "modifierSelection.h"

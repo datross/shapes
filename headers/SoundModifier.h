@@ -3,13 +3,15 @@
 
 
 #include "modifier.h"
+#include "DependenteModifier.h"
 #include "ofxAbletonLive.h"
+#include "OscWrapper.h"
 
 namespace idl {
     
-class SoundModifier : public Modifier {
+class SoundModifier : public DependenteModifier {
 private:
-    ofxAbletonLive live;
+    OscWrapper &osc;
 public:
     SoundModifier();
     ~SoundModifier();
@@ -18,3 +20,7 @@ public:
 
 }
 #endif // SOUND_MODIFIER_H
+
+/* 
+
+*/
