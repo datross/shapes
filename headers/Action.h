@@ -4,7 +4,7 @@
 #include <vector>
 #include <memory>
 
-#include "modifier.h"
+#include "Modifier.h"
 
 namespace idl {
 	

@@ -1,12 +1,12 @@
 #ifndef MODIFIER_SCALE_H
 #define MODIFIER_SCALE_H
 
-#include "DependenteModifier.h"
+#include "DependanteSelectionModifier.h"
 #include "SeedConstant.h"
 
 namespace idl {
 
-class Scalator : public DependenteModifier {
+class Scalator : public DependanteSelectionModifier {
 private:
 	ofVec2f scale;
 	bool individual_origin;

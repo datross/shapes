@@ -2,11 +2,11 @@
 #define MODIFIER_SELECTION_H
 
 #include "selection.h"
-#include "modifier.h"
+#include "Modifier.h"
 
 namespace idl {
 
-class ModifierSelection : public Modifier {
+class ModifierSelection : public virtual Modifier {
 protected :
 	std::shared_ptr<Selection> selection;
 

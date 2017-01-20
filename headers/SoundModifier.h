@@ -1,17 +1,18 @@
 #ifndef SOUND_MODIFIER_H
 #define SOUND_MODIFIER_H
 
-
-#include "modifier.h"
+#include "DependanteModifier.h"
 #include "ofxAbletonLive.h"
+#include "OscWrapper.h"
+#include <memory>
 
 namespace idl {
     
-class SoundModifier : public Modifier {
+class SoundModifier : public DependanteModifier {
 private:
-    ofxAbletonLive live;
+    OscWrapper &osc;
 public:
-    SoundModifier();
+    SoundModifier(shared_ptr<Seed> , OscWrapper &osc);
     ~SoundModifier();
     virtual void apply() = 0;
 };
