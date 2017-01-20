@@ -7,6 +7,7 @@
 
 namespace idl {
 	class DependanteModifier : public virtual Modifier{
+	protected:
 		std::shared_ptr<Seed> seed;
 	public:
 		DependanteModifier(std::shared_ptr<Seed>);

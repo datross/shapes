@@ -14,9 +14,6 @@ public:
         DependanteSelectionModifier(std::shared_ptr<Selection> s, std::shared_ptr<Seed> _seed);
         ~DependanteSelectionModifier();
         virtual void apply() = 0;
-
-protected:
-        std::shared_ptr<Seed> seed;
 };
 
 }
