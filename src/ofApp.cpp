@@ -47,7 +47,7 @@ void ofApp::setup(){
 	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
 	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
 
-	shared_ptr<Action> action = ActionFactory::getInstance().create("grab");
+	shared_ptr<Action> action = ActionFactory::getInstance().create("deepRotation");
 	if(action)
 		actions.push_front(action);
 
@@ -100,24 +100,24 @@ void ofApp::update(){
 	
 	
 	/* TODO this should be removed */
-	ofxLeapMotion &leap = deviceListener.getLeap();
-	simpleHands = leap.getSimpleHands();
-	if(leap.isFrameNew()) {
-		
-		leap.setMappingX(-230, 230, 0, ofGetWidth());
-		leap.setMappingY(90, 490, ofGetHeight(), 0);
-		leap.setMappingZ(-150, 150, -200, 200);
-		
-		simpleHands.clear();
-		simpleHands = leap.getSimpleHands();
-		
-		if(!simpleHands.empty()) {
-			cursor.x = simpleHands[0].handPos.x;
-			cursor.y = simpleHands[0].handPos.y;
-		}
-		
-		leap.markFrameAsOld();
-	}
+	//ofxLeapMotion &leap = deviceListener.getLeap();
+	//simpleHands = leap.getSimpleHands();
+	//if(leap.isFrameNew()) {
+	//	
+	//	leap.setMappingX(-230, 230, 0, ofGetWidth());
+	//	leap.setMappingY(90, 490, ofGetHeight(), 0);
+	//	leap.setMappingZ(-150, 150, -200, 200);
+	//	
+	//	simpleHands.clear();
+	//	simpleHands = leap.getSimpleHands();
+	//	
+	//	if(!simpleHands.empty()) {
+	//		cursor.x = simpleHands[0].handPos.x;
+	//		cursor.y = simpleHands[0].handPos.y;
+	//	}
+	//	
+	//	leap.markFrameAsOld();
+	//}
 }
 //--------------------------------------------------------------
 void ofApp::draw(){
@@ -204,13 +204,24 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 void ofApp::executeActions() {
-	for(auto it = actions.begin(); it != actions.end(); ++it) {
+// 	for(auto it = actions.begin(); it != actions.end(); ++it) {
+// 		/* need to delete the action */
+// 		auto next_it = it;
+// 		++next_it;
+// 		if(!(*it)->execute()) {
+// 			actions.erase(it);
+// 			//it = next_it;
+// 		}
+// 	}
+	
+	auto it = actions.begin();
+	while(it != actions.end()) {
 		/* need to delete the action */
-		auto next_it = it;
-		++next_it;
 		if(!(*it)->execute()) {
-			actions.erase(it);
-			it = next_it;
+			actions.erase(it++);
+			//it = next_it;
+		}else{
+			++it;
 		}
 	}
 }

@@ -50,7 +50,9 @@ shared_ptr<Seed> SeedFactory::createSeed(string type) {
 		if(arguments.size() > 2) {
 			settings = parseSettings(vector<string>(arguments.begin()+2, arguments.end()));
 		}
-		return shared_ptr<Seed>(new SeedTimeFunctor(fct->second.first, settings));
+		auto seed =  shared_ptr<Seed>(new SeedTimeFunctor(fct->second.first, settings));
+		dynamic_pointer_cast<SeedTime>(seed)->start();
+		return seed;
 	}
 
 	return nullptr;
