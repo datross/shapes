@@ -88,9 +88,6 @@ void ofApp::update(){
 	/* TODO debug : prints number of actions */
 	Hud::getInstance().addEntry("Nb actions", actions.size());
 	
-	/* reset world transform before executing actions */
-	world.resetTransform();
-	
 	/* execute the action list on the world */
 	executeActions();
 	

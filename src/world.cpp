@@ -63,12 +63,6 @@ void World::update() {
 	}
 }
 
-void World::resetTransform() {
-	for(firstShape(); !endShape(); nextShape()) {
-		currentShape().resetTransform();
-	}
-}
-
 void World::addShape(Shape& shape) {
 	shapes.push_front(shape);
 }

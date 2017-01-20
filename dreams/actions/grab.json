@@ -12,7 +12,7 @@
 		    "angle" : 20,
 		    "individual_origin" : false,
 		    "pivot" : "500 500", 
-		    "seed" : "time sinusoide 1 1.5 0"
+		    "seed" : "time sinusoide 1 1.5 1.5"
     	}
 	]
 }

@@ -17,12 +17,14 @@ void Rotator::apply() {
 	if(individual_origin) {
 		for(std::vector< ShapeSelected >::iterator it = selection->getShapes().begin();
 			it != selection->getShapes().end(); ++it) {
-			it->first->addRotation(it->second * angle * seed->current().x);
+			it->first->addRotationForce(it->second * angle * seed->current().x);
 		}
 	} else {
 		for(std::vector< ShapeSelected >::iterator it = selection->getShapes().begin();
 			it != selection->getShapes().end(); ++it) {
-			it->first->rotatePosition(it->second * angle * seed->current().x, ofVec3f(pivot.x, pivot.y, 1));
+			ofVec2f dir = it->first->getPosition() - pivot;
+			dir.rotate(90);
+			it->first->addForce(it->second * angle * seed->current().x * dir);
 		}
 	}
 }
