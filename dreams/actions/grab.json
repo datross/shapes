@@ -28,7 +28,7 @@
 		{	
 	        "type" : "dependante sound",
 		    "value" : 45,
-			"controller" : "left-rev"
+			"controller" : "left-rev",
 		    "seed" : "time sinusoide 1 1.5 1.57"
     	}
 	]

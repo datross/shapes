@@ -73,9 +73,6 @@ private:
 	/* sound buffer storing the input sound */
 	ofSoundBuffer generalInputBuffer;
 	
-	/* interface with Ableton */
-	ofxAbletonLive abletonSet;
-	
 	/* Actions to apply next update */
 	std::list<std::shared_ptr<idl::Action> > actions;
 	
