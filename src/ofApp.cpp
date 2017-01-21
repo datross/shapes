@@ -28,11 +28,11 @@ void ofApp::setup(){
 
 	//loading ableton
 	abletonSet.setup();
-//#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
-//	while (!abletonSet.isLoaded()) {
-//		abletonSet.update();
-//	}
-//#endif
+#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
+	while (!abletonSet.isLoaded()) {
+		abletonSet.update();
+	}
+#endif
 
 	World& world = World::getInstance();
 
