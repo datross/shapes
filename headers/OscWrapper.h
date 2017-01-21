@@ -12,9 +12,10 @@ class OscWrapper
 private:
 	ofxAbletonLive *oscInterface;
 	json soundParameterList;
-public:
 	OscWrapper();
 	~OscWrapper();
+public:
+	static OscWrapper& getInstance();
 	void sendValue(string parameter, float value);
 
 	void setOSCInterface(ofxAbletonLive * live);

@@ -5,6 +5,7 @@
 #include "Utility.h"
 #include "ModifierScale.h"
 #include "ModifierRotation.h"
+#include "OscWrapper.h"
 #include <string>
 
 using namespace std;
@@ -19,20 +20,24 @@ ModifierFactory & idl::ModifierFactory::getInstance(){
 	return instance;
 }
 
+shared_ptr<Seed> getSeed(json& jModifier) {
+	if (jModifier.find("seed") != jModifier.end()) {
+		return SeedFactory::getInstance().
+			createSeed(jModifier["seed"].get<string>());
+	}
+	return shared_ptr<Seed>(new SeedConstant());
+}
+
+
 shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 	try {
 		string type = jModifier["type"];
 		auto args = split(type, ' ');
 		if (args[0] == "selection") {
 			shared_ptr<Selection> selection = SelectionFactory::getInstance().create(jModifier["selection"]);
-
 			if (args[1] == "dependante") {
 				/*Seed Recupération*/
-				shared_ptr<Seed> seed = shared_ptr<Seed>(new SeedConstant());
-				if (jModifier.find("seed") != jModifier.end()) {
-					seed = SeedFactory::getInstance().
-						createSeed(jModifier["seed"].get<string>());
-				}
+				shared_ptr<Seed> seed = getSeed(jModifier);
 				/*Rotation*/
 				if (args[2] == "rotation") {
 					cout << "Angle :" << jModifier["angle"] << endl;
@@ -54,6 +59,12 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 					}
 					return shared_ptr<Modifier>(new Scalator(selection, scale, indiv, pivot, seed));
 				}
+			}
+		}
+		if (args[0] == "dependante") {
+			shared_ptr<Seed> seed = getSeed(jModifier);
+			if (args[1] == "sound") {
+				
 			}
 		}
 	}catch (exception& e) {
