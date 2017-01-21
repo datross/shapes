@@ -1,5 +1,6 @@
 ofxAbletonLive
 ofxFft
 ofxLeapMotion2
+ofxMidi
 ofxOsc
 ofxSvg

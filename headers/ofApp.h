@@ -23,6 +23,7 @@
 #include "GestureController.h"
 #include <list>
 #include <memory>
+#include "ofxMidi.h"
 
 class ofApp : public ofBaseApp {
 public:
@@ -75,6 +76,8 @@ private:
 	
 	/* interface with Ableton */
 	ofxAbletonLive abletonSet;
+
+	ofxMidiOut signal;
 	
 	/* Actions to apply next update */
 	std::list<std::shared_ptr<idl::Action> > actions;
