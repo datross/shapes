@@ -14,8 +14,11 @@ private:
 	json soundParameterList;
 	OscWrapper();
 	~OscWrapper();
+	std::map<string, float> originalValues;
+
 public:
 	static OscWrapper& getInstance();
+	float getOriginValue(string p);
 	void sendValue(string parameter, float value);
 
 	void setOSCInterface(ofxAbletonLive * live);
