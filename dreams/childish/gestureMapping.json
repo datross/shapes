@@ -1,5 +1,6 @@
 {
-	"grab" : "grab",
+	"left-grab" : "grabLeft",
+	"right-grab" : "grabRight",
 	"xmove" : "", 
 	"ymove" : "",
 	"top" : "",

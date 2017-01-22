@@ -15,12 +15,21 @@ idl::Gesture::~Gesture() {
 }
 
 std::string Gesture::getTypeString() {
+
+	std::string gestType;
+
 	switch(type) {
-		case GestureGrab  : return "grab";
-		case GestureXMove : return "xmove";
-		case GestureYMove : return "ymove";
-		case GestureTap   : return "tap";
-		case GesturePinch : return "pinch";
-		default           : return ""; // TODO
+	case GestureGrab: gestType = "grab"; break;
+		case GestureXMove : gestType = "xmove"; break;
+		case GestureYMove : gestType = "ymove"; break;
+		case GestureTap   : gestType = "tap"; break;
+		case GesturePinch : gestType = "pinch"; break;
+		default           : return "";  break;
 	}
+	if (isLeft)
+		gestType = "left-" + gestType;
+	else
+		gestType = "right-" + gestType;
+
+	return gestType;
 }

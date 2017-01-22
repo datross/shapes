@@ -89,15 +89,11 @@ vector<idl::Gesture> DeviceListener::getGestures()
 			gestures.push_back(tapGesture);			
 		}
 		
-		if (abs(leapDevice.xPos(nbHands)) > 0.01) {
-			idl::Gesture xMoveGesture = idl::Gesture(it->isLeft, GestureXMove, leapDevice.xPos(nbHands));
-			gestures.push_back(xMoveGesture);			
-		}
+		idl::Gesture xMoveGesture = idl::Gesture(it->isLeft, GestureXMove, leapDevice.xPos(nbHands));
+		gestures.push_back(xMoveGesture);			
 		
-		if (abs(leapDevice.yPos(nbHands)) > 0.01) {
-			idl::Gesture yMoveGesture = idl::Gesture(it->isLeft, GestureYMove, leapDevice.yPos(nbHands));
-			gestures.push_back(yMoveGesture);			
-		}
+		idl::Gesture yMoveGesture = idl::Gesture(it->isLeft, GestureYMove, leapDevice.yPos(nbHands));
+		gestures.push_back(yMoveGesture);			
 	}
 	return gestures;
 }

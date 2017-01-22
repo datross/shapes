@@ -1,4 +1,5 @@
 #include "GestureController.h"
+#include <iostream>
 
 using namespace idl;
 using namespace std;
@@ -10,8 +11,10 @@ GestureController::GestureController(DeviceListener & _deviceListener)
 shared_ptr<Action> GestureController::ComputeAction(idl::Gesture gesture) {
 	string request;
 	auto tmp = linkTable.find(gesture.getTypeString());
-	if(tmp == linkTable.end())
+	if (tmp == linkTable.end()) {
+		//cerr << "No action linked to this gesture : " << gesture.getTypeString() << endl;
 		return nullptr;
+	}
 	return ActionFactory::getInstance().create(tmp->get<string>());
 }
 

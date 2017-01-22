@@ -13,12 +13,6 @@
 		    "individual_origin" : true,
 		    "pivot" : "200 200", 
 		    "seed" : "time sinusoide 1 0.5 0"
-    	}, 
-		{	
-	        "type" : "dependante sound",
-		    "value" : 50,
-			"controller" : "left-rev",
-		    "seed" : "time sinusoide 1 1.5 1.57"
     	}
 	]
 }
