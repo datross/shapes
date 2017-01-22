@@ -6,10 +6,10 @@
 namespace idl {
 	
 #define DAMPNESS_POSITION 0.9
-#define DAMPNESS_SCALE 1.
+#define DAMPNESS_SCALE 0.9
 #define DAMPNESS_ROTATION 1.
 #define GRAVITY_ORIGIN_POSITION 2.
-#define GRAVITY_ORIGIN_SCALE 1.
+#define GRAVITY_ORIGIN_SCALE 10.
 #define GRAVITY_ORIGIN_ROTATION 1.
 
 	class Shape{

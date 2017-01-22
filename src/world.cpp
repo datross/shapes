@@ -4,7 +4,7 @@ using namespace idl;
 using namespace std;
 
 World::World()
-: selector(shapes.begin()){
+: selector(shapes.begin()), timePrec(ofGetElapsedTimef()) {
 
 }
 
@@ -58,9 +58,11 @@ bool World::nextShape()
 }
 
 void World::update() {
+	float now = ofGetElapsedTimef();
 	for(firstShape(); !endShape(); nextShape()) {
-		currentShape().update();
+		currentShape().update(now - timePrec);
 	}
+	timePrec = now;
 }
 
 void World::addShape(Shape& shape) {

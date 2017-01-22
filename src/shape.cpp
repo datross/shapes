@@ -107,7 +107,7 @@ void Shape::update(float timeStep) {
 	addForce((positionOrigin - position) * GRAVITY_ORIGIN_POSITION);
 	
 	addScaleForce(-1 * scaleSpeed * DAMPNESS_SCALE);
-	addScaleForce((scaleOrigin - scale).normalize() * (scale, scaleOrigin).length() * GRAVITY_ORIGIN_SCALE);
+	addScaleForce((scaleOrigin - scale) * GRAVITY_ORIGIN_SCALE);
 	
 	addRotationForce(-1 * rotationSpeed * DAMPNESS_ROTATION);
 	addRotationForce(GRAVITY_ORIGIN_ROTATION * (rotationOrigin - rotation));

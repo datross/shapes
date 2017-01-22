@@ -14,12 +14,14 @@ void idl::OscWrapper::update(){
 }
 
 void OscWrapper::sendValue(string parameter, float value){
+#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
 	json parameterJSON = soundParameterList[parameter];
 	string device = parameterJSON["device"].get<string>();
 	string track = parameterJSON["track"].get<string>();
 	string param = parameterJSON["parameter"].get<string>();
 	ofxAbletonLiveTrack *t = abletonSet.getTrack(track);
 	t->getDevice(device)->getParameter(param)->setValue(value);
+#endif
 }
 
 OscWrapper::OscWrapper()
