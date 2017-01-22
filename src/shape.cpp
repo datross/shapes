@@ -1,4 +1,7 @@
 #include "shape.h"
+#include "Hud.h"
+
+#include <cmath>
 
 using namespace idl;
 //using namespace std;
@@ -18,6 +21,10 @@ Shape::Shape()
 
 Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r)
 	: positionOrigin(pos), speed(_speed), scaleOrigin(_scale), rotationOrigin(r), path(_path){
+	position = positionOrigin;
+	scale = scaleOrigin;
+	rotation = rotationOrigin;
+		
 	speed = ofVec2f(0);
 	scaleSpeed = ofVec2f(0);
 	rotationSpeed = 0;
@@ -73,29 +80,35 @@ void Shape::draw(){
 // 	rotation = rotationOrigin;
 // }
 
-float invSqr(ofVec2f a, ofVec2f b) {
-	float dist = (b - a).length();
-	return 1. / (dist * dist);
-}
-
-void Shape::update() {
+void Shape::update(float timeStep) {
 	/* update position, speed, scale, rotation etc.. */
-	speed += acceleration;
-	position += speed;
+	speed += acceleration * timeStep;
+	position += speed * timeStep;
 	
-	scaleSpeed += scaleAcceleration;
-	scale += scaleSpeed;
+	scaleSpeed += scaleAcceleration * timeStep;
+	scale += scaleSpeed * timeStep;
 	
-	rotationSpeed += rotationAcceleration;
-	rotation += rotationSpeed;
+	rotationSpeed += rotationAcceleration * timeStep;
+	rotation += rotationSpeed * timeStep;
+	
+	rotation = fmod(rotation, 360.);
+	
+	Hud::getInstance().addEntry("position", position);
+	Hud::getInstance().addEntry("scale", scale);
+	Hud::getInstance().addEntry("rotation", rotation);
 	
 	/* update forces */
-	acceleration = -1. * speed * DAMPNESS_POSITION;
-	acceleration += (positionOrigin - position).normalize() * invSqr(position, positionOrigin) * GRAVITY_ORIGIN_POSITION;
+	acceleration = ofVec2f(0);
+	scaleAcceleration = ofVec2f(0);
+	rotationAcceleration = 0;
 	
-	scaleAcceleration = -1 * scaleSpeed * DAMPNESS_SCALE;
-	scaleAcceleration += (scaleOrigin - scale).normalize() * invSqr(scale, scaleOrigin) * GRAVITY_ORIGIN_SCALE;
 	
-	rotationAcceleration = -1 * rotationSpeed * DAMPNESS_ROTATION;
-	rotationAcceleration += GRAVITY_ORIGIN_ROTATION / ((rotationOrigin - rotation) * (rotationOrigin - rotation));
+	addForce(-1. * speed * DAMPNESS_POSITION);
+	addForce((positionOrigin - position) * GRAVITY_ORIGIN_POSITION);
+	
+	addScaleForce(-1 * scaleSpeed * DAMPNESS_SCALE);
+	addScaleForce((scaleOrigin - scale).normalize() * (scale, scaleOrigin).length() * GRAVITY_ORIGIN_SCALE);
+	
+	addRotationForce(-1 * rotationSpeed * DAMPNESS_ROTATION);
+	addRotationForce(GRAVITY_ORIGIN_ROTATION * (rotationOrigin - rotation));
 }

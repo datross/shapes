@@ -5,12 +5,12 @@
 
 namespace idl {
 	
-#define DAMPNESS_POSITION 0.2
-#define DAMPNESS_SCALE 0.2
-#define DAMPNESS_ROTATION 0.2
-#define GRAVITY_ORIGIN_POSITION 0.1
-#define GRAVITY_ORIGIN_SCALE 0.1
-#define GRAVITY_ORIGIN_ROTATION 0.1
+#define DAMPNESS_POSITION 0.9
+#define DAMPNESS_SCALE 1.
+#define DAMPNESS_ROTATION 1.
+#define GRAVITY_ORIGIN_POSITION 2.
+#define GRAVITY_ORIGIN_SCALE 1.
+#define GRAVITY_ORIGIN_ROTATION 1.
 
 	class Shape{
 		/* physics parameters */
@@ -43,7 +43,7 @@ namespace idl {
 		
 		ofVec2f getPosition() { return position; }
 		
-		void update();
+		void update(float timeStep);
 		
 		//void resetTransform();
 		
