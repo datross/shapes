@@ -39,3 +39,4 @@ obj/*
 *.exp
 *.suo
 *.kdev4*
+.vs/Delaunay/v14/.suo

@@ -2,6 +2,13 @@
 
 using namespace idl;
 
+static const string JSON_FILE = "soundParameterList.json";
+
+OscWrapper & idl::OscWrapper::getInstance(){
+	static OscWrapper instance;
+	return instance;
+}
+
 void OscWrapper::sendValue(string parameter, float value)
 {
 	json parameterJSON = soundParameterList[parameter];
@@ -12,11 +19,10 @@ void OscWrapper::setOSCInterface(ofxAbletonLive * _live) {
 	oscInterface = _live;
 }
 
-OscWrapper::OscWrapper(): soundParameterList(FileManager::getInstance().loadJSONFile("soundParameterList.json", false)) {
+OscWrapper::OscWrapper()
+	: soundParameterList(FileManager::getInstance().loadJSONFile(JSON_FILE, false)) {
 }
 
-
-OscWrapper::~OscWrapper()
-{
+OscWrapper::~OscWrapper(){
 
 }
