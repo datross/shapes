@@ -1,24 +1,24 @@
 {
   "left-freq": {
-    "track" : "BassDrumFxTrack",
+    "track" : "BassDrumFxTracl",
     "device" : "masterRack",
     "parameter" : "FREQ"
   },
 
     "left-rev": {
-    "track" : "BassDrumFxTrack",
+    "track" : "BassDrumFxTracl",
     "device" : "masterRack",
     "parameter" : "REV"
   },
 
     "left-dly": {
-    "track" : "BassDrumFxTrack",
+    "track" : "BassDrumFxTracl",
     "device" : "masterRack",
     "parameter" : "DLY"
   },
 
     "left-repeat": {
-    "track" : "BassDrumFxTrack",
+    "track" : "BassDrumFxTracl",
     "device" : "masterRack",
     "parameter" : "REPEAT"
   },

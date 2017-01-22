@@ -2,27 +2,44 @@
 
 using namespace idl;
 
-static const string JSON_FILE = "soundParameterList.json";
+static const string JSON_FILE = "soundParameterList";
 
 OscWrapper & idl::OscWrapper::getInstance(){
 	static OscWrapper instance;
 	return instance;
 }
 
-void OscWrapper::sendValue(string parameter, float value)
-{
-	json parameterJSON = soundParameterList[parameter];
-	oscInterface->getTrack(parameterJSON["track"].get<string>())->getDevice(parameterJSON["device"].get<string>())->getParameter(parameterJSON["parameter"].get<string>())->setValue(value);
+void idl::OscWrapper::update(){
+	abletonSet.update();
 }
 
-void OscWrapper::setOSCInterface(ofxAbletonLive * _live) {
-	oscInterface = _live;
+void OscWrapper::sendValue(string parameter, float value){
+	json parameterJSON = soundParameterList[parameter];
+	string device = parameterJSON["device"].get<string>();
+	string track = parameterJSON["track"].get<string>();
+	string param = parameterJSON["parameter"].get<string>();
+	ofxAbletonLiveTrack *t = abletonSet.getTrack(track);
+	t->getDevice(device)->getParameter(param)->setValue(value);
 }
 
 OscWrapper::OscWrapper()
 	: soundParameterList(FileManager::getInstance().loadJSONFile(JSON_FILE, false)) {
+	//loading ableton
+	abletonSet.setup();
+#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
+	while (!abletonSet.isLoaded()) {
+		abletonSet.update();
+	}
+#endif
 }
 
 OscWrapper::~OscWrapper(){
 
+}
+
+float OscWrapper::getOriginValue(string p){
+	auto tmp = originalValues.find(p);
+	if (tmp == originalValues.end())
+		return 0.;
+	return tmp->second;
 }

@@ -5,6 +5,7 @@
 #include "Utility.h"
 #include "ModifierScale.h"
 #include "ModifierRotation.h"
+#include "ModifierSoundSetter.h"
 #include "OscWrapper.h"
 #include <string>
 
@@ -64,7 +65,10 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 		if (args[0] == "dependante") {
 			shared_ptr<Seed> seed = getSeed(jModifier);
 			if (args[1] == "sound") {
-				
+				float value = jModifier["value"].get<float>();
+				string param = jModifier["controller"].get<string>();
+				OscWrapper &osc = OscWrapper::getInstance();
+				return shared_ptr<Modifier>(new ModifierSoundSetter(seed, osc, value, param));
 			}
 		}
 	}catch (exception& e) {
@@ -74,4 +78,5 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 }
 
 ModifierFactory::~ModifierFactory(){
+
 }
