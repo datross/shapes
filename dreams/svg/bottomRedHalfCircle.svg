@@ -1,7 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 19.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" baseProfile="basic" id="Calque_1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="55.37px" height="35.81px"
-	 viewBox="0 0 55.37 35.81" xml:space="preserve">
-<path style="fill:#B74137;" d="M55.37,15.2c-4.2,15-19.76,23.75-34.76,19.56S-3.15,15,1.05,0"/>
-</svg>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Calque_1"
+   x="0px"
+   y="0px"
+   width="55.37px"
+   height="35.81px"
+   viewBox="0 0 55.37 35.81"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="bottomRedHalfCircle.svg"><metadata
+     id="metadata3354"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs3352" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview3350"
+     showgrid="false"
+     inkscape:zoom="6.4294746"
+     inkscape:cx="8.3210532"
+     inkscape:cy="17.905001"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Calque_1" /><path
+     style="fill:#b74137"
+     d="M 28.091243,35.943697 C 28.117175,51.520582 15.513745,64.162957 -0.0604266,64.198514 -15.634599,64.23407 -28.289312,51.623728 -28.315243,36.046843"
+     id="path3348"
+     inkscape:connector-curvature="0" /></svg>

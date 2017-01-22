@@ -1,7 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 19.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" baseProfile="basic" id="Calque_1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="55.23px" height="36.28px"
-	 viewBox="0 0 55.23 36.28" xml:space="preserve">
-<path style="fill:#1A1A1A;" d="M55.23,16.14c-4.46,14.92-20.17,23.41-35.09,18.95S-3.27,14.92,1.19,0"/>
-</svg>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Calque_1"
+   x="0px"
+   y="0px"
+   width="55.23px"
+   height="36.28px"
+   viewBox="0 0 55.23 36.28"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="bottomBlackHalfCircle.svg"><metadata
+     id="metadata3343"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs3341" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview3339"
+     showgrid="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-page="true"
+     inkscape:zoom="5.8572218"
+     inkscape:cx="-1.9691203"
+     inkscape:cy="27.897316"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Calque_1"><inkscape:grid
+       type="xygrid"
+       id="grid3345" /></sodipodi:namedview><path
+     style="fill:#1a1a1a"
+     d="M 28.189172,36.301035 C 28.148115,51.873328 15.494543,64.473777 -0.07775034,64.432719 -15.650043,64.391662 -28.250492,51.73809 -28.209435,36.165797"
+     id="path3337"
+     inkscape:connector-curvature="0" /></svg>

@@ -164,7 +164,7 @@ void ofApp::keyPressed(int key){
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
 
-	if (key == 'mm') {
+	if (key == 'm') {
 		signal.sendNoteOff(1, 72, 64);
 	}
 
