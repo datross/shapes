@@ -10,6 +10,7 @@ namespace idl {
 	protected:
 		std::shared_ptr<Seed> seed;
 	public:
+// 		DependanteModifier(SettingList list);
 		DependanteModifier(std::shared_ptr<Seed>);
 		~DependanteModifier();
 		virtual void apply() =0;
