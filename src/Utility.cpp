@@ -42,3 +42,7 @@ ofPoint parsePoint(string s){
 	ofVec2f tmp = parseVec2(s);
 	return ofPoint(tmp.x, tmp.y);
 }
+
+ofVec2f clampVec2(ofVec2f v, float inf, float sup) {
+	return ofVec2f(ofClamp(v.x, inf, sup), ofClamp(v.y, inf, sup));
+}

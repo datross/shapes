@@ -9,10 +9,8 @@
 namespace idl {
     
 class SoundModifier : public DependanteModifier {
-protected:
-    OscWrapper &osc;
 public:
-    SoundModifier(shared_ptr<Seed> , OscWrapper &osc);
+    SoundModifier(shared_ptr<Seed>);
     ~SoundModifier();
     virtual void apply() = 0;
 };

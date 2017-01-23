@@ -92,4 +92,14 @@ ofVec3f parseVec3(string s);
 */
 ofPoint parsePoint(string s);
 
+/**
+* @brief Clamps an ofVec2f between inf and sup
+*
+* @param v vec2 to clamp
+* @param inf Inf bound
+* @param sup Sup bound
+* @return ofVec3f
+*/
+ofVec2f clampVec2(ofVec2f v, float inf, float sup);
+
 #endif

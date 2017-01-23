@@ -11,7 +11,7 @@ namespace idl {
 	class SeedSoundEnvelope : public SeedSound {
 	private:
 	public:
-		SeedSoundEnvelope(SoundListener& soundListener);
+		SeedSoundEnvelope(SoundListener * soundListener);
 		
 		virtual ofVec3f getValue();
 	};

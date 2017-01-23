@@ -67,8 +67,7 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 			if (args[1] == "sound") {
 				float value = jModifier["value"].get<float>();
 				string param = jModifier["controller"].get<string>();
-				OscWrapper &osc = OscWrapper::getInstance();
-				return shared_ptr<Modifier>(new ModifierSoundSetter(seed, osc, value, param));
+				return shared_ptr<Modifier>(new ModifierSoundSetter(seed, value, param));
 			}
 		}
 	}catch (exception& e) {
