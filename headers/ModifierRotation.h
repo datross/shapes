@@ -18,6 +18,7 @@ public:
 			bool individual_origin, 
 			ofPoint pivot = ofPoint(0,0), 
 			std::shared_ptr<Seed> seed =  std::shared_ptr<Seed>(new SeedConstant()));
+	Rotator(SettingList list);
 	virtual void apply();
 };
 

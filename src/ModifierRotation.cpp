@@ -4,10 +4,16 @@
 #include <iostream>
 
 using namespace std;
-
 using namespace idl;
 
-Rotator::Rotator(std::shared_ptr<Selection> _selection, float _angle, bool _individual_origin, ofPoint _pivot, std::shared_ptr<Seed> _seed)
+Rotator::Rotator(SettingList list) 
+	: DependanteSelectionModifier(list.get< shared_ptr<Selection> >("selection"), list.get< shared_ptr<Seed> >("list")),
+	  angle(list.get<float>("angle")),
+	  individual_origin(list.get<bool>("individual_origin")),
+	  pivot(list.get<ofVec2f>("pivot")) {
+}
+
+Rotator::Rotator(std::shared_ptr<Selection> _selection, float _angle, bool _individual_origin, ofPoint _pivot, shared_ptr<Seed> _seed)
 	: DependanteSelectionModifier(_selection, _seed), angle(_angle), individual_origin(_individual_origin), pivot(_pivot)
 {
 }

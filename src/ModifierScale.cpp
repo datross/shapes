@@ -6,6 +6,13 @@ using namespace std;
 
 using namespace idl;
 
+Scalator::Scalator(SettingList list) 
+	: DependanteSelectionModifier(list.get< shared_ptr<Selection> >("selection"), list.get< shared_ptr<Seed> >("list")),
+	  scale(list.get<ofVec2f>("scale")),
+	  individual_origin(list.get<bool>("individual_origin")),
+	  pivot(list.get<ofVec2f>("pivot")) {
+}
+
 Scalator::Scalator(shared_ptr<Selection> _selection, ofVec2f _scale, bool _individual_origin, ofPoint _pivot, std::shared_ptr<Seed> _seed)
 	: DependanteSelectionModifier(_selection, _seed), scale(_scale), individual_origin(_individual_origin), pivot(_pivot) {
 }
