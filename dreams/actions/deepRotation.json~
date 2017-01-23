@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
 	"duration" : 0,
+=======
+	"duration" : 2,
+>>>>>>> 2b7d1ddc372d08e6d599277fadcbd46d7a3919e3
 
 	"modifiers" :
 	[ 
@@ -7,7 +11,7 @@
 	        "type" : "selection dependante expand",
 		    "selection" : {
 				"type" : "byColor", 
-				"color" : "183 65 50"
+				"color" : "26 26 26 255"
 			},
 		    "force" : 10000,
 		    "p1" : "400 0",

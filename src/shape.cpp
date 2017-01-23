@@ -21,6 +21,8 @@ Shape::Shape()
 
 Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r, std::string _id)
 	: positionOrigin(pos), speed(_speed), scaleOrigin(_scale), rotationOrigin(r), path(_path), id(_id){
+
+	positionOrigin += ofVec2f(960, 540);
 	position = positionOrigin;
 	scale = scaleOrigin;
 	rotation = rotationOrigin;
