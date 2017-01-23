@@ -32,6 +32,10 @@ Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float 
 	mass = 1.;
 	massRotation = 1.;
 	massScale = 1.;
+	
+	acceleration = ofVec2f(0);
+	scaleAcceleration = ofVec2f(0);
+	rotationAcceleration = 0;
 }
 
 Shape::Shape(ofPath& path, ofVec2f pos) : Shape(){
@@ -92,10 +96,6 @@ void Shape::update(float timeStep) {
 	rotation += rotationSpeed * timeStep;
 	
 	rotation = fmod(rotation, 360.);
-	
-	Hud::getInstance().addEntry("position", position);
-	Hud::getInstance().addEntry("scale", scale);
-	Hud::getInstance().addEntry("rotation", rotation);
 	
 	/* update forces */
 	acceleration = ofVec2f(0);

@@ -6,6 +6,7 @@
 #include "ModifierScale.h"
 #include "ModifierRotation.h"
 #include "ModifierSoundSetter.h"
+#include "ModifierExpand.h"
 #include "OscWrapper.h"
 #include <string>
 
@@ -59,6 +60,13 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 						pivot = parsePoint(jModifier["pivot"].get<string>());
 					}
 					return shared_ptr<Modifier>(new Scalator(selection, scale, indiv, pivot, seed));
+				}
+				/* Expand */
+				if(args[2] == "expand") {
+					ofVec2f a = parseVec2(jModifier["p1"]);					
+					ofVec2f b = parseVec2(jModifier["p2"]);
+					float value = jModifier["force"];
+					return shared_ptr<Modifier>(new ModifierExpand(selection, seed, a, b, value));
 				}
 			}
 		}

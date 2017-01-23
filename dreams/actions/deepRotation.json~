@@ -4,15 +4,14 @@
 	"modifiers" :
 	[ 
 	    {	
-	        "type" : "selection dependante rotation",
+	        "type" : "selection dependante expand",
 		    "selection" : {
 				"type" : "uniform", 
 				"weight" : 1
 			},
-		    "angle" : 5,
-		    "individual_origin" : false,
-		    "pivot" : "200 200", 
-		    "seed" : "time sinusoide 1 0.5 0"
+		    "force" : 10000,
+		    "p1" : "0 0",
+		    "p2" : "50 50"
     	}
 	]
 }
