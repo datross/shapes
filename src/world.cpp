@@ -65,7 +65,7 @@ void World::update() {
 	timePrec = now;
 }
 
-void World::addShape(Shape& shape) {
+void World::addShape(Shape & shape) {
 	shapes.push_front(shape);
 }
 
