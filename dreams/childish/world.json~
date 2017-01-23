@@ -87,7 +87,7 @@
 		{
 	        "path" : "twoThirdArc",
 		   "position" : "104 486",
-			"scale" : "5 5",
+			"scale" : "2 2",
 			"rotation" : "30",
 		    "speed" : "2 1"
 		},
