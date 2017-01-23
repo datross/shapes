@@ -48,13 +48,13 @@ ofxSVG FileManager::loadSVGFile(string path) {
 }
 
 
-string FileManager::loadMovBackground(string path){
-	//ofVideoPlayer background;
+ofVideoPlayer FileManager::loadMovBackground(string path){
+	ofVideoPlayer background;
 	path =  sessionDirectory.getAbsolutePath() + "/background/" + path + ".mov";
-//	cout << "BACKGROUND Loading file : " << path << endl;
-//	background.load(path);
-	return path;
+	background.load(path);
+	return background;
 }
+
 
 void FileManager::initActions(std::map<std::string, json>& actions){
 	ofDirectory dir(sessionDirectory.getAbsolutePath() + "/actions");

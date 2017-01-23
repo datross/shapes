@@ -73,6 +73,10 @@ void World::addShape(Shape& shape) {
 	shapes.push_front(shape);
 }
 
+void World::addMask(Shape& shape) {
+	masks.push_back(shape);
+}
+
 void World::addBackground(ofVideoPlayer& video) {
 	background = video;
 }

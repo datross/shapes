@@ -73,7 +73,7 @@ namespace idl {
 		* @param path File name.
 		* @return ofVideoPlayer
 		*/
-		string loadMovBackground(std::string path);
+		ofVideoPlayer loadMovBackground(std::string path);
 
 		/**
 		* @brief File a actions' map with namefile and his corresponding json action

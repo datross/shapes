@@ -4,3 +4,4 @@ ofxLeapMotion2
 ofxOsc
 ofxSvg
 ofxPostGlitch
+ofxMask

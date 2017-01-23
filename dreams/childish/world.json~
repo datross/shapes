@@ -1,154 +1,434 @@
 {
   "shapes": [
     {
-      "path": "bottomBlackHalfCircle",
-      "position": "133 125",
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "bottomBlackHalfCircle",
-      "position": "301 178",
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "-760 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "-760 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "bottomBlackHalfCircle",
-      "position": "468 233",
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "-760 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },   
+     {
+      "path": "ArcTop_circle1",
+      "id" : "",      
+      "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "bottomBlackHalfCircle",
-      "position": "637 288",
+      "path": "ArcTop_circle2",
+      "id" : "",
+      "position": "-611 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle3",
+      "id" : "",
+      "position": "-611 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcTop_circle4",
+      "id" : "",
+      "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "bottomRedHalfCircle",
-      "position": "217 151",
+      "path": "ArcTop_circle5",
+      "id" : "",
+      "position": "-611 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+        {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "-462 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "bottomRedHalfCircle",
-      "position": "385 205",
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "-462 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "-462 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "-462 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "bottomRedHalfCircle",
-      "position": "552 261",
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "-462 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },  
+    {
+      "path": "ArcTop_circle1",
+      "id" : "",      
+      "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "bottomRedHalfCircle",
-      "position": "720 313",
+      "path": "ArcTop_circle2",
+      "id" : "",
+      "position": "-313 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle3",
+      "id" : "",
+      "position": "-313 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcTop_circle4",
+      "id" : "",
+      "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "topBlackHalfCircle",
-      "position": "218 131",
+      "path": "ArcTop_circle5",
+      "id" : "",
+      "position": "-313 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },  
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "-164 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "topBlackHalfCircle",
-      "position": "386 186",
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "-164 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "-164 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "-164 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "-164 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "topBlackHalfCircle",
-      "position": "552 241",
+      "path": "ArcTop_circle1",
+      "id" : "",      
+      "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "topBlackHalfCircle",
-      "position": "720 293",
+      "path": "ArcTop_circle2",
+      "id" : "",
+      "position": "-15 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle3",
+      "id" : "",
+      "position": "-15 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcTop_circle4",
+      "id" : "",
+      "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "twoThirdArc",
-      "position": "104 486",
-      "scale": "2 2",
-      "rotation": "30",
+      "path": "ArcTop_circle5",
+      "id" : "",
+      "position": "-15 0",
+      "scale": "1 1",
+      "rotation": "0",
       "speed": "2 1"
-    },
-    {
-      "path": "lines",
-      "position": "1020 190",
-      "scale": "1 1",
-      "rotation": "20",
-      "speed": "0 0"
-    },
-    {
-      "path": "lines",
-      "position": "660 560",
-      "scale": "1 1",
-      "rotation": "-20",
-      "speed": "2 1"
-    },
-    {
-      "path": "lines",
-      "position": "900 54",
-      "scale": "1 1",
-      "rotation": "10",
-      "speed": "0 1"
-    },
-    {
-      "path": "lines",
-      "position": "1110 110",
-      "scale": "1 1",
-      "rotation": "5",
-      "speed": "0 1"
-    },
-    {
-      "path": "lines",
-      "position": "205 360",
+    },  
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "134 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "whiteSnake",
-      "position": "113 110",
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "134 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "134 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "134 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "134 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle1",
+      "id" : "",      
+      "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
     {
-      "path": "blueSnake",
-      "position": "115 114",
-      "scale": "1 1",
-      "rotation": "0.2",
-      "speed": "2 1"
-    },
-    {
-      "path": "blackSnake",
-      "position": "100 100",
+      "path": "ArcTop_circle2",
+      "id" : "",
+      "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }
+    }, 
+    {
+      "path": "ArcTop_circle3",
+      "id" : "",
+      "position": "283 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcTop_circle4",
+      "id" : "",
+      "position": "283 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "",
+      "position": "283 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },  
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "432 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "432 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "432 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "432 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "432 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+  	{
+      "path": "BlackLine",
+      "id" : "",
+       "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "BlackArc",
+      "id" : "",
+       "position": "432 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "RedArc",
+      "id" : "",
+       "position": "-760 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle1",
+      "id" : "",
+       "position": "294 -508",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle2",
+      "id" : "",
+       "position": "672 -372",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle3",
+      "id" : "",
+       "position": "470 -198",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle4",
+      "id" : "",
+       "position": "-768 122",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle5",
+      "id" : "",
+       "position": "138 294",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    } 
   ],
   "background": {
-    "path": "background/childish.mov"
+    "path": "childish"
+  }, 
+    "masks": {
+    "path": "robotic"
   }
 }

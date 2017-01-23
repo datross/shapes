@@ -13,7 +13,7 @@ class World {
 	std::list<Shape> shapes;
 	std::list<Shape>::iterator selector;
 	
-	std::list<ofPath> masks;
+	std::list<Shape> masks;
 	ofVideoPlayer background;
 
 	World();
@@ -38,11 +38,15 @@ public:
 	bool firstShape();
 	/* Select next shape. Returns false of end is reached. */
 	bool nextShape();
+
 	/* Add a shape to the world. */
 	void addShape(Shape& shape);
 	
 	/* Add a background video to the world */
 	void addBackground(ofVideoPlayer& video);
+
+	/* Add a mask to the world */
+	void addMask(Shape& shape);
 
 	/* updates the whole world logic */
 	void update();

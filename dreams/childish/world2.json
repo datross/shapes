@@ -1,0 +1,434 @@
+{
+  "shapes": [
+    {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "324 -47.8",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "321 -41.9",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "300 -43.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "280 -44.3",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "260 -45.5",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },   
+     {
+      "path": "ArcTop_circle1",
+      "id" : "",      
+      "position": "477 -38.3",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle2",
+      "id" : "",
+      "position": "457 -15.4",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle3",
+      "id" : "",
+      "position": "436 -46.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcTop_circle4",
+      "id" : "",
+      "position": "416 -50",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "",
+      "position": "477 -32.4",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+        {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "629 -30.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "627 -21.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "605 -25.3",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "585 -26.5",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "565 -27.7",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },  
+    {
+      "path": "ArcTop_circle1",
+      "id" : "",      
+      "position": "782 -20.4",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle2",
+      "id" : "",
+      "position": "761 -24.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle3",
+      "id" : "",
+      "position": "740 -28.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcTop_circle4",
+      "id" : "",
+      "position": "720 -31.7",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "",
+      "position": "783 -14.2",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },  
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "934 -10.9",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "930 -5",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "910 -6.7",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "890 -8.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "868 -9.3",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle1",
+      "id" : "",      
+      "position": "1086 -1.8",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle2",
+      "id" : "",
+      "position": "1066 -5.5",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle3",
+      "id" : "",
+      "position": "1045 -9.3",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcTop_circle4",
+      "id" : "",
+      "position": "1025 -13.3",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "",
+      "position": "1085 4.07",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },  
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "1238 7.4",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "1235 13.5",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "1214 12",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "1193 11.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "1172 10",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle1",
+      "id" : "",      
+      "position": "1390 17.2",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle2",
+      "id" : "",
+      "position": "1370 13.5",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcTop_circle3",
+      "id" : "",
+      "position": "1350 9.3",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcTop_circle4",
+      "id" : "",
+      "position": "1329 5.2",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "",
+      "position": "1391 22.4",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },  
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "",      
+      "position": "1530 23.2",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "",
+      "position": "1530 29.2",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "",
+      "position": "1524 28",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "",
+      "position": "1500 26.8",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "",
+      "position": "1480 25.6",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+  	{
+      "path": "BlackLine",
+      "id" : "",
+       "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "BlackArc",
+      "id" : "",
+       "position": "1480 11.6",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "RedArc",
+      "id" : "",
+       "position": "265 -59.3",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle1",
+      "id" : "",
+       "position": "1254 -94.1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle2",
+      "id" : "",
+       "position": "1632 -68.9",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle3",
+      "id" : "",
+       "position": "1430 -36.7",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle4",
+      "id" : "",
+       "position": "192 22.6",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "LineCircle5",
+      "id" : "",
+       "position": "1098 54.4",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    } 
+  ],
+  "background": {
+    "path": "childish"
+  }, 
+    "masks": {
+    "path": "robotic"
+  }
+}

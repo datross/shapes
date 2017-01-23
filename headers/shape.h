@@ -20,6 +20,7 @@ namespace idl {
 		void addRotation(float);
 		void addScale(ofVec2f s);
 		void addSpeed(ofVec2f v);
+		void addPosition(ofVec2f v);
 		void rotatePosition(float r, ofVec3f pivot);
 		
 		ofVec2f getPosition() { return position; }

@@ -18,6 +18,7 @@ Shape::Shape()
 
 Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r)
 	: position(pos), speed(_speed), scale(_scale), rotation(r), path(_path){
+	addPosition(ofVec2f(960, 540));
 }
 
 Shape::Shape(ofPath& path, ofVec2f pos) : Shape(){
@@ -51,6 +52,11 @@ void Shape::draw(){
 
 void Shape::addSpeed(ofVec2f v){
 	speed += v;
+}
+
+void Shape::addPosition(ofVec2f v){
+	position.x += v.x;
+	position.y += v.y;
 }
 
 void Shape::update() {

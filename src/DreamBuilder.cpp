@@ -15,13 +15,11 @@ Shape DreamBuilder::parseShape(json j) {
 				parseVec2(j["speed"]),
 				parseVec2(j["scale"]),
 				parseFloat(j["rotation"]));
-	
 	return shape;
 }
 
 ofPath DreamBuilder::pathFromSvg(std::string path) {
 	ofxSVG svg = FileManager::getInstance().loadSVGFile(path);
-	/* TODO for the moment path to load is the first one */
 	ofPath pathSvg = svg.getPathAt(0);
 	for (int i = 1; i < svg.getNumPath(); i++){
 		pathSvg.newSubPath();
@@ -29,6 +27,7 @@ ofPath DreamBuilder::pathFromSvg(std::string path) {
 	}
 	return pathSvg;
 }
+
 	
 void DreamBuilder::buildWorld(World& world) {
 	/* first removes existing elements */
@@ -43,14 +42,23 @@ void DreamBuilder::buildWorld(World& world) {
 		world.addShape(shape);
 	}
 
+	/*loading background video*/
 	json & backgroundJson = worldJson["background"];
-
-	ofVideoPlayer background;
-	background.load(FileManager::getInstance().loadMovBackground(backgroundJson["path"]));
+	ofVideoPlayer background = FileManager::getInstance().loadMovBackground(backgroundJson["path"]);
 	background.play();
 	world.addBackground(background);
 
-	/*Laod all Actions*/
+	/*loading dream masks*/
+	json & masksJson = worldJson["masks"];
+	ofxSVG svg = FileManager::getInstance().loadSVGFile("svg/masks/" + masksJson["path"].get<std::string>());
+	for (int i = 0; i < svg.getNumPath(); i++){
+			ofPath path;
+			path = svg.getPathAt(i);
+			Shape shape(path, ofVec2f(0,0));
+			world.addMask(shape);
+	}
+
+	/*Load all Actions*/
 	ActionFactory::getInstance();
 }
 

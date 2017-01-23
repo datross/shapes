@@ -5,6 +5,7 @@
 #include "Utility.h"
 #include "SeedFactory.h"
 #include "ActionFactory.h"
+#include "PostFxGlitch.h"
 
 #include "Hud.h"
 
@@ -57,6 +58,31 @@ void ofApp::setup(){
 	
 	/* hud is hidden by default */
 	toggleHud = false;
+
+	/*multiply mode*/
+	//ofEnableBlendMode(ofBlendMode::OF_BLENDMODE_ADD);
+
+
+	/*view setup*/
+
+	view = shared_ptr<View>(new View());
+
+	//PostFxGlitch *fx = new PostFxGlitch(OFXPOSTGLITCH_INVERT);
+
+	//view->setFx(shared_ptr<PostFxGlitch>(fx));
+
+	//view->setPostFx(OFXPOSTGLITCH_GLOW, myFbo);
+
+//	postFx.setFx(OFXPOSTGLITCH_INVERT, true);
+//
+//
+//
+//	PostFxGlitch *fx = new PostFxGlitch(OFXPOSTGLITCH_INVERT);
+//	view->setFx(shared_ptr<PostFxGlitch>(fx));
+
+	//fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight());
+	//postFx.setup(&fbo);
+
 }
 
 //--------------------------------------------------------------
@@ -122,14 +148,23 @@ void ofApp::update(){
 		
 		leap.markFrameAsOld();
 	}
+
+
+	//fbo.begin();
+	//view->updateFbo(world);
+	//fbo.end();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 	World& world = World::getInstance();
-	ofFill();
-	view.drawWorld(world);
-	
+	//ofFill();
+	//postFx.generateFx();
+	//fbo.draw(0,0);
+	//view->drawFbo();
+	view->drawWorld(world);
+
+
 	
 	
 	// leapmotion

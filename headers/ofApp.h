@@ -56,12 +56,14 @@ public:
 	
 private:
 	// TODO check these
-	idl::View view;
+	shared_ptr<idl::View> view;
 	vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;
 	float env;
 	std::shared_ptr<idl::Seed> s1, s2;
-	
+	ofFbo fbo;
+	ofxPostGlitch postFx;
+
 	/* -------------- members -------------- */
 	
 	/* HUD visibility, press 'h' to toggle it. */
