@@ -3,24 +3,19 @@
 
 	"modifiers" :
 	[
-	    {	
-	        "type" : "selection dependante expand",
+	    {
+	        "type" : "selection dependante move",
 		    "selection" : {
 				"type" : "uniform",
 				"weight" : 1
 			},
-		    "angle" : 5,
-		    "individual_origin" : true,
-		    "pivot" : "200 200",
-		    "force" : 10000,
-		    "p1" : "400 0",
-		    "p2" : "400 50",
+		    "movement" : "50 0",
 		    "seed" : "time sinusoide 1 0.5 0.5"
-    	}, 
-		{	
+    	},
+		{
 	        "type" : "selection dependante color",
 			"selection" : {
-				"type" : "uniform", 
+				"type" : "uniform",
 				"weight" : 1
 			},
 		    "color" : "255 0 0",

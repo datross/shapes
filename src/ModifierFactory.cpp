@@ -10,6 +10,7 @@
 #include "OscWrapper.h"
 #include "MidiModifier.h"
 #include "ModifierColor.h"
+#include "ModifierMove.h"
 #include <string>
 
 using namespace std;
@@ -74,6 +75,11 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 				if (args[2] == "color") {
 					ofColor color = parseColor(jModifier["color"]);
 					return shared_ptr<Modifier>(new Colorizer(selection, color, seed));
+				}
+
+				if (args[2] == "move") {
+					ofVec2f movement = parseVec2(jModifier["movement"]);
+					return shared_ptr<Modifier>(new Movator(selection, movement, seed));
 				}
 			}
 		}
