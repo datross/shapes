@@ -8,6 +8,7 @@
 #include "ModifierSoundSetter.h"
 #include "ModifierExpand.h"
 #include "OscWrapper.h"
+#include "ModifierColor.h"
 #include <string>
 
 using namespace std;
@@ -67,6 +68,11 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 					ofVec2f b = parseVec2(jModifier["p2"]);
 					float value = jModifier["force"];
 					return shared_ptr<Modifier>(new ModifierExpand(selection, seed, a, b, value));
+				}
+				/*Color*/
+				if (args[2] == "color") {
+					ofColor color = parseColor(jModifier["color"]);
+					return shared_ptr<Modifier>(new Colorizer(selection, color, seed));
 				}
 			}
 		}

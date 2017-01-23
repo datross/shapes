@@ -27,6 +27,7 @@ namespace idl {
 	
 		/* shape to draw */
 		ofPath path;
+		ofColor originColor;
 	public:
 		Shape();
 		Shape(ofPath & path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r);
@@ -41,6 +42,10 @@ namespace idl {
 		void addScale(ofVec2f s);
 		void addRotation(float r);
 		
+		ofColor getColor();
+		ofColor getOriginColor();
+		void setColor(ofColor c);
+
 		ofVec2f getPosition() { return position; }
 		
 		void update(float timeStep);
