@@ -6,6 +6,7 @@
 #include "ModifierScale.h"
 #include "ModifierRotation.h"
 #include "OscWrapper.h"
+#include "MidiModifier.h"
 #include <string>
 
 using namespace std;
@@ -66,6 +67,10 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 			if (args[1] == "sound") {
 				
 			}
+		}
+
+		if (args[0] == "midi") {
+			return shared_ptr<Modifier>(new MidiModifier());
 		}
 	}catch (exception& e) {
 		cerr << e.what() << endl;

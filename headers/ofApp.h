@@ -77,7 +77,6 @@ private:
 	/* interface with Ableton */
 	ofxAbletonLive abletonSet;
 
-	ofxMidiOut signal;
 	
 	/* Actions to apply next update */
 	std::list<std::shared_ptr<idl::Action> > actions;

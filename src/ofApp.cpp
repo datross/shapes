@@ -7,7 +7,6 @@
 #include "ActionFactory.h"
 
 #include "Hud.h"
-#include "ofxMidi.h"
 
 using namespace idl;
 using namespace std;
@@ -21,7 +20,6 @@ void ofApp::setup(){
 	
 	view.setOfApp(this);
 
-	signal.openPort(1); // by name
 	
 	//s1 = SeedFactory::getInstance().createSeed("time sinusoide");
 // 	s1 = shared_ptr<Seed>(new SeedSoundSpectrum(soundListener, 0,0.1,0.1,1));
@@ -151,8 +149,6 @@ void ofApp::keyPressed(int key){
 		abletonSet.stop();
 	}
 	if (key == 'm') {
-		signal.listPorts();
-		signal.sendNoteOn(1, 72, 64);
 	}
 	else
 		abletonSet.play();	
@@ -164,8 +160,7 @@ void ofApp::keyPressed(int key){
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
 
-	if (key == 'mm') {
-		signal.sendNoteOff(1, 72, 64);
+	if (key == 'm') {
 	}
 
 }

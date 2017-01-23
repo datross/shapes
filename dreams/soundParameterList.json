@@ -45,5 +45,41 @@
     "track" : "HighsFxTrack",
     "device" : "masterRack",
     "parameter" : "REPEAT"
-  }
+  },
+
+  "drum-freq" : {
+    "track" : "childishDrum",
+    "device" : "drumRack",
+    "parameter" : "freq"
+  },
+
+  "melody-vol" : {
+    "track" : "childishFloatingMelody",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
+
+  "perc-vol" : {
+    "track" : "childishPerc",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
+
+  "baby-calm-vol" : {
+    "track" : "childishBabyCalm",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
+
+  "baby-angry-vol" : {
+    "track" : "childishBabyAngry",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
+
+  "ep-vol" : {
+    "track" : "childishEP",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
 }
