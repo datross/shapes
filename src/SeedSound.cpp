@@ -2,6 +2,6 @@
 
 using namespace idl;
 
-SeedSound::SeedSound(SoundListener& _soundListener) 
+SeedSound::SeedSound(SoundListener * _soundListener) 
 	: soundListener(_soundListener) {
 }

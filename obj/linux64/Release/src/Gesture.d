@@ -1,5 +1,5 @@
 obj/linux64/Release/src/Gesture.o: \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/src/Gesture.cpp \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/headers/Gesture.h
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/src/Gesture.cpp \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/Gesture.h
 
-/home/julie/Desktop/OF/apps/myApps/shapes_try/headers/Gesture.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/Gesture.h:

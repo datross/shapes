@@ -1,167 +1,167 @@
 obj/linux64/Release/src/SoundModifier.o: \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/src/SoundModifier.cpp \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/headers/SoundModifier.h \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/headers/DependanteModifier.h \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/headers/Modifier.h \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/headers/Seed.h \
- /home/julie/Desktop/OF/libs/openFrameworks/ofMain.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofConstants.h \
- /home/julie/Desktop/OF/libs/tess2/include/tesselator.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofFileUtils.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofLog.h \
- /home/julie/Desktop/OF/libs/openFrameworks/types/ofTypes.h \
- /home/julie/Desktop/OF/libs/openFrameworks/types/ofColor.h \
- /home/julie/Desktop/OF/libs/openFrameworks/math/ofMath.h \
- /home/julie/Desktop/OF/libs/openFrameworks/types/ofPoint.h \
- /home/julie/Desktop/OF/libs/openFrameworks/math/ofVec3f.h \
- /home/julie/Desktop/OF/libs/openFrameworks/math/ofVec2f.h \
- /home/julie/Desktop/OF/libs/openFrameworks/math/ofVec4f.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofSystemUtils.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofURLFileLoader.h \
- /home/julie/Desktop/OF/libs/openFrameworks/events/ofEvents.h \
- /home/julie/Desktop/OF/libs/openFrameworks/events/ofEventUtils.h \
- /home/julie/Desktop/OF/libs/openFrameworks/events/ofEvent.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofTimer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofFpsCounter.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofUtils.h \
- /home/julie/Desktop/OF/libs/utf8cpp/include/utf8.h \
- /home/julie/Desktop/OF/libs/utf8cpp/include/utf8/checked.h \
- /home/julie/Desktop/OF/libs/utf8cpp/include/utf8/core.h \
- /home/julie/Desktop/OF/libs/utf8cpp/include/utf8/unchecked.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofThread.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/AtomicCounter.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Foundation.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Config.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Platform.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Platform_POSIX.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Alignment.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Bugcheck.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Types.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Mutex.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Exception.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/ScopedLock.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Mutex_POSIX.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Thread.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Event.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Event_POSIX.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Thread_POSIX.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Runnable.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SignalHandler.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/RefCountedObject.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/AutoPtr.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SharedPtr.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofThreadChannel.h \
- /home/julie/Desktop/OF/libs/openFrameworks/types/ofBaseTypes.h \
- /home/julie/Desktop/OF/libs/openFrameworks/types/ofRectangle.h \
- /home/julie/Desktop/OF/libs/openFrameworks/math/ofMatrix4x4.h \
- /home/julie/Desktop/OF/libs/openFrameworks/math/ofQuaternion.h \
- /home/julie/Desktop/OF/libs/openFrameworks/3d/ofMesh.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofGLUtils.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofPixels.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofXml.h \
- /home/julie/Desktop/OF/libs/openFrameworks/types/ofParameter.h \
- /home/julie/Desktop/OF/libs/openFrameworks/types/ofParameterGroup.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Document.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/XML.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/AbstractContainerNode.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/AbstractNode.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Node.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/EventTarget.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DOMObject.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/XMLString.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SAX/NamespaceSupport.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/MutationEvent.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Event.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DocumentEvent.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Element.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/Name.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/NamePool.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/AutoReleasePool.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DocumentFragment.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DOMParser.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SAX/SAXParser.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SAX/XMLReader.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/ParserEngine.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/expat.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/expat_external.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/XMLStream.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SAX/Locator.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/TextEncoding.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DOMException.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/XMLException.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SAX/SAXException.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/XML/XMLWriter.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SAX/ContentHandler.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SAX/LexicalHandler.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SAX/DTDHandler.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/StreamConverter.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/UnbufferedStreamBuf.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/StreamUtil.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DOMWriter.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Attr.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Text.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/CharacterData.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/NodeIterator.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/NodeFilter.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/NamedNodeMap.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/ChildNodesList.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DOM/NodeList.h \
- /home/julie/Desktop/OF/libs/openFrameworks/math/ofVectorMath.h \
- /home/julie/Desktop/OF/libs/openFrameworks/math/ofMatrix3x3.h \
- /home/julie/Desktop/OF/libs/openFrameworks/communication/ofSerial.h \
- /home/julie/Desktop/OF/libs/openFrameworks/communication/ofArduino.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofFbo.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofTexture.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofVboMesh.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofVbo.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofGLUtils.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofBufferObject.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofGLRenderer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofPolyline.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/of3dGraphics.h \
- /home/julie/Desktop/OF/libs/openFrameworks/3d/of3dPrimitives.h \
- /home/julie/Desktop/OF/libs/openFrameworks/3d/ofNode.h \
- /home/julie/Desktop/OF/libs/openFrameworks/3d/of3dUtils.h \
- /home/julie/Desktop/OF/libs/openFrameworks/app/ofAppRunner.h \
- /home/julie/Desktop/OF/libs/openFrameworks/app/ofWindowSettings.h \
- /home/julie/Desktop/OF/libs/openFrameworks/app/ofMainLoop.h \
- /home/julie/Desktop/OF/libs/openFrameworks/app/ofAppBaseWindow.h \
- /home/julie/Desktop/OF/libs/openFrameworks/app/ofBaseApp.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofBitmapFont.h \
- /home/julie/Desktop/OF/libs/openFrameworks/utils/ofMatrixStack.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofGraphics.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofPath.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofTessellator.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofLight.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofMaterial.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofShader.h \
- /home/julie/Desktop/OF/libs/openFrameworks/gl/ofGLProgrammableRenderer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofCairoRenderer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/src/SoundModifier.cpp \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/SoundModifier.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/DependanteModifier.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/Modifier.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/Seed.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/ofMain.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofConstants.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/tess2/include/tesselator.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofFileUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofLog.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofTypes.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofColor.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofMath.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofPoint.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofVec3f.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofVec2f.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofVec4f.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofSystemUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofURLFileLoader.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/events/ofEvents.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/events/ofEventUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/events/ofEvent.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofTimer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofFpsCounter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/utf8cpp/include/utf8.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/utf8cpp/include/utf8/checked.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/utf8cpp/include/utf8/core.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/utf8cpp/include/utf8/unchecked.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofThread.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AtomicCounter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Foundation.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Config.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Platform.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Platform_POSIX.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Alignment.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Bugcheck.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Types.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Mutex.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Exception.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ScopedLock.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Mutex_POSIX.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Thread.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Event.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Event_POSIX.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Thread_POSIX.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Runnable.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SignalHandler.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/RefCountedObject.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AutoPtr.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SharedPtr.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofThreadChannel.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofBaseTypes.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofRectangle.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofMatrix4x4.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofQuaternion.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/ofMesh.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofGLUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofPixels.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofXml.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofParameter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofVectorMath.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofMatrix3x3.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofParameterGroup.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Document.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XML.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/AbstractContainerNode.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/AbstractNode.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Node.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/EventTarget.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DOMObject.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XMLString.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/NamespaceSupport.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/MutationEvent.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Event.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DocumentEvent.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Element.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/Name.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/NamePool.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AutoReleasePool.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DocumentFragment.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DOMParser.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/SAXParser.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/XMLReader.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/ParserEngine.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/expat.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/expat_external.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XMLStream.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/Locator.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/TextEncoding.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DOMException.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XMLException.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/SAXException.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XMLWriter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/ContentHandler.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/LexicalHandler.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/DTDHandler.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/StreamConverter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/UnbufferedStreamBuf.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/StreamUtil.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DOMWriter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Attr.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Text.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/CharacterData.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/NodeIterator.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/NodeFilter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/NamedNodeMap.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/ChildNodesList.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/NodeList.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/communication/ofSerial.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/communication/ofArduino.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofFbo.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofTexture.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofVboMesh.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofVbo.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofGLUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofBufferObject.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofGLRenderer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofPolyline.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/of3dGraphics.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/of3dPrimitives.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/ofNode.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/of3dUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofAppRunner.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofWindowSettings.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofMainLoop.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofAppBaseWindow.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofBaseApp.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofBitmapFont.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofMatrixStack.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofGraphics.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofPath.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofTessellator.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofLight.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofMaterial.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofShader.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofGLProgrammableRenderer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofCairoRenderer.h \
  /usr/include/cairo/cairo-features.h /usr/include/cairo/cairo-pdf.h \
  /usr/include/cairo/cairo.h /usr/include/cairo/cairo-version.h \
  /usr/include/cairo/cairo-features.h \
  /usr/include/cairo/cairo-deprecated.h /usr/include/cairo/cairo-svg.h \
  /usr/include/cairo/cairo.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofImage.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofRendererCollection.h \
- /home/julie/Desktop/OF/libs/openFrameworks/graphics/ofTrueTypeFont.h \
- /home/julie/Desktop/OF/libs/openFrameworks/app/ofAppGLFWWindow.h \
- /home/julie/Desktop/OF/libs/glfw/include/GLFW/glfw3.h \
- /home/julie/Desktop/OF/libs/openFrameworks/app/ofAppGlutWindow.h \
- /home/julie/Desktop/OF/libs/openFrameworks/sound/ofSoundStream.h \
- /home/julie/Desktop/OF/libs/openFrameworks/sound/ofBaseSoundStream.h \
- /home/julie/Desktop/OF/libs/openFrameworks/sound/ofRtAudioSoundStream.h \
- /home/julie/Desktop/OF/libs/openFrameworks/sound/ofSoundBuffer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/sound/ofSoundPlayer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/sound/ofBaseSoundPlayer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/sound/ofOpenALSoundPlayer.h \
- /home/julie/Desktop/OF/libs/kiss/include/kiss_fft.h \
- /home/julie/Desktop/OF/libs/kiss/include/kiss_fftr.h \
- /home/julie/Desktop/OF/libs/kiss/include/kiss_fft.h \
- /home/julie/Desktop/OF/libs/openFrameworks/sound/ofSoundBuffer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/video/ofVideoGrabber.h \
- /home/julie/Desktop/OF/libs/openFrameworks/video/ofGstVideoGrabber.h \
- /home/julie/Desktop/OF/libs/openFrameworks/video/ofGstUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofImage.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofRendererCollection.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofTrueTypeFont.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofAppGLFWWindow.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/glfw/include/GLFW/glfw3.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofAppGlutWindow.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofSoundStream.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofBaseSoundStream.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofRtAudioSoundStream.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofSoundBuffer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofSoundPlayer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofBaseSoundPlayer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofOpenALSoundPlayer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/kiss/include/kiss_fft.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/kiss/include/kiss_fftr.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/kiss/include/kiss_fft.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofSoundBuffer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofVideoGrabber.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofGstVideoGrabber.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofGstUtils.h \
  /usr/include/gstreamer-1.0/gst/gst.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
@@ -171,7 +171,7 @@ obj/linux64/Release/src/SoundModifier.o: \
  /usr/include/glib-2.0/glib/gasyncqueue.h \
  /usr/include/glib-2.0/glib/gthread.h \
  /usr/include/glib-2.0/glib/gatomic.h /usr/include/glib-2.0/glib/gerror.h \
- /usr/include/glib-2.0/glib/gquark.h \
+ /usr/include/glib-2.0/glib/gquark.h /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gbacktrace.h \
  /usr/include/glib-2.0/glib/gbase64.h \
  /usr/include/glib-2.0/glib/gbitlock.h \
@@ -195,7 +195,6 @@ obj/linux64/Release/src/SoundModifier.o: \
  /usr/include/glib-2.0/glib/gmain.h /usr/include/glib-2.0/glib/gpoll.h \
  /usr/include/glib-2.0/glib/gslist.h /usr/include/glib-2.0/glib/gstring.h \
  /usr/include/glib-2.0/glib/gunicode.h \
- /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gkeyfile.h \
  /usr/include/glib-2.0/glib/gmappedfile.h \
  /usr/include/glib-2.0/glib/gmarkup.h \
@@ -226,6 +225,7 @@ obj/linux64/Release/src/SoundModifier.o: \
  /usr/include/glib-2.0/glib/deprecated/gmain.h \
  /usr/include/glib-2.0/glib/deprecated/grel.h \
  /usr/include/glib-2.0/glib/deprecated/gthread.h \
+ /usr/include/glib-2.0/glib/glib-autocleanups.h \
  /usr/include/gstreamer-1.0/gst/glib-compat.h \
  /usr/include/gstreamer-1.0/gst/gstenumtypes.h \
  /usr/include/glib-2.0/glib-object.h \
@@ -246,7 +246,9 @@ obj/linux64/Release/src/SoundModifier.o: \
  /usr/include/glib-2.0/gobject/gtypeplugin.h \
  /usr/include/glib-2.0/gobject/gvaluearray.h \
  /usr/include/glib-2.0/gobject/gvaluetypes.h \
+ /usr/include/glib-2.0/gobject/gobject-autocleanups.h \
  /usr/include/gstreamer-1.0/gst/gstversion.h \
+ /usr/include/gstreamer-1.0/gst/gstatomicqueue.h \
  /usr/include/gstreamer-1.0/gst/gstbin.h \
  /usr/include/gstreamer-1.0/gst/gstelement.h \
  /usr/include/gstreamer-1.0/gst/gstconfig.h \
@@ -276,6 +278,7 @@ obj/linux64/Release/src/SoundModifier.o: \
  /usr/include/gstreamer-1.0/gst/gstquery.h \
  /usr/include/gstreamer-1.0/gst/gsttoc.h \
  /usr/include/gstreamer-1.0/gst/gstcontext.h \
+ /usr/include/gstreamer-1.0/gst/gstdevice.h \
  /usr/include/gstreamer-1.0/gst/gsttask.h \
  /usr/include/gstreamer-1.0/gst/gsttaskpool.h \
  /usr/include/gstreamer-1.0/gst/gstbus.h \
@@ -287,9 +290,12 @@ obj/linux64/Release/src/SoundModifier.o: \
  /usr/include/gstreamer-1.0/gst/gstbufferpool.h \
  /usr/include/gstreamer-1.0/gst/gstchildproxy.h \
  /usr/include/gstreamer-1.0/gst/gstdebugutils.h \
+ /usr/include/gstreamer-1.0/gst/gstdeviceprovider.h \
+ /usr/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h \
  /usr/include/gstreamer-1.0/gst/gstelementmetadata.h \
  /usr/include/gstreamer-1.0/gst/gsterror.h \
  /usr/include/gstreamer-1.0/gst/gstghostpad.h \
+ /usr/include/gstreamer-1.0/gst/gstdevicemonitor.h \
  /usr/include/gstreamer-1.0/gst/gstinfo.h \
  /usr/include/gstreamer-1.0/gst/gstparamspecs.h \
  /usr/include/gstreamer-1.0/gst/gstvalue.h \
@@ -308,6 +314,7 @@ obj/linux64/Release/src/SoundModifier.o: \
  /usr/include/gstreamer-1.0/gst/video/video.h \
  /usr/include/gstreamer-1.0/gst/video/video-format.h \
  /usr/include/gstreamer-1.0/gst/video/video-enumtypes.h \
+ /usr/include/gstreamer-1.0/gst/video/video-tile.h \
  /usr/include/gstreamer-1.0/gst/video/video-chroma.h \
  /usr/include/gstreamer-1.0/gst/video/video-color.h \
  /usr/include/gstreamer-1.0/gst/video/video-info.h \
@@ -330,344 +337,344 @@ obj/linux64/Release/src/SoundModifier.o: \
  /usr/include/gstreamer-1.0/gst/video/videoorientation.h \
  /usr/include/gstreamer-1.0/gst/video/video-overlay-composition.h \
  /usr/include/gstreamer-1.0/gst/video/videooverlay.h \
- /home/julie/Desktop/OF/libs/openFrameworks/video/ofVideoPlayer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/video/ofGstVideoPlayer.h \
- /home/julie/Desktop/OF/libs/openFrameworks/3d/ofCamera.h \
- /home/julie/Desktop/OF/libs/openFrameworks/3d/ofEasyCam.h \
- /home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLive.h \
- /home/julie/Desktop/OF/addons/ofxOsc/src/ofxOsc.h \
- /home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscArg.h \
- /home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscMessage.h \
- /home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscSender.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscException.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h \
- /home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscBundle.h \
- /home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscReceiver.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
- /home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
- /home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLiveParameter.h \
- /home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLiveDevice.h \
- /home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLiveClip.h \
- /home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLiveTrack.h \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/headers/OscWrapper.h \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/headers/FileManager.h \
- /home/julie/Desktop/OF/apps/myApps/shapes_try/headers/json.hpp \
- /home/julie/Desktop/OF/addons/ofxSvg/src/ofxSvg.h \
- /home/julie/Desktop/OF/addons/ofxSvg/libs/svgTiny/src/svgtiny.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/URIStreamOpener.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/StreamCopier.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Path.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/URI.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/HTTPStreamFactory.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/Net.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/HTTPSession.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/StreamSocket.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/Socket.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/SocketImpl.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/SocketDefs.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/SocketAddress.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/SocketAddressImpl.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/IPAddress.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Net/IPAddressImpl.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Timespan.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Timestamp.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/FIFOBuffer.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Buffer.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/BasicEvent.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/AbstractEvent.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/SingletonHolder.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/ActiveResult.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/ActiveMethod.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/ActiveRunnable.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/ActiveStarter.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/ThreadPool.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/DefaultStrategy.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/NotificationStrategy.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/AbstractDelegate.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Format.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/Any.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/MetaProgramming.h \
- /home/julie/Desktop/OF/libs/poco/include/Poco/URIStreamFactory.h
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofVideoPlayer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofGstVideoPlayer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/ofCamera.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/ofEasyCam.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLive.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOsc.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscArg.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscMessage.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscSender.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscException.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscBundle.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscReceiver.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLiveParameter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLiveDevice.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLiveClip.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLiveTrack.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/OscWrapper.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/FileManager.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/json.hpp \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxSvg/src/ofxSvg.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxSvg/libs/svgTiny/src/svgtiny.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/URIStreamOpener.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/StreamCopier.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Path.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/URI.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/HTTPStreamFactory.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/Net.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/HTTPSession.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/StreamSocket.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/Socket.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/SocketImpl.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/SocketDefs.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/SocketAddress.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/SocketAddressImpl.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/IPAddress.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/IPAddressImpl.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Timespan.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Timestamp.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/FIFOBuffer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Buffer.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/BasicEvent.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AbstractEvent.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SingletonHolder.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ActiveResult.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ActiveMethod.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ActiveRunnable.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ActiveStarter.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ThreadPool.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DefaultStrategy.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/NotificationStrategy.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AbstractDelegate.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Format.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Any.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/MetaProgramming.h \
+ /home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/URIStreamFactory.h
 
-/home/julie/Desktop/OF/apps/myApps/shapes_try/headers/SoundModifier.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/SoundModifier.h:
 
-/home/julie/Desktop/OF/apps/myApps/shapes_try/headers/DependanteModifier.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/DependanteModifier.h:
 
-/home/julie/Desktop/OF/apps/myApps/shapes_try/headers/Modifier.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/Modifier.h:
 
-/home/julie/Desktop/OF/apps/myApps/shapes_try/headers/Seed.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/Seed.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/ofMain.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/ofMain.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofConstants.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofConstants.h:
 
-/home/julie/Desktop/OF/libs/tess2/include/tesselator.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/tess2/include/tesselator.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofFileUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofFileUtils.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofLog.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofLog.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/types/ofTypes.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofTypes.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/types/ofColor.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofColor.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/math/ofMath.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofMath.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/types/ofPoint.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofPoint.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/math/ofVec3f.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofVec3f.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/math/ofVec2f.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofVec2f.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/math/ofVec4f.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofVec4f.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofSystemUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofSystemUtils.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofURLFileLoader.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofURLFileLoader.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/events/ofEvents.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/events/ofEvents.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/events/ofEventUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/events/ofEventUtils.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/events/ofEvent.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/events/ofEvent.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofTimer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofTimer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofFpsCounter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofFpsCounter.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofUtils.h:
 
-/home/julie/Desktop/OF/libs/utf8cpp/include/utf8.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/utf8cpp/include/utf8.h:
 
-/home/julie/Desktop/OF/libs/utf8cpp/include/utf8/checked.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/utf8cpp/include/utf8/checked.h:
 
-/home/julie/Desktop/OF/libs/utf8cpp/include/utf8/core.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/utf8cpp/include/utf8/core.h:
 
-/home/julie/Desktop/OF/libs/utf8cpp/include/utf8/unchecked.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/utf8cpp/include/utf8/unchecked.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofThread.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofThread.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/AtomicCounter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AtomicCounter.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Foundation.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Foundation.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Config.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Config.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Platform.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Platform.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Platform_POSIX.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Platform_POSIX.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Alignment.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Alignment.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Bugcheck.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Bugcheck.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Types.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Types.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Mutex.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Mutex.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Exception.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Exception.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/ScopedLock.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ScopedLock.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Mutex_POSIX.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Mutex_POSIX.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Thread.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Thread.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Event.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Event.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Event_POSIX.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Event_POSIX.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Thread_POSIX.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Thread_POSIX.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Runnable.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Runnable.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SignalHandler.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SignalHandler.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/RefCountedObject.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/RefCountedObject.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/AutoPtr.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AutoPtr.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SharedPtr.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SharedPtr.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofThreadChannel.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofThreadChannel.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/types/ofBaseTypes.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofBaseTypes.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/types/ofRectangle.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofRectangle.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/math/ofMatrix4x4.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofMatrix4x4.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/math/ofQuaternion.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofQuaternion.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/3d/ofMesh.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/ofMesh.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofGLUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofGLUtils.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofPixels.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofPixels.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofXml.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofXml.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/types/ofParameter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofParameter.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/types/ofParameterGroup.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofVectorMath.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Document.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/math/ofMatrix3x3.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/XML.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/types/ofParameterGroup.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/AbstractContainerNode.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Document.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/AbstractNode.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XML.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Node.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/AbstractContainerNode.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/EventTarget.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/AbstractNode.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DOMObject.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Node.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/XMLString.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/EventTarget.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SAX/NamespaceSupport.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DOMObject.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/MutationEvent.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XMLString.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Event.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/NamespaceSupport.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DocumentEvent.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/MutationEvent.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Element.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Event.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/Name.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DocumentEvent.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/NamePool.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Element.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/AutoReleasePool.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/Name.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DocumentFragment.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/NamePool.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DOMParser.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AutoReleasePool.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SAX/SAXParser.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DocumentFragment.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SAX/XMLReader.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DOMParser.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/ParserEngine.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/SAXParser.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/expat.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/XMLReader.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/expat_external.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/ParserEngine.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/XMLStream.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/expat.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SAX/Locator.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/expat_external.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/TextEncoding.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XMLStream.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DOMException.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/Locator.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/XMLException.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/TextEncoding.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SAX/SAXException.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DOMException.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/XML/XMLWriter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XMLException.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SAX/ContentHandler.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/SAXException.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SAX/LexicalHandler.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/XML/XMLWriter.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SAX/DTDHandler.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/ContentHandler.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/StreamConverter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/LexicalHandler.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/UnbufferedStreamBuf.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SAX/DTDHandler.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/StreamUtil.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/StreamConverter.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/DOMWriter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/UnbufferedStreamBuf.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Attr.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/StreamUtil.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/Text.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/DOMWriter.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/CharacterData.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Attr.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/NodeIterator.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/Text.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/NodeFilter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/CharacterData.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/NamedNodeMap.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/NodeIterator.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/ChildNodesList.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/NodeFilter.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DOM/NodeList.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/NamedNodeMap.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/math/ofVectorMath.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/ChildNodesList.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/math/ofMatrix3x3.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DOM/NodeList.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/communication/ofSerial.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/communication/ofSerial.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/communication/ofArduino.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/communication/ofArduino.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofFbo.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofFbo.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofTexture.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofTexture.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofVboMesh.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofVboMesh.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofVbo.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofVbo.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofGLUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofGLUtils.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofBufferObject.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofBufferObject.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofGLRenderer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofGLRenderer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofPolyline.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofPolyline.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/of3dGraphics.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/of3dGraphics.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/3d/of3dPrimitives.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/of3dPrimitives.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/3d/ofNode.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/ofNode.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/3d/of3dUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/of3dUtils.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/app/ofAppRunner.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofAppRunner.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/app/ofWindowSettings.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofWindowSettings.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/app/ofMainLoop.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofMainLoop.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/app/ofAppBaseWindow.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofAppBaseWindow.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/app/ofBaseApp.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofBaseApp.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofBitmapFont.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofBitmapFont.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/utils/ofMatrixStack.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/utils/ofMatrixStack.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofGraphics.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofGraphics.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofPath.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofPath.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofTessellator.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofTessellator.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofLight.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofLight.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofMaterial.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofMaterial.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofShader.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofShader.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/gl/ofGLProgrammableRenderer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/gl/ofGLProgrammableRenderer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofCairoRenderer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofCairoRenderer.h:
 
 /usr/include/cairo/cairo-features.h:
 
@@ -685,45 +692,45 @@ obj/linux64/Release/src/SoundModifier.o: \
 
 /usr/include/cairo/cairo.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofImage.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofImage.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofRendererCollection.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofRendererCollection.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/graphics/ofTrueTypeFont.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/graphics/ofTrueTypeFont.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/app/ofAppGLFWWindow.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofAppGLFWWindow.h:
 
-/home/julie/Desktop/OF/libs/glfw/include/GLFW/glfw3.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/glfw/include/GLFW/glfw3.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/app/ofAppGlutWindow.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/app/ofAppGlutWindow.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/sound/ofSoundStream.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofSoundStream.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/sound/ofBaseSoundStream.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofBaseSoundStream.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/sound/ofRtAudioSoundStream.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofRtAudioSoundStream.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/sound/ofSoundBuffer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofSoundBuffer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/sound/ofSoundPlayer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofSoundPlayer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/sound/ofBaseSoundPlayer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofBaseSoundPlayer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/sound/ofOpenALSoundPlayer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofOpenALSoundPlayer.h:
 
-/home/julie/Desktop/OF/libs/kiss/include/kiss_fft.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/kiss/include/kiss_fft.h:
 
-/home/julie/Desktop/OF/libs/kiss/include/kiss_fftr.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/kiss/include/kiss_fftr.h:
 
-/home/julie/Desktop/OF/libs/kiss/include/kiss_fft.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/kiss/include/kiss_fft.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/sound/ofSoundBuffer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/sound/ofSoundBuffer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/video/ofVideoGrabber.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofVideoGrabber.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/video/ofGstVideoGrabber.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofGstVideoGrabber.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/video/ofGstUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofGstUtils.h:
 
 /usr/include/gstreamer-1.0/gst/gst.h:
 
@@ -750,6 +757,8 @@ obj/linux64/Release/src/SoundModifier.o: \
 /usr/include/glib-2.0/glib/gerror.h:
 
 /usr/include/glib-2.0/glib/gquark.h:
+
+/usr/include/glib-2.0/glib/gutils.h:
 
 /usr/include/glib-2.0/glib/gbacktrace.h:
 
@@ -810,8 +819,6 @@ obj/linux64/Release/src/SoundModifier.o: \
 /usr/include/glib-2.0/glib/gstring.h:
 
 /usr/include/glib-2.0/glib/gunicode.h:
-
-/usr/include/glib-2.0/glib/gutils.h:
 
 /usr/include/glib-2.0/glib/gkeyfile.h:
 
@@ -879,6 +886,8 @@ obj/linux64/Release/src/SoundModifier.o: \
 
 /usr/include/glib-2.0/glib/deprecated/gthread.h:
 
+/usr/include/glib-2.0/glib/glib-autocleanups.h:
+
 /usr/include/gstreamer-1.0/gst/glib-compat.h:
 
 /usr/include/gstreamer-1.0/gst/gstenumtypes.h:
@@ -919,7 +928,11 @@ obj/linux64/Release/src/SoundModifier.o: \
 
 /usr/include/glib-2.0/gobject/gvaluetypes.h:
 
+/usr/include/glib-2.0/gobject/gobject-autocleanups.h:
+
 /usr/include/gstreamer-1.0/gst/gstversion.h:
+
+/usr/include/gstreamer-1.0/gst/gstatomicqueue.h:
 
 /usr/include/gstreamer-1.0/gst/gstbin.h:
 
@@ -979,6 +992,8 @@ obj/linux64/Release/src/SoundModifier.o: \
 
 /usr/include/gstreamer-1.0/gst/gstcontext.h:
 
+/usr/include/gstreamer-1.0/gst/gstdevice.h:
+
 /usr/include/gstreamer-1.0/gst/gsttask.h:
 
 /usr/include/gstreamer-1.0/gst/gsttaskpool.h:
@@ -1001,11 +1016,17 @@ obj/linux64/Release/src/SoundModifier.o: \
 
 /usr/include/gstreamer-1.0/gst/gstdebugutils.h:
 
+/usr/include/gstreamer-1.0/gst/gstdeviceprovider.h:
+
+/usr/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h:
+
 /usr/include/gstreamer-1.0/gst/gstelementmetadata.h:
 
 /usr/include/gstreamer-1.0/gst/gsterror.h:
 
 /usr/include/gstreamer-1.0/gst/gstghostpad.h:
+
+/usr/include/gstreamer-1.0/gst/gstdevicemonitor.h:
 
 /usr/include/gstreamer-1.0/gst/gstinfo.h:
 
@@ -1042,6 +1063,8 @@ obj/linux64/Release/src/SoundModifier.o: \
 /usr/include/gstreamer-1.0/gst/video/video-format.h:
 
 /usr/include/gstreamer-1.0/gst/video/video-enumtypes.h:
+
+/usr/include/gstreamer-1.0/gst/video/video-tile.h:
 
 /usr/include/gstreamer-1.0/gst/video/video-chroma.h:
 
@@ -1087,130 +1110,130 @@ obj/linux64/Release/src/SoundModifier.o: \
 
 /usr/include/gstreamer-1.0/gst/video/videooverlay.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/video/ofVideoPlayer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofVideoPlayer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/video/ofGstVideoPlayer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/video/ofGstVideoPlayer.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/3d/ofCamera.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/ofCamera.h:
 
-/home/julie/Desktop/OF/libs/openFrameworks/3d/ofEasyCam.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/openFrameworks/3d/ofEasyCam.h:
 
-/home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLive.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLive.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/src/ofxOsc.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOsc.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscArg.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscArg.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscMessage.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscMessage.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscSender.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscSender.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscException.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscException.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscBundle.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscBundle.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/src/ofxOscReceiver.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/src/ofxOscReceiver.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h:
 
-/home/julie/Desktop/OF/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:
 
-/home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLiveParameter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLiveParameter.h:
 
-/home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLiveDevice.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLiveDevice.h:
 
-/home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLiveClip.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLiveClip.h:
 
-/home/julie/Desktop/OF/addons/ofxAbletonLive/src/ofxAbletonLiveTrack.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxAbletonLive/src/ofxAbletonLiveTrack.h:
 
-/home/julie/Desktop/OF/apps/myApps/shapes_try/headers/OscWrapper.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/OscWrapper.h:
 
-/home/julie/Desktop/OF/apps/myApps/shapes_try/headers/FileManager.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/FileManager.h:
 
-/home/julie/Desktop/OF/apps/myApps/shapes_try/headers/json.hpp:
+/home/datross/Depots/of_v0.9.7_linux64_release/apps/myApps/shapes/headers/json.hpp:
 
-/home/julie/Desktop/OF/addons/ofxSvg/src/ofxSvg.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxSvg/src/ofxSvg.h:
 
-/home/julie/Desktop/OF/addons/ofxSvg/libs/svgTiny/src/svgtiny.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/addons/ofxSvg/libs/svgTiny/src/svgtiny.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/URIStreamOpener.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/URIStreamOpener.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/StreamCopier.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/StreamCopier.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Path.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Path.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/URI.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/URI.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/HTTPStreamFactory.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/HTTPStreamFactory.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/Net.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/Net.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/HTTPSession.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/HTTPSession.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/StreamSocket.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/StreamSocket.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/Socket.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/Socket.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/SocketImpl.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/SocketImpl.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/SocketDefs.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/SocketDefs.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/SocketAddress.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/SocketAddress.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/SocketAddressImpl.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/SocketAddressImpl.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/IPAddress.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/IPAddress.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Net/IPAddressImpl.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Net/IPAddressImpl.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Timespan.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Timespan.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Timestamp.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Timestamp.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/FIFOBuffer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/FIFOBuffer.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Buffer.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Buffer.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/BasicEvent.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/BasicEvent.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/AbstractEvent.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AbstractEvent.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/SingletonHolder.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/SingletonHolder.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/ActiveResult.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ActiveResult.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/ActiveMethod.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ActiveMethod.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/ActiveRunnable.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ActiveRunnable.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/ActiveStarter.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ActiveStarter.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/ThreadPool.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/ThreadPool.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/DefaultStrategy.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/DefaultStrategy.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/NotificationStrategy.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/NotificationStrategy.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/AbstractDelegate.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/AbstractDelegate.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Format.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Format.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/Any.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/Any.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/MetaProgramming.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/MetaProgramming.h:
 
-/home/julie/Desktop/OF/libs/poco/include/Poco/URIStreamFactory.h:
+/home/datross/Depots/of_v0.9.7_linux64_release/libs/poco/include/Poco/URIStreamFactory.h:

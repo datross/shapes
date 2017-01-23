@@ -44,11 +44,21 @@ ofPoint parsePoint(string s){
 }
 
 ofColor parseColor(string s){
-	auto v = split(s, ' ');
-	return ofColor(parseFloat(v[0]), parseFloat(v[1]),
-			parseFloat(v[2]));
+	return vec3ToColor(parseVec3(s));
 }
 
 vector<string> parseIds(string s){
 	return split(s,' ');
+}
+
+ofVec2f clampVec2(ofVec2f v, float inf, float sup) {
+	return ofVec2f(ofClamp(v.x, inf, sup), ofClamp(v.y, inf, sup));
+}
+
+ofColor pourcentVec3ToColor(ofVec3f v) {
+	return ofColor(255 * v.x, 255 * v.y, 255 * v.z);
+}
+
+ofColor vec3ToColor(ofVec3f v) {
+	return ofColor(v.x, v.y, v.z);
 }

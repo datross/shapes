@@ -1,17 +1,26 @@
 {
-	"duration" : -1,
+	"duration" : 0,
 
 	"modifiers" :
 	[ 
 	    {	
-	        "type" : "selection dependante rotation",
+	        "type" : "selection dependante expand",
 		    "selection" : {
+				"type" : "byColor", 
+				"color" : "183 65 50"
+			},
+		    "force" : 10000,
+		    "p1" : "400 0",
+		    "p2" : "400 50",
+		    "seed" : "time sinusoide 1 0.5 0.5"
+    	}, 
+		{	
+	        "type" : "selection dependante color",
+			"selection" : {
 				"type" : "uniform", 
 				"weight" : 1
 			},
-		    "angle" : 5,
-		    "individual_origin" : false,
-		    "pivot" : "200 200", 
+		    "color" : "255 0 0",
 		    "seed" : "time sinusoide 1 0.5 0"
     	}
 	]
