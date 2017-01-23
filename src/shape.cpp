@@ -28,10 +28,22 @@ Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float 
 	speed = ofVec2f(0);
 	scaleSpeed = ofVec2f(0);
 	rotationSpeed = 0;
-	
 	mass = 1.;
 	massRotation = 1.;
 	massScale = 1.;
+	originColor = path.getFillColor();
+}
+
+ofColor Shape::getColor() {
+	return path.getFillColor();
+}
+
+ofColor Shape::getOriginColor() {
+	return originColor;
+}
+
+void Shape::setColor(ofColor c) {
+	path.setFillColor(c);
 }
 
 Shape::Shape(ofPath& path, ofVec2f pos) : Shape(){

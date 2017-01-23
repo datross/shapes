@@ -7,6 +7,7 @@
 #include "ModifierRotation.h"
 #include "ModifierSoundSetter.h"
 #include "OscWrapper.h"
+#include "ModifierColor.h"
 #include <string>
 
 using namespace std;
@@ -59,6 +60,11 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 						pivot = parsePoint(jModifier["pivot"].get<string>());
 					}
 					return shared_ptr<Modifier>(new Scalator(selection, scale, indiv, pivot, seed));
+				}
+				/*Color*/
+				if (args[2] == "color") {
+					ofColor color = parseColor(jModifier["color"]);
+					return shared_ptr<Modifier>(new Colorizer(selection, color, seed));
 				}
 			}
 		}
