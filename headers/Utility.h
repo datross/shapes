@@ -92,4 +92,39 @@ ofVec3f parseVec3(string s);
 */
 ofPoint parsePoint(string s);
 
+/**
+* @brief Parse a string to an ofColor.
+*
+* @param s ...
+* @return ofColor
+*/
+ofColor parseColor(string s);
+
+
+/**
+* @brief Clamps an ofVec2f between inf and sup
+*
+* @param v vec2 to clamp
+* @param inf Inf bound
+* @param sup Sup bound
+* @return ofVec3f
+*/
+ofVec2f clampVec2(ofVec2f v, float inf, float sup);
+
+/**
+* @brief Parse an ofVec3f to an ofColor.
+*
+* @param v ofVec3f
+* @return ofColor
+*/
+ofColor vec3ToColor(ofVec3f v);
+
+/**
+* @brief Parse an pourcent ofVec3f (0-1) to an ofColor.
+*
+* @param v ofVec3f
+* @return ofColor
+*/
+ofColor pourcentVec3ToColor(ofVec3f v);
+
 #endif

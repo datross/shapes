@@ -18,9 +18,9 @@ namespace idl {
 		
 		/**
 		 * @bried Reference to the only SoundListener of the program */
-		SoundListener& soundListener;
+		SoundListener * soundListener;
 	public:
-		SeedSound(SoundListener& soundListener);
+		SeedSound(SoundListener * soundListener);
 	};
 	
 }

@@ -6,8 +6,10 @@
 #include "ModifierScale.h"
 #include "ModifierRotation.h"
 #include "ModifierSoundSetter.h"
+#include "ModifierExpand.h"
 #include "OscWrapper.h"
 #include "MidiModifier.h"
+#include "ModifierColor.h"
 #include <string>
 
 using namespace std;
@@ -61,6 +63,18 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 					}
 					return shared_ptr<Modifier>(new Scalator(selection, scale, indiv, pivot, seed));
 				}
+				/* Expand */
+				if(args[2] == "expand") {
+					ofVec2f a = parseVec2(jModifier["p1"]);					
+					ofVec2f b = parseVec2(jModifier["p2"]);
+					float value = jModifier["force"];
+					return shared_ptr<Modifier>(new ModifierExpand(selection, seed, a, b, value));
+				}
+				/*Color*/
+				if (args[2] == "color") {
+					ofColor color = parseColor(jModifier["color"]);
+					return shared_ptr<Modifier>(new Colorizer(selection, color, seed));
+				}
 			}
 		}
 		if (args[0] == "dependante") {
@@ -68,8 +82,7 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 			if (args[1] == "sound") {
 				float value = jModifier["value"].get<float>();
 				string param = jModifier["controller"].get<string>();
-				OscWrapper &osc = OscWrapper::getInstance();
-				return shared_ptr<Modifier>(new ModifierSoundSetter(seed, osc, value, param));
+				return shared_ptr<Modifier>(new ModifierSoundSetter(seed, value, param));
 			}
 		}
 
