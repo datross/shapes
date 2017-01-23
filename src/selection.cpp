@@ -25,3 +25,26 @@ void Selection::radial(float weight, ofPoint point, float radius){
 		shapes.push_back(ShapeSelected(&world.currentShape(), w));
 	}
 }
+
+void Selection::byId(std::string id){
+	for(world.firstShape(); !world.endShape(); world.nextShape()) {
+		if (id == world.currentShape().getId())
+			shapes.push_back(ShapeSelected(&world.currentShape(), 1));
+	}
+}
+
+void Selection::byColor(ofColor color){
+	for(world.firstShape(); !world.endShape(); world.nextShape()) {
+			if (color == world.currentShape().getColor())
+				shapes.push_back(ShapeSelected(&world.currentShape(), 1));
+	}
+}
+
+void Selection::random(float threshold){
+	srand(time(NULL));
+	for(world.firstShape(); !world.endShape(); world.nextShape()) {
+		float weight = ofRandom(0, 1);
+		if (weight >threshold)
+				shapes.push_back(ShapeSelected(&world.currentShape(), weight));
+		}
+}

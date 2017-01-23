@@ -92,4 +92,15 @@ ofVec3f parseVec3(string s);
 */
 ofPoint parsePoint(string s);
 
+
+/**
+* @brief Parse a string to an ofColor.
+*
+* @param s ...
+* @return ofColor
+*/
+
+ofColor parseColor(string s);
+
+
 #endif

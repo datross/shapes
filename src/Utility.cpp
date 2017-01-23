@@ -42,3 +42,9 @@ ofPoint parsePoint(string s){
 	ofVec2f tmp = parseVec2(s);
 	return ofPoint(tmp.x, tmp.y);
 }
+
+ofColor parseColor(string s){
+	auto v = split(s, ' ');
+	return ofColor(parseFloat(v[0]), parseFloat(v[1]),
+			parseFloat(v[2]));
+}

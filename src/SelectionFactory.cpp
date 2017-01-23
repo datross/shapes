@@ -25,6 +25,21 @@ shared_ptr<Selection> idl::SelectionFactory::create(json& jSelection) {
 			s->radial(weight, pt, radius);
 			return shared_ptr<Selection>(s);
 		}
+		if (type == "byId") {
+			std::string id = jSelection["id"];
+			s->byId(id);
+			return shared_ptr<Selection>(s);
+		}
+		if (type == "byColor") {
+			ofColor color = parseColor(jSelection["color"]);
+			s->byColor(color);
+			return shared_ptr<Selection>(s);
+		}
+		if (type == "random") {
+			float threshold = parseColor(jSelection["threshold"]);
+			s->random(threshold);
+			return shared_ptr<Selection>(s);
+		}
 	}catch (exception& e) {
 		cerr << e.what() << endl;
 		return nullptr;

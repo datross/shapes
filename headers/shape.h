@@ -24,12 +24,14 @@ namespace idl {
 		float rotationOrigin;
 		
 		float mass, massRotation, massScale;
+
+		std::string id;
 	
 		/* shape to draw */
 		ofPath path;
 	public:
 		Shape();
-		Shape(ofPath & path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r);
+		Shape(ofPath & path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r, std::string _id);
 		Shape(ofPath & path, ofVec2f pos);
 		
 		/* physics manipulation */
@@ -42,6 +44,8 @@ namespace idl {
 		void addRotation(float r);
 		
 		ofVec2f getPosition() { return position; }
+		std::string getId() {return id; }
+		std::string getColor() { return path.getFillColor(); }
 		
 		void update(float timeStep);
 		
