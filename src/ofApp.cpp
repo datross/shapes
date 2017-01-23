@@ -5,6 +5,7 @@
 #include "Utility.h"
 #include "SeedFactory.h"
 #include "ActionFactory.h"
+#include "OscWrapper.h"
 
 #include "Hud.h"
 
@@ -25,14 +26,6 @@ void ofApp::setup(){
 // 	s1 = shared_ptr<Seed>(new SeedSoundSpectrum(soundListener, 0,0.1,0.1,1));
 // 	s2 = SeedFactory::getInstance().createSeed("time sinusoide");
 
-
-	//loading ableton
-	abletonSet.setup();
-//#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
-//	while (!abletonSet.isLoaded()) {
-//		abletonSet.update();
-//	}
-//#endif
 
 	World& world = World::getInstance();
 
@@ -69,7 +62,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	/* update Ableton connection */
-	abletonSet.update();
+	OscWrapper::getInstance().update();
 
 	World& world = World::getInstance();
 	
@@ -87,9 +80,6 @@ void ofApp::update(){
 	
 	/* TODO debug : prints number of actions */
 	Hud::getInstance().addEntry("Nb actions", actions.size());
-	
-	/* reset world transform before executing actions */
-	world.resetTransform();
 	
 	/* execute the action list on the world */
 	executeActions();
@@ -142,16 +132,16 @@ void ofApp::keyPressed(int key){
 		view.toggleFullScreen();
 	}
 	if (key == OF_KEY_RETURN) {
-		abletonSet.printAll();
+		OscWrapper::getInstance().printAll();
 		return;
 	}
 	if (key == OF_KEY_DOWN ) {
-		abletonSet.stop();
+		OscWrapper::getInstance().stop();
 	}
 	if (key == 'm') {
 	}
 	else
-		abletonSet.play();	
+		OscWrapper::getInstance().play();
 	//live.setTempo(75);
 
 

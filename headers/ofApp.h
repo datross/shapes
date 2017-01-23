@@ -27,7 +27,7 @@
 
 class ofApp : public ofBaseApp {
 public:
-	
+
 	/* ------------- openFrameWorks relative ------------- */
 	void setup();
 	void update();
@@ -44,7 +44,7 @@ public:
 	void windowResized(int w, int h);
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
-	
+
 	void audioIn(ofSoundBuffer &buffer) {
 		generalInputBuffer = buffer;
 	}
@@ -52,9 +52,9 @@ public:
 // 			buffer.fillWithTone();
 // 		buffer = buf;
 	}
-	
+
 	/* ------------- Delaunay Interactive relative ------------- */
-	
+
 private:
 	// TODO check these
 	idl::View view;
@@ -62,30 +62,26 @@ private:
 	ofPoint cursor;
 	float env;
 	std::shared_ptr<idl::Seed> s1, s2;
-	
+
 	/* -------------- members -------------- */
-	
+
 	/* stands for the leapmotion (or a mouse, keyboard etc..) */
 	idl::DeviceListener deviceListener;
-	
+
 	/* process input sound */
 	idl::SoundListener soundListener;
-	
+
 	/* sound buffer storing the input sound */
 	ofSoundBuffer generalInputBuffer;
 	
-	/* interface with Ableton */
-	ofxAbletonLive abletonSet;
-
-	
 	/* Actions to apply next update */
 	std::list<std::shared_ptr<idl::Action> > actions;
-	
+
 	/* Gesture Controller */
 	std::shared_ptr<idl::GestureController> gestureController;
-	
+
 	/* -------------- methods -------------- */
-	
+
 	/* execute every actions, and delete the outdated ones */
 	void executeActions();
 };

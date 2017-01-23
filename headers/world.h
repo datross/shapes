@@ -13,6 +13,8 @@ class World {
 	std::list<Shape> shapes;
 	std::list<Shape>::iterator selector;
 	
+	float timePrec;
+	
 	World();
 public:
 	static World& getInstance();

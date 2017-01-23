@@ -6,8 +6,7 @@ SeedTimeFunctor::SeedTimeFunctor(std::function< ofVec3f(SeedTime&) > functor, st
 	: SeedTime(settings), functor(functor) {
 }
 
-ofVec3f SeedTimeFunctor::getValue()
-{
+ofVec3f SeedTimeFunctor::getValue(){
 	return functor(*this);
 }
 

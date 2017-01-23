@@ -2,6 +2,7 @@
 #include "DreamBuilder.h"
 #include "Utility.h"
 #include "ActionFactory.h"
+#include "OscWrapper.h"
 
 using namespace idl;
 
@@ -45,6 +46,9 @@ void DreamBuilder::buildWorld(World& world) {
 
 	/*Loading all Actions*/
 	ActionFactory::getInstance();
+
+	/*Loading sound Modifier*/
+	OscWrapper::getInstance();
 }
 
 

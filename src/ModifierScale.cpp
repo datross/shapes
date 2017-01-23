@@ -23,14 +23,14 @@ void Scalator::apply() {
 		for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
 			tmp.x = seed->current().x * it->second * scale.x;
 			tmp.y = seed->current().y * it->second * scale.y;
-			it->first->addScale(tmp);
+			it->first->addScaleForce(tmp);
 		}
 	} else {
 		for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
 			move = getMoveScale(*(it->first));
 			tmp.x = seed->current().x * it->second * scale.x * move.x;
 			tmp.y = seed->current().y * it->second * scale.y * move.y;
-			it->first->addSpeed(tmp);
+			it->first->addForce(tmp);
 		}
 	}
 }

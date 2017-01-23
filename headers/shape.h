@@ -4,31 +4,48 @@
 #include "ofMain.h"
 
 namespace idl {
+	
+#define DAMPNESS_POSITION 0.9
+#define DAMPNESS_SCALE 0.9
+#define DAMPNESS_ROTATION 1.
+#define GRAVITY_ORIGIN_POSITION 2.
+#define GRAVITY_ORIGIN_SCALE 10.
+#define GRAVITY_ORIGIN_ROTATION 1.
 
 	class Shape{
-		ofVec2f position;
+		/* physics parameters */
+		ofVec2f position, speed, acceleration;
 		ofVec2f positionOrigin;
-		ofVec2f speed;
-		ofVec2f scale;
+		
+		ofVec2f scale, scaleSpeed, scaleAcceleration;
 		ofVec2f scaleOrigin;
-		float rotation;
+		
+		float rotation, rotationSpeed, rotationAcceleration;
 		float rotationOrigin;
+		
+		float mass, massRotation, massScale;
 	
+		/* shape to draw */
 		ofPath path;
 	public:
 		Shape();
 		Shape(ofPath & path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r);
 		Shape(ofPath & path, ofVec2f pos);
 		
-		void addRotation(float);
+		/* physics manipulation */
+		void addForce(ofVec2f a);
+		void addScaleForce(ofVec2f a);
+		void addRotationForce(float a);
+		
+		void addPosition(ofVec2f p);
 		void addScale(ofVec2f s);
-		void addSpeed(ofVec2f v);
-		void rotatePosition(float r, ofVec3f pivot);
+		void addRotation(float r);
 		
 		ofVec2f getPosition() { return position; }
 		
-		void update();
-		void resetTransform();
+		void update(float timeStep);
+		
+		//void resetTransform();
 		
 		void draw();
 	};
