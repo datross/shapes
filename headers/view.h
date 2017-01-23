@@ -18,6 +18,7 @@ public:
 	void setOfApp(ofBaseApp * app);
 	
 	void drawShape(Shape&);
+	void drawBackground(ofVideoPlayer&);
 	void drawWorld(World&);
 	
 	void toggleHud();

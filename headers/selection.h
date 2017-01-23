@@ -24,7 +24,7 @@ public:
 	void uniform(float weight);
 	void radial(float weight, ofPoint point, float radius);
 	void byId(std::string id);
-	void byColor(ofColor color);
+	void byColor(std::string color);
 	void random(float threshold);
 };
 

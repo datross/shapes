@@ -32,11 +32,14 @@ Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float 
 	mass = 1.;
 	massRotation = 1.;
 	massScale = 1.;
+
+	//TODO viewPort Better
+	addPosition(ofVec2f(960, 540));
 }
 
-Shape::Shape(ofPath& path, ofVec2f pos) : Shape(){
+Shape::Shape(ofPath& _path, ofVec2f pos) : Shape(){
 	position = pos;
-	path = path;
+	path = _path;
 }
 
 void Shape::addForce(ofVec2f a) {
@@ -79,6 +82,10 @@ void Shape::draw(){
 // 	scale = scaleOrigin;
 // 	rotation = rotationOrigin;
 // }
+
+ofColor Shape::getColor() {
+	return path.getFillColor();
+}
 
 void Shape::update(float timeStep) {
 	/* update position, speed, scale, rotation etc.. */

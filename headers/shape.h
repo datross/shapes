@@ -45,7 +45,7 @@ namespace idl {
 		
 		ofVec2f getPosition() { return position; }
 		std::string getId() {return id; }
-		std::string getColor() { return path.getFillColor(); }
+		ofColor getColor();
 		
 		void update(float timeStep);
 		

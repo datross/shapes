@@ -48,3 +48,7 @@ ofColor parseColor(string s){
 	return ofColor(parseFloat(v[0]), parseFloat(v[1]),
 			parseFloat(v[2]));
 }
+
+vector<string> parseIds(string s){
+	return split(s,' ');
+}

@@ -1,5 +1,7 @@
 ofxAbletonLive
 ofxFft
 ofxLeapMotion2
+ofxMask
+ofxPostGlitch
 ofxOsc
 ofxSvg

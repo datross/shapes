@@ -1,7 +1,7 @@
 #ifndef POST_FX_MODIFIER_H
 #define POST_FX_MODIFIER_H
 
-#include "DependenteModifier.h"
+#include "DependanteModifier.h"
 #include "PostFx.h"
 
 namespace idl {

@@ -6,13 +6,13 @@
 	    {	
 	        "type" : "selection dependante rotation",
 		    "selection" : {
-				"type" : "uniform", 
-				"weight" : 1
+				"type" : "byColor", 
+				"color" : "183 65 50"
 			},
-		    "angle" : 5,
+		    "angle" : 90,
 		    "individual_origin" : true,
 		    "pivot" : "200 200", 
-		    "seed" : "time sinusoide 1 0.5 0"
+		    "seed" : "time sinusoide 1 3 0"
     	}
 	]
 }
