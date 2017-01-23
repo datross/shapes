@@ -1,5 +1,5 @@
 #include "ModifierShapeCreator.h"
-#include "World.h"
+#include "world.h"
 
 using namespace idl;
 

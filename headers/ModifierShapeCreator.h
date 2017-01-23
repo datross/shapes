@@ -2,7 +2,7 @@
 #define MODIFIER_SHAPE_CREATOR_H
 
 #include "Modifier.h"
-#include "Shape.h"
+#include "shape.h"
 
 namespace idl {
 
