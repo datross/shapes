@@ -8,9 +8,10 @@ using namespace std;
 
 SeedFactory::SeedFactory(){
 	/* Adding every function to the map. */
-	
+
 	addFunction("sinusoide", sinusoide, {1,1,0});
-}	
+	addFunction("linearFade", linearFade, {0,1,1});
+}
 
 void SeedFactory::addFunction(string type, function<ofVec3f(SeedTime&)> f,  std::vector<Setting> defaultsSettings) {
 	functions[type] = make_pair(f, defaultsSettings);
@@ -21,7 +22,7 @@ SeedFactory::~SeedFactory(){
 
 /**
  * @brief Allows to convert an array of string to a Settings array.
- * 
+ *
  * @param vecStr String array.
  * @return Settings array.
  */
@@ -35,7 +36,7 @@ vector<Setting> parseSettings(vector<string> vecStr) {
 
 shared_ptr<Seed> SeedFactory::createSeed(string type) {
 	auto arguments = split(type, ' ');
-	
+
 	/* If first argument is 'time', then it's a SeedTime. */
 	if(arguments[0] == "time") {
 		auto fct = functions.find(arguments[1]);
@@ -44,7 +45,7 @@ shared_ptr<Seed> SeedFactory::createSeed(string type) {
 			cerr << "Seed's function's name unknown : " << arguments[0] << endl;
 			return nullptr;
 		}
-		
+
 		vector<Setting> settings = fct->second.second;
 		/* if parameters are detailed in the request */
 		if(arguments.size() > 2) {
@@ -62,8 +63,3 @@ SeedFactory& SeedFactory::getInstance() {
 	static SeedFactory instance;
 	return instance;
 }
-
-
-
-
-
