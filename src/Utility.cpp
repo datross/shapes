@@ -46,7 +46,7 @@ ofPoint parsePoint(string s){
 ofColor parseColor(string s){
 	auto v = split(s, ' ');
 	return ofColor(parseFloat(v[0]), parseFloat(v[1]),
-			parseFloat(v[2]));
+			parseFloat(v[2]), parseFloat(v[3]));
 }
 
 vector<string> parseIds(string s){

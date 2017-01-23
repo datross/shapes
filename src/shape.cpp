@@ -21,6 +21,8 @@ Shape::Shape()
 
 Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r, std::string _id)
 	: positionOrigin(pos), speed(_speed), scaleOrigin(_scale), rotationOrigin(r), path(_path), id(_id){
+
+	positionOrigin += ofVec2f(960, 540);
 	position = positionOrigin;
 	scale = scaleOrigin;
 	rotation = rotationOrigin;
@@ -32,9 +34,8 @@ Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float 
 	mass = 1.;
 	massRotation = 1.;
 	massScale = 1.;
+	cout << "color" << path.getFillColor() << endl;
 
-	//TODO viewPort Better
-	addPosition(ofVec2f(960, 540));
 }
 
 Shape::Shape(ofPath& _path, ofVec2f pos) : Shape(){

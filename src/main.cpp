@@ -9,7 +9,7 @@ using namespace idl;
 
 int main(int argc, char * argv[]){
 // 	ofSetupOpenGL(1024,768,OF_GAME_MODE);			// <-------- setup the GL context
-	ofSetupOpenGL(1024,768,OF_WINDOW);			// <-------- setup the GL context
+	ofSetupOpenGL(1920,1080,OF_WINDOW);			// <-------- setup the GL context
 	
 	/* Init FileManager */
 	

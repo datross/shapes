@@ -1,5 +1,5 @@
 {
-	"duration" : -1,
+	"duration" : 2,
 
 	"modifiers" :
 	[ 
@@ -7,7 +7,7 @@
 	        "type" : "selection dependante rotation",
 		    "selection" : {
 				"type" : "byColor", 
-				"color" : "183 65 50"
+				"color" : "26 26 26 255"
 			},
 		    "angle" : 90,
 		    "individual_origin" : true,
