@@ -14,8 +14,7 @@ using namespace std;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofBackground(255,255,255);	
-// 	ofSetFrameRate(60);
+
 	
 	ofSetWindowTitle("Interactive Delaunay");
 	
@@ -87,8 +86,6 @@ void ofApp::update(){
 	/* update every world's element */
 	world.update();
 	
-	
-	
 	/* TODO this should be removed */
 	//ofxLeapMotion &leap = deviceListener.getLeap();
 	//simpleHands = leap.getSimpleHands();
@@ -115,12 +112,13 @@ void ofApp::draw(){
 	
 	/* clear the buffer */
 	ofFill();
-	
+
 	/* draw world elements */
 	view.drawWorld(world);
 
 	/* draw HUD */
 	view.drawHud();
+
 }
 
 //--------------------------------------------------------------
