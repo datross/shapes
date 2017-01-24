@@ -20,8 +20,8 @@ void View::drawShape(Shape& shape) {
 }
 
 void View::drawBackground(ofVideoPlayer& video) {
-	ofColor(255, 255, 255);
-	video.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
+	ofColor(255, 255, 255, 255);
+	video.draw(0,0,  ofGetWindowWidth(), ofGetWindowHeight());
 }
 
 

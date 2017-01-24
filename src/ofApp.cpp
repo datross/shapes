@@ -14,8 +14,6 @@ using namespace std;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofBackground(255,255,255);	
-// 	ofSetFrameRate(60);
 	
 	ofSetWindowTitle("Interactive Delaunay");
 	
@@ -29,7 +27,7 @@ void ofApp::setup(){
 
 	World& world = World::getInstance();
 
-	ofBackground(255,255,255);
+	ofBackground(255,255,255, 255);
 	ofSetFrameRate(60);
 	
 	FileManager::getInstance().setCurrentDream("childish");
@@ -115,7 +113,7 @@ void ofApp::draw(){
 	
 	/* clear the buffer */
 	ofFill();
-	
+
 	/* draw world elements */
 	view.drawWorld(world);
 

@@ -6,7 +6,7 @@
       "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcBottom_circle2",
@@ -14,295 +14,295 @@
       "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "",
+      "id" : "snake",
       "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcBottom_circle5",
-      "id" : "",
+      "id" : "snake",
       "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },   
      {
       "path": "ArcTop_circle1",
-      "id" : "",      
+      "id" : "snake",      
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "",
+      "id" : "snake",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcTop_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcTop_circle4",
-      "id" : "",
+      "id" : "snake",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "",
+      "id" : "snake",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
         {
       "path": "ArcBottom_circle1",
-      "id" : "",      
+      "id" : "snake",      
       "position": "-462 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "",
+      "id" : "snake",
       "position": "-462 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "-462 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "",
+      "id" : "snake",
       "position": "-462 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcBottom_circle5",
-      "id" : "",
+      "id" : "snake",
       "position": "-462 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },  
     {
       "path": "ArcTop_circle1",
-      "id" : "",      
+      "id" : "snake",      
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "",
+      "id" : "snake",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcTop_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcTop_circle4",
-      "id" : "",
+      "id" : "snake",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "",
+      "id" : "snake",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },  
      {
       "path": "ArcBottom_circle1",
-      "id" : "",      
+      "id" : "snake",      
       "position": "-164 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "",
+      "id" : "snake",
       "position": "-164 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "-164 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "",
+      "id" : "snake",
       "position": "-164 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "",
+      "id" : "snake",
       "position": "-164 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle1",
-      "id" : "",      
+      "id" : "snake",      
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "",
+      "id" : "snake",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcTop_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcTop_circle4",
-      "id" : "",
+      "id" : "snake",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "",
+      "id" : "snake",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },  
      {
       "path": "ArcBottom_circle1",
-      "id" : "",      
+      "id" : "snake",      
       "position": "134 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "",
+      "id" : "snake",
       "position": "134 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "134 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "",
+      "id" : "snake",
       "position": "134 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "",
+      "id" : "snake",
       "position": "134 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcTop_circle1",
-      "id" : "",      
+      "id" : "snake",      
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "",
+      "id" : "snake",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcTop_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcTop_circle4",
@@ -310,7 +310,7 @@
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcTop_circle5",
@@ -318,47 +318,47 @@
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },  
      {
       "path": "ArcBottom_circle1",
-      "id" : "",      
+      "id" : "snake",      
       "position": "432 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "",
+      "id" : "snake",
       "position": "432 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "",
+      "id" : "snake",
       "position": "432 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "",
+      "id" : "snake",
       "position": "432 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "",
+      "id" : "snake",
       "position": "432 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     },
   	{
       "path": "BlackLine",
@@ -366,15 +366,15 @@
        "position": "0 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "BlackArc",
-      "id" : "snake gros",
+      "id" : "snake",
        "position": "432 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "RedArc",
@@ -382,48 +382,48 @@
        "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "LineCircle1",
-      "id" : "gros",
+      "id" : "line",
        "position": "294 -508",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "LineCircle2",
-      "id" : "gros",
+      "id" : "line",
        "position": "672 -372",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "LineCircle3",
-      "id" : "gros",
+      "id" : "line",
        "position": "470 -198",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "LineCircle4",
-      "id" : "gros",
+      "id" : "line",
        "position": "-768 122",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
+      "speed" :  "1 1"
     }, 
     {
       "path": "LineCircle5",
-      "id" : "gros",
+      "id" : "line",
        "position": "138 294",
       "scale": "1 1",
       "rotation": "0",
-      "speed": "2 1"
-    } 
+      "speed" :  "1 1"
+    }
   ],
   "background": {
     "path": "childish"

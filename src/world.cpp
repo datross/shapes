@@ -79,6 +79,7 @@ void World::addMask(Shape& shape) {
 
 void World::addBackground(ofVideoPlayer& video) {
 	background = video;
+	background.play();
 }
 
 

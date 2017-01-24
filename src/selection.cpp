@@ -52,7 +52,7 @@ void Selection::random(float threshold){
 	srand(time(NULL));
 	for(world.firstShape(); !world.endShape(); world.nextShape()) {
 		float weight = ofRandom(0, 1);
-		if (weight >threshold)
+		if (weight > threshold)
 				shapes.push_back(ShapeSelected(&world.currentShape(), weight));
 	}
 }

@@ -22,7 +22,6 @@ Shape::Shape()
 Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r, std::string _id)
 	: positionOrigin(pos), speed(_speed), scaleOrigin(_scale), rotationOrigin(r), path(_path), id(_id){
 
-	positionOrigin += ofVec2f(960, 540);
 	position = positionOrigin;
 	scale = scaleOrigin;
 	rotation = rotationOrigin;
@@ -34,7 +33,6 @@ Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float 
 	mass = 1.;
 	massRotation = 1.;
 	massScale = 1.;
-	cout << "color" << path.getFillColor() << endl;
 
 }
 
@@ -69,10 +67,10 @@ void Shape::addScale(ofVec2f s){
 
 void Shape::draw(){
 	ofPushMatrix();
+	ofTranslate(ofGetWindowWidth()/2, ofGetWindowHeight()/2);
 	ofTranslate(position.x, position.y, 0.);
 	ofRotate(rotation);
 	ofScale(scale.x, scale.y, 1.);
-
 	path.draw();
 
 	ofPopMatrix();
