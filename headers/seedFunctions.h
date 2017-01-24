@@ -21,11 +21,17 @@ namespace idl {
 	 * @return ofVec3f
 	 */
 	ofVec3f sinusoide(SeedTime& seed) {
-	float v = seed.getSetting(0) * sin(seed.getSetting(1) * seed.getAge() + seed.getSetting(2));
-	return ofVec3f(v);
-}
+		float v = seed.getSetting(0) + seed.getSetting(1) * sin(seed.getSetting(2) * seed.getAge() + seed.getSetting(3));
+		return ofVec3f(v);
+	}
 
-	// 0 value beginning, 1 valeur ending, 2, time between begin and end
+	/**
+	/* @brief if age < 0, then linear interpolation between a and b, else returns b
+	 * 0 value beginning, 1 valeur ending, 2, time between begin and end
+	 * 
+	 * @param seed ...
+	 * @return
+	 */
 	ofVec3f linearFade(SeedTime& seed) {
 		if (seed.getAge() < seed.getSetting(2))
 		{
@@ -34,10 +40,17 @@ namespace idl {
 		else return ofVec3f(seed.getSetting(1));
 	}
 
+	/**
+	 * @brief Simple wiggle.
+	 * 0 amplitude, 1 frequency
+	 * 
+	 * @param seed ...
+	 * @return
+	 */
 	ofVec3f wiggle(SeedTime& seed) {
 		return ofVec3f(seed.getSetting(0)*(2*ofNoise(seed.getSetting(1)*seed.getAge())-1),
-									 seed.getSetting(0)*(2*ofNoise(seed.getSetting(1)*seed.getAge()+10000)-1),
-									 seed.getSetting(0)*(2*ofNoise(seed.getSetting(1)*seed.getAge()+20000)-1));
+		seed.getSetting(0)*(2*ofNoise(seed.getSetting(1)*seed.getAge()+10000)-1),
+		seed.getSetting(0)*(2*ofNoise(seed.getSetting(1)*seed.getAge()+20000)-1));
 	}
 
 

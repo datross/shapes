@@ -9,7 +9,7 @@ using namespace std;
 SeedFactory::SeedFactory(){
 	/* Adding every function to the map. */
 
-	addFunction("sinusoide", sinusoide, {1,1,0});
+	addFunction("sinusoide", sinusoide, {0,1,1,0});
 	addFunction("linearFade", linearFade, {0,1,1});
 	addFunction("wiggle", wiggle, {1,1});
 }

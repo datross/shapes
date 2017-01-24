@@ -201,17 +201,8 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 void ofApp::executeActions() {
-// 	for(auto it = actions.begin(); it != actions.end(); ++it) {
-// 		/* need to delete the action */
-// 		auto next_it = it;
-// 		++next_it;
-// 		if(!(*it)->execute()) {
-// 			actions.erase(it);
-// 			//it = next_it;
-// 		}
-// 	}
-	
 	auto it = actions.begin();
+// 	cout << "exe 1" << endl;
 	while(it != actions.end()) {
 		/* need to delete the action */
 		if(!(*it)->execute()) {
@@ -221,4 +212,5 @@ void ofApp::executeActions() {
 			++it;
 		}
 	}
+// 	cout << "exe 2" << endl;
 }
