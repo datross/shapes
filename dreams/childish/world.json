@@ -3,7 +3,7 @@
     {
       "path": "ArcBottom_circle1",
       "id" : "snake",      
-      "position": "-760 0",
+      "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -11,7 +11,7 @@
     {
       "path": "ArcBottom_circle2",
       "id" : "snake small-block",
-      "position": "-760 0",
+      "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -19,7 +19,7 @@
     {
       "path": "ArcBottom_circle3",
       "id" : "snake big-block",
-      "position": "-760 0",
+      "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -27,7 +27,7 @@
      {
       "path": "ArcBottom_circle4",
       "id" : "snake big-block",
-      "position": "-760 0",
+      "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -35,7 +35,7 @@
     {
       "path": "ArcBottom_circle5",
       "id" : "snake big-block top-path",
-      "position": "-760 0",
+      "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -83,7 +83,7 @@
         {
       "path": "ArcBottom_circle1",
       "id" : "snake top-path",      
-      "position": "-462 0",
+      "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -91,7 +91,7 @@
     {
       "path": "ArcBottom_circle2",
       "id" : "snake small-block",
-      "position": "-462 0",
+      "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -99,7 +99,7 @@
     {
       "path": "ArcBottom_circle3",
       "id" : "snake big-block",
-      "position": "-462 0",
+      "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -107,7 +107,7 @@
      {
       "path": "ArcBottom_circle4",
       "id" : "snake big-block top-path",
-      "position": "-462 0",
+      "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -115,7 +115,7 @@
     {
       "path": "ArcBottom_circle5",
       "id" : "snake big-block",
-      "position": "-462 0",
+      "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -163,7 +163,7 @@
      {
       "path": "ArcBottom_circle1",
       "id" : "snake top-path",      
-      "position": "-164 0",
+      "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -171,7 +171,7 @@
     {
       "path": "ArcBottom_circle2",
       "id" : "snake small-block",
-      "position": "-164 0",
+      "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -179,7 +179,7 @@
     {
       "path": "ArcBottom_circle3",
       "id" : "snake big-block",
-      "position": "-164 0",
+      "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -187,7 +187,7 @@
      {
       "path": "ArcBottom_circle4",
       "id" : "snake big-block",
-      "position": "-164 0",
+      "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -195,7 +195,7 @@
      {
       "path": "ArcBottom_circle5",
       "id" : "snake big-block",
-      "position": "-164 0",
+      "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -243,7 +243,7 @@
      {
       "path": "ArcBottom_circle1",
       "id" : "snake top-path",      
-      "position": "134 0",
+      "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -251,7 +251,7 @@
     {
       "path": "ArcBottom_circle2",
       "id" : "snake small-block",
-      "position": "134 0",
+      "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -259,7 +259,7 @@
     {
       "path": "ArcBottom_circle3",
       "id" : "snake big-block",
-      "position": "134 0",
+      "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -267,7 +267,7 @@
      {
       "path": "ArcBottom_circle4",
       "id" : "snake big-block",
-      "position": "134 0",
+      "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -275,7 +275,7 @@
      {
       "path": "ArcBottom_circle5",
       "id" : "snake big-block",
-      "position": "134 0",
+      "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -323,7 +323,7 @@
      {
       "path": "ArcBottom_circle1",
       "id" : "snake top-path",      
-      "position": "432 0",
+      "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -331,7 +331,7 @@
     {
       "path": "ArcBottom_circle2",
       "id" : "snake small-block",
-      "position": "432 0",
+      "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -339,7 +339,7 @@
     {
       "path": "ArcBottom_circle3",
       "id" : "snake big-block",
-      "position": "432 0",
+      "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -347,7 +347,7 @@
      {
       "path": "ArcBottom_circle4",
       "id" : "snake big-block",
-      "position": "432 0",
+      "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
@@ -355,14 +355,14 @@
      {
       "path": "ArcBottom_circle5",
       "id" : "snake big-block",
-      "position": "432 0",
+      "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
     },
   	{
       "path": "BlackLine",
-      "id" : "middleLine",
+      "id" : "snake middleLine",
        "position": "0 0",
       "scale": "1 1",
       "rotation": "0",

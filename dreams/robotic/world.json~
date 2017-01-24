@@ -1,0 +1,233 @@
+{
+  "shapes": [
+   {
+      "path": "circle",
+      "id" : "square circle",      
+      "position": "0 -7",
+      "scale": "2 2",
+      "rotation": "0",
+      "speed": "2 1"
+    }
+    ,{
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "12 -59",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "64 -8",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "0 -150",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "12 -209",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "64 -158",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }
+    ,{
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "0 -300",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "12 -359",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "64 -308",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, {
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "200 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "212 -59",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "264 -8",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }
+    ,{
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "200 -150",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "212 -209",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "264 -158",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }
+    ,{
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "200 -300",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "212 -359",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "264 -308",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "-200 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "-188 -59",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "-136 -8",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }
+    ,{
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "-200 -150",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "-188 -209",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "-136 -158",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }
+    ,{
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "-200 -300",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "-188 -359",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "-136 -308",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }
+  ],
+  "background": {
+    "path": "robotic"
+  }, 
+    "masks": {
+    "path": "robotic"
+  }
+}
