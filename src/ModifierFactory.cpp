@@ -42,6 +42,8 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 		auto args = split(type, ' ');
 		if (args[0] == "selection") {
 			shared_ptr<Selection> selection = SelectionFactory::getInstance().create(jModifier["selection"]);
+			if (!selection)
+				return nullptr;
 			if (args[1] == "dependante") {
 				/*Seed Recupération*/
 				shared_ptr<Seed> seed = getSeed(jModifier);
