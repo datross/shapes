@@ -25,12 +25,19 @@ namespace idl {
 	return ofVec3f(v);
 }
 
+	// 0 value beginning, 1 valeur ending, 2, time between begin and end
 	ofVec3f linearFade(SeedTime& seed) {
 		if (seed.getAge() < seed.getSetting(2))
 		{
 			return ofVec3f(seed.getSetting(0) + (seed.getSetting(1) - seed.getSetting(0))*seed.getAge()/seed.getSetting(2));
 		}
 		else return ofVec3f(seed.getSetting(1));
+	}
+
+	ofVec3f wiggle(SeedTime& seed) {
+		return ofVec3f(seed.getSetting(0)*(2*ofNoise(seed.getSetting(1)*seed.getAge())-1),
+									 seed.getSetting(0)*(2*ofNoise(seed.getSetting(1)*seed.getAge()+10000)-1),
+									 seed.getSetting(0)*(2*ofNoise(seed.getSetting(1)*seed.getAge()+20000)-1));
 	}
 
 

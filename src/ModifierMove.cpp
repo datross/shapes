@@ -1,5 +1,6 @@
 #include "ModifierMove.h"
 #include "shape.h"
+#include "Hud.h"
 
 #include <iostream>
 
@@ -16,6 +17,8 @@ void Movator::apply() {
 	seed->update();
 
 	for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
-		it->first->addForce(movement*ofVec2f(seed->current())*it->second);
-		}
+		it->first->addForce(ofVec2f(movement.x*seed->current().x, movement.y*seed->current().y)*it->second);
+		Hud::getInstance().addEntry("X",movement.x*seed->current().x);
+		Hud::getInstance().addEntry("Y",movement.y*seed->current().y);
+	}
 }

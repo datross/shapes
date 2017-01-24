@@ -1,5 +1,5 @@
 {
-	"duration" : 0,
+	"duration" : -1,
 
 	"modifiers" :
 	[
@@ -9,8 +9,8 @@
 				"type" : "uniform",
 				"weight" : 1
 			},
-		    "movement" : "50 0",
-		    "seed" : "time linearFade 0 1 2"
+		    "movement" : "20 20",
+		    "seed" : "time wiggle 20 0.5"
     	},
 		{
 	        "type" : "selection dependante color",

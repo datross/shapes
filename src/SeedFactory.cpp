@@ -11,6 +11,7 @@ SeedFactory::SeedFactory(){
 
 	addFunction("sinusoide", sinusoide, {1,1,0});
 	addFunction("linearFade", linearFade, {0,1,1});
+	addFunction("wiggle", wiggle, {1,1});
 }
 
 void SeedFactory::addFunction(string type, function<ofVec3f(SeedTime&)> f,  std::vector<Setting> defaultsSettings) {
