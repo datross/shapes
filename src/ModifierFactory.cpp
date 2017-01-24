@@ -27,8 +27,10 @@ ModifierFactory & idl::ModifierFactory::getInstance(){
 
 shared_ptr<Seed> getSeed(json& jModifier) {
 	if (jModifier.find("seed") != jModifier.end()) {
-		return SeedFactory::getInstance().
+		shared_ptr<Seed> s = SeedFactory::getInstance().
 			createSeed(jModifier["seed"].get<string>());
+		if (s)
+			return s;
 	}
 	return shared_ptr<Seed>(new SeedConstant());
 }
@@ -40,6 +42,8 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 		auto args = split(type, ' ');
 		if (args[0] == "selection") {
 			shared_ptr<Selection> selection = SelectionFactory::getInstance().create(jModifier["selection"]);
+			if (!selection)
+				return nullptr;
 			if (args[1] == "dependante") {
 				/*Seed Recupération*/
 				shared_ptr<Seed> seed = getSeed(jModifier);

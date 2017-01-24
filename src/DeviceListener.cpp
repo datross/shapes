@@ -14,74 +14,114 @@ LeapDevice & idl::LeapDevice::getInstance(){
 }
 
 float LeapDevice::grabStrength(unsigned hand) {
+	ourMutex.lock();
 	if (hand >= hands.size()) {
+		ourMutex.unlock();
 		return 0;
 	}
-	return hands[hand].grabStrength();
+	auto tmp = hands[hand].grabStrength();
+	ourMutex.unlock();
+	return tmp;
 }
 
 float LeapDevice::pinchStrength(unsigned hand) {
+	ourMutex.lock();
 	if (hand >= hands.size()) {
+		ourMutex.unlock();
 		return 0;
 	}
-	return hands[hand].pinchStrength();
+	auto tmp = hands[hand].pinchStrength();
+	ourMutex.unlock();
+	return tmp;
 }
 
-bool hasHand(HandList hands, unsigned handId){
+bool LeapDevice::hasHand(unsigned handId){
+	ourMutex.lock();
 	for(auto hand = hands.begin(); hand != hands.end(); ++hand){
-		if((*hand).id() == handId)
+		if ((*hand).id() == handId) {
+			ourMutex.unlock();
 			return true;
+		}
 	}
+	ourMutex.unlock();
 	return false;
 }
 
 bool LeapDevice::tapped(unsigned hand) {
+	ourMutex.lock();
 	auto gestures = ourController->frame().gestures();
 	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
 		auto hands = (*it).hands();
-		//cout << (*it).type() << endl;
-		if(((*it).type() == Leap::Gesture::TYPE_SCREEN_TAP) && hasHand(hands, hand)) {
+		if(((*it).type() == Leap::Gesture::TYPE_SCREEN_TAP) && hasHand(hand)) {
+			ourMutex.unlock();
 			return true ;
 		}
 	}
+	ourMutex.unlock();
 	return false;
 }
 
-float LeapDevice::xPos(unsigned hand) {
-	if(hand > hands.size())
+float LeapDevice::xPos(int hand) {
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
 		return 0;
+	}
+	cout << "HAND : " << hand << endl;
+	cout << "HANDs size : " << hands.size() << endl;
+	float x = hands[hand].palmPosition().x;
+	ourMutex.unlock();
+	return x;
+}
+
+float LeapDevice::yPos(int hand) {
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
+		return 0;
+	}
+	float x = hands[hand].palmPosition().y;
+	ourMutex.unlock();
+	return x;
 	
-	return hands[hand].palmPosition().x;
 }
-float LeapDevice::yPos(unsigned hand) {
-	if(hand > hands.size())
+
+float idl::LeapDevice::zPos(int hand){
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
 		return 0;
-	
-	return hands[hand].palmPosition().y;
+	}
+	float x = hands[hand].palmPosition().z;
+	ourMutex.unlock();
+	return x;
 }
 
-float idl::LeapDevice::zPos(unsigned hand){
-	if (hand > hands.size())
-		return 0;
-
-	return hands[hand].palmPosition().z;
-}
-
-unsigned idl::LeapDevice::getRightHand(){
+int idl::LeapDevice::getRightHand(){
+	ourMutex.lock();
+	int i = 0;
 	for (auto& hand : hands) {
 		if (hand.isRight()) {
-			return hand.id();
+			ourMutex.unlock();
+			return i;
 		}
+		i++;
 	}
+	ourMutex.unlock();
 	return -1;
 }
 
-unsigned idl::LeapDevice::getLeftHand(){
+int idl::LeapDevice::getLeftHand(){
+	ourMutex.lock();
+	int i = 0;
 	for (auto& hand : hands) {
 		if (hand.isLeft()) {
-			return hand.id();
+			ourMutex.unlock();
+			return i;
 		}
+		i++;
 	}
+	ourMutex.unlock();
 	return -1;
 }
 
@@ -98,8 +138,7 @@ void DeviceListener::setup() {
 DeviceListener::~DeviceListener() {
 }
 
-vector<idl::Gesture> DeviceListener::getGestures()
-{
+vector<idl::Gesture> DeviceListener::getGestures(){
 	vector<idl::Gesture> gestures;
 	vector<ofxLeapMotionSimpleHand> hands = leapDevice.getSimpleHands();
 	unsigned nbHands = 0;

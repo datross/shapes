@@ -3,7 +3,7 @@
    {
       "path": "circle",
       "id" : "square circle",      
-      "position": "0 -6",
+      "position": "0 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"

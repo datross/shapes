@@ -1,0 +1,18 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+		{
+	        "type" : "dependante sound",
+		    "value" : 127,
+			"controller" : "right-rev",
+<<<<<<< HEAD
+		    "seed" : "time sinusoide 0 1 1.5 1.57"
+=======
+		    "seed" : "leap position right"
+>>>>>>> 3e20fb58125b10a2cee6ff0674e5e3f48d6a0d01
+    	}
+	]
+}

@@ -20,7 +20,7 @@
 	        "type" : "dependante sound",
 		    "value" : 45,
 			"controller" : "right-dly",
-		    "seed" : "time sinusoide 1 1.5 1.57"
+		    "seed" : "time sinusoide 0 1 1.5 1.57"
     	}
 	]
 }

@@ -12,7 +12,7 @@
 		    "angle" : 90,
 		    "individual_origin" : true,
 		    "pivot" : "500 500", 
-		    "seed" : "time sinusoide 1 1.5 1.5"
+		    "seed" : "time sinusoide 0 1 1.5 1.5"
     	},
 		{	
 	        "type" : "selection dependante scale",
@@ -23,13 +23,13 @@
 		    "scale" : "10 10",
 		    "individual_origin" : true,
 		    "pivot" : "3 3", 
-		    "seed" : "time sinusoide 1 1.5 1.57"
+		    "seed" : "time sinusoide 0 1 1.5 1.57"
     	}, 
 		{	
 	        "type" : "dependante sound",
 		    "value" : 45,
 			"controller" : "right-freq",
-		    "seed" : "time sinusoide 1 1.5 1.57"
+		    "seed" : "time sinusoide 0 1 1.5 1.57"
     	}
 	]
 }

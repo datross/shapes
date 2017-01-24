@@ -11,7 +11,7 @@ using namespace std;
 SeedFactory::SeedFactory(){
 	/* Adding every function to the map. */
 
-	addFunction("sinusoide", sinusoide, {1,1,0});
+	addFunction("sinusoide", sinusoide, {0,1,1,0});
 	addFunction("linearFade", linearFade, {0,1,1});
 	addFunction("wiggle", wiggle, {1,1});
 }
@@ -64,22 +64,22 @@ shared_ptr<Seed> SeedFactory::createSeed(string type) {
 		if (arguments[1] == "right") {
 			hand = RIGHT;
 		}
-		else if (arguments[2] == "left") {
+		else if (arguments[1] == "left") {
 			hand = LEFT;
 		}
-		if (arguments[1] == "position") 
+		if (arguments[2] == "position") 
 			return shared_ptr<Seed>(new SeedLeap(hand, POS));
-		if (arguments[1] == "positionX")
+		if (arguments[2] == "positionX")
 			return shared_ptr<Seed>(new SeedLeap(hand, POSX));
-		if (arguments[1] == "positionY")
+		if (arguments[2] == "positionY")
 			return shared_ptr<Seed>(new SeedLeap(hand, POSY));
-		if (arguments[1] == "positionZ")
+		if (arguments[2] == "positionZ")
 			return shared_ptr<Seed>(new SeedLeap(hand, POSZ));
-		if (arguments[1] == "strength") 
+		if (arguments[2] == "strength") 
 			return shared_ptr<Seed>(new SeedLeap(hand, STRENGTH));
-		if (arguments[1] == "grab")
+		if (arguments[2] == "grab")
 			return shared_ptr<Seed>(new SeedLeap(hand, GRAB));
-		if (arguments[1] == "pinch")
+		if (arguments[2] == "pinch")
 			return shared_ptr<Seed>(new SeedLeap(hand, PINCH));
 	}
 
