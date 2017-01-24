@@ -1,0 +1,24 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+		{
+			"type" : "selection dependante rotation",
+			"selection" : {
+			"type" : "uniform",
+			"weight" : 1
+				},
+			"angle" : 90,
+			"individual_origin" : true,
+			"pivot" : "500 500", 
+		},
+
+		{
+	        "type" : "dependante sound",
+		    "value" : 45,
+			"controller" : "left-dly",
+		    "seed" : "time sinusoide 1 1.5 1.57"
+    	}
+	]
+}

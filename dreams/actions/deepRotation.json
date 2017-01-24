@@ -1,5 +1,5 @@
 {
-	"duration" : 100,
+	"duration" : -1,
 	"modifiers" :
 	[
 	    {
@@ -9,7 +9,7 @@
 				"color" : "26 26 26 255"
 			},
 		    "movement" : "20 20",
-		    "seed" : "time wiggle 20 0.5"
+		    "seed" : "time wiggle 2 0.2"
     	},
 		{	
 	        "type" : "selection dependante color",
@@ -18,7 +18,7 @@
 				"id" : "small-block"
 			},
 		    "color" : "255 0 0",
-		    "seed" : "time sinusoide 1 0.5 0"
+		    "seed" : "time sinusoide 0.2 0.5 0"
     	},
 			{
 	        "type" : "dependante sound",

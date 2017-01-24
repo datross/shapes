@@ -1,6 +1,8 @@
 #include "SeedFactory.h"
 #include "seedFunctions.h"
+#include "DeviceListener.h"
 #include "Utility.h"
+#include "SeedLeap.h"
 
 using namespace idl;
 using namespace std;
@@ -55,6 +57,30 @@ shared_ptr<Seed> SeedFactory::createSeed(string type) {
 		auto seed =  shared_ptr<Seed>(new SeedTimeFunctor(fct->second.first, settings));
 		dynamic_pointer_cast<SeedTime>(seed)->start();
 		return seed;
+	}
+	if (arguments[0] == "leap") {
+		LeapDevice& leap = LeapDevice::getInstance();
+		HandSide hand;
+		if (arguments[1] == "right") {
+			hand = RIGHT;
+		}
+		else if (arguments[2] == "left") {
+			hand = LEFT;
+		}
+		if (arguments[1] == "position") 
+			return shared_ptr<Seed>(new SeedLeap(hand, POS));
+		if (arguments[1] == "positionX")
+			return shared_ptr<Seed>(new SeedLeap(hand, POSX));
+		if (arguments[1] == "positionY")
+			return shared_ptr<Seed>(new SeedLeap(hand, POSY));
+		if (arguments[1] == "positionZ")
+			return shared_ptr<Seed>(new SeedLeap(hand, POSZ));
+		if (arguments[1] == "strength") 
+			return shared_ptr<Seed>(new SeedLeap(hand, STRENGTH));
+		if (arguments[1] == "grab")
+			return shared_ptr<Seed>(new SeedLeap(hand, GRAB));
+		if (arguments[1] == "pinch")
+			return shared_ptr<Seed>(new SeedLeap(hand, PINCH));
 	}
 
 	return nullptr;

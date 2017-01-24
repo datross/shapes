@@ -4,6 +4,18 @@
 	"modifiers" :
 	[
 
+	 {	
+	        "type" : "selection dependante expand",
+		    "selection" : {
+				"type" : "uniform", 
+				"weight" : 1
+			},
+		    "angle" : 90,
+		    "individual_origin" : true,
+		    "pivot" : "500 500", 
+		    "seed" : "time sinusoide 1 1.5 1.5"
+    	},
+
 		{
 	        "type" : "dependante sound",
 		    "value" : 45,

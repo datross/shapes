@@ -8,6 +8,11 @@ using namespace std;
 
 LeapDevice::LeapDevice() : ofxLeapMotion() {}
 
+LeapDevice & idl::LeapDevice::getInstance(){
+	static LeapDevice instance;
+	return instance;
+}
+
 float LeapDevice::grabStrength(unsigned hand) {
 	if (hand >= hands.size()) {
 		return 0;
@@ -55,9 +60,34 @@ float LeapDevice::yPos(unsigned hand) {
 	return hands[hand].palmPosition().y;
 }
 
+float idl::LeapDevice::zPos(unsigned hand){
+	if (hand > hands.size())
+		return 0;
+
+	return hands[hand].palmPosition().z;
+}
+
+unsigned idl::LeapDevice::getRightHand(){
+	for (auto& hand : hands) {
+		if (hand.isRight()) {
+			return hand.id();
+		}
+	}
+	return -1;
+}
+
+unsigned idl::LeapDevice::getLeftHand(){
+	for (auto& hand : hands) {
+		if (hand.isLeft()) {
+			return hand.id();
+		}
+	}
+	return -1;
+}
+
 /* --------------------- DeviceListener -------------------------- */
 
-DeviceListener::DeviceListener() {
+DeviceListener::DeviceListener() : leapDevice(LeapDevice::getInstance()){
 }
 
 void DeviceListener::setup() {

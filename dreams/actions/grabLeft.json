@@ -3,22 +3,13 @@
 
 	"modifiers" :
 	[ 
-	    {	
-	        "type" : "selection dependante rotation",
-		    "selection" : {
-				"type" : "uniform", 
-				"weight" : 1
-			},
-		    "angle" : 90,
-		    "individual_origin" : true,
-		    "pivot" : "500 500", 
-		    "seed" : "time sinusoide 1 1.5 1.5"
-    	},
+	    
 		{	
 	        "type" : "selection dependante scale",
 		    "selection" : {
-				"type" : "uniform", 
-				"weight" : 1
+				"type" : "radial", 
+				"weight" : 1,
+				"radius" : 200
 			},
 		    "scale" : "10 10",
 		    "individual_origin" : true,

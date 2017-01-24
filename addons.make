@@ -3,6 +3,6 @@ ofxFft
 ofxLeapMotion2
 ofxMask
 ofxMidi
-ofxPostGlitch
 ofxOsc
+ofxPostGlitch
 ofxSvg
