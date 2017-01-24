@@ -11,23 +11,29 @@
 
 namespace idl {
 
+	enum HandSide { LEFT, RIGHT };
+	enum LeapInfoFlag { POSITION, STRENGTH };
+
 /* In order to access protected members */
 class LeapDevice : public ofxLeapMotion {
 private:
 // 	float ofVec2 hand_pos_prec[2];
-public:
 	LeapDevice();
+public:
 
 	/* MIND the hands number */
+	static LeapDevice& getInstance();
 	float grabStrength(unsigned hand);
 	float pinchStrength(unsigned hand);
 	float xPos(unsigned hand);
 	float yPos(unsigned hand);
 	bool tapped(unsigned hand); // it changes leap state
+	unsigned getRightHand();
+	unsigned getLeftHand();
 };
 
 class DeviceListener{
-	LeapDevice leapDevice;
+	LeapDevice& leapDevice;
 public:
 	DeviceListener();
 	~DeviceListener();
