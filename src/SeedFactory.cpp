@@ -67,12 +67,20 @@ shared_ptr<Seed> SeedFactory::createSeed(string type) {
 		else if (arguments[2] == "left") {
 			hand = LEFT;
 		}
-		if (arguments[1] == "position") {
-			return shared_ptr<Seed>(new SeedLeap(hand, POSITION));
-		}
-		if (arguments[1] == "strength") {
-
-		}
+		if (arguments[1] == "position") 
+			return shared_ptr<Seed>(new SeedLeap(hand, POS));
+		if (arguments[1] == "positionX")
+			return shared_ptr<Seed>(new SeedLeap(hand, POSX));
+		if (arguments[1] == "positionY")
+			return shared_ptr<Seed>(new SeedLeap(hand, POSY));
+		if (arguments[1] == "positionZ")
+			return shared_ptr<Seed>(new SeedLeap(hand, POSZ));
+		if (arguments[1] == "strength") 
+			return shared_ptr<Seed>(new SeedLeap(hand, STRENGTH));
+		if (arguments[1] == "grab")
+			return shared_ptr<Seed>(new SeedLeap(hand, GRAB));
+		if (arguments[1] == "pinch")
+			return shared_ptr<Seed>(new SeedLeap(hand, PINCH));
 	}
 
 	return nullptr;

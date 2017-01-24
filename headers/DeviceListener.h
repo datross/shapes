@@ -12,7 +12,7 @@
 namespace idl {
 
 	enum HandSide { LEFT, RIGHT };
-	enum LeapInfoFlag { POSITION, STRENGTH };
+	enum LeapInfoFlag { POS, POSX, POSY, POSZ, STRENGTH, GRAB, PINCH };
 
 /* In order to access protected members */
 class LeapDevice : public ofxLeapMotion {
@@ -27,6 +27,7 @@ public:
 	float pinchStrength(unsigned hand);
 	float xPos(unsigned hand);
 	float yPos(unsigned hand);
+	float zPos(unsigned hand);
 	bool tapped(unsigned hand); // it changes leap state
 	unsigned getRightHand();
 	unsigned getLeftHand();

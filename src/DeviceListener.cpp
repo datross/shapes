@@ -60,6 +60,13 @@ float LeapDevice::yPos(unsigned hand) {
 	return hands[hand].palmPosition().y;
 }
 
+float idl::LeapDevice::zPos(unsigned hand){
+	if (hand > hands.size())
+		return 0;
+
+	return hands[hand].palmPosition().z;
+}
+
 unsigned idl::LeapDevice::getRightHand(){
 	for (auto& hand : hands) {
 		if (hand.isRight()) {

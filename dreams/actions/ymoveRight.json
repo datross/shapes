@@ -6,9 +6,9 @@
 
 		{
 	        "type" : "dependante sound",
-		    "value" : 45,
+		    "value" : 127,
 			"controller" : "right-rev",
-		    "seed" : "time sinusoide 1 1.5 1.57"
+		    "seed" : "leap position right"
     	}
 	]
 }
