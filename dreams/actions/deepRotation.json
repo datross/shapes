@@ -14,11 +14,11 @@
 		{	
 	        "type" : "selection dependante color",
 			"selection" : {
-				"type" : "uniform",
-				"weight" : 1
+				"type" : "byId",
+				"id" : "small-block"
 			},
 		    "color" : "255 0 0",
-		    "seed" : "time sinusoide 0.5 0.5 5 0"
+		    "seed" : "leap right positionX"
     	},
 			{
 	        "type" : "dependante sound",

@@ -27,8 +27,10 @@ ModifierFactory & idl::ModifierFactory::getInstance(){
 
 shared_ptr<Seed> getSeed(json& jModifier) {
 	if (jModifier.find("seed") != jModifier.end()) {
-		return SeedFactory::getInstance().
+		shared_ptr<Seed> s = SeedFactory::getInstance().
 			createSeed(jModifier["seed"].get<string>());
+		if (s)
+			return s;
 	}
 	return shared_ptr<Seed>(new SeedConstant());
 }

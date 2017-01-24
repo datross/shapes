@@ -8,6 +8,11 @@ using namespace std;
 
 LeapDevice::LeapDevice() : ofxLeapMotion() {}
 
+LeapDevice & idl::LeapDevice::getInstance(){
+	static LeapDevice instance;
+	return instance;
+}
+
 float LeapDevice::grabStrength(unsigned hand) {
 	if (hand >= hands.size()) {
 		return 0;
@@ -42,22 +47,52 @@ bool LeapDevice::tapped(unsigned hand) {
 	return false;
 }
 
-float LeapDevice::xPos(unsigned hand) {
+float LeapDevice::xPos(int hand) {
 	if(hand > hands.size())
 		return 0;
-	
-	return hands[hand].palmPosition().x;
+	cout << "HAND : " << hand << endl;
+	cout << "HANDs size : " << hands.size() << endl;
+	float x = hands[hand].palmPosition().x;
+	return x;
 }
-float LeapDevice::yPos(unsigned hand) {
+
+float LeapDevice::yPos(int hand) {
 	if(hand > hands.size())
 		return 0;
-	
 	return hands[hand].palmPosition().y;
+}
+
+float idl::LeapDevice::zPos(int hand){
+	if (hand > hands.size())
+		return 0;
+	return hands[hand].palmPosition().z;
+}
+
+int idl::LeapDevice::getRightHand(){
+	int i = 0;
+	for (auto& hand : hands) {
+		if (hand.isRight()) {
+			return i;
+		}
+		i++;
+	}
+	return -1;
+}
+
+int idl::LeapDevice::getLeftHand(){
+	int i = 0;
+	for (auto& hand : hands) {
+		if (hand.isLeft()) {
+			return i;
+		}
+		i++;
+	}
+	return -1;
 }
 
 /* --------------------- DeviceListener -------------------------- */
 
-DeviceListener::DeviceListener() {
+DeviceListener::DeviceListener() : leapDevice(LeapDevice::getInstance()){
 }
 
 void DeviceListener::setup() {

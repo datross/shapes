@@ -67,6 +67,8 @@ void World::update() {
 		currentShape().update(now - timePrec);
 	}
 	timePrec = now;
+	background.update();
+
 }
 
 void World::addShape(Shape & shape) {

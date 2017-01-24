@@ -24,7 +24,6 @@ void View::drawBackground(ofVideoPlayer& video) {
 	video.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
 }
 
-
 void View::drawWorld(World & world) {
 	drawBackground(world.currentBackground());
 	for(world.firstShape(); !world.endShape(); world.nextShape()) {

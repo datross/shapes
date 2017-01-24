@@ -14,8 +14,7 @@ using namespace std;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofBackground(255,255,255);	
-// 	ofSetFrameRate(60);
+
 	
 	ofSetWindowTitle("Interactive Delaunay");
 	
@@ -81,13 +80,13 @@ void ofApp::update(){
 	/* TODO debug : prints number of actions */
 	Hud::getInstance().addEntry("Nb actions", actions.size());
 	
+	cout << "nb actions :" << actions.size() << endl;
+
 	/* execute the action list on the world */
 	executeActions();
 	
 	/* update every world's element */
 	world.update();
-	
-	
 	
 	/* TODO this should be removed */
 	//ofxLeapMotion &leap = deviceListener.getLeap();
@@ -115,12 +114,13 @@ void ofApp::draw(){
 	
 	/* clear the buffer */
 	ofFill();
-	
+
 	/* draw world elements */
 	view.drawWorld(world);
 
 	/* draw HUD */
 	view.drawHud();
+
 }
 
 //--------------------------------------------------------------
