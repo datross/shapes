@@ -14,8 +14,8 @@
 		{	
 	        "type" : "selection dependante color",
 			"selection" : {
-				"type" : "uniform",
-				"weight" : 1
+				"type" : "byId",
+				"id" : "small-block"
 			},
 		    "color" : "255 0 0",
 		    "seed" : "leap right positionX"
