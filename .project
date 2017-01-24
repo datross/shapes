@@ -51,6 +51,11 @@
 			<locationURI>/home/julie/Desktop/OF/addons/ofxMask</locationURI>
 		</link>
 		<link>
+			<name>addons/ofxMidi</name>
+			<type>2</type>
+			<locationURI>/home/julie/Desktop/OF/addons/ofxMidi</locationURI>
+		</link>
+		<link>
 			<name>addons/ofxOsc</name>
 			<type>2</type>
 			<locationURI>/home/julie/Desktop/OF/addons/ofxOsc</locationURI>
