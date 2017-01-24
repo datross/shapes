@@ -1,6 +1,5 @@
 {
-	"duration" : -1,
-
+	"duration" : 100,
 	"modifiers" :
 	[
 	    {
@@ -12,7 +11,7 @@
 		    "movement" : "20 20",
 		    "seed" : "time wiggle 20 0.5"
     	},
-		{
+		{	
 	        "type" : "selection dependante color",
 			"selection" : {
 				"type" : "uniform",
@@ -25,7 +24,8 @@
 	        "type" : "dependante sound",
 		    "value" : 45,
 			"controller" : "baby-calm-vol",
-		    "seed" : "time sinusoide 1 1.5 1.57"
+		    "color" : "0 0 255",
+		    "seed" : "time sinusoide 1 3 0"
     	}
 
 	]

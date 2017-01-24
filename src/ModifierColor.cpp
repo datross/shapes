@@ -11,9 +11,11 @@ void Colorizer::apply(){
 	seed->update();
 	for(auto it = selection->getShapes().begin();
 			it != selection->getShapes().end(); ++it) {
+		float w = it->second;
 		Shape *shape = it->first;
 		ofColor seedC = pourcentVec3ToColor(seed->current());
-		ofColor c = ((ofColor(255)-seedC)*shape->getOriginColor()) + (seedC*(shape->getOriginColor()*(1 - it->second)) + (color*it->second));
+		ofColor c = ((ofColor(255)-seedC)*shape->getOriginColor()) + seedC*((shape->getOriginColor()*(1 - it->second)) + (color*it->second));
 		shape->setColor(c);
+// 		shape->setColor(shape->getOriginColor() * (1 - w) + color * w);
 	}
 }
