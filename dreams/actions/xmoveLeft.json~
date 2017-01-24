@@ -11,7 +11,7 @@
 				},
 			"angle" : 90,
 			"individual_origin" : true,
-			"pivot" : "500 500"
+			"pivot" : "500 500", 
 		},
 
 		{

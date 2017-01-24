@@ -21,9 +21,9 @@ public:
 	/* MIND the hands number */
 	float grabStrength(unsigned hand);
 	float pinchStrength(unsigned hand);
-	bool tapped(unsigned hand);
 	float xPos(unsigned hand);
 	float yPos(unsigned hand);
+	bool tapped(unsigned hand); // it changes leap state
 };
 
 class DeviceListener{
