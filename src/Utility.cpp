@@ -47,6 +47,10 @@ ofColor parseColor(string s){
 	return vec3ToColor(parseVec3(s));
 }
 
+vector<string> parseIds(string s){
+	return split(s,' ');
+}
+
 ofVec2f clampVec2(ofVec2f v, float inf, float sup) {
 	return ofVec2f(ofClamp(v.x, inf, sup), ofClamp(v.y, inf, sup));
 }

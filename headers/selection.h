@@ -23,6 +23,9 @@ public:
 	// TODO gérer proprement la construction
 	void uniform(float weight);
 	void radial(float weight, ofPoint point, float radius);
+	void byId(std::string id);
+	void byColor(std::string color);
+	void random(float threshold);
 };
 
 }
