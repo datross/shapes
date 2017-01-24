@@ -81,6 +81,8 @@ void ofApp::update(){
 	/* TODO debug : prints number of actions */
 	Hud::getInstance().addEntry("Nb actions", actions.size());
 	
+	cout << "nb actions :" << actions.size() << endl;
+
 	/* execute the action list on the world */
 	executeActions();
 	

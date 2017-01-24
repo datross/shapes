@@ -25,12 +25,12 @@ public:
 	static LeapDevice& getInstance();
 	float grabStrength(unsigned hand);
 	float pinchStrength(unsigned hand);
-	float xPos(unsigned hand);
-	float yPos(unsigned hand);
-	float zPos(unsigned hand);
+	float xPos(int hand);
+	float yPos(int hand);
+	float zPos(int hand);
 	bool tapped(unsigned hand); // it changes leap state
-	unsigned getRightHand();
-	unsigned getLeftHand();
+	int getRightHand();
+	int getLeftHand();
 };
 
 class DeviceListener{
