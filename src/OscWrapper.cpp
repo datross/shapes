@@ -40,7 +40,7 @@ OscWrapper::OscWrapper()
 }
 
 OscWrapper::~OscWrapper(){
-
+	stop();
 }
 
 float OscWrapper::getOriginValue(string p){
