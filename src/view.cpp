@@ -21,7 +21,7 @@ void View::drawShape(Shape& shape) {
 
 void View::drawBackground(ofVideoPlayer& video) {
 	ofColor(255, 255, 255);
-	video.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
+	//video.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
 }
 
 void View::drawWorld(World & world) {
@@ -41,5 +41,5 @@ void View::drawHud() {
 
 void View::toggleFullScreen() {
 	fullScreen = !fullScreen;
- 	ofSetFullscreen(fullScreen);
+	ofSetFullscreen(fullScreen);
 }
