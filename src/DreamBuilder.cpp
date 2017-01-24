@@ -15,7 +15,8 @@ Shape DreamBuilder::parseShape(json j) {
 				parseVec2(j["position"]),
 				parseVec2(j["speed"]),
 				parseVec2(j["scale"]),
-				parseFloat(j["rotation"]));
+				parseFloat(j["rotation"]),
+				j["id"]);
 	
 	return shape;
 }
@@ -38,6 +39,22 @@ void DreamBuilder::buildWorld(World& world) {
 	/* loading shapes file. */
 	json worldJson = FileManager::getInstance().loadJSONFile("world", true);
 	
+	/*loading background video*/
+	json & backgroundJson = worldJson["background"];
+	ofVideoPlayer background = FileManager::getInstance().loadMovBackground(backgroundJson["path"]);
+	background.play();
+	world.addBackground(background);
+
+	/*loading dream masks*/
+	json & masksJson = worldJson["masks"];
+	ofxSVG svg = FileManager::getInstance().loadSVGFile("svg/masks/" + masksJson["path"].get<std::string>());
+	for (int i = 0; i < svg.getNumPath(); i++){
+		ofPath path;
+		path = svg.getPathAt(i);
+		Shape shape(path, ofVec2f(0,0));
+		world.addMask(shape);
+	}
+
 	json & shapesJson = worldJson["shapes"];
 	for(auto it = shapesJson.begin(); it != shapesJson.end(); ++it) {
 		Shape shape = parseShape(*it);

@@ -1,26 +1,26 @@
 {
-	"duration" : 0,
+	"duration" : -1,
 
 	"modifiers" :
 	[
-	    {	
-	        "type" : "selection dependante expand",
+	    {
+	        "type" : "selection dependante move",
 		    "selection" : {
+<<<<<<< HEAD
 				"type" : "uniform",
 				"weight" : 1
+=======
+				"type" : "byColor", 
+				"color" : "26 26 26 255"
+>>>>>>> master
 			},
-		    "angle" : 5,
-		    "individual_origin" : true,
-		    "pivot" : "200 200",
-		    "force" : 10000,
-		    "p1" : "400 0",
-		    "p2" : "400 50",
-		    "seed" : "time sinusoide 1 0.5 0.5"
-    	}, 
-		{	
+		    "movement" : "20 20",
+		    "seed" : "time wiggle 20 0.5"
+    	},
+		{
 	        "type" : "selection dependante color",
 			"selection" : {
-				"type" : "uniform", 
+				"type" : "uniform",
 				"weight" : 1
 			},
 		    "color" : "255 0 0",

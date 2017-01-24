@@ -6,8 +6,8 @@
 	    {
 	        "type" : "selection dependante move",
 		    "selection" : {
-				"type" : "uniform",
-				"weight" : 1
+				"type" : "byColor", 
+				"color" : "26 26 26 255"
 			},
 		    "movement" : "20 20",
 		    "seed" : "time wiggle 20 0.5"

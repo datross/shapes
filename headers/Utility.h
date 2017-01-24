@@ -100,6 +100,14 @@ ofPoint parsePoint(string s);
 */
 ofColor parseColor(string s);
 
+/**
+* @brief Parse a string of Id to an vector of said ids.
+*
+* @param s ...
+* @return vector<string>
+*/
+vector<string> parseIds(string s);
+
 
 /**
 * @brief Clamps an ofVec2f between inf and sup

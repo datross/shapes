@@ -19,8 +19,14 @@ void View::drawShape(Shape& shape) {
 	shape.draw();
 }
 
+void View::drawBackground(ofVideoPlayer& video) {
+	ofColor(255, 255, 255);
+	video.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
+}
+
 
 void View::drawWorld(World & world) {
+	drawBackground(world.currentBackground());
 	for(world.firstShape(); !world.endShape(); world.nextShape()) {
 		drawShape(world.currentShape());
 	}

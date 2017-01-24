@@ -28,6 +28,9 @@ Project{
             'src/ModifierScale.cpp',
             'src/ModifierSoundSetter.cpp',
             'src/OscWrapper.cpp',
+            'src/PostFx.cpp',
+            'src/PostFxGlitch.cpp',
+            'src/PostFxModifier.cpp',
             'src/Seed.cpp',
             'src/SeedConstant.cpp',
             'src/SeedFactory.cpp',
@@ -54,9 +57,13 @@ Project{
 
         of.addons: [
             'ofxAbletonLive',
+            'ofxFft',
             'ofxLeapMotion2',
+            'ofxMask',
             'ofxOsc',
+            'ofxPostGlitch',
             'ofxSvg',
+            'ofxMidi',
         ]
 
         // additional flags for the project. the of module sets some
