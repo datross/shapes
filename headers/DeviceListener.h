@@ -6,8 +6,8 @@
 
 #include <vector>
 
-#define THRESHOLD_GRAB 0.4
-#define THRESHOLD_PINCH 0.4
+#define THRESHOLD_GRAB 0
+#define THRESHOLD_PINCH 0
 
 namespace idl {
 

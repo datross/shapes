@@ -2,7 +2,7 @@
   "shapes": [
     {
       "path": "ArcBottom_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -10,23 +10,23 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake bottom-path under",
+      "id" : "snake whole bottom-path under",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake under",
+      "id" : "snake whole under",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -34,15 +34,15 @@
     },
     {
       "path": "ArcBottom_circle5",
-      "id" : "snake top-path under",
+      "id" : "snake whole top-path under",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    },   
+    },
      {
       "path": "ArcTop_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
@@ -50,23 +50,23 @@
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "snake bottom-path over",
+      "id" : "snake whole bottom-path over",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcTop_circle3",
-      "id" : "snake over",
+      "id" : "snake whole over",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcTop_circle4",
-      "id" : "snake top-path over",
+      "id" : "snake whole top-path over",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
@@ -74,15 +74,15 @@
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
         {
       "path": "ArcBottom_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -90,23 +90,23 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake bottom-path under",
+      "id" : "snake whole bottom-path under",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake under",
+      "id" : "snake whole under",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -114,15 +114,15 @@
     },
     {
       "path": "ArcBottom_circle5",
-      "id" : "snake top-path under",
+      "id" : "snake whole top-path under",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    },  
+    },
     {
       "path": "ArcTop_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
@@ -130,23 +130,23 @@
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "snake bottom-path over",
+      "id" : "snake whole bottom-path over",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcTop_circle3",
-      "id" : "snake over",
+      "id" : "snake whole over",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcTop_circle4",
-      "id" : "snake top-path over",
+      "id" : "snake whole top-path over",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
@@ -154,15 +154,15 @@
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    },  
+    },
      {
       "path": "ArcBottom_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -170,23 +170,23 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake bottom-path under",
+      "id" : "snake whole bottom-path under",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake under",
+      "id" : "snake whole under",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -194,7 +194,7 @@
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "snake top-path under",
+      "id" : "snake whole top-path under",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -202,7 +202,7 @@
     },
     {
       "path": "ArcTop_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
@@ -210,23 +210,23 @@
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "snake bottom-path over",
+      "id" : "snake whole bottom-path over",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcTop_circle3",
-      "id" : "snake over",
+      "id" : "snake whole over",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcTop_circle4",
-      "id" : "snake top-path over",
+      "id" : "snake whole top-path over",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
@@ -234,15 +234,15 @@
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    },  
+    },
      {
       "path": "ArcBottom_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -250,23 +250,23 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake bottom-path under",
+      "id" : "snake whole bottom-path under",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake under",
+      "id" : "snake whole under",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -274,15 +274,15 @@
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "snake top-path under",
+      "id" : "snake whole top-path under",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcTop_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
@@ -290,23 +290,23 @@
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "snake bottom-path over",
+      "id" : "snake whole bottom-path over",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcTop_circle3",
-      "id" : "snake over",
+      "id" : "snake whole over",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcTop_circle4",
-      "id" : "snake top-path over",
+      "id" : "snake whole top-path over",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
@@ -314,15 +314,15 @@
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    },  
+    },
      {
       "path": "ArcBottom_circle1",
-      "id" : "snake circle over",      
+      "id" : "snake whole circle over",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -330,23 +330,23 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake circle under",
+      "id" : "snake whole circle under",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake bottom-path under",
+      "id" : "snake whole bottom-path under",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake under",
+      "id" : "snake whole under",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -354,7 +354,7 @@
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "snake top-path under",
+      "id" : "snake whole top-path under",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -362,28 +362,28 @@
     },
   	{
       "path": "BlackLine",
-      "id" : "snake middleLine",
+      "id" : "whole middleLine",
        "position": "0 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "BlackArc",
-      "id" : "snake arc-ext",
+      "id" : "snake whole arc-ext",
        "position": "432 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "RedArc",
-      "id" : "snake arc-ext",
+      "id" : "snake whole arc-ext",
        "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "LineCircle1",
       "id" : "line",
@@ -391,7 +391,7 @@
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "LineCircle2",
       "id" : "line",
@@ -399,7 +399,7 @@
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "LineCircle3",
       "id" : "line",
@@ -407,7 +407,7 @@
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "LineCircle4",
       "id" : "line",
@@ -415,7 +415,7 @@
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    }, 
+    },
     {
       "path": "LineCircle5",
       "id" : "line",
@@ -423,11 +423,11 @@
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"
-    } 
+    }
   ],
   "background": {
     "path": "childish"
-  }, 
+  },
     "masks": {
     "path": "robotic"
   }

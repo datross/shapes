@@ -7,8 +7,8 @@
 		{
 	        "type" : "dependante sound",
 		    "value" : 127,
-			"controller" : "left-dly",
-		   "seed" : "leap left positionX"
+			"controller" : "right-gater",
+		   "seed" : "leap left positionZ"
     	}
 	]
 }

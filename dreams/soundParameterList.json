@@ -41,6 +41,18 @@
     "parameter" : "DLY"
   },
 
+  "right-corpus": {
+  "track" : "HighsFxTrack",
+  "device" : "masterRack",
+  "parameter" : "CORPUS"
+},
+
+  "right-gater": {
+  "track" : "HighsFxTrack",
+  "device" : "masterRack",
+  "parameter" : "GATER"
+  },
+
     "right-repeat": {
     "track" : "HighsFxTrack",
     "device" : "masterRack",

@@ -7,8 +7,7 @@
 
 namespace idl {
 
-class OscWrapper
-{
+class OscWrapper {
 private:
 	json soundParameterList;
 	OscWrapper();

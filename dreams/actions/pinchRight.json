@@ -9,18 +9,21 @@
 		    "value" : 127,
 			"controller" : "right-repeat",
 		    "seed" : "leap right pinch"
-    	}, {	
+    	},
+
+			{
 	        "type" : "selection dependante rotation",
 			"selection" : {
 				"type" : "random",
 				"threshold" : 0.8
 			},
 		"angle" : 1,
-		"individual_origin" : false,
+		"individual_origin" : true,
 		"pivot" : "960 540",
-		"seed" : "time sinusoide 3 3 3 1"		    
-    	}, 
-    	{	
+		"seed" : "leap right pinch"
+    	},
+
+    	{
 	        "type" : "selection dependante scale",
 			"selection" : {
 				"type" : "random",
@@ -29,7 +32,7 @@
 		"scale" : "5 5",
 		"individual_origin" : false,
 		"pivot" : "960 540",
-		"seed" : "time sinusoide 1 3 3 1"	    
+		"seed" : "leap right pinch"
     	}
 	]
 }

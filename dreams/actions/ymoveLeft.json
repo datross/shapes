@@ -10,15 +10,26 @@
 			"controller" : "left-rev",
 		   "seed" : "leap left positionY"
     	},
-		{	
+		{
 	        "type" : "selection dependante expand",
 		    "selection" : {
-				"type" : "byId", 
+				"type" : "byId",
 				"id" : "under"
 			},
 		    "p1" : "100 100",
 		    "p2" : "700 100",
-		    "force" : 10000
-		    }
+		    "force" : -5,
+				"seed" : "leap left positionY"
+			},
+
+			{
+						"type" : "selection dependante color",
+				"selection" : {
+					"type" : "byColor",
+					"color" : "26 26 26 255"
+				},
+					"color" : "0 0 0 255",
+					"seed" : "leap left positionY"
+				}
 	]
 }

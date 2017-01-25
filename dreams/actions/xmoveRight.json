@@ -9,23 +9,43 @@
 			"controller" : "right-dly",
 			"seed" : "leap right positionX"
     	},
-{	
+
+			{
+						"type" : "dependante sound",
+					"value" : 127,
+				"controller" : "right-corpus",
+				"seed" : "leap right positionX"
+				},
+{
 	        "type" : "selection dependante color",
 			"selection" : {
 				"type" : "byColor",
 				"color" : "26 26 26 255"
 			},
 		    "color" : "255 255 255 255",
-		    "seed" : "time sinusoide 2 1 0.5"
+		    "seed" : "leap right positionX"
     	},
-		{	
+		{
 	        "type" : "selection dependante color",
 			"selection" : {
 				"type" : "byColor",
 				"color" : "26 26 26 255"
 			},
 		    "color" : "0 0 0 255",
-		    "seed" : "time sinusoide 1 1 0.5"
-    	}
+		    "seed" : "leap right positionX"
+    	},
+
+			{
+	      "type" : "selection dependante rotation",
+				"selection" : {
+					"type" :"byId",
+					"id" : "snake"
+				},
+		"angle" : 1800,
+		"individual_origin" : true,
+		"pivot" : "960 540",
+		"seed" : "leap right positionX"
+	}
+
 	]
 }
