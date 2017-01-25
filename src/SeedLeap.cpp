@@ -30,10 +30,16 @@ ofVec3f SeedLeap::getValue() {
 		ofVec3f lol(tmp, tmp, tmp);
 		return lol;
 	}
-	if (flag == POSY)
-		return ofVec3f(leap.yPos(h), leap.yPos(h), leap.yPos(h));
-	if (flag == POSZ)
-		return ofVec3f(leap.zPos(h), leap.zPos(h), leap.zPos(h));
+	if (flag == POSY) {
+		float tmp = abs(leap.yPos(h) / 300);
+		ofVec3f lol(tmp, tmp, tmp);
+		return lol;
+	}
+	if (flag == POSZ) {
+		float tmp = abs(leap.zPos(h) / 300);
+		ofVec3f lol(tmp, tmp, tmp);
+		return lol;
+	}
 	if(flag == STRENGTH)
 		return ofVec3f(leap.pinchStrength(h), leap.grabStrength(h), 0.);
 	if (flag == GRAB)
