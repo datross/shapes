@@ -4,23 +4,23 @@
 	"modifiers" :
 	[
 
-	 {	
+	 {
 	        "type" : "selection dependante expand",
 		    "selection" : {
-				"type" : "uniform", 
+				"type" : "uniform",
 				"weight" : 1
 			},
 		    "angle" : 90,
 		    "individual_origin" : true,
-		    "pivot" : "500 500", 
+		    "pivot" : "500 500",
 		    "seed" : "time sinusoide 1 1.5 1.5"
     	},
 
 		{
 	        "type" : "dependante sound",
-		    "value" : 45,
+		    "value" : 127,
 			"controller" : "right-dly",
-		    "seed" : "time sinusoide 0 1 1.5 1.57"
+		    "seed" : "leap right positionX"
     	}
 	]
 }
