@@ -2,7 +2,7 @@
   "shapes": [
     {
       "path": "ArcBottom_circle1",
-      "id" : "snake",      
+      "id" : "snake circle",      
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -10,7 +10,7 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -18,7 +18,7 @@
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -26,7 +26,7 @@
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake big-block",
+      "id" : "snake",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -34,7 +34,7 @@
     },
     {
       "path": "ArcBottom_circle5",
-      "id" : "snake big-block top-path",
+      "id" : "snake top-path",
       "position": "-760 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -42,7 +42,7 @@
     },   
      {
       "path": "ArcTop_circle1",
-      "id" : "snake",      
+      "id" : "snake circle",      
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
@@ -50,7 +50,7 @@
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
@@ -58,7 +58,7 @@
     }, 
     {
       "path": "ArcTop_circle3",
-      "id" : "snake big-block",
+      "id" : "snake",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
@@ -66,7 +66,7 @@
     }, 
      {
       "path": "ArcTop_circle4",
-      "id" : "snake big-block top-path",
+      "id" : "snake top-path",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
@@ -74,7 +74,7 @@
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "-611 0",
       "scale": "1 1",
       "rotation": "0",
@@ -82,7 +82,7 @@
     }, 
         {
       "path": "ArcBottom_circle1",
-      "id" : "snake top-path",      
+      "id" : "snake circle",      
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -90,7 +90,7 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -98,7 +98,7 @@
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -106,7 +106,7 @@
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake big-block top-path",
+      "id" : "snake",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -114,7 +114,7 @@
     },
     {
       "path": "ArcBottom_circle5",
-      "id" : "snake big-block",
+      "id" : "snake top-path",
       "position": "-462 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -122,7 +122,7 @@
     },  
     {
       "path": "ArcTop_circle1",
-      "id" : "snake",      
+      "id" : "snake circle",      
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
@@ -130,7 +130,7 @@
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
@@ -138,7 +138,7 @@
     }, 
     {
       "path": "ArcTop_circle3",
-      "id" : "snake big-block",
+      "id" : "snake",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
@@ -146,7 +146,7 @@
     }, 
      {
       "path": "ArcTop_circle4",
-      "id" : "snake big-block top-path",
+      "id" : "snake top-path",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
@@ -154,7 +154,7 @@
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "-313 0",
       "scale": "1 1",
       "rotation": "0",
@@ -162,7 +162,7 @@
     },  
      {
       "path": "ArcBottom_circle1",
-      "id" : "snake top-path",      
+      "id" : "snake circle",      
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -170,7 +170,7 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -178,7 +178,7 @@
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -186,7 +186,7 @@
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake big-block",
+      "id" : "snake",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -194,7 +194,7 @@
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "snake big-block",
+      "id" : "snake top-path",
       "position": "-164 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -202,7 +202,7 @@
     },
     {
       "path": "ArcTop_circle1",
-      "id" : "snake",      
+      "id" : "snake circle",      
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
@@ -210,7 +210,7 @@
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
@@ -218,7 +218,7 @@
     }, 
     {
       "path": "ArcTop_circle3",
-      "id" : "snake big-block",
+      "id" : "snake",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
@@ -226,7 +226,7 @@
     }, 
      {
       "path": "ArcTop_circle4",
-      "id" : "snake big-block top-path",
+      "id" : "snake top-path",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
@@ -234,7 +234,7 @@
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "-15 0",
       "scale": "1 1",
       "rotation": "0",
@@ -242,7 +242,7 @@
     },  
      {
       "path": "ArcBottom_circle1",
-      "id" : "snake top-path",      
+      "id" : "snake circle",      
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -250,7 +250,7 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -258,7 +258,7 @@
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -266,7 +266,7 @@
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake big-block",
+      "id" : "snake",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -274,7 +274,7 @@
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "snake big-block",
+      "id" : "snake top-path",
       "position": "134 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -282,7 +282,7 @@
     }, 
     {
       "path": "ArcTop_circle1",
-      "id" : "snake",      
+      "id" : "snake circle",      
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
@@ -290,7 +290,7 @@
     },
     {
       "path": "ArcTop_circle2",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
@@ -298,7 +298,7 @@
     }, 
     {
       "path": "ArcTop_circle3",
-      "id" : "snake big-block",
+      "id" : "snake",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
@@ -306,7 +306,7 @@
     }, 
      {
       "path": "ArcTop_circle4",
-      "id" : "snake big-block top-path",
+      "id" : "snake top-path",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
@@ -314,7 +314,7 @@
     },
     {
       "path": "ArcTop_circle5",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "283 0",
       "scale": "1 1",
       "rotation": "0",
@@ -322,7 +322,7 @@
     },  
      {
       "path": "ArcBottom_circle1",
-      "id" : "snake top-path",      
+      "id" : "snake circle",      
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -330,7 +330,7 @@
     },
     {
       "path": "ArcBottom_circle2",
-      "id" : "snake small-block",
+      "id" : "snake circle",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -338,7 +338,7 @@
     }, 
     {
       "path": "ArcBottom_circle3",
-      "id" : "snake big-block",
+      "id" : "snake bottom-path",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -346,7 +346,7 @@
     }, 
      {
       "path": "ArcBottom_circle4",
-      "id" : "snake big-block",
+      "id" : "snake",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -354,7 +354,7 @@
     },
      {
       "path": "ArcBottom_circle5",
-      "id" : "snake big-block",
+      "id" : "snake top-path",
       "position": "432 -1",
       "scale": "1 1",
       "rotation": "0",
@@ -370,7 +370,7 @@
     }, 
     {
       "path": "BlackArc",
-      "id" : "snake",
+      "id" : "snake arc-ext",
        "position": "432 0",
       "scale": "1 1",
       "rotation": "0",
@@ -378,7 +378,7 @@
     }, 
     {
       "path": "RedArc",
-      "id" : "snake",
+      "id" : "snake arc-ext",
        "position": "-760 0",
       "scale": "1 1",
       "rotation": "0",

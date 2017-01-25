@@ -9,6 +9,15 @@
 		    "value" : 127,
 			"controller" : "right-rev",
 		    "seed" : "leap position right"
+    	},   {	
+	        "type" : "selection dependante scale",
+		    "selection" : {
+				"type" : "byId", 
+				"id" : "arc-ext"
+			},
+		    "scale" : "3 3",
+		    "individual_origin" : true,
+			"seed" : "time sinusoide 1 1.5 1.5"
     	}
 	]
 }

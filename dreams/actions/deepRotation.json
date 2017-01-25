@@ -14,10 +14,10 @@
 		{	
 	        "type" : "selection dependante color",
 			"selection" : {
-				"type" : "byId",
-				"id" : "small-block"
+				"type" : "byColor",
+				"color" : "26 26 26 255"
 			},
-		    "color" : "255 0 0",
+		    "color" : "255 255 255",
 		    "seed" : "leap right positionX"
     	},
 			{
@@ -37,6 +37,8 @@
 		"individual_origin" : true,
 		"pivot" : "0 0"
     	}
+	
+
 
 	]
 }

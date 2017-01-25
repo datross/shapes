@@ -5,7 +5,7 @@
 	[
 
 	 {	
-	        "type" : "selection dependante expand",
+	        "type" : "selection dependante scale",
 		    "selection" : {
 				"type" : "uniform", 
 				"weight" : 1
@@ -21,6 +21,24 @@
 		    "value" : 45,
 			"controller" : "right-dly",
 		    "seed" : "time sinusoide 0 1 1.5 1.57"
+    	},
+{	
+	        "type" : "selection dependante color",
+			"selection" : {
+				"type" : "byColor",
+				"color" : "26 26 26 255"
+			},
+		    "color" : "255 255 255",
+		    "seed" : "time sinusoide 2 1 0.5"
+    	},
+		{	
+	        "type" : "selection dependante color",
+			"selection" : {
+				"type" : "byColor",
+				"color" : "255 255 255 255"
+			},
+		    "color" : "0 0 0",
+		    "seed" : "time sinusoide 1 1 0.5"
     	}
 	]
 }

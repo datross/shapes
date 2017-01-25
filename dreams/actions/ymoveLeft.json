@@ -9,6 +9,17 @@
 		    "value" : 45,
 			"controller" : "left-rev",
 		    "seed" : "time sinusoide 0 1 1.5 1.57"
-    	}
+    	},
+		{	
+	        "type" : "selection dependante expand",
+		    "selection" : {
+				"type" : "byId", 
+				"id" : "snake"
+			},
+		    "p1" : "100 100",
+		    "p2" : "700 100",
+		    "force" : 6, 
+		    "seed" : "time sinusoide 1 1.5 1.5"
+		}
 	]
 }

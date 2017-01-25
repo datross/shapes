@@ -3,34 +3,44 @@
 
 	"modifiers" :
 	[ 
-	    {	
+	 {	
 	        "type" : "selection dependante rotation",
-		    "selection" : {
-				"type" : "uniform", 
-				"weight" : 1
+			"selection" : {
+				"type" : "byId",
+				"id" : "arc-ext"
 			},
-		    "angle" : 90,
-		    "individual_origin" : true,
-		    "pivot" : "500 500", 
-		    "seed" : "time sinusoide 0 1 1.5 1.5"
+		"angle" : 80,
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 6 3 0"
     	},
-		{	
-	        "type" : "selection dependante scale",
-		    "selection" : {
-				"type" : "radial", 
-				"weight" : 1,
-				"radius" : 200
-			},
-		    "scale" : "10 10",
-		    "individual_origin" : true,
-		    "pivot" : "3 3", 
-		    "seed" : "time sinusoide 0 1 1.5 1.57"
-    	}, 
-		{	
+	{	
 	        "type" : "dependante sound",
 		    "value" : 45,
 			"controller" : "left-freq",
 		    "seed" : "time sinusoide 0 1 1.5 1.57"
+    	},
+		{	
+	        "type" : "selection dependante scale",
+			"selection" : {
+				"type" : "byId",
+				"id" : "top-path"
+			},
+		"scale" : "2 2",
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 1 5 1"
+    	}, 
+		{	
+	        "type" : "selection dependante scale",
+			"selection" : {
+				"type" : "byId",
+				"id" : "bottom-path"
+			},
+		"scale" : "2 2",
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 1 5 0.5"
     	}
 	]
 }
