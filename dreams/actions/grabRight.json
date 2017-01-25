@@ -2,8 +2,8 @@
 	"duration" : 0,
 
 	"modifiers" :
-	[ 
-	    {	
+	[
+	    {
 	        "type" : "selection dependante rotation",
 			"selection" : {
 				"type" : "byId",
@@ -12,9 +12,9 @@
 		"angle" : 80,
 		"individual_origin" : true,
 		"pivot" : "0 0",
-		"seed" : "time sinusoide 6 3 0"
+		"seed" : "time sinusoide  0 6 3 0"
     	},
-		{	
+		{
 	        "type" : "selection dependante scale",
 			"selection" : {
 				"type" : "byId",
@@ -27,9 +27,9 @@
     	},
 		{	
 	        "type" : "dependante sound",
-		    "value" : 45,
+		    "value" : 127,
 			"controller" : "right-freq",
-		    "seed" : "time sinusoide 0 1 1.5 1.57"
+		    "seed" : "leap right grab"
     	}
 	]
 }

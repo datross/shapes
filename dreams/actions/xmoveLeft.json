@@ -6,18 +6,18 @@
 		
 		{
 	        "type" : "dependante sound",
-		    "value" : 45,
+		    "value" : 127,
 			"controller" : "left-dly",
-		    "seed" : "time sinusoide 0 1 1.5 1.57"
+		   "seed" : "leap left positionX"
     	},
-{	
+		{	
 	        "type" : "selection dependante color",
 			"selection" : {
 				"type" : "byColor",
 				"color" : "78 110 187 255"
 			},
 		    "color" : "183 65 55",
-		    "seed" : "time sinusoide 2 1 1"
+		    "seed" : "time sinusoide 0 2 1 1"
     	},
 		{	
 	        "type" : "selection dependante color",
@@ -26,7 +26,7 @@
 				"color" : "183 65 55 255"
 			},
 		    "color" : "78 110 187",
-		    "seed" : "time sinusoide 1 1 1"
+		    "seed" : "time sinusoide 0 1 1 1"
     	}
 	]
 }

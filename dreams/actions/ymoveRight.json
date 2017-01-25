@@ -8,7 +8,7 @@
 	        "type" : "dependante sound",
 		    "value" : 127,
 			"controller" : "right-rev",
-		    "seed" : "leap position right"
+			"seed" : "leap right positionY"
     	},   {	
 	        "type" : "selection dependante scale",
 		    "selection" : {

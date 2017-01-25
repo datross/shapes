@@ -2,7 +2,7 @@
 	"duration" : 0,
 
 	"modifiers" :
-	[ 
+	[
 	 {	
 	        "type" : "selection dependante rotation",
 			"selection" : {
@@ -12,15 +12,9 @@
 		"angle" : 80,
 		"individual_origin" : true,
 		"pivot" : "0 0",
-		"seed" : "time sinusoide 6 3 0"
+		"seed" : "time sinusoide 0 6 3 0"
     	},
-	{	
-	        "type" : "dependante sound",
-		    "value" : 45,
-			"controller" : "left-freq",
-		    "seed" : "time sinusoide 0 1 1.5 1.57"
-    	},
-		{	
+		{
 	        "type" : "selection dependante scale",
 			"selection" : {
 				"type" : "byId",
@@ -29,7 +23,7 @@
 		"scale" : "2 2",
 		"individual_origin" : true,
 		"pivot" : "0 0",
-		"seed" : "time sinusoide 1 5 1"
+		"seed" : "time sinusoide 0 1 5 1"
     	}, 
 		{	
 	        "type" : "selection dependante scale",
@@ -40,7 +34,14 @@
 		"scale" : "2 2",
 		"individual_origin" : true,
 		"pivot" : "0 0",
-		"seed" : "time sinusoide 1 5 0.5"
+		"seed" : "time sinusoide 0 1 5 0.5"
+    	},
+		{
+	        "type" : "dependante sound",
+		    "value" : 127,
+			"controller" : "left-freq",
+		    "seed" : "leap left grab"
+
     	}
 	]
 }

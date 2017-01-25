@@ -6,9 +6,9 @@
 
 		{
 	        "type" : "dependante sound",
-		    "value" : 45,
+		    "value" : 127,
 			"controller" : "right-repeat",
-		    "seed" : "time sinusoide 0 1 1.5 1.57"
+		    "seed" : "leap right pinch"
     	}, {	
 	        "type" : "selection dependante rotation",
 			"selection" : {
@@ -18,8 +18,7 @@
 		"angle" : 90,
 		"individual_origin" : true,
 		"pivot" : "0 0",
-		"seed" : "time sinusoide 3 3 1"
-
+		"seed" : "time sinusoide 0 3 3 1"		    
     	}
 	]
 }
