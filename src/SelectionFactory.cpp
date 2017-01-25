@@ -26,7 +26,7 @@ shared_ptr<Selection> idl::SelectionFactory::create(json& jSelection) {
 			ofPoint pt = parsePoint(jSelection["point"]);
 			cout << "Point:" << pt << endl;
 			float radius = jSelection["radius"].get<float>();
-			cout << "RAdius:" << radius << endl;
+			cout << "Radius:" << radius << endl;
 			s->radial(weight, pt, radius);
 			return shared_ptr<Selection>(s);
 		}

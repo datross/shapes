@@ -13,6 +13,7 @@ namespace idl {
 #define GRAVITY_ORIGIN_ROTATION 1.
 
 	class Shape{
+	protected:
 		/* physics parameters */
 		ofVec2f position, speed, acceleration;
 		ofVec2f positionOrigin;
@@ -36,22 +37,22 @@ namespace idl {
 		Shape(ofPath & path, ofVec2f pos);
 		
 		/* physics manipulation */
-		void addForce(ofVec2f a);
-		void addScaleForce(ofVec2f a);
-		void addRotationForce(float a);
+		virtual void addForce(ofVec2f a);
+		virtual void addScaleForce(ofVec2f a);
+		virtual void addRotationForce(float a);
 		
-		void addPosition(ofVec2f p);
-		void addScale(ofVec2f s);
-		void addRotation(float r);
+		virtual void addPosition(ofVec2f p);
+		virtual void addScale(ofVec2f s);
+		virtual void addRotation(float r);
 		
 		ofColor getColor();
 		ofColor getOriginColor();
 		void setColor(ofColor c);
 
 		ofVec2f getPosition() { return position; }
-		std::string getId() {return id; }
+		std::string getId() { return id; }
 		
-		void update(float timeStep);
+		virtual void update(float timeStep);
 		
 		//void resetTransform();
 		

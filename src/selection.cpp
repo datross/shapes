@@ -4,8 +4,9 @@
 using namespace idl;
 using namespace std;
 
-Selection::Selection(): world(World::getInstance()) {
-	
+Selection::Selection(string type, SettingList& param)
+	: world(World::getInstance()) {
+	if(type == )
 }
 
 void Selection::uniform(float weight){
