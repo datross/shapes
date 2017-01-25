@@ -1,5 +1,5 @@
 #include "SeedLeap.h"
-
+#include <cmath>
 
 using namespace idl;
 
@@ -26,9 +26,9 @@ ofVec3f SeedLeap::getValue() {
 	if (flag == POS) 
 		return ofVec3f(leap.xPos(h), leap.yPos(h), leap.zPos(h));
 	if (flag == POSX) {
-		float tmp = leap.xPos(h);
+		float tmp = abs(leap.xPos(h)/60);
 		ofVec3f lol(tmp, tmp, tmp);
-		return lol / 100;
+		return lol;
 	}
 	if (flag == POSY)
 		return ofVec3f(leap.yPos(h), leap.yPos(h), leap.yPos(h));
