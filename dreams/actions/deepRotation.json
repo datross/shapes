@@ -36,9 +36,13 @@
 		"angle" : 0.2,
 		"individual_origin" : false,
 		"pivot" : "960 540"
-    	}
+    	},
 	
+	{	
+	        "type" : "dependante glitch",
+		"glitch-type" : "convergence"
 
+    	}
 
 	]
 }

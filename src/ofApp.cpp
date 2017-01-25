@@ -6,7 +6,6 @@
 #include "SeedFactory.h"
 #include "ActionFactory.h"
 #include "OscWrapper.h"
-#include "PostFxGlitch.h"
 #include "Hud.h"
 
 using namespace idl;
@@ -33,8 +32,8 @@ void ofApp::setup(){
 	if(action)
 		actions.push_front(action);
 	
-	PostFxGlitch * fx = new PostFxGlitch(OFXPOSTGLITCH_INVERT);
-	view.addFx(shared_ptr<PostFx>(fx));
+	
+	View::getInstance().setGlitch(&postGlitch);
 
 	deviceListener.setup();
 	
@@ -81,7 +80,7 @@ void ofApp::update(){
 	world.update();
 	
 	/* draw world on fbo */
-	view.updateFbo();
+	View::getInstance().updateFbo();
 }
 //--------------------------------------------------------------
 void ofApp::draw(){	
@@ -89,20 +88,20 @@ void ofApp::draw(){
 	ofFill();
 
 	/* draw fbo in the window */
-	view.drawFbo();
+	View::getInstance().drawFbo();
 
 	/* draw HUD */
-	view.drawHud();
+	View::getInstance().drawHud();
 
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 	if(key == 'h') {
-		view.toggleHud();
+		View::getInstance().toggleHud();
 	}
 	if(key == 'f') {
-		view.toggleFullScreen();
+		View::getInstance().toggleFullScreen();
 	}
 	if (key == OF_KEY_RETURN) {
 		OscWrapper::getInstance().printAll();

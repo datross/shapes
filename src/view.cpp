@@ -9,6 +9,20 @@ View::View()
 	fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight());
 }
 
+View & View::getInstance() {
+	static View instance;
+	return instance;
+}
+
+void View::setGlitch(ofxPostGlitch * pg) {
+	postGlitch = pg;
+	postGlitch->setup(&fbo);
+}
+
+ofxPostGlitch * View::getGlitch() {
+	return postGlitch;
+}
+
 void View::drawShape(Shape& shape) {
 	shape.draw();
 }
@@ -62,6 +76,7 @@ void View::updateFbo(){
 void View::drawFbo(){
 	for(auto& fx : FXs)
 		fx.second->apply();
+	postGlitch->generateFx();
 	ofSetColor(255);
 	fbo.draw(0,0);
 }

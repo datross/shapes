@@ -17,11 +17,18 @@ private:
 	std::map<int, std::shared_ptr<PostFx> > FXs;
 	int freeId;
 	ofFbo fbo;
-public:
+	ofxPostGlitch * postGlitch;
+	
 	View();
+public:
+	static View & getInstance();
+	
+	void setGlitch(ofxPostGlitch * pg);
+	ofxPostGlitch * getGlitch();
 	
 	int addFx(std::shared_ptr<PostFx> fx);
 	void removeFx(int id);
+	
 	
 	void updateFbo();
 	void drawFbo();

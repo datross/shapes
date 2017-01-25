@@ -57,7 +57,6 @@ public:
 
 private:
 	// TODO check these
-	idl::View view;
 	vector <ofxLeapMotionSimpleHand> simpleHands;
 	ofPoint cursor;
 	float env;
@@ -79,6 +78,9 @@ private:
 
 	/* Gesture Controller */
 	std::shared_ptr<idl::GestureController> gestureController;
+	
+	/* mysterious problem... it needs to be here */
+	ofxPostGlitch postGlitch;
 
 	/* -------------- methods -------------- */
 

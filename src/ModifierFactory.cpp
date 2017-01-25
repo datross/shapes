@@ -11,6 +11,7 @@
 #include "MidiModifier.h"
 #include "ModifierColor.h"
 #include "ModifierMove.h"
+#include "ModifierGlitch.h"
 #include <string>
 
 using namespace std;
@@ -93,6 +94,11 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 				float value = jModifier["value"].get<float>();
 				string param = jModifier["controller"].get<string>();
 				return shared_ptr<Modifier>(new ModifierSoundSetter(seed, value, param));
+			}
+			
+			if(args[1] == "glitch") {
+				string type = jModifier["glitch-type"].get<string>();
+				return shared_ptr<ModifierGlitch>(new ModifierGlitch(type, seed));
 			}
 		}
 
