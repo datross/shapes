@@ -9,19 +9,20 @@
 #define HEADERS_POSTFXGLITCH_H_
 
 #include "ofMain.h"
+#include "PostFx.h"
 #include "ofxPostGlitch.h"
 
 namespace idl {
 
-class PostFxGlitch {
+class PostFxGlitch : public PostFx {
 private :
 	ofxPostGlitch postFx;
-
+	ofxPostGlitchType type;
 public:
-	PostFxGlitch(ofxPostGlitchType type, ofFbo* fbo = NULL);
+	PostFxGlitch(ofxPostGlitchType type);
 	PostFxGlitch(ofxPostGlitch& fx);
-	void setup(ofFbo* fbo);
-	void apply();
+	virtual void setup(ofFbo* fbo);
+	virtual void apply();
 	virtual ~PostFxGlitch();
 };
 

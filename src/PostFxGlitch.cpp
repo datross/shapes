@@ -9,10 +9,8 @@
 
 namespace idl {
 
-PostFxGlitch::PostFxGlitch(ofxPostGlitchType type, ofFbo* fbo){
-	postFx.setFx(type, true);
-	if(fbo)
-	postFx.setup(fbo);
+PostFxGlitch::PostFxGlitch(ofxPostGlitchType _type)
+	: type(_type) {
 }
 
 PostFxGlitch::PostFxGlitch(ofxPostGlitch& fx) : postFx(fx){
@@ -21,6 +19,7 @@ PostFxGlitch::PostFxGlitch(ofxPostGlitch& fx) : postFx(fx){
 
 void PostFxGlitch::setup(ofFbo* fbo){
 	postFx.setup(fbo);
+	postFx.setFx(type, true);
 }
 
 void PostFxGlitch::apply(){

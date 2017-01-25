@@ -6,7 +6,7 @@
 #include "SeedFactory.h"
 #include "ActionFactory.h"
 #include "OscWrapper.h"
-
+#include "PostFxGlitch.h"
 #include "Hud.h"
 
 using namespace idl;
@@ -18,14 +18,6 @@ void ofApp::setup(){
 	
 	ofSetWindowTitle("Interactive Delaunay");
 	
-	view.setOfApp(this);
-
-	
-	//s1 = SeedFactory::getInstance().createSeed("time sinusoide");
-// 	s1 = shared_ptr<Seed>(new SeedSoundSpectrum(soundListener, 0,0.1,0.1,1));
-// 	s2 = SeedFactory::getInstance().createSeed("time sinusoide");
-
-
 	World& world = World::getInstance();
 
 	ofBackground(255,255,255);
@@ -35,13 +27,14 @@ void ofApp::setup(){
 
 	DreamBuilder dreamBuilder;
 	dreamBuilder.buildWorld(world);
-	
-	/*s1 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");
-	s2 = SeedFactory::getInstance().createSeed("time sinusoide 1 50 0");*/
 
+	// TODO
 	shared_ptr<Action> action = ActionFactory::getInstance().create("deepRotation");
 	if(action)
 		actions.push_front(action);
+	
+	PostFxGlitch * fx = new PostFxGlitch(OFXPOSTGLITCH_INVERT);
+	view.addFx(shared_ptr<PostFx>(fx));
 
 	deviceListener.setup();
 	
@@ -87,35 +80,16 @@ void ofApp::update(){
 	/* update every world's element */
 	world.update();
 	
-	/* TODO this should be removed */
-	//ofxLeapMotion &leap = deviceListener.getLeap();
-	//simpleHands = leap.getSimpleHands();
-	//if(leap.isFrameNew()) {
-	//	
-	//	leap.setMappingX(-230, 230, 0, ofGetWidth());
-	//	leap.setMappingY(90, 490, ofGetHeight(), 0);
-	//	leap.setMappingZ(-150, 150, -200, 200);
-	//	
-	//	simpleHands.clear();
-	//	simpleHands = leap.getSimpleHands();
-	//	
-	//	if(!simpleHands.empty()) {
-	//		cursor.x = simpleHands[0].handPos.x;
-	//		cursor.y = simpleHands[0].handPos.y;
-	//	}
-	//	
-	//	leap.markFrameAsOld();
-	//}
+	/* draw world on fbo */
+	view.updateFbo();
 }
 //--------------------------------------------------------------
-void ofApp::draw(){
-	World& world = World::getInstance();
-	
+void ofApp::draw(){	
 	/* clear the buffer */
 	ofFill();
 
-	/* draw world elements */
-	view.drawWorld(world);
+	/* draw fbo in the window */
+	view.drawFbo();
 
 	/* draw HUD */
 	view.drawHud();
