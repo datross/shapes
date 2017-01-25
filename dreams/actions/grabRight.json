@@ -23,7 +23,7 @@
 		"scale" : "-1 -1",
 		"individual_origin" : true,
 		"pivot" : "0 0",
-		"seed" : "time sinusoide 4 3 0"
+		"seed" : "time sinusoide 1 4 3 0"
     	},
 		{	
 	        "type" : "dependante sound",

@@ -15,16 +15,16 @@
 				"type" : "byColor",
 				"color" : "26 26 26 255"
 			},
-		    "color" : "255 255 255",
+		    "color" : "255 255 255 255",
 		    "seed" : "time sinusoide 2 1 0.5"
     	},
 		{	
 	        "type" : "selection dependante color",
 			"selection" : {
 				"type" : "byColor",
-				"color" : "255 255 255 255"
+				"color" : "26 26 26 255"
 			},
-		    "color" : "0 0 0",
+		    "color" : "0 0 0 255",
 		    "seed" : "time sinusoide 1 1 0.5"
     	}
 	]

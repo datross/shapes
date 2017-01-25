@@ -15,10 +15,21 @@
 				"type" : "random",
 				"threshold" : 0.8
 			},
-		"angle" : 90,
-		"individual_origin" : true,
-		"pivot" : "0 0",
-		"seed" : "time sinusoide 0 3 3 1"		    
+		"angle" : 1,
+		"individual_origin" : false,
+		"pivot" : "960 540",
+		"seed" : "time sinusoide 3 3 3 1"		    
+    	}, 
+    	{	
+	        "type" : "selection dependante scale",
+			"selection" : {
+				"type" : "random",
+				"threshold" : 0.8
+			},
+		"scale" : "5 5",
+		"individual_origin" : false,
+		"pivot" : "960 540",
+		"seed" : "time sinusoide 1 3 3 1"	    
     	}
 	]
 }

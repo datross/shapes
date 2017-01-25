@@ -26,7 +26,7 @@ ofVec3f SeedLeap::getValue() {
 	if (flag == POS) 
 		return ofVec3f(leap.xPos(h), leap.yPos(h), leap.zPos(h));
 	if (flag == POSX) {
-		float tmp = abs(leap.xPos(h)/60);
+		float tmp = abs(leap.xPos(h)/300);
 		ofVec3f lol(tmp, tmp, tmp);
 		return lol;
 	}
