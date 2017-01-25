@@ -6,9 +6,19 @@
 
 		{
 	        "type" : "dependante sound",
-		    "value" : 45,
+		    "value" : 127,
 			"controller" : "left-rev",
-		    "seed" : "time sinusoide 0 1 1.5 1.57"
-    	}
+		   "seed" : "leap left positionY"
+    	},
+		{	
+	        "type" : "selection dependante expand",
+		    "selection" : {
+				"type" : "byId", 
+				"id" : "under"
+			},
+		    "p1" : "100 100",
+		    "p2" : "700 100",
+		    "force" : 10000
+		    }
 	]
 }

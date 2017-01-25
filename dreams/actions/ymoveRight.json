@@ -8,7 +8,25 @@
 	        "type" : "dependante sound",
 		    "value" : 127,
 			"controller" : "right-rev",
-		    "seed" : "leap position right"
-    	}
+			"seed" : "leap right positionY"
+    	},   {	
+	        "type" : "selection dependante scale",
+		    "selection" : {
+				"type" : "byId", 
+				"id" : "arc-ext"
+			},
+		    "scale" : "3 3",
+		    "individual_origin" : true,
+			"seed" : "time sinusoide 0 1 1.5 1.5"
+    	}, {	
+	        "type" : "selection dependante expand",
+		    "selection" : {
+				"type" : "byId", 
+				"id" : "over"
+			},
+		    "p1" : "300 820",
+		    "p2" : "590 190",
+		    "force" : 1000
+	}
 	]
 }

@@ -35,32 +35,6 @@ float LeapDevice::pinchStrength(unsigned hand) {
 	return tmp;
 }
 
-bool LeapDevice::hasHand(unsigned handId){
-	ourMutex.lock();
-	for(auto hand = hands.begin(); hand != hands.end(); ++hand){
-		if ((*hand).id() == handId) {
-			ourMutex.unlock();
-			return true;
-		}
-	}
-	ourMutex.unlock();
-	return false;
-}
-
-bool LeapDevice::tapped(unsigned hand) {
-	ourMutex.lock();
-	auto gestures = ourController->frame().gestures();
-	for(auto it = gestures.begin(); it != gestures.end(); ++it) {
-		auto hands = (*it).hands();
-		if(((*it).type() == Leap::Gesture::TYPE_SCREEN_TAP) && hasHand(hand)) {
-			ourMutex.unlock();
-			return true ;
-		}
-	}
-	ourMutex.unlock();
-	return false;
-}
-
 float LeapDevice::xPos(int hand) {
 	ourMutex.lock();
 	if (hand >= hands.size()) {
@@ -151,11 +125,6 @@ vector<idl::Gesture> DeviceListener::getGestures(){
 		if (leapDevice.pinchStrength(nbHands) > THRESHOLD_PINCH) {
 			idl::Gesture pinchGesture = idl::Gesture(it->isLeft, GesturePinch, leapDevice.pinchStrength(nbHands));
 			gestures.push_back(pinchGesture);
-		}
-		
-		if (leapDevice.tapped(nbHands)) {
-			idl::Gesture tapGesture = idl::Gesture(it->isLeft, GestureTap, leapDevice.tapped(nbHands));
-			gestures.push_back(tapGesture);			
 		}
 		
 		idl::Gesture xMoveGesture = idl::Gesture(it->isLeft, GestureXMove, leapDevice.xPos(nbHands));

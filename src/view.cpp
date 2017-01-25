@@ -35,7 +35,7 @@ void View::drawHud() {
 
 void View::toggleFullScreen() {
 	fullScreen = !fullScreen;
- 	ofSetFullscreen(fullScreen);
+	ofSetFullscreen(fullScreen);
 }
 
 int View::addFx(std::shared_ptr<PostFx> fx){
