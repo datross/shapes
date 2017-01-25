@@ -54,7 +54,7 @@ void View::removeFx(int id) {
 
 void View::updateFbo(){
 	fbo.begin();
-	fbo.clear();
+	ofClear(0,0,0,255);
 	drawWorld();
 	fbo.end();
 }
@@ -62,5 +62,6 @@ void View::updateFbo(){
 void View::drawFbo(){
 	for(auto& fx : FXs)
 		fx.second->apply();
+	ofSetColor(255);
 	fbo.draw(0,0);
 }
