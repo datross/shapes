@@ -127,11 +127,6 @@ vector<idl::Gesture> DeviceListener::getGestures(){
 			gestures.push_back(pinchGesture);
 		}
 		
-		if (leapDevice.tapped(nbHands)) {
-			idl::Gesture tapGesture = idl::Gesture(it->isLeft, GestureTap, leapDevice.tapped(nbHands));
-			gestures.push_back(tapGesture);			
-		}
-		
 		idl::Gesture xMoveGesture = idl::Gesture(it->isLeft, GestureXMove, leapDevice.xPos(nbHands));
 		gestures.push_back(xMoveGesture);			
 		
