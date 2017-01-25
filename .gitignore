@@ -40,3 +40,4 @@ obj/*
 *.suo
 *.kdev4*
 .vs/Delaunay/v14/.suo
+*.mov
