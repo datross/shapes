@@ -19,10 +19,8 @@ class LeapDevice : public ofxLeapMotion {
 private:
 // 	float ofVec2 hand_pos_prec[2];
 	LeapDevice();
-	bool hasHand(unsigned handId);
 
 public:
-
 
 	/* MIND the hands number */
 	static LeapDevice& getInstance();
@@ -31,7 +29,6 @@ public:
 	float xPos(int hand);
 	float yPos(int hand);
 	float zPos(int hand);
-	bool tapped(unsigned hand); // it changes leap state
 	int getRightHand();
 	int getLeftHand();
 };
