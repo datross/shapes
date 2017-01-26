@@ -5,7 +5,7 @@ using namespace idl;
 using namespace std;
 
 View::View()
-	: hud(false), fullScreen(false), freeId(0) {
+	: hud(true), fullScreen(false), freeId(0) {
 	fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight());
 }
 
