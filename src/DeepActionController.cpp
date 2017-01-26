@@ -9,6 +9,7 @@ const static float NO_HAND_DURATION = 5;
 DeepActionController::DeepActionController(DeviceListener& _deviceListener) : deviceListener(_deviceListener) {
 	awakeState = false;
 	startTime = true;
+	fallingAsleep = false;
 	json j = FileManager::getInstance().loadJSONFile("deepActionsIndex", true);
 	for(auto& d : j["deep"]) {
 		deep.push_back(d.get<string>());
@@ -22,14 +23,19 @@ DeepActionController::DeepActionController(DeviceListener& _deviceListener) : de
 }
 
 bool DeepActionController::checkState(){
-	if(awakeState && !deviceListener.hasHand()){
-		noHandTime = ofGetElapsedTime();
-		if(noHandTime > NO_HAND_DURATION){
-			awakeState = false;
-			return true;
+	if(awakeState && !deviceListener.getLeap().hasHand()){
+		if(!fallingAsleep) {
+			fallingAsleep = true;
+			noHandTime = ofGetElapsedTimef();
+		} else {
+			if(ofGetElapsedTimef() - noHandTime > NO_HAND_DURATION){
+				awakeState = false;
+				fallingAsleep = false;
+				return true;
+			}
 		}
 	}
-	if(deviceListener.hasHand()){
+	if(deviceListener.getLeap().hasHand()){
 		awakeState = true;
 		return true;
 	}
@@ -44,7 +50,7 @@ void DeepActionController::cleanCurrentActions(){
 }
 
 void DeepActionController::addAction(string s){
-	Action &a = ActionFactory::getInstance().create(s);
+	auto a = ActionFactory::getInstance().create(s);
 	if(a)
 		currentActions.push_back(a);
 }
@@ -65,11 +71,11 @@ vector< shared_ptr< Action > > DeepActionController::ComputeActions() {
 	if(startTime){
 		vector< shared_ptr< Action > > actions;
 		for(auto& s : deep){			
-			Action &a = ActionFactory::getInstance().create(s);
+			auto a = ActionFactory::getInstance().create(s);
 			if(a)
 				actions.push_back(a);
 		}
-		actions.insert(currentActions.begin(), currentActions.end());
+		actions.insert(actions.end(), currentActions.begin(), currentActions.end());
 		startTime = false;
 		return actions;
 	}

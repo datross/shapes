@@ -18,7 +18,7 @@ namespace idl {
 		
 		std::vector< std::shared_ptr<Action> > currentActions;
 		
-		bool awakeState, startTime;
+		bool awakeState, startTime, fallingAsleep;
 		float noHandTime;
 		
 		bool checkState();
