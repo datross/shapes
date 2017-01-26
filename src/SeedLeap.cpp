@@ -63,9 +63,9 @@ ofVec3f SeedLeap::getValue() {
 	if(flag == STRENGTH)
 		return ofVec3f(leap.pinchStrength(h), leap.grabStrength(h), 0.);
 	if (flag == GRAB)
-		return ofVec3f(leap.grabStrength(h), leap.grabStrength(h), leap.grabStrength(h));
+		return ofVec3f(leap.grabStrength(h));
 	if (flag == PINCH)
-		return ofVec3f(leap.pinchStrength(h), leap.pinchStrength(h), leap.pinchStrength(h));
+		return ofVec3f(leap.pinchStrength(h));
 	if (flag == NORMALX)
 		return ofVec3f(leap.xNormal(h));
 	if (flag == NORMALY)

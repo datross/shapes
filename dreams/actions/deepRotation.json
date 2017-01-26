@@ -28,21 +28,24 @@
 		    "seed" : "time sinusoide 0 1 3 0"
     	},
 		{	
-	        "type" : "selection dependante rotation",
+			"type" : "selection dependante rotation",
 			"selection" : {
 				"type" : "byId",
 				"id" : "snake"
 			},
-		"angle" : -1000,
-		"individual_origin" : true,
-		"pivot" : "960 540",
-		"seed" : "leap left normalX"
+			"angle" : -1000,
+			"individual_origin" : true,
+			"pivot" : "960 540",
+			"seed" : "leap left normalX"
     	},
-	
-	{	
-	        "type" : "dependante glitch",
-		"glitch-type" : "slitscan",
-		"seed" : "sound envelope"
+		{	
+			"type" : "selection dependante color",
+			"selection" : {
+				"type" : "uniform",
+				"weight" : 1
+			},
+		    "color" : "0 255 0",
+			"seed" : "sound envelope"
     	}
 
 	]

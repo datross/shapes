@@ -1,4 +1,5 @@
 #include "SoundListener.h"
+#include "Hud.h"
 
 using namespace idl;
 
@@ -42,6 +43,7 @@ void SoundListener::analyze() {
 		
 		/* computes RMS amplitude and stores it */
 		data.enveloppe = soundBuffer->getRMSAmplitude();
+		Hud::getInstance().addEntry("Envelope ", data.enveloppe);
 	}
 }
 

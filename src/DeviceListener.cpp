@@ -135,6 +135,10 @@ float LeapDevice::zVelocity(int hand) {
 	return z;
 }
 
+bool idl::LeapDevice::hasHand(){
+	return hands.size() > 0 ;
+}
+
 int idl::LeapDevice::getRightHand(){
 	ourMutex.lock();
 	int i = 0;

@@ -8,5 +8,6 @@ SeedSoundEnvelope::SeedSoundEnvelope(SoundListener * soundListener)
 }
 
 ofVec3f SeedSoundEnvelope::getValue() {
-	return ofVec3f(soundListener->getData().enveloppe);
+	ofVec3f vec(soundListener->getData().enveloppe);
+	return vec;
 }
