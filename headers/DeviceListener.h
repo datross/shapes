@@ -51,6 +51,7 @@ public:
 	float xVelocity(int hand);
 	float yVelocity(int hand);
 	float zVelocity(int hand);
+	bool hasHand();
 	int getRightHand();
 	int getLeftHand();
 };

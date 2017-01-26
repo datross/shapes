@@ -1,14 +1,14 @@
 #ifndef MODIFIER_SHAPE_CREATOR_H
 #define MODIFIER_SHAPE_CREATOR_H
 
-#include "Modifier.h"
+#include "DependanteModifier.h"
 #include "shape.h"
 
 namespace idl {
 
-	class ShapeCreator : public Modifier {
+	class ShapeCreator : public DependanteModifier {
 	public:
-		ShapeCreator(Shape& shape);
+		ShapeCreator(Shape& shape, shared_ptr<Seed> s);
 		~ShapeCreator();
 		virtual void apply();
 

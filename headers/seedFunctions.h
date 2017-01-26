@@ -27,8 +27,8 @@ namespace idl {
 
 	/**
 	/* @brief if age < 0, then linear interpolation between a and b, else returns b
-	 * 0 value beginning, 1 valeur ending, 2, time between begin and end
-	 * 
+	 * 0 value beginning, 1 value ending, 2, time between begin and end
+	 *
 	 * @param seed ...
 	 * @return
 	 */
@@ -43,7 +43,7 @@ namespace idl {
 	/**
 	 * @brief Simple wiggle.
 	 * 0 amplitude, 1 frequency
-	 * 
+	 *
 	 * @param seed ...
 	 * @return
 	 */

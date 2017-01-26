@@ -1,5 +1,13 @@
 {
   "shapes": [
+  	{
+      "path": "squareLine",
+      "id" : "square circle",      
+      "position": "-500 300",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
    {
       "path": "circle",
       "id" : "square circle",      
@@ -219,6 +227,171 @@
       "path": "perspectiveRight",
       "id" : "square perspective",      
       "position": "-136 -308",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "0 150",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "12 90",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "64 141",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "200 150",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "212 90",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "264 141",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "blackSquare",
+      "id" : "square flat",      
+      "position": "-200 150",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+	{
+      "path": "perspectiveTop",
+      "id" : "square perspective",      
+      "position": "-188 90",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "perspectiveRight",
+      "id" : "square perspective",      
+      "position": "-136 141",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+	{
+	  "path": "redLine",
+      "id" : "vertical-line",      
+      "position": "-500 -540",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+	}, 
+	{
+	  "path": "redLine",
+      "id" : "vertical-line",      
+      "position": "-480 -540",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+	}, 
+	{
+	  "path": "redLine",
+      "id" : "vertical-line",      
+      "position": "-460 -540",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+	}, {
+	  "path": "redLine",
+      "id" : "vertical-line",      
+      "position": "-440 -540",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+	}, 
+	{
+	  "path": "redLine",
+      "id" : "vertical-line",      
+      "position": "-420 -540",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+	}, 
+	{
+	  "path": "redLine",
+      "id" : "vertical-line",      
+      "position": "-400 -540",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+	},
+    {
+      "path": "squareLine",
+      "id" : "square circle",      
+      "position": "-450 250",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+      {
+      "path": "greenLine",
+      "id" : "horizontal-line",      
+      "position": "1300 250",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+     {
+      "path": "greenLine",
+      "id" : "horizontal-line",      
+      "position": "1300 270",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, 
+    {
+      "path": "greenLine",
+      "id" : "horizontal-line",      
+      "position": "1300 280",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },{
+      "path": "greenLine",
+      "id" : "horizontal-line green",      
+      "position": "1300 210",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },{
+      "path": "greenLine",
+      "id" : "horizontal-line green",      
+      "position": "1300 140",
       "scale": "1 1",
       "rotation": "0",
       "speed": "2 1"

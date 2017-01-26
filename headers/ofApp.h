@@ -21,6 +21,7 @@
 #include "SeedSoundSpectrum.h"
 #include "DreamBuilder.h"
 #include "GestureController.h"
+#include "DeepActionController.h"
 #include <list>
 #include <memory>
 #include "ofxMidi.h"
@@ -75,6 +76,9 @@ private:
 
 	/* Gesture Controller */
 	std::shared_ptr<idl::GestureController> gestureController;
+
+	/* DeepAction Controller */
+	std::shared_ptr<idl::DeepActionController> deepActionController;
 
 	/* mysterious problem... it needs to be here */
 	ofxPostGlitch postGlitch;

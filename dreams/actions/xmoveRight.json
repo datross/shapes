@@ -17,23 +17,18 @@
 				"seed" : "leap right positionX"
 				},
 {
-	        "type" : "selection dependante color",
-			"selection" : {
-				"type" : "byColor",
-				"color" : "26 26 26 255"
+	        "type" : "selection dependante scale",
+					"selection" : {
+				  "type" : "uniform",
+				  "weight" : 1
 			},
-		    "color" : "255 255 255 255",
-		    "seed" : "leap right positionX"
+			"scale" : "400 400",
+			"individual_origin" : false,
+			"pivot" : "960 540",
+			"seed" : "leap right normal"
     	},
-		{
-	        "type" : "selection dependante color",
-			"selection" : {
-				"type" : "byColor",
-				"color" : "26 26 26 255"
-			},
-		    "color" : "0 0 0 255",
-		    "seed" : "leap right positionX"
-    	},
+
+
 
 {
 	"type" : "selection dependante rotation",
@@ -41,7 +36,7 @@
 			"type" : "composite intersection",
 			"selections" : [
 				{ "type" : "radial", "point" : "0 0", "weight" : 1, "radius" : 800 } ,
-				{ "type" : "radial", "point" : "0 0", "weight" : 1, "radius" : 800 } ]
+				{ "type" : "byId", "id" : "snake" } ]
 		},
 		"angle" : 2,
 		"pivot" : "0 0",

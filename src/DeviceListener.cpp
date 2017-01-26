@@ -1,5 +1,6 @@
 #include "DeviceListener.h"
 #include <vector>
+#include "Hud.h"
 
 using namespace idl;
 using namespace std;
@@ -55,7 +56,7 @@ float LeapDevice::yPos(int hand) {
 	float y = hands[hand].palmPosition().y / 540;
 	ourMutex.unlock();
 	return y;
-	
+
 }
 
 float LeapDevice::zPos(int hand){
@@ -135,6 +136,10 @@ float LeapDevice::zVelocity(int hand) {
 	return z;
 }
 
+bool idl::LeapDevice::hasHand(){
+	return hands.size() > 0 ;
+}
+
 int idl::LeapDevice::getRightHand(){
 	ourMutex.lock();
 	int i = 0;
@@ -190,12 +195,12 @@ vector<idl::Gesture> DeviceListener::getGestures(){
 			idl::Gesture pinchGesture = idl::Gesture(it->isLeft, GesturePinch, leapDevice.pinchStrength(nbHands));
 			gestures.push_back(pinchGesture);
 		}
-		
+
 		idl::Gesture xMoveGesture = idl::Gesture(it->isLeft, GestureXMove, leapDevice.xPos(nbHands));
-		gestures.push_back(xMoveGesture);			
-		
+		gestures.push_back(xMoveGesture);
+
 		idl::Gesture yMoveGesture = idl::Gesture(it->isLeft, GestureYMove, leapDevice.yPos(nbHands));
-		gestures.push_back(yMoveGesture);			
+		gestures.push_back(yMoveGesture);
 	}
 	return gestures;
 }

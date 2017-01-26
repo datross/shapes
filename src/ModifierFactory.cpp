@@ -108,7 +108,6 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 				return shared_ptr<ModifierGlitch>(new ModifierGlitch(type, seed));
 			}
 		}
-
 		if (args[0] == "midi") {
 			return shared_ptr<Modifier>(new MidiModifier());
 		}

@@ -79,6 +79,6 @@ void View::drawFbo(){
 	for(auto& fx : FXs)
 		fx.second->apply();
 	postGlitch->generateFx();
-	ofSetColor(255);
+	ofSetColor(220);
 	fbo.draw(0,0);
 }

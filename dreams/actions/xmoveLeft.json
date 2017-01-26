@@ -9,6 +9,18 @@
 		    "value" : 127,
 			"controller" : "left-dly",
 		   "seed" : "leap left positionX"
-    	}
+		 },
+
+		 {
+					 "type" : "selection dependante color",
+			 "selection" : {
+				 "type" : "byId",
+				 "id" : "arc-ext"
+			 },
+				 "color" : "0 0 255 255",
+				 "seed" : "leap left normal"
+			 }
+
+
 	]
 }

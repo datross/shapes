@@ -33,6 +33,9 @@
 		"individual_origin" : false,
 		"pivot" : "960 540",
 		"seed" : "leap right pinch"
-    	}
+	},
+	{
+		"type" : "midi"
+	}
 	]
 }
