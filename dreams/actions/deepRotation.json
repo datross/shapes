@@ -27,7 +27,18 @@
 				"type" : "byId",
 				"id" : "snake"
 			},
-				"movement" : "300 0"
-			}
+				"movement" : "300 0",
+		"angle" : 0.2,
+		"individual_origin" : false,
+		"pivot" : "960 540"
+    	},
+
+	{
+	        "type" : "dependante glitch",
+		"glitch-type" : "convergence",
+		"seed" : "leap right pinch"
+
+    	}
+
 	]
 }

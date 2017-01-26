@@ -6,13 +6,13 @@
 
 namespace idl {
 
-class PostFxModifier {
+class PostFxModifier : public DependanteModifier {
 
 private:
 	PostFx *postFxEffect;
 
 public:
-	PostFxModifier(PostFx * postFxEffect);
+	PostFxModifier(std::shared_ptr< Seed >, PostFx * postFxEffect = NULL);
 	virtual void apply() = 0;
 };
 

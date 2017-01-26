@@ -5,14 +5,22 @@ using namespace idl;
 using namespace std;
 
 View::View()
-	: hud(false), fullScreen(false) {
+	: hud(false), fullScreen(false), freeId(0) {
+	fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight());
 }
 
-void View::setOfApp(ofBaseApp * _app) {
-	if(!_app) {
-		cerr << "Error [View] : no ofBaseApp" << endl;
-	}
-	app = _app;
+View & View::getInstance() {
+	static View instance;
+	return instance;
+}
+
+void View::setGlitch(ofxPostGlitch * pg) {
+	postGlitch = pg;
+	postGlitch->setup(&fbo);
+}
+
+ofxPostGlitch * View::getGlitch() {
+	return postGlitch;
 }
 
 void View::drawShape(Shape& shape) {
@@ -24,10 +32,10 @@ void View::drawBackground(ofVideoPlayer& video) {
 	video.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
 }
 
-void View::drawWorld(World & world) {
-	drawBackground(world.currentBackground());
-	for(world.firstShape(); !world.endShape(); world.nextShape()) {
-		drawShape(world.currentShape());
+void View::drawWorld() {
+	drawBackground(World::getInstance().currentBackground());
+	for(World::getInstance().firstShape(); !World::getInstance().endShape(); World::getInstance().nextShape()) {
+		drawShape(World::getInstance().currentShape());
 	}
 }
 
@@ -42,4 +50,33 @@ void View::drawHud() {
 void View::toggleFullScreen() {
 	fullScreen = !fullScreen;
 	ofSetFullscreen(fullScreen);
+}
+
+int View::addFx(std::shared_ptr<PostFx> fx){
+	int tmp = freeId;
+	fx->setup(&fbo);
+	FXs[freeId++] = fx;
+	return tmp;
+}
+
+void View::removeFx(int id) {
+	auto it = FXs.find(id);
+	if(it == FXs.end())
+		return;
+	FXs.erase(it);
+}
+
+void View::updateFbo(){
+	fbo.begin();
+	ofClear(0,0,0,255);
+	drawWorld();
+	fbo.end();
+}
+
+void View::drawFbo(){
+	for(auto& fx : FXs)
+		fx.second->apply();
+	postGlitch->generateFx();
+	ofSetColor(255);
+	fbo.draw(0,0);
 }
