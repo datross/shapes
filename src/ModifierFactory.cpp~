@@ -12,7 +12,6 @@
 #include "ModifierColor.h"
 #include "ModifierMove.h"
 #include "ModifierGlitch.h"
-#include "ModifierBezierNoise.h"
 #include <string>
 
 using namespace std;
@@ -47,7 +46,7 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 			if (!selection)
 				return nullptr;
 			if (args[1] == "dependante") {
-				/*Seed Recupï¿½ration*/
+				/*Seed Recupération*/
 				shared_ptr<Seed> seed = getSeed(jModifier);
 				/*Rotation*/
 				if (args[2] == "rotation") {
@@ -86,12 +85,6 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 				if (args[2] == "move") {
 					ofVec2f movement = parseVec2(jModifier["movement"]);
 					return shared_ptr<Modifier>(new Movator(selection, movement, seed));
-				}
-				
-				/*bezierNoise*/
-				if (args[2] == "bezierNoise"){
-					ofVec2f movement = parseVec2(jModifier["movement"]);
-					return shared_ptr<Modifier>(new Noisator(selection, movement, seed));
 				}
 			}
 		}

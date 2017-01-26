@@ -49,7 +49,7 @@ public:
 		generalInputBuffer = buffer;
 	}
 	void audioOut(ofSoundBuffer &buffer) {
- 			buffer.fillWithTone();
+// 			buffer.fillWithTone();
 // 		buffer = buf;
 	}
 

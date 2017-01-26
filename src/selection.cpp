@@ -5,7 +5,7 @@ using namespace idl;
 using namespace std;
 
 Selection::Selection(): world(World::getInstance()) {
-	
+
 }
 
 void Selection::uniform(float weight){
@@ -55,4 +55,28 @@ void Selection::random(float threshold){
 		if (weight >threshold)
 				shapes.push_back(ShapeSelected(&world.currentShape(), weight));
 	}
+}
+
+void Selection::intersection(vector<shared_ptr<Selection>> s){
+	if (s.empty()) return;
+	shared_ptr<Selection> s1 = *(s.begin());
+	for(auto it = s.begin()+1; it != s.end(); ++it) {
+		if (!(*it)) continue;
+		vector<ShapeSelected> intersection = intersectionTwo(*s1, *(*it));
+		s1->shapes = intersection;
+	}
+	shapes = s1->shapes;
+}
+
+vector<ShapeSelected> Selection::intersectionTwo(Selection& s1, Selection& s2){
+	vector<ShapeSelected> intersection;
+	for(auto it1 = s1.shapes.begin(); it1 != s1.shapes.end(); ++it1){
+		for(auto it2 = s2.shapes.begin(); it2 != s2.shapes.end(); ++it2){
+				if (*it1 == *it2 ){
+					ShapeSelected shape = *it1;
+					intersection.push_back(shape);
+				}
+			}
+	}
+	return intersection;
 }

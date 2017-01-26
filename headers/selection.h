@@ -26,6 +26,8 @@ public:
 	void byId(std::string id);
 	void byColor(std::string color);
 	void random(float threshold);
+	void intersection(std::vector<std::shared_ptr<Selection>>);
+	std::vector<ShapeSelected> intersectionTwo(Selection& s1, Selection& s2);
 };
 
 }

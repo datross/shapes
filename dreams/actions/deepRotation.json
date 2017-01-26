@@ -2,6 +2,45 @@
 	"duration" : -1,
 	"modifiers" :
 	[
+
+	    {
+	        "type" : "selection dependante bezierNoise",
+		    "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+					"type" : "byId",
+					"id" : "snake"
+				},
+				{
+					"type" : "radial",
+					"point" : "0 0",
+					"weight" : 1,
+					"radius" : 300
+				}
+				]
+			},
+		    "movement" : "0.1 0.1"
+    	},
+			{
+	        "type" : "selection dependante move",
+		    "selection" : {
+				"type" : "byId",
+				"id" : "snake"
+			},
+		    "movement" : "4 -4",
+		    "seed" : "leap left speed"
+    	},
+		{
+	        "type" : "selection dependante color",
+			"selection" : {
+				"type" : "uniform",
+				"weight" : 1
+			},
+		    "color" : "255 255 255",
+		    "seed" : "leap left normal"
+    	},
+
 			{
 					"type" : "selection dependante move",
 				"selection" : {

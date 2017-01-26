@@ -47,16 +47,14 @@ bool World::endShape()
 	return selector == shapes.end();
 }
 
-bool World::firstShape()
-{
+bool World::firstShape(){
 	if(shapes.empty())
 		return false;
 	selector = shapes.begin();
 	return true;
 }
 
-bool World::nextShape()
-{
+bool World::nextShape(){
 	++selector;
 	return !endShape();
 }
