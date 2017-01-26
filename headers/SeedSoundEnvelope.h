@@ -15,7 +15,6 @@ namespace idl {
 		
 		virtual ofVec3f getValue();
 	};
-	
 }
 
 #endif

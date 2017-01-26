@@ -49,7 +49,7 @@ public:
 		generalInputBuffer = buffer;
 	}
 	void audioOut(ofSoundBuffer &buffer) {
-// 			buffer.fillWithTone();
+ 			buffer.fillWithTone();
 // 		buffer = buf;
 	}
 
@@ -67,18 +67,15 @@ private:
 	/* stands for the leapmotion (or a mouse, keyboard etc..) */
 	idl::DeviceListener deviceListener;
 
-	/* process input sound */
-	idl::SoundListener soundListener;
-
 	/* sound buffer storing the input sound */
 	ofSoundBuffer generalInputBuffer;
-	
+
 	/* Actions to apply next update */
 	std::list<std::shared_ptr<idl::Action> > actions;
 
 	/* Gesture Controller */
 	std::shared_ptr<idl::GestureController> gestureController;
-	
+
 	/* mysterious problem... it needs to be here */
 	ofxPostGlitch postGlitch;
 

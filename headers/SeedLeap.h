@@ -4,14 +4,14 @@
 #include "Seed.h"
 #include "DeviceListener.h"
 
-namespace idl{	
+namespace idl{
 
 	class SeedLeap : public Seed {
 	private:
 		HandSide hand;
-		LeapInfoFlag flag;
+		SeedLeapInfoFlag flag;
 	public:
-		SeedLeap(HandSide h, LeapInfoFlag flag);
+		SeedLeap(HandSide h, std::string flag);
 		~SeedLeap();
 		virtual ofVec3f getValue();
 		

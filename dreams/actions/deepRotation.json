@@ -9,16 +9,18 @@
 				"id" : "line"
 			},
 		    "movement" : "80 80",
-		    "seed" : "time wiggle 2 2"
+		    "seed" : "time wiggle 2 2",
+		    "movement" : "4 -4",
+		    "seed" : "leap left speed"
     	},
 		{
 	        "type" : "selection dependante color",
 			"selection" : {
-				"type" : "byColor",
-				"color" : "26 26 26 255"
+				"type" : "uniform",
+				"weight" : 1
 			},
 		    "color" : "255 255 255",
-		    "seed" : "leap right positionX"
+		    "seed" : "leap left normal"
     	},
 
 			{
@@ -30,14 +32,20 @@
 				"movement" : "300 0",
 		"angle" : 0.2,
 		"individual_origin" : false,
-		"pivot" : "960 540"
+		"pivot" : "960 540",
+		"angle" : -1000,
+		"individual_origin" : true,
+		"pivot" : "960 540",
+		"seed" : "leap left normalX"
     	},
 
 	{
 	        "type" : "dependante glitch",
 		"glitch-type" : "convergence",
-		"seed" : "leap right pinch"
+		"seed" : "leap right pinch",
 
+		"glitch-type" : "slitscan",
+		"seed" : "sound envelope"
     	}
 
 	]
