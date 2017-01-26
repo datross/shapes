@@ -72,8 +72,9 @@ vector<ShapeSelected> Selection::intersectionTwo(Selection s1, Selection s2){
 	vector<ShapeSelected> intersection;
 	for(auto it1 = s1.shapes.begin(); it1 != s1.shapes.end(); ++it1){
 		for(auto it2 = s2.shapes.begin(); it2 != s2.shapes.end(); ++it2){
-				if (*it1 == *it2 ){
-					ShapeSelected shape = *it1;
+				if (get<0>(*it1) == get<0>(*it2)){
+					float min = std::min(get<1>(*it1),get<1>(*it2));
+					ShapeSelected shape = std::make_pair(get<0>(*it1), min);
 					intersection.push_back(shape);
 				}
 			}

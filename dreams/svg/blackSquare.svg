@@ -29,7 +29,7 @@
      id="namedview3313"
      showgrid="true"
      inkscape:zoom="2.8039742"
-     inkscape:cx="42.083126"
+     inkscape:cx="-20.684927"
      inkscape:cy="42.083126"
      inkscape:window-x="63"
      inkscape:window-y="24"
@@ -55,11 +55,12 @@
   </metadata>
   <g
      transform="matrix(1.1881247,0,0,1.1881247,6.5136135,-424.9168)"
-     id="layer1">
+     id="layer1"
+     style="fill:#000000;fill-opacity:0.63470322">
     <path
        d="m 36.627767,399.74851 -84.166251,0 0,-84.16625 84.166251,0 0,84.16625 z"
        id="path62"
-       style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="fill:#000000;fill-opacity:0.63470322;fill-rule:nonzero;stroke:none"
        inkscape:connector-curvature="0" />
   </g>
 </svg>

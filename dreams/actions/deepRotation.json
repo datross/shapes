@@ -3,20 +3,32 @@
 	"modifiers" :
 	[
 		{
+	        "type" : "dependante sound",
+		    "value" : 45,
+			"controller" : "baby-calm-vol",
+		    "color" : "0 0 255",
+		    "seed" : "time sinusoide 0 1 3 0"
+    	},
+		 {
+	        "type" : "selection dependante move",
+		 "selection" : {
+				"type" : "byId",
+				"id" : "vertical-line"
+			},
+		"movement" : "-500 540",
+		 "seed" : "time sinusoide 0 1 3 0"
+    	},{
 	        "type" : "selection dependante scale",
 		    "selection" : {
 				"type" : "composite intersection",
 				"selections" : [
 					{ 	
 						"type" : "byId",
-						"id" : "over"
+						"id" : "horizontal-line"
 					}, 
 					 {
 					 	"type" : "byId",
-						"id" : "circle"
-					}, {
-						"type" : "byColor",
-						"color" : "255 255 255"
+						"id" : "green"
 					}
 				]
 			},
@@ -24,56 +36,6 @@
 		"individual_origin" : true,
 		"pivot" : "0 0",
 		"seed" : "time sinusoide 0 1 5 1"
-		},
-	    {
-	        "type" : "selection dependante bezierNoise",
-		    "selection" : {
-				"type" : "byId",
-				"id" : "lineCircle"
-			},
-		    "movement" : "0.1 0.1"
-    	},{
-	        "type" : "selection dependante move",
-		    "selection" : {
-				"type" : "byId",
-				"id" : "snake"
-			},
-		    "movement" : "4 -4",
-		    "seed" : "leap left speed"
-    	},
-		{	
-	        "type" : "selection dependante color",
-			"selection" : {
-				"type" : "uniform",
-				"weight" : 1
-			},
-		    "color" : "255 255 255",
-		    "seed" : "leap left normal"
-    	},
-			{
-	        "type" : "dependante sound",
-		    "value" : 45,
-			"controller" : "baby-calm-vol",
-		    "color" : "0 0 255",
-		    "seed" : "time sinusoide 0 1 3 0"
-    	},
-		{	
-	        "type" : "selection dependante rotation",
-			"selection" : {
-				"type" : "byId",
-				"id" : "snake"
-			},
-		"angle" : -1000,
-		"individual_origin" : true,
-		"pivot" : "960 540",
-		"seed" : "leap left normalX"
-    	},
-	
-	{	
-	        "type" : "dependante glitch",
-		"glitch-type" : "slitscan",
-		"seed" : "sound envelope"
-    	}
-
+		}
 	]
 }
