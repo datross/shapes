@@ -9,7 +9,7 @@ View::View()
 	fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight(), GL_RGBA);
 }
 
-View & View::getInstance() {
+View & View::getInstance() {	
 	static View instance;
 	return instance;
 }
