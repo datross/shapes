@@ -28,9 +28,9 @@ void ofApp::setup(){
 	dreamBuilder.buildWorld(world);
 
 	// TODO
-	shared_ptr<Action> action = ActionFactory::getInstance().create("deepRotation");
-	if(action)
-		actions.push_front(action);
+	//shared_ptr<Action> action = ActionFactory::getInstance().create("deepRotation");
+	//if(action)
+	//	actions.push_front(action);
 	
 	
 	View::getInstance().setGlitch(&postGlitch);
@@ -74,7 +74,7 @@ void ofApp::update(){
 		actions.push_front(*a);
 	}
 	
-	/* adds actions created by leap gestures */
+	/* adds actions created by deep controller */
 	act = deepActionController->ComputeActions();
 	for(auto a = act.begin(); a != act.end(); ++a) {
 		actions.push_front(*a);

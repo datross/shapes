@@ -1,0 +1,10 @@
+{
+	"duration" : -1,
+	"modifiers" :
+	[
+		{
+	        "type" : "dependante glitch",
+		    "glitch-type" : "slitscan"
+    	}
+	]
+}
