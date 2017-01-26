@@ -12,11 +12,14 @@ ModifierExpand::ModifierExpand(std::shared_ptr<Selection> _selection, std::share
 
 void ModifierExpand::apply() {
 	seed->update();
+	ofVec2f normal = (b - a).rotate(90).normalize();
+	ofVec2f dir;
 	for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
-		ofVec2f dir = (b - a).rotate(90).normalize();
+		dir = normal;
 		/* flip direction if it's the wrong one */
 		if(dir.dot(it->first->getPosition() - a) < -1)
-			dir *= -1;
+			dir = -normal;
 		it->first->addForce(it->second * seed->current() * dir * value);
+		Hud::getInstance().addEntry("Expand direction", dir);
 	}
 }

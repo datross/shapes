@@ -22,9 +22,10 @@ void OscWrapper::sendValue(string parameter, float value){
 	ofxAbletonLiveTrack *t = abletonSet.getTrack(track);
 	if (!t) {
 		cerr << "Track does not exist : " << parameterJSON["track"].get<string>() << endl;
+		return;
 	}
 	t->getDevice(device)->getParameter(param)->setValue(value);
-	cout << device << " " << track << " " << param << " " << value << endl;
+	//cout << device << " " << track << " " << param << " " << value << endl;
 #endif
 }
 

@@ -14,14 +14,14 @@ using namespace std;
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	
+
 	ofSetWindowTitle("Interactive Delaunay");
-	
+
 	World& world = World::getInstance();
 
 	ofBackground(255,255,255);
 	ofSetFrameRate(60);
-	
+
 	FileManager::getInstance().setCurrentDream("childish");
 
 	DreamBuilder dreamBuilder;
@@ -31,23 +31,23 @@ void ofApp::setup(){
 	shared_ptr<Action> action = ActionFactory::getInstance().create("deepRotation");
 	if(action)
 		actions.push_front(action);
-	
-	
+
+
 	View::getInstance().setGlitch(&postGlitch);
 
 	deviceListener.setup();
-	
+
 	/* allocate gesture controller */
 	gestureController.reset(new GestureController(deviceListener));
 
 	/* open audio channels */
 	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
-	
+
 	ofSoundStreamStart();
-	
+
 	/* pre-allocate global buffer */
 	generalInputBuffer.allocate(IDL_BUFFER_SIZE, 2);
-	
+
 	/* soundListener points toward the global sound buffer */
 	SoundListener::getInstance().setInputBuffer(&generalInputBuffer);
 }
@@ -58,34 +58,34 @@ void ofApp::update(){
 	OscWrapper::getInstance().update();
 
 	World& world = World::getInstance();
-	
+
 	/* analyze audio IN */
 	SoundListener::getInstance().analyze();
-	
+
 	/* TODO to remove */
 	cursor = ofPoint(mouseX, mouseY);
-	
+
 	/* adds actions created by leap gestures */
 	auto act = gestureController->ComputeActions();
 	for(auto a = act.begin(); a != act.end(); ++a) {
 		actions.push_front(*a);
 	}
-	
+
 	/* TODO debug : prints number of actions */
 	Hud::getInstance().addEntry("Nb actions", actions.size());
-	
+
 
 	/* execute the action list on the world */
 	executeActions();
-	
+
 	/* update every world's element */
 	world.update();
-	
+
 	/* draw world on fbo */
 	View::getInstance().updateFbo();
 }
 //--------------------------------------------------------------
-void ofApp::draw(){	
+void ofApp::draw(){
 	/* clear the buffer */
 	ofFill();
 
@@ -99,26 +99,14 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	if(key == 'h') {
-		View::getInstance().toggleHud();
+	switch(key) {
+		case 'h': View::getInstance().toggleHud(); break;
+		case 'f': View::getInstance().toggleHud(); break;
+		case 'k' : OscWrapper::getInstance().stop(); break;
+		case 'l' : OscWrapper::getInstance().play(); break;
+		case OF_KEY_RETURN : OscWrapper::getInstance().printAll(); break;
+		default: break;
 	}
-	if(key == 'f') {
-		View::getInstance().toggleFullScreen();
-	}
-	if (key == OF_KEY_RETURN) {
-		OscWrapper::getInstance().printAll();
-		return;
-	}
-	if (key == OF_KEY_DOWN ) {
-		OscWrapper::getInstance().stop();
-	}
-	if (key == 'm') {
-	}
-	else
-		OscWrapper::getInstance().play();
-	//live.setTempo(75);
-
-
 }
 
 //--------------------------------------------------------------
@@ -170,7 +158,7 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
 

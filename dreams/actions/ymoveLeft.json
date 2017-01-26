@@ -10,15 +10,30 @@
 			"controller" : "left-rev",
 		   "seed" : "leap left positionY"
     	},
+
+			{
+				"type" : "dependante sound",
+				"value" : 64,
+				"controller" : "baby-calm-vol",
+				"seed" : "leap left positionZ"
+			},
+
+			{
+				"type" : "dependante sound",
+				"value" : -64,
+				"controller" : "baby-calm-vol",
+				"seed" : "leap left positionZ"
+			},
+
 		{
 	        "type" : "selection dependante expand",
 		    "selection" : {
 				"type" : "byId",
-				"id" : "under"
+				"id" : "over"
 			},
-		    "p1" : "100 100",
-		    "p2" : "700 100",
-		    "force" : -5,
+		    "p1" : "0 0",
+		    "p2" : "1 0",
+		    "force" : -200,
 				"seed" : "leap left positionY"
 			},
 

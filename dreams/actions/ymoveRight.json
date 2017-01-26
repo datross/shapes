@@ -9,7 +9,9 @@
 		    "value" : 127,
 			"controller" : "right-rev",
 			"seed" : "leap right positionY"
-    	},   {
+    	},
+
+			{
 	        "type" : "selection dependante scale",
 		    "selection" : {
 				"type" : "byId",
@@ -18,17 +20,29 @@
 		    "scale" : "10 10",
 		    "individual_origin" : true,
 			"seed" : "leap right positionY"
-    	}, {
-	        "type" : "selection dependante expand",
-		    "selection" : {
+		},
+
+		{
+					"type" : "selection dependante expand",
+				"selection" : {
 				"type" : "byId",
-				"id" : "over"
+				"id" : "under"
 			},
-		    "p1" : "300 820",
-		    "p2" : "590 190",
-		    "force" : 800,
-				"seed" : "leap right positionY"
-	}
+				"p1" : "0 0",
+				"p2" : "1 0",
+				"force" : -2,
+				"seed" : "leap left speedY"
+			},
+
+			{
+						"type" : "selection dependante color",
+				"selection" : {
+					"type" : "byColor",
+					"color" : "26 26 26 255"
+				},
+					"color" : "0 0 0 255",
+					"seed" : "leap right positionY"
+				}
 
 
 	]

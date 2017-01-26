@@ -3,10 +3,10 @@
 	"right-grab" : "grabRight",
 
 	"left-xmove" : "xmoveLeft",
-	"right-xmove" : "xmoveRight", 
+	"right-xmove" : "xmoveRight",
 
 	"left-ymove" : "ymoveLeft",
-	"right-ymove" : "yMoveRight", 
+	"right-ymove" : "ymoveRight", 
 
 	"top" : "",
 

@@ -34,18 +34,19 @@
 		    "color" : "0 0 0 255",
 		    "seed" : "leap right positionX"
     	},
-
 			{
-	      "type" : "selection dependante rotation",
-				"selection" : {
-					"type" :"byId",
-					"id" : "snake"
-				},
-		"angle" : 1800,
+		"type" : "selection dependante rotation",
+		"selection" : {
+			"type" :"byId",
+			"id" : "snake"
+			},
+		"angle" : 5,
 		"individual_origin" : true,
 		"pivot" : "960 540",
-		"seed" : "leap right positionX"
-	}
+		"seed" : "leap right speedX"
+		}
+
+
 
 	]
 }
