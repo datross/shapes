@@ -39,6 +39,9 @@ void ofApp::setup(){
 	
 	/* allocate gesture controller */
 	gestureController.reset(new GestureController(deviceListener));
+	
+	/* allocate deepActino controller */
+	deepActionController.reset(new DeepActionController(deviceListener));
 
 	/* open audio channels */
 	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
@@ -67,6 +70,12 @@ void ofApp::update(){
 	
 	/* adds actions created by leap gestures */
 	auto act = gestureController->ComputeActions();
+	for(auto a = act.begin(); a != act.end(); ++a) {
+		actions.push_front(*a);
+	}
+	
+	/* adds actions created by leap gestures */
+	act = deepActionController->ComputeActions();
 	for(auto a = act.begin(); a != act.end(); ++a) {
 		actions.push_front(*a);
 	}
