@@ -2,51 +2,40 @@
 	"duration" : -1,
 	"modifiers" :
 	[
-	    {
-	        "type" : "selection dependante move",
-		    "selection" : {
-				"type" : "byId",
-				"id" : "snake"
-			},
-		    "movement" : "4 -4",
-		    "seed" : "leap left speed"
-    	},
-		{	
-	        "type" : "selection dependante color",
-			"selection" : {
-				"type" : "uniform",
-				"weight" : 1
-			},
-		    "color" : "255 255 255",
-		    "seed" : "leap left normal"
-    	},
-			{
+		{
 	        "type" : "dependante sound",
 		    "value" : 45,
 			"controller" : "baby-calm-vol",
 		    "color" : "0 0 255",
 		    "seed" : "time sinusoide 0 1 3 0"
     	},
-		{	
-			"type" : "selection dependante rotation",
-			"selection" : {
+		{
+	        "type" : "selection dependante move",
+		 "selection" : {
 				"type" : "byId",
-				"id" : "snake"
+				"id" : "vertical-line"
 			},
-			"angle" : -1000,
-			"individual_origin" : true,
-			"pivot" : "960 540",
-			"seed" : "leap left normalX"
-    	},
-		{	
-			"type" : "selection dependante color",
-			"selection" : {
-				"type" : "uniform",
-				"weight" : 1
+		"movement" : "-500 540",
+		 "seed" : "time sinusoide 0 1 3 0"
+    	},{
+	        "type" : "selection dependante scale",
+		    "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{ 	
+						"type" : "byId",
+						"id" : "horizontal-line"
+					}, 
+					 {
+					 	"type" : "byId",
+						"id" : "green"
+					}
+				]
 			},
-		    "color" : "0 255 0",
-			"seed" : "sound envelope"
-    	}
-
+		"scale" : "5 5",
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 0 1 5 1"
+		}
 	]
 }
