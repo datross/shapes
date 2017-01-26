@@ -3,6 +3,9 @@
 #include "DeviceListener.h"
 #include "Utility.h"
 #include "SeedLeap.h"
+#include "SoundListener.h"
+#include "SeedSoundEnvelope.h"
+#include "SeedSoundSpectrum.h"
 
 using namespace idl;
 using namespace std;
@@ -67,20 +70,35 @@ shared_ptr<Seed> SeedFactory::createSeed(string type) {
 		else if (arguments[1] == "left") {
 			hand = LEFT;
 		}
-		if (arguments[2] == "position") 
-			return shared_ptr<Seed>(new SeedLeap(hand, POS));
-		if (arguments[2] == "positionX")
-			return shared_ptr<Seed>(new SeedLeap(hand, POSX));
-		if (arguments[2] == "positionY")
-			return shared_ptr<Seed>(new SeedLeap(hand, POSY));
-		if (arguments[2] == "positionZ")
-			return shared_ptr<Seed>(new SeedLeap(hand, POSZ));
-		if (arguments[2] == "strength") 
-			return shared_ptr<Seed>(new SeedLeap(hand, STRENGTH));
-		if (arguments[2] == "grab")
-			return shared_ptr<Seed>(new SeedLeap(hand, GRAB));
-		if (arguments[2] == "pinch")
-			return shared_ptr<Seed>(new SeedLeap(hand, PINCH));
+		return shared_ptr<Seed>(new SeedLeap(hand, arguments[2]));
+	}
+	if(arguments[0] == "sound") {
+		if(arguments[1] == "envelope") {
+			return shared_ptr<Seed>(new SeedSoundEnvelope(&SoundListener::getInstance()));
+		}
+		if(arguments[1] == "spectrum") {
+			switch(arguments.size()) {
+				case 2: 
+					return shared_ptr<Seed>(new SeedSoundSpectrum(&SoundListener::getInstance()
+					));
+				case 4:
+					return shared_ptr<Seed>(new SeedSoundSpectrum(&SoundListener::getInstance(),
+						convert<float, string>(arguments[2]), convert<float, string>(arguments[3])
+					));
+				case 6:
+					return shared_ptr<Seed>(new SeedSoundSpectrum(&SoundListener::getInstance(),
+						convert<float, string>(arguments[2]), convert<float, string>(arguments[3]),
+						convert<float, string>(arguments[4]), convert<float, string>(arguments[5])
+					));
+				case 8:
+					return shared_ptr<Seed>(new SeedSoundSpectrum(&SoundListener::getInstance(),
+						convert<float, string>(arguments[2]), convert<float, string>(arguments[3]),
+						convert<float, string>(arguments[4]), convert<float, string>(arguments[5]),
+						convert<float, string>(arguments[6]), convert<float, string>(arguments[7])
+					));
+				default: break;
+			}
+		}
 	}
 
 	return nullptr;

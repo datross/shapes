@@ -30,8 +30,10 @@ private:
 	
 	/* update leftChannel with data ready to analyze */
 	void updateAnalyzeChannel();
-public:
 	SoundListener();
+public:
+	static SoundListener& getInstance();
+	
 	~SoundListener();
 	void setInputBuffer(const ofSoundBuffer*);
 

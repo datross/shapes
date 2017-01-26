@@ -8,17 +8,17 @@
 				"type" : "byId",
 				"id" : "snake"
 			},
-		    "movement" : "20 20",
-		    "seed" : "time wiggle 2 0.2"
+		    "movement" : "4 -4",
+		    "seed" : "leap left speed"
     	},
 		{	
 	        "type" : "selection dependante color",
 			"selection" : {
-				"type" : "byColor",
-				"color" : "26 26 26 255"
+				"type" : "uniform",
+				"weight" : 1
 			},
 		    "color" : "255 255 255",
-		    "seed" : "leap right positionX"
+		    "seed" : "leap left normal"
     	},
 			{
 	        "type" : "dependante sound",
@@ -33,15 +33,16 @@
 				"type" : "byId",
 				"id" : "snake"
 			},
-		"angle" : 0.2,
-		"individual_origin" : false,
-		"pivot" : "960 540"
+		"angle" : -1000,
+		"individual_origin" : true,
+		"pivot" : "960 540",
+		"seed" : "leap left normalX"
     	},
 	
 	{	
 	        "type" : "dependante glitch",
-		"glitch-type" : "convergence"
-
+		"glitch-type" : "slitscan",
+		"seed" : "sound envelope"
     	}
 
 	]

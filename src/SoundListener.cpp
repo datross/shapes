@@ -10,6 +10,10 @@ SoundListener::SoundListener() {
 	data.spectrum.resize(fft->getBinSize());
 }
 
+SoundListener& SoundListener::getInstance() {
+	static SoundListener instance;
+	return instance;
+}
 
 SoundListener::~SoundListener() {
 }

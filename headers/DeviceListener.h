@@ -12,7 +12,23 @@
 namespace idl {
 
 	enum HandSide { LEFT, RIGHT };
-	enum LeapInfoFlag { POS, POSX, POSY, POSZ, STRENGTH, GRAB, PINCH };
+	enum SeedLeapInfoFlag {
+		POS,
+		POSX,
+		POSY,
+		POSZ,
+		GRAB,
+		PINCH,
+		STRENGTH,
+		NORMALX,
+		NORMALY,
+		NORMALZ,
+		NORMAL,
+		SPEEDX,
+		SPEEDY,
+		SPEEDZ,
+		SPEED
+	};
 
 /* In order to access protected members */
 class LeapDevice : public ofxLeapMotion {
@@ -29,6 +45,12 @@ public:
 	float xPos(int hand);
 	float yPos(int hand);
 	float zPos(int hand);
+	float xNormal(int hand);
+	float yNormal(int hand);
+	float zNormal(int hand);
+	float xVelocity(int hand);
+	float yVelocity(int hand);
+	float zVelocity(int hand);
 	int getRightHand();
 	int getLeftHand();
 };

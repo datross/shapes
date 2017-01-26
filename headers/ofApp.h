@@ -67,9 +67,6 @@ private:
 	/* stands for the leapmotion (or a mouse, keyboard etc..) */
 	idl::DeviceListener deviceListener;
 
-	/* process input sound */
-	idl::SoundListener soundListener;
-
 	/* sound buffer storing the input sound */
 	ofSoundBuffer generalInputBuffer;
 	

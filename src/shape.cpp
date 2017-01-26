@@ -25,7 +25,7 @@ Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float 
 	position = positionOrigin;
 	scale = scaleOrigin;
 	rotation = rotationOrigin;
-		
+
 	speed = ofVec2f(0);
 	scaleSpeed = ofVec2f(0);
 	rotationSpeed = 0;
