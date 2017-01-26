@@ -5,11 +5,11 @@ using namespace idl;
 using namespace std;
 
 View::View()
-	: hud(true), fullScreen(false), freeId(0) {
-	fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight());
+	: hud(false), fullScreen(false), freeId(0) {
+	fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight(), GL_RGBA);
 }
 
-View & View::getInstance() {
+View & View::getInstance() {	
 	static View instance;
 	return instance;
 }
@@ -68,7 +68,9 @@ void View::removeFx(int id) {
 
 void View::updateFbo(){
 	fbo.begin();
-	ofClear(0,0,0,255);
+	// TODO blending
+	//ofEnableAlphaBlending();
+	ofClear(0,0,0,0);
 	drawWorld();
 	fbo.end();
 }

@@ -43,11 +43,13 @@ void ofApp::setup(){
 	/* open audio channels */
 	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
 	
+	ofSoundStreamStart();
+	
 	/* pre-allocate global buffer */
 	generalInputBuffer.allocate(IDL_BUFFER_SIZE, 2);
 	
 	/* soundListener points toward the global sound buffer */
-	soundListener.setInputBuffer(&generalInputBuffer);
+	SoundListener::getInstance().setInputBuffer(&generalInputBuffer);
 }
 
 //--------------------------------------------------------------
@@ -58,7 +60,7 @@ void ofApp::update(){
 	World& world = World::getInstance();
 	
 	/* analyze audio IN */
-	soundListener.analyze();
+	SoundListener::getInstance().analyze();
 	
 	/* TODO to remove */
 	cursor = ofPoint(mouseX, mouseY);

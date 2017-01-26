@@ -41,9 +41,7 @@ float LeapDevice::xPos(int hand) {
 		ourMutex.unlock();
 		return 0;
 	}
-	cout << "HAND : " << hand << endl;
-	cout << "HANDs size : " << hands.size() << endl;
-	float x = hands[hand].palmPosition().x;
+	float x = hands[hand].palmPosition().x / 300;
 	ourMutex.unlock();
 	return x;
 }
@@ -54,21 +52,87 @@ float LeapDevice::yPos(int hand) {
 		ourMutex.unlock();
 		return 0;
 	}
-	float x = hands[hand].palmPosition().y;
+	float y = hands[hand].palmPosition().y / 540;
 	ourMutex.unlock();
-	return x;
+	return y;
 	
 }
 
-float idl::LeapDevice::zPos(int hand){
+float LeapDevice::zPos(int hand){
 	ourMutex.lock();
 	if (hand >= hands.size()) {
 		ourMutex.unlock();
 		return 0;
 	}
-	float x = hands[hand].palmPosition().z;
+	float z = hands[hand].palmPosition().z / 300;
+	ourMutex.unlock();
+	return z;
+}
+
+float LeapDevice::xNormal(int hand) {
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
+		return 0;
+	}
+	float x = hands[hand].palmNormal().x;
 	ourMutex.unlock();
 	return x;
+}
+
+float LeapDevice::yNormal(int hand) {
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
+		return 0;
+	}
+	float y = hands[hand].palmNormal().y;
+	ourMutex.unlock();
+	return y;
+}
+
+float LeapDevice::zNormal(int hand) {
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
+		return 0;
+	}
+	float z = hands[hand].palmNormal().z;
+	ourMutex.unlock();
+	return z;
+}
+
+float LeapDevice::xVelocity(int hand) {
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
+		return 0;
+	}
+	float x = hands[hand].palmVelocity().x;
+	ourMutex.unlock();
+	return x;
+}
+
+float LeapDevice::yVelocity(int hand) {
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
+		return 0;
+	}
+	float y = hands[hand].palmVelocity().y;
+	ourMutex.unlock();
+	return y;
+}
+
+float LeapDevice::zVelocity(int hand) {
+	ourMutex.lock();
+	if (hand >= hands.size()) {
+		ourMutex.unlock();
+		return 0;
+	}
+	float z = hands[hand].palmVelocity().z;
+	ourMutex.unlock();
+	return z;
 }
 
 int idl::LeapDevice::getRightHand(){
