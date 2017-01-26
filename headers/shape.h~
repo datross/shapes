@@ -50,7 +50,6 @@ namespace idl {
 
 		ofVec2f getPosition() { return position; }
 		std::string getId() {return id; }
-		void bezierNoise(ofVec2f movement);
 		
 		void update(float timeStep);
 		

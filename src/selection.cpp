@@ -56,3 +56,27 @@ void Selection::random(float threshold){
 				shapes.push_back(ShapeSelected(&world.currentShape(), weight));
 	}
 }
+
+void Selection::intersection(vector<shared_ptr<Selection>> s){
+	shared_ptr<Selection> s1 = *(s.begin());
+	vector<ShapeSelected> intersection;
+	for(auto it = s.begin()+1; it != s.end(); ++it) {
+		shared_ptr<Selection> tempSel = *it;
+		intersection = intersectionTwo(*s1, *tempSel);
+		s1->shapes = intersection;
+	}
+	shapes = s1->shapes;
+}
+
+vector<ShapeSelected> Selection::intersectionTwo(Selection s1, Selection s2){
+	vector<ShapeSelected> intersection;
+	for(auto it1 = s1.shapes.begin(); it1 != s1.shapes.end(); ++it1){
+		for(auto it2 = s2.shapes.begin(); it2 != s2.shapes.end(); ++it2){
+				if (*it1 == *it2 ){
+					ShapeSelected shape = *it1;
+					intersection.push_back(shape);
+				}
+			}
+	}
+	return intersection;
+}

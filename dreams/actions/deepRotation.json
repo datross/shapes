@@ -2,7 +2,37 @@
 	"duration" : -1,
 	"modifiers" :
 	[
+		{
+	        "type" : "selection dependante scale",
+		    "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{ 	
+						"type" : "byId",
+						"id" : "over"
+					}, 
+					 {
+					 	"type" : "byId",
+						"id" : "circle"
+					}, {
+						"type" : "byColor",
+						"color" : "255 255 255"
+					}
+				]
+			},
+		"scale" : "5 5",
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 0 1 5 1"
+		},
 	    {
+	        "type" : "selection dependante bezierNoise",
+		    "selection" : {
+				"type" : "byId",
+				"id" : "lineCircle"
+			},
+		    "movement" : "0.1 0.1"
+    	},{
 	        "type" : "selection dependante move",
 		    "selection" : {
 				"type" : "byId",
