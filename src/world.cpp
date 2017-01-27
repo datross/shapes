@@ -42,8 +42,7 @@ void World::setup(){
 }
 
 
-bool World::endShape()
-{
+bool World::endShape(){
 	return selector == shapes.end();
 }
 

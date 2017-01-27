@@ -26,15 +26,15 @@
 			},
 
 		{
-	        "type" : "selection dependante expand",
-		    "selection" : {
+					"type" : "selection dependante expand",
+				"selection" : {
 				"type" : "byId",
-				"id" : "over"
+				"id" : "under"
 			},
-		    "p1" : "0 0",
-		    "p2" : "1 0",
-		    "force" : -200,
-				"seed" : "leap left positionY"
+				"p1" : "0 0",
+				"p2" : "1 0",
+				"force" : -2,
+				"seed" : "leap left speedY"
 			},
 
 			{

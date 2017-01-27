@@ -21,19 +21,6 @@
 		    "individual_origin" : true,
 			"seed" : "leap right positionY"
 		},
-
-		{
-					"type" : "selection dependante expand",
-				"selection" : {
-				"type" : "byId",
-				"id" : "under"
-			},
-				"p1" : "0 0",
-				"p2" : "1 0",
-				"force" : -2,
-				"seed" : "leap left speedY"
-			},
-
 			{
 						"type" : "selection dependante color",
 				"selection" : {
