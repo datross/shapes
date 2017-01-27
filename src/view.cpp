@@ -45,11 +45,21 @@ void View::toggleHud() {
 
 void View::drawHud() {
 	Hud::getInstance().draw(hud);
+	// TODO move to HUD this line
+	ofSetColor(veilColor);
 }
 
 void View::toggleFullScreen() {
 	fullScreen = !fullScreen;
 	ofSetFullscreen(fullScreen);
+}
+
+void View::setVeilColor(ofColor color) {
+	veilColor = color;
+}
+
+ofColor View::getVeilColor() {
+	return veilColor;
 }
 
 int View::addFx(std::shared_ptr<PostFx> fx){
@@ -79,6 +89,6 @@ void View::drawFbo(){
 	for(auto& fx : FXs)
 		fx.second->apply();
 	postGlitch->generateFx();
-	ofSetColor(220);
+	ofSetColor(veilColor);
 	fbo.draw(0,0);
 }

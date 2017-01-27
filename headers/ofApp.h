@@ -51,7 +51,7 @@ public:
 	}
 	void audioOut(ofSoundBuffer &buffer) {
 // 			buffer.fillWithTone();
-// 		buffer = buf;
+		buffer = generalInputBuffer;
 	}
 
 	/* ------------- Delaunay Interactive relative ------------- */

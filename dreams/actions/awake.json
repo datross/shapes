@@ -37,6 +37,12 @@
 			"value" : 127,
 			"controller" : "ep-vol",
 			"seed" : "time linearFade 0 1 0.5"
+		},
+
+		{
+			"type" : "dependante veil",
+			"color" : "255 255 255",
+			"seed" : "time linearFade 0 1 0.5"
 		}
 	]
 }

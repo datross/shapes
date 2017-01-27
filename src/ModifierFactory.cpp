@@ -13,6 +13,7 @@
 #include "ModifierMove.h"
 #include "ModifierGlitch.h"
 #include "ModifierBezierNoise.h"
+#include "ModifierVeil.h"
 #include <string>
 
 using namespace std;
@@ -106,6 +107,11 @@ shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {
 			if(args[1] == "glitch") {
 				string type = jModifier["glitch-type"].get<string>();
 				return shared_ptr<ModifierGlitch>(new ModifierGlitch(type, seed));
+			}
+			
+			if(args[1] == "veil") {
+				ofColor color = parseColor(jModifier["color"].get<string>());
+				return shared_ptr<ModifierVeil>(new ModifierVeil(seed, color));
 			}
 		}
 		if (args[0] == "midi") {

@@ -110,6 +110,12 @@
 				"value" : 127,
 				"controller" : "right-gater",
 				"seed" : "time linearFade 1 0 2"
+			},
+
+			{
+				"type" : "dependante veil",
+				"color" : "150 150 150",
+				"seed" : "time linearFade 0 1 3"
 			}
 	]
 }

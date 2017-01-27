@@ -20,7 +20,6 @@ void Hud::draw(bool visible) {
 		for(unsigned i = 0; i < lines.size(); ++i) {
 			font.drawString(lines[i], HUD_LEFT_MARGIN, HUD_TOP_MARGIN + (i+1) * font.getLineHeight());
 		}
-		ofSetColor(255,255,255);
 	}
 	
 	/* clear */

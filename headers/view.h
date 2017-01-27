@@ -18,6 +18,8 @@ private:
 	int freeId;
 	ofFbo fbo;
 	ofxPostGlitch * postGlitch;
+	ofColor veilColor;
+	
 	
 	View();
 public:
@@ -25,6 +27,9 @@ public:
 	
 	void setGlitch(ofxPostGlitch * pg);
 	ofxPostGlitch * getGlitch();
+	
+	void setVeilColor(ofColor color);
+	ofColor getVeilColor();
 	
 	int addFx(std::shared_ptr<PostFx> fx);
 	void removeFx(int id);

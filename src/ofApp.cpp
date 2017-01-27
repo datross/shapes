@@ -104,7 +104,7 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
 	switch(key) {
 		case 'h': View::getInstance().toggleHud(); break;
-		case 'f': View::getInstance().toggleHud(); break;
+		case 'f': View::getInstance().toggleFullScreen(); break;
 		case 'k' : OscWrapper::getInstance().stop(); break;
 		case 'l' : OscWrapper::getInstance().play(); break;
 		case OF_KEY_RETURN : OscWrapper::getInstance().printAll(); break;
