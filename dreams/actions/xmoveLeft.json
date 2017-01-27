@@ -12,6 +12,13 @@
 		 },
 
 		 {
+					 "type" : "dependante sound",
+				 "value" : 127,
+			 "controller" : "right-gater",
+				"seed" : "leap left positionZ"
+			},
+
+		 {
 					 "type" : "selection dependante color",
 			 "selection" : {
 				 "type" : "byId",
