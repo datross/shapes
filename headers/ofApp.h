@@ -47,11 +47,11 @@ public:
 	void gotMessage(ofMessage msg);
 
 	void audioIn(ofSoundBuffer &buffer) {
-		generalInputBuffer = buffer;
+		//generalInputBuffer = buffer;
 	}
 	void audioOut(ofSoundBuffer &buffer) {
 // 			buffer.fillWithTone();
-		buffer = generalInputBuffer;
+		//buffer = generalInputBuffer;
 	}
 
 	/* ------------- Delaunay Interactive relative ------------- */

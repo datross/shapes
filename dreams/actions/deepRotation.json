@@ -49,14 +49,6 @@
 		"individual_origin" : false,
 		"pivot" : "0 0",
 		"seed" : "time sinusoide 0 1 0.3 0"
-	},
-	{
-		"type" : "selection dependante scale",
-		"selection" : {"type" : "byId", "id" : "snake"},
-		"scale" : "50 50",
-		"individual_origin" : true,
-		"pivot" : "0 0",
-		"seed" : "sound envelope"
 	}
 	]
 }
