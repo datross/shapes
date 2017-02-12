@@ -114,7 +114,7 @@
 
 			{
 				"type" : "dependante veil",
-				"color" : "150 150 150",
+				"color" : "190 190 190",
 				"seed" : "time linearFade 0 1 3"
 			}
 	]

@@ -4,15 +4,14 @@
 	"modifiers" :
 	[
 		{
-				"type" : "selection dependante move",
+			"type" : "selection dependante color",
 			"selection" : {
-			"type" : "uniform",
-			"weight" : 1
+				"type" : "byId",
+				"id" : "middleLine"
+			},
+			"color" : "255 255 255",
+			"seed" : "leap left pinch"
 		},
-			"movement" : "100 100",
-			"seed" : "time wiggle 18 1"
-		},
-
 		{
 	        "type" : "dependante sound",
 		    "value" : 127,

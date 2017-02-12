@@ -12,21 +12,35 @@
 		 },
 
 		 {
-					 "type" : "dependante sound",
-				 "value" : 127,
-			 "controller" : "right-gater",
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "right-gater",
 				"seed" : "leap left positionZ"
 			},
 
 		 {
-					 "type" : "selection dependante color",
+			"type" : "selection dependante color",
 			 "selection" : {
 				 "type" : "byId",
 				 "id" : "arc-ext"
 			 },
 				 "color" : "0 0 255 255",
 				 "seed" : "leap left normal"
-			 }
+			 },
+    {
+      "type" : "selection dependante rotation",
+	    "selection" : { "type" : "byId", "id" : "snake" },
+		"angle" : 2000,
+		"pivot" : "0 0",
+		"individual_origin" : true,
+		"seed" : "leap left positionX"
+    },
+    {
+      "type" : "selection dependante color",
+	    "selection" : { "type" : "byId", "id" : "circle" },
+		"color" : "255 225 255",
+		"seed" : "leap left positionX"
+    }
 
 
 	]
