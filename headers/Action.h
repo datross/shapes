@@ -16,6 +16,7 @@ namespace idl {
 		bool execute();
 		void apply();
 		void suicide(){duration = 0;}
+		void setBirthTime(float time) { birthTime = time; }
 		
 	protected:
 		float duration;

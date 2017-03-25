@@ -60,6 +60,7 @@ void DeepActionController::addAction(string s){
 }
 
 vector< shared_ptr< Action > > DeepActionController::ComputeActions() {
+	
 	if(!startTime && !checkState())
 		return vector< shared_ptr< Action > >();
 	cleanCurrentActions();
@@ -71,17 +72,18 @@ vector< shared_ptr< Action > > DeepActionController::ComputeActions() {
 		for(auto& s : sleep){
 			addAction(s);
 		}
-	}
-	if(startTime){
+	}	
+	if (startTime) {
 		vector< shared_ptr< Action > > actions;
-		for(auto& s : deep){
+		for (auto& s : deep) {
 			auto a = ActionFactory::getInstance().create(s);
-			if(a)
+			if (a)
 				actions.push_back(a);
 		}
 		actions.insert(actions.end(), currentActions.begin(), currentActions.end());
 		startTime = false;
 		return actions;
 	}
+
 	return currentActions;
 }

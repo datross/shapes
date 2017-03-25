@@ -17,9 +17,9 @@ namespace idl {
 		ActionFactory();
 		~ActionFactory();
 		/* std::map<std::string, json> actions; */
-    std::map<std::string, std::shared_ptr<Action> > actions;
-    void preComputeActions(std::map<std::string, json>&);
-    std::shared_ptr<Action> createAction(json jAction);
+	std::map<std::string, std::shared_ptr<Action> > actions;
+	void preComputeActions(std::map<std::string, json>&);
+	std::shared_ptr<Action> createAction(json jAction);
 	};
 }
 
