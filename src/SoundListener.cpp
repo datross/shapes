@@ -43,7 +43,7 @@ void SoundListener::analyze() {
 
 		/* computes RMS amplitude and stores it */
 		data.enveloppe = soundBuffer->getRMSAmplitude();
-		Hud::getInstance().addEntry("audio in", data.enveloppe);
+		// Hud::getInstance().addEntry("audio in", data.enveloppe);
 	}
 }
 

@@ -1,46 +1,46 @@
 {
-	"duration" : 0,
+    "duration" : 0,
 
-	"modifiers" :
-	[
-	 {
-	        "type" : "selection dependante rotation",
-			"selection" : {
-				"type" : "byId",
-				"id" : "arc-ext"
-			},
-		"angle" : 80,
-		"individual_origin" : true,
-		"pivot" : "0 0",
-		"seed" : "leap right grab"
-    	},
-		{
-	        "type" : "selection dependante scale",
-			"selection" : {
-				"type" : "byId",
-				"id" : "top-path"
-			},
-		"scale" : "5 5",
-		"individual_origin" : true,
-		"pivot" : "0 0",
-		"seed" : "leap left grab"
-    	},
-		{
-	        "type" : "selection dependante scale",
-			"selection" : {
-				"type" : "byId",
-				"id" : "bottom-path"
-			},
-		"scale" : "3 3",
-		"individual_origin" : true,
-		"pivot" : "0 0",
-		"seed" : "leap left grab"
-    	},
-		{
-	        "type" : "dependante sound",
-		    "value" : 127,
-			"controller" : "left-freq",
-		    "seed" : "leap left grab"
-    	}
-	]
+    "modifiers" :
+    [
+        {
+            "type" : "selection dependante rotation",
+            "selection" : {
+                "type" : "byId",
+                "id" : "arc-ext"
+            },
+            "angle" : 80,
+            "individual_origin" : true,
+            "pivot" : "0 0",
+            "seed" : "leap right grab"
+        },
+        {
+            "type" : "selection dependante scale",
+            "selection" : {
+                "type" : "byId",
+                "id" : "top-path"
+            },
+            "scale" : "5 5",
+            "individual_origin" : true,
+            "pivot" : "0 0",
+            "seed" : "leap left grab"
+        },
+        {
+            "type" : "selection dependante scale",
+            "selection" : {
+                "type" : "byId",
+                "id" : "bottom-path"
+            },
+            "scale" : "3 3",
+            "individual_origin" : true,
+            "pivot" : "0 0",
+            "seed" : "leap left grab"
+        },
+        {
+            "type" : "dependante sound",
+            "value" : 127,
+            "controller" : "left-freq",
+            "seed" : "leap left grab"
+        }
+    ]
 }
