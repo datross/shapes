@@ -172,7 +172,7 @@ void ofApp::executeActions() {
 		/* need to delete the action */
 		if(!(*it)->execute()) {
 			cout << "KILL Action " << (*it)->getId() << endl;
-      (*it)->suicide();
+			(*it)->suicide();
 			actions.erase(it++);
 			//it = next_it;
 		}else{

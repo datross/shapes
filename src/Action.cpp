@@ -27,13 +27,18 @@ void Action::apply(){
 }
 
 void Action::suicide() {
-  for(auto modif : modifiers) {
-    modif->reset();
-  }
   die = true;
+  resetModifiers();
+}
+
+void Action::resetModifiers() {
+	for (auto mod : modifiers) {
+		mod->reset();
+	}
 }
 
 void Action::reset() {
   die = false;
   setBirthTime(ofGetElapsedTimef());
+  resetModifiers();
 }

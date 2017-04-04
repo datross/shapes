@@ -12,10 +12,8 @@ SelectionFactory & idl::SelectionFactory::getInstance(){
 
 shared_ptr<Selection> idl::SelectionFactory::create(json& jSelection) {
 	try{
-		cout << "SELECTION " << jSelection << endl;
 		string type = jSelection["type"].get<string>();
 		auto args = split(type, ' ');
-		cout << "type:" << type << endl;
 		Selection* s = new Selection();
 		if (args[0] == "uniform") {
 			float weight = jSelection["weight"].get<float>();
@@ -24,11 +22,8 @@ shared_ptr<Selection> idl::SelectionFactory::create(json& jSelection) {
 		}
 		if (args[0] == "radial") {
 			float weight = jSelection["weight"].get<float>();
-			cout << "here" << endl;
 			ofPoint pt = parsePoint(jSelection["point"]);
-			cout << "Point:" << pt << endl;
 			float radius = jSelection["radius"].get<float>();
-			cout << "RAdius:" << radius << endl;
 			s->radial(weight, pt, radius);
 			return shared_ptr<Selection>(s);
 		}

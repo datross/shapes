@@ -48,7 +48,7 @@ bool DeepActionController::checkState(){
 
 void DeepActionController::cleanCurrentActions(){
 	for(auto& a : currentActions){
-    cout << "suicide" << endl;
+	cout << "suicide" << endl;
 		a->suicide();
 	}
 	currentActions.clear();

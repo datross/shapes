@@ -67,10 +67,11 @@ namespace idl {
 		 */
 		unsigned getSettingsCount();
 
-    virtual void reset() {
-      start();
-    }
-	};
+		virtual void reset() {
+			if(getAge()>1)
+				start();
+		}
+	};	
 	
 }
 

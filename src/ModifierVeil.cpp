@@ -11,11 +11,11 @@ ModifierVeil::ModifierVeil(shared_ptr< Seed > seed, ofColor _color): PostFxModif
 
 void ModifierVeil::apply() {
 	seed->update();
-	View::getInstance().setVeilColor((ofColor(255) - pourcentVec3ToColor(seed->current())) * colorOrigin + pourcentVec3ToColor(seed->current()) * color);
+	ofVec3f val = seed->current();
+	View::getInstance().setVeilColor((ofColor(255) - pourcentVec3ToColor(val)) * colorOrigin + pourcentVec3ToColor(val) * color);
 }
 
-void ModifierVeil::reset() {
-  std::cout << "reset veil" << endl;
+void idl::ModifierVeil::reset() {
   seed->reset();
 }
 
