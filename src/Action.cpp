@@ -4,7 +4,7 @@
 
 using namespace idl;
 
-Action::Action(float _duration,  std::vector< std::shared_ptr<Modifier> > _modifiers) : duration(_duration), modifiers(_modifiers) {
+Action::Action(float _duration,  std::vector< std::shared_ptr<Modifier> > _modifiers, std::string key) : duration(_duration), modifiers(_modifiers), id(key) {
 	birthTime = ofGetElapsedTimef();
 }
 

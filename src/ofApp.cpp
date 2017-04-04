@@ -171,6 +171,7 @@ void ofApp::executeActions() {
 	while(it != actions.end()) {
 		/* need to delete the action */
 		if(!(*it)->execute()) {
+			cout << "KILL Action " << (*it)->getId() << endl;
 			actions.erase(it++);
 			//it = next_it;
 		}else{

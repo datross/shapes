@@ -19,7 +19,7 @@ namespace idl {
 		/* std::map<std::string, json> actions; */
 	std::map<std::string, std::shared_ptr<Action> > actions;
 	void preComputeActions(std::map<std::string, json>&);
-	std::shared_ptr<Action> createAction(json jAction);
+	std::shared_ptr<Action> createAction(json jAction, string k);
 	};
 }
 

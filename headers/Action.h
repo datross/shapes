@@ -11,14 +11,16 @@ namespace idl {
 	class Action {
 
 	public:
-		Action(float _duration, std::vector< std::shared_ptr<Modifier> > modifers);
+		Action(float _duration, std::vector< std::shared_ptr<Modifier> > modifers, std::string id);
 		~Action();
 		bool execute();
 		void apply();
 		void suicide(){duration = 0;}
 		void setBirthTime(float time) { birthTime = time; }
-		
-	protected:
+		std::string getId() { return id; }
+
+	private:
+		std::string id;
 		float duration;
 		float birthTime;
 		std::vector< std::shared_ptr<Modifier> > modifiers;
