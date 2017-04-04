@@ -20,3 +20,4 @@ void Movator::apply() {
 		it->first->addForce(ofVec2f(movement.x*seed->current().x, movement.y*seed->current().y)*it->second);
 	}
 }
+

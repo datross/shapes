@@ -15,8 +15,8 @@ namespace idl {
 		~Action();
 		bool execute();
 		void apply();
-		void suicide(){duration = 0;}
-		void setBirthTime(float time) { birthTime = time; }
+		void suicide();
+    void reset();
 		std::string getId() { return id; }
 
 	private:
@@ -24,6 +24,8 @@ namespace idl {
 		float duration;
 		float birthTime;
 		std::vector< std::shared_ptr<Modifier> > modifiers;
+    bool die;
+		void setBirthTime(float time) { birthTime = time; }
 	};
 
 }

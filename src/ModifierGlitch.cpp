@@ -18,6 +18,9 @@ ModifierGlitch::ModifierGlitch(string type,shared_ptr<Seed> seed): PostFxModifie
 }
 
 ModifierGlitch::~ModifierGlitch() {
+}
+
+void ModifierGlitch::reset() {
 	View::getInstance().getGlitch()->setFx(glitchType, false);
 }
 

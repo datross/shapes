@@ -4,6 +4,7 @@
 #include "Modifier.h"
 #include "Seed.h"
 #include <memory>
+#include <iostream>
 
 namespace idl {
 	class DependanteModifier : public virtual Modifier{

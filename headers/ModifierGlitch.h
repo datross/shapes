@@ -14,6 +14,7 @@ namespace idl {
 		ModifierGlitch(std::string type, std::shared_ptr<Seed> seed);
 		~ModifierGlitch();
 		virtual void apply();
+    virtual void reset();
 	};
 	
 }

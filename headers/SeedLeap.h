@@ -14,6 +14,7 @@ namespace idl{
 		SeedLeap(HandSide h, std::string flag);
 		~SeedLeap();
 		virtual ofVec3f getValue();
+    virtual void reset(){}
 		
 	};
 }

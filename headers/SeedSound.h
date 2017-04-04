@@ -19,6 +19,7 @@ namespace idl {
 		SoundListener * soundListener;
 	public:
 		SeedSound(SoundListener * soundListener);
+    virtual void reset(){}
 	};
 	
 }

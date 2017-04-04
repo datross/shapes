@@ -12,8 +12,10 @@ namespace idl {
 	public:
 		ModifierVeil(std::shared_ptr< Seed > seed, ofColor color);
 		virtual void apply();
-	};
+    virtual void reset();
 	
+  };
+
 }
 
 #endif

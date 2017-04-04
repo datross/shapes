@@ -66,6 +66,10 @@ namespace idl {
 		 * @return unsigned int
 		 */
 		unsigned getSettingsCount();
+
+    virtual void reset() {
+      start();
+    }
 	};
 	
 }

@@ -58,7 +58,7 @@ shared_ptr<Seed> SeedFactory::createSeed(string type) {
 			settings = parseSettings(vector<string>(arguments.begin()+2, arguments.end()));
 		}
 		auto seed =  shared_ptr<Seed>(new SeedTimeFunctor(fct->second.first, settings));
-		dynamic_pointer_cast<SeedTime>(seed)->start();
+		// dynamic_pointer_cast<SeedTime>(seed)->start();
 		return seed;
 	}
 	if (arguments[0] == "leap") {

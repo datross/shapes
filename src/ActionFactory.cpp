@@ -38,7 +38,7 @@ shared_ptr<Action> ActionFactory::createAction(json jAction, string key) {
 }	
 
 shared_ptr<Action> ActionFactory::create(string type){
-	actions[type]->setBirthTime(ofGetElapsedTimef());
+  actions[type]->reset();
 	cout << "Create Action " << actions[type]->getId()<<endl;
 	return actions[type];
 }

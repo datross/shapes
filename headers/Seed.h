@@ -2,7 +2,7 @@
 #define SEED_H
 
 #include "ofMain.h"
-
+#include <iostream>
 namespace idl {
 
 class Seed {
@@ -12,7 +12,7 @@ public:
 	ofVec3f current() const;
 	ofVec3f prec() const;
 	ofVec3f step() const;
-	
+  virtual void reset() = 0;
 	void update();
 private:
 	virtual ofVec3f getValue() = 0;

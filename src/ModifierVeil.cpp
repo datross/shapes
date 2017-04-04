@@ -14,3 +14,8 @@ void ModifierVeil::apply() {
 	View::getInstance().setVeilColor((ofColor(255) - pourcentVec3ToColor(seed->current())) * colorOrigin + pourcentVec3ToColor(seed->current()) * color);
 }
 
+void ModifierVeil::reset() {
+  std::cout << "reset veil" << endl;
+  seed->reset();
+}
+

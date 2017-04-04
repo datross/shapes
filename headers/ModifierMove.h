@@ -4,6 +4,7 @@
 #include "DependanteSelectionModifier.h"
 #include "SeedConstant.h"
 #include <memory>
+#include <iostream>
 
 namespace idl {
 
