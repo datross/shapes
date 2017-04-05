@@ -76,11 +76,13 @@ std::vector<ShapeSelected> SelectionIntersection::intersectionTwo(Selection & s1
 	for (auto it1 = shapesS1.begin(); it1 != shapesS1.end(); ++it1) {
 		auto shapesS2 = s2.getShapes();
 		for (auto it2 = shapesS2.begin(); it2 != shapesS2.end(); ++it2) {
-			if (get<0>(*it1) == get<0>(*it2)) {
-				float min = std::min(get<1>(*it1), get<1>(*it2));
-				ShapeSelected shape = std::make_pair(get<0>(*it1), min);
-				intersection.push_back(shape);
-			}
+          if (it1->shape == it2->shape) {
+            if(it1->weight < it2->weight) {
+				intersection.push_back(*it1);
+            } else {
+              intersection.push_back(*it2);
+            }
+          }
 		}
 	}
 	return intersection;

@@ -22,7 +22,7 @@ Noisator::Noisator(std::shared_ptr<Selection> _selection,
 void Noisator::apply(){
 	seed->update();
 	for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
-			it->first->bezierNoise(ofVec2f(movement.x*seed->current().x, movement.y*seed->current().y)*it->second);
+			it->shape->bezierNoise(ofVec2f(movement.x*seed->current().x, movement.y*seed->current().y)*it->weight);
 	}
 }
 

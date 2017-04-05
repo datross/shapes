@@ -10,8 +10,13 @@
 
 namespace idl {
 	
-typedef std::pair<Shape*, float> ShapeSelected;
+struct ShapeSelected {
+ShapeSelected(Shape* s, float w)
+    : shape(s), weight(w) {}
 
+    Shape* shape;
+    float weight;
+};
 
 class Selection{
 protected:
