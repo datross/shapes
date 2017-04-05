@@ -54,11 +54,11 @@ void SelectShape::update(float timeStep) {
 	rotation += rotationSpeed * timeStep;
 	rotation = fmod(rotation, 360.);
 
-	for(auto s: shapes) {
+	for (auto s : shapes) {
 		s.shape->addRotationForce(rotation);
 		s.shape->addScaleForce(scale);
 		float dist = distance(s.shape->getPosition(), position);
-		ofVec2f rot(rotation*cos(rotation), rotation*sin(rotation));
+		ofVec2f rot(rotation*cos(rotation)*dist, rotation*sin(rotation)*dist);
 		s.shape->addForce();
 
 	}
@@ -67,14 +67,14 @@ void SelectShape::update(float timeStep) {
 	acceleration = ofVec2f(0);
 	scaleAcceleration = ofVec2f(0);
 	rotationAcceleration = 0;
-	
-	
+
+
 	addForce(-1. * speed * DAMPNESS_POSITION);
 	addForce((positionOrigin - position) * GRAVITY_ORIGIN_POSITION);
-	
+
 	addScaleForce(-1 * scaleSpeed * DAMPNESS_SCALE);
 	addScaleForce((scaleOrigin - scale) * GRAVITY_ORIGIN_SCALE);
-	
+
 	addRotationForce(-1 * rotationSpeed * DAMPNESS_ROTATION);
 	addRotationForce(GRAVITY_ORIGIN_ROTATION * (rotationOrigin - rotation));
 }
