@@ -41,3 +41,4 @@ obj/*
 *.kdev4*
 .vs/Delaunay/v14/.suo
 *.mov
+.clang_complete
