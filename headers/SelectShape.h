@@ -8,7 +8,7 @@ namespace idl {
 
 	class SelectShape : public Shape, public Selection	{
 	public:
-		SelectShape();
+		SelectShape(shared_ptr<Selection> s);
 		~SelectShape();
 
 	private:
