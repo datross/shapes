@@ -14,46 +14,38 @@ shared_ptr<Selection> idl::SelectionFactory::create(json& jSelection) {
 	try{
 		string type = jSelection["type"].get<string>();
 		auto args = split(type, ' ');
-		Selection* s = new Selection();
 		if (args[0] == "uniform") {
 			float weight = jSelection["weight"].get<float>();
-			s->uniform(weight);
-			return shared_ptr<Selection>(s);
+			return shared_ptr<Selection>(new SelectionUniform(weight));
 		}
 		if (args[0] == "radial") {
 			float weight = jSelection["weight"].get<float>();
 			ofPoint pt = parsePoint(jSelection["point"]);
 			float radius = jSelection["radius"].get<float>();
-			s->radial(weight, pt, radius);
-			return shared_ptr<Selection>(s);
+			return shared_ptr<Selection>(new SelectionRadial(weight, pt, radius));
 		}
 		if (args[0] == "byId") {
 			std::string id = jSelection["id"].get<string>();
-			s->byId(id);
-			return shared_ptr<Selection>(s);
+			return shared_ptr<Selection>(new SelectionById(id));
 		}
 		if (args[0] == "byColor") {
 			std::string color = jSelection["color"].get<string>();
-			s->byColor(color);
-			return shared_ptr<Selection>(s);
+			return shared_ptr<Selection>(new SelectionByColor(color));
 		}
 		if (args[0] == "random") {
 			float threshold = jSelection["threshold"].get<float>();
-			s->random(threshold);
-			return shared_ptr<Selection>(s);
+			return shared_ptr<Selection>(new SelectionRandom(threshold));
 		}
 
 		if (args[0] == "composite"){
 			if (args[1] == "intersection"){
 				json& selections = jSelection["selections"];
 				vector<shared_ptr<Selection>> selection_vector;
-				for(auto it = selections.begin(); it != selections.end(); ++it){
+				for (auto it = selections.begin(); it != selections.end(); ++it) {
 					shared_ptr<Selection> s2 = create(*it);
 					selection_vector.push_back(s2);
 				}
-				s->intersection(selection_vector);
-				if(!s) exit(12);
-				return shared_ptr<Selection>(s);
+				return shared_ptr<Selection>(new SelectionIntersection(selection_vector));
 			}
 		}
 	}catch (exception& e) {
