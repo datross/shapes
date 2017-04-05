@@ -11,12 +11,13 @@
 namespace idl {
 	
 struct ShapeSelected {
-ShapeSelected(Shape* s, float w)
-	: shape(s), weight(w) {}
+	ShapeSelected(Shape * s, float w) : shape(s), weight(w) {}
 
 	Shape* shape;
 	float weight;
 };
+
+
 
 class Selection{
 protected:
@@ -24,6 +25,7 @@ protected:
 	World& world;
 public:
 	Selection();
+	void add(ShapeSelected s);
 	std::vector<ShapeSelected>& getShapes() { return shapes; }
 };
 

@@ -40,7 +40,7 @@ public:
 	/* Select next shape. Returns false of end is reached. */
 	bool nextShape();
 	/* Add a shape to the world. */
-	void addShape(Shape& shape);
+	Shape* addShape(Shape& shape);
 
 	/* Add a background video to the world */
 	void addBackground(ofVideoPlayer& video);

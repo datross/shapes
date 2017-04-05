@@ -59,8 +59,8 @@ void SelectShape::update(float timeStep) {
 		s.shape->addScaleForce(scale);
 		float dist = distance(s.shape->getPosition(), position);
 		ofVec2f rot(rotation*cos(rotation)*dist, rotation*sin(rotation)*dist);
-		s.shape->addForce();
-
+		ofVec2f sca = scale * (s.shape->getPosition() - position);
+		s.shape->addForce(rot + sca + position);
 	}
 
 	/* update forces */

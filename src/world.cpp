@@ -68,8 +68,9 @@ void World::update() {
 
 }
 
-void World::addShape(Shape & shape) {
+Shape* World::addShape(Shape & shape) {
 	shapes.push_front(shape);
+	return &(*shapes.begin());
 }
 
 void World::addMask(Shape& shape) {

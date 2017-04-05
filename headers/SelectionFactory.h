@@ -14,6 +14,8 @@ namespace idl {
 
 	private:
 		SelectionFactory();
+		shared_ptr<Selection> getSelection(vector<string>, json& );
+		
 		~SelectionFactory();
 	};
 }

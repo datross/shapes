@@ -8,6 +8,9 @@ Selection::Selection() : world(World::getInstance()) {
 
 }
 
+void Selection::add(ShapeSelected s){
+  shapes.push_back(s);
+}
 
 idl::SelectionUniform::SelectionUniform(float weight){
 	for (world.firstShape(); !world.endShape(); world.nextShape()) {
