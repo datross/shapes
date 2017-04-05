@@ -1,14 +1,16 @@
 #include "SelectShape.h"
+#include "Utility.h"
+
 using namespace idl;
 
-SelectShape::SelectShape(shared_ptr<Selection> s)
-    : Shape::Shape() {
+SelectShape::SelectShape(shared_ptr<Selection> s){
 	shapes = s->getShapes();
-    ofVec2f barycentre(0,0);
-    for(auto s: shapes) {
-        barycentre += s.shape->getPosition();
-    }
-    barycentre *= (float)shapes.size();
+	ofVec2f barycentre(0,0);
+	for(auto s: shapes) {
+		barycentre += s.shape->getPosition();
+	}
+	barycentre *= (float)shapes.size();
+	initDefault(barycentre);
 }
 
 
@@ -24,7 +26,7 @@ SelectShape::~SelectShape()
 // }
 
 // void SelectShape::addScaleForce(ofVec2f a) {
-    
+	
 // }
 
 // void addRotationForce(float a);
@@ -52,9 +54,14 @@ void SelectShape::update(float timeStep) {
 	rotation += rotationSpeed * timeStep;
 	rotation = fmod(rotation, 360.);
 
-    for(auto s: shapes) {
-        s.shape->setOriginPosition(position);
-    }
+	for(auto s: shapes) {
+		s.shape->addRotationForce(rotation);
+		s.shape->addScaleForce(scale);
+		float dist = distance(s.shape->getPosition(), position);
+		ofVec2f rot(rotation*cos(rotation), rotation*sin(rotation));
+		s.shape->addForce();
+
+	}
 
 	/* update forces */
 	acceleration = ofVec2f(0);

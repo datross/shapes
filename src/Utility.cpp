@@ -62,3 +62,7 @@ ofColor pourcentVec3ToColor(ofVec3f v) {
 ofColor vec3ToColor(ofVec3f v) {
 	return ofColor(v.x, v.y, v.z);
 }
+
+float distance(ofVec2f v1, ofVec2f v2) {
+	return sqrt((v1.x - v2.x)*(v1.x - v2.x) + (v1.y - v2.y)*(v1.y - v2.y));
+}

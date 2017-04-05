@@ -12,10 +12,10 @@ namespace idl {
 	
 struct ShapeSelected {
 ShapeSelected(Shape* s, float w)
-    : shape(s), weight(w) {}
+	: shape(s), weight(w) {}
 
-    Shape* shape;
-    float weight;
+	Shape* shape;
+	float weight;
 };
 
 class Selection{

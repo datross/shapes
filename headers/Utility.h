@@ -135,4 +135,6 @@ ofColor vec3ToColor(ofVec3f v);
 */
 ofColor pourcentVec3ToColor(ofVec3f v);
 
+float distance(ofVec2f v1, ofVec2f v2);
+
 #endif
