@@ -14,13 +14,13 @@ void Selection::add(ShapeSelected s){
 
 idl::SelectionUniform::SelectionUniform(float weight){
 	for (world.firstShape(); !world.endShape(); world.nextShape()) {
-		shapes.push_back(ShapeSelected(&world.currentShape(), weight));
+		shapes.push_back(ShapeSelected(world.currentShape(), weight));
 	}
 }
 
 idl::SelectionRadial::SelectionRadial(float weight, ofPoint point, float radius) {
 	for (world.firstShape(); !world.endShape(); world.nextShape()) {
-		float dist = (point - world.currentShape().getPosition()).length();
+		float dist = (point - world.currentShape()->getPosition()).length();
 		float w;
 		if (dist > radius) {
 			w = 0;
@@ -28,7 +28,7 @@ idl::SelectionRadial::SelectionRadial(float weight, ofPoint point, float radius)
 		else {
 			w = (1 - dist / radius) * weight;
 		}
-		shapes.push_back(ShapeSelected(&world.currentShape(), w));
+		shapes.push_back(ShapeSelected(world.currentShape(), w));
 	}
 }
 
@@ -36,10 +36,10 @@ idl::SelectionById::SelectionById(string id) {
 	for (world.firstShape(); !world.endShape(); world.nextShape()) {
 
 		//TODO better
-		vector<string> ids = parseIds(world.currentShape().getId());
+		vector<string> ids = parseIds(world.currentShape()->getId());
 		for (std::vector<string>::iterator it = ids.begin(); it != ids.end(); ++it) {
 			if (id == (*it))
-				shapes.push_back(ShapeSelected(&world.currentShape(), 1));
+				shapes.push_back(ShapeSelected(world.currentShape(), 1));
 		}
 
 	}
@@ -48,8 +48,8 @@ idl::SelectionById::SelectionById(string id) {
 idl::SelectionByColor::SelectionByColor(std::string _color) {
 	ofColor color = parseColor(_color);
 	for (world.firstShape(); !world.endShape(); world.nextShape()) {
-		if (color == world.currentShape().getColor())
-			shapes.push_back(ShapeSelected(&world.currentShape(), 1));
+		if (color == world.currentShape()->getColor())
+			shapes.push_back(ShapeSelected(world.currentShape(), 1));
 	}
 }
 
@@ -58,7 +58,7 @@ idl::SelectionRandom::SelectionRandom(float threshold) {
 	for (world.firstShape(); !world.endShape(); world.nextShape()) {
 		float weight = ofRandom(0, 1);
 		if (weight >threshold)
-			shapes.push_back(ShapeSelected(&world.currentShape(), weight));
+			shapes.push_back(ShapeSelected(world.currentShape(), weight));
 	}
 }
 
@@ -79,13 +79,13 @@ std::vector<ShapeSelected> SelectionIntersection::intersectionTwo(Selection & s1
 	for (auto it1 = shapesS1.begin(); it1 != shapesS1.end(); ++it1) {
 		auto shapesS2 = s2.getShapes();
 		for (auto it2 = shapesS2.begin(); it2 != shapesS2.end(); ++it2) {
-          if (it1->shape == it2->shape) {
-            if(it1->weight < it2->weight) {
+		  if (it1->shape == it2->shape) {
+			if(it1->weight < it2->weight) {
 				intersection.push_back(*it1);
-            } else {
-              intersection.push_back(*it2);
-            }
-          }
+			} else {
+			  intersection.push_back(*it2);
+			}
+		  }
 		}
 	}
 	return intersection;

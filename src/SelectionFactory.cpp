@@ -65,8 +65,9 @@ shared_ptr<Selection> SelectionFactory::getSelection(vector<string> args, json& 
 		vector<string> newArgs (args.begin()+1, args.end());
 		shared_ptr<Selection> selection = getSelection(newArgs, jSelection);
 		shared_ptr<Selection> tmp(new Selection());
-		Shape s = SelectShape(selection);
-		tmp->add(ShapeSelected(World::getInstance().addShape(s), 1));
+		Shape* s = new SelectShape(selection);
+		World::getInstance().addShape(s);
+		tmp->add(ShapeSelected(s, 1));
 		return tmp;
 	}
 }

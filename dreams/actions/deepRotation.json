@@ -2,15 +2,7 @@
 	"duration" : -1,
 	"modifiers" :
 	[
-		{
-	        "type" : "selection dependante move",
-		 "selection" : {
-				"type" : "byId",
-				"id" : "snake"
-			},
-		"movement" : " 0"
-    	},
-
+	
 		{
 	        "type" : "selection dependante move",
 		 "selection" : {
@@ -44,7 +36,7 @@
 
 	{
 		"type" : "selection dependante rotation",
-		"selection" : {"type" : "byId", "id" : "whole"},
+		"selection" : {"type" : "shape byId", "id" : "whole"},
 		"angle" : 0.4,
 		"individual_origin" : false,
 		"pivot" : "0 0",

@@ -35,7 +35,7 @@ void View::drawBackground(ofVideoPlayer& video) {
 void View::drawWorld() {
 	drawBackground(World::getInstance().currentBackground());
 	for(World::getInstance().firstShape(); !World::getInstance().endShape(); World::getInstance().nextShape()) {
-		drawShape(World::getInstance().currentShape());
+		drawShape(*(World::getInstance().currentShape()));
 	}
 }
 

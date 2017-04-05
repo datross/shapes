@@ -28,7 +28,7 @@ namespace idl {
 		/* std::string getId() {return id; } */
 		/* void bezierNoise(ofVec2f movement); */
 		
-		void update(float timeStep);
+		virtual void update(float timeStep);
 		
 		//void resetTransform();
 		

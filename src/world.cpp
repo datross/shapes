@@ -17,8 +17,8 @@ void World::clear() {
 	shapes.clear();
 }
 
-Shape & World::currentShape() {
-	return *selector;
+Shape * World::currentShape() {
+	return selector->get();
 }
 
 ofVideoPlayer& World::currentBackground() {
@@ -34,9 +34,7 @@ void World::setup(){
 			p.rectangle(0, 0, 20, 20);
 			p.setColor(ofColor(0, 100, 150));
 			ofVec2f pos(x * ofGetWidth() / nb_x, y * ofGetHeight() / nb_y);
-			Shape shape(p, pos);
-			shapes.push_back(shape);
-			
+			shapes.push_back(shared_ptr<Shape>(new Shape(p, pos)));	
 		}
 	}
 }
@@ -61,7 +59,7 @@ bool World::nextShape(){
 void World::update() {
 	float now = ofGetElapsedTimef();
 	for(firstShape(); !endShape(); nextShape()) {
-		currentShape().update(now - timePrec);
+		currentShape()->update(now - timePrec);
 	}
 	timePrec = now;
 	background.update();
@@ -69,8 +67,13 @@ void World::update() {
 }
 
 Shape* World::addShape(Shape & shape) {
-	shapes.push_front(shape);
-	return &(*shapes.begin());
+	shapes.push_front(shared_ptr<Shape>(new Shape(shape)));
+	return shapes.begin()->get();
+}
+
+Shape* World::addShape(Shape* shape) {
+	shapes.push_front(shared_ptr<Shape>(shape));
+	return shapes.begin()->get();
 }
 
 void World::addMask(Shape& shape) {

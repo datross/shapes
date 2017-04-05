@@ -9,7 +9,7 @@ SelectShape::SelectShape(shared_ptr<Selection> s){
 	for(auto s: shapes) {
 		barycentre += s.shape->getPosition();
 	}
-	barycentre *= (float)shapes.size();
+	barycentre /= (float)shapes.size();
 	initDefault(barycentre);
 }
 

@@ -10,8 +10,8 @@
 namespace idl {
 
 class World {
-	std::list<Shape> shapes;
-	std::list<Shape>::iterator selector;
+	std::list<std::shared_ptr<Shape>> shapes;
+	std::list<std::shared_ptr<Shape>>::iterator selector;
 	
 	std::list<Shape> masks;
 	ofVideoPlayer background;
@@ -32,7 +32,8 @@ public:
 	ofVideoPlayer& currentBackground();
 		
 	/* Returns a reference to the current shape. */
-	Shape & currentShape();
+	Shape * currentShape();
+
 	/* Returns true if selector is at the end. */
 	bool endShape();
 	/* Select the first shape. Returns false if there isn't one. */
@@ -41,6 +42,7 @@ public:
 	bool nextShape();
 	/* Add a shape to the world. */
 	Shape* addShape(Shape& shape);
+	Shape* addShape(Shape* shape);
 
 	/* Add a background video to the world */
 	void addBackground(ofVideoPlayer& video);
