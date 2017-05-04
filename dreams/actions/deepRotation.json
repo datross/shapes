@@ -37,8 +37,8 @@
 	{
 		"type" : "selection dependante rotation",
 		"selection" : {"type" : "shape byId", "id" : "whole"},
-		"angle" : 0.4,
-		"individual_origin" : false,
+		"angle" : 1000,
+		"individual_origin" : true,
 		"pivot" : "0 0",
 		"seed" : "time sinusoide 0 1 0.3 0"
 	}
