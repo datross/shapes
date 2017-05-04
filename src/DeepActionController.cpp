@@ -10,6 +10,10 @@ DeepActionController::DeepActionController(DeviceListener& _deviceListener) : de
 	awakeState = false;
 	startTime = true;
 	fallingAsleep = false;
+	updateActions();
+}
+
+void DeepActionController::updateActions() {
 	json j = FileManager::getInstance().loadJSONFile("deepActionsIndex", true);
 	for(auto& d : j["deep"]) {
 		deep.push_back(d.get<string>());

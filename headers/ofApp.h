@@ -87,6 +87,9 @@ private:
 
 	/* execute every actions, and delete the outdated ones */
 	void executeActions();
+	
+	/* does dreal transition */
+	void transitDream();
 };
 
 #endif

@@ -30,6 +30,12 @@ namespace idl {
 		 */
 		std::string currentDream;
 		
+		/**
+		 * @brief List of the dreams names
+		 */
+		std::vector<std::string> dreams;
+		unsigned dream_index;
+		
 		FileManager(std::string path);
 	public:
 		
@@ -88,6 +94,11 @@ namespace idl {
 		 * @param currentDream Name of the dream
 		 */
 		void setCurrentDream(std::string currentDream);
+		
+		/**
+		 * @brief Change current dream
+		 */
+		void nextDream();
 	};
 	
 }

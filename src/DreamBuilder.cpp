@@ -41,9 +41,9 @@ void DreamBuilder::buildWorld(World& world) {
 	
 	/*loading background video*/
 	json & backgroundJson = worldJson["background"];
-	ofVideoPlayer background = FileManager::getInstance().loadMovBackground(backgroundJson["path"]);
-	background.play();
-	world.addBackground(background);
+// 	ofVideoPlayer background = FileManager::getInstance().loadMovBackground(backgroundJson["path"]);
+// 	background.play();
+// 	world.addBackground(background);
 
 	/*loading dream masks*/
 	json & masksJson = worldJson["masks"];

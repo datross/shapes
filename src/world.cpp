@@ -15,15 +15,16 @@ World & idl::World::getInstance(){
 
 void World::clear() {
 	shapes.clear();
+	masks.clear();
 }
 
 Shape * World::currentShape() {
 	return selector->get();
 }
 
-ofVideoPlayer& World::currentBackground() {
-	return background;
-}
+// ofVideoPlayer& World::currentBackground() {
+// 	return background;
+// }
 
 void World::setup(){
 	const int nb_x = 46,
@@ -62,7 +63,7 @@ void World::update() {
 		currentShape()->update(now - timePrec);
 	}
 	timePrec = now;
-	background.update();
+// 	background.update();
 
 }
 
@@ -80,8 +81,8 @@ void World::addMask(Shape& shape) {
 	masks.push_back(shape);
 }
 
-void World::addBackground(ofVideoPlayer& video) {
-	background = video;
-}
+// void World::addBackground(ofVideoPlayer& video) {
+// 	background = video;
+// }
 
 

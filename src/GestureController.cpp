@@ -30,3 +30,7 @@ vector<shared_ptr<Action > > GestureController::ComputeActions() {
 	return actions;
 }
 
+void GestureController::updateLinkTable() {
+	linkTable = FileManager::getInstance().loadJSONFile("gestureMapping", true);
+}
+

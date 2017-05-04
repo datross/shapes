@@ -29,6 +29,8 @@ namespace idl {
 		DeepActionController(DeviceListener & deviceListener);
 		
 		std::vector<std::shared_ptr<Action> > ComputeActions();
+		
+		void updateActions();
 	};
 	
 }

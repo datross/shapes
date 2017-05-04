@@ -1,0 +1,14 @@
+{
+	"deep" :
+		[
+			"deepRotation"
+		],
+	"sleep" :
+		[
+			"sleep"
+		],
+	"awake" :
+		[
+			"awake"
+		]
+}

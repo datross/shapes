@@ -11,6 +11,12 @@ FileManager::FileManager(string path)
 	if(!sessionDirectory.exists()) {
 		cerr << "Error this directory doesn't exist : " << sessionDirectory.getAbsolutePath() << endl;
 	}
+	/* Load dreams list */
+	json d = loadJSONFile("Dreams", false);
+	dreams = d.get<vector<string> >();
+	
+	dream_index = 0;
+	currentDream = dreams[dream_index];
 }
 
 
@@ -66,6 +72,11 @@ void FileManager::initActions(std::map<std::string, json>& actions){
 
 void FileManager::setCurrentDream(string _currentDream) {
 	currentDream = _currentDream;
+}
+
+void FileManager::nextDream() {
+	dream_index = (dream_index + 1) % dreams.size();
+	currentDream = dreams[dream_index];
 }
 
 

@@ -14,7 +14,7 @@ class World {
 	std::list<std::shared_ptr<Shape>>::iterator selector;
 	
 	std::list<Shape> masks;
-	ofVideoPlayer background;
+// 	ofVideoPlayer background;
 
 	float timePrec;
 	
@@ -29,7 +29,7 @@ public:
 	void setup();
 
 	/*Returns a reference to the background*/
-	ofVideoPlayer& currentBackground();
+// 	ofVideoPlayer& currentBackground();
 		
 	/* Returns a reference to the current shape. */
 	Shape * currentShape();
@@ -45,7 +45,7 @@ public:
 	Shape* addShape(Shape* shape);
 
 	/* Add a background video to the world */
-	void addBackground(ofVideoPlayer& video);
+// 	void addBackground(ofVideoPlayer& video);
 
 	/* Add a mask to the world */
 	void addMask(Shape& shape);

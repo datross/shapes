@@ -22,8 +22,6 @@ void ofApp::setup(){
 	ofBackground(255,255,255);
 	ofSetFrameRate(60);
 
-	FileManager::getInstance().setCurrentDream("childish");
-
 	DreamBuilder dreamBuilder;
 	dreamBuilder.buildWorld(world);
 
@@ -107,6 +105,7 @@ void ofApp::keyPressed(int key){
 		case 'f': View::getInstance().toggleFullScreen(); break;
 		case 'k' : OscWrapper::getInstance().stop(); break;
 		case 'l' : OscWrapper::getInstance().play(); break;
+		case 't' : transitDream(); break;
 		case OF_KEY_RETURN : OscWrapper::getInstance().printAll(); break;
 		default: break;
 	}
@@ -181,3 +180,13 @@ void ofApp::executeActions() {
 	}
 // 	cout << "exe 2" << endl;
 }
+
+void ofApp::transitDream() {
+	FileManager::getInstance().nextDream();
+	deepActionController->updateActions();
+	gestureController->updateLinkTable();
+	DreamBuilder dreamBuilder;
+	dreamBuilder.buildWorld(World::getInstance());
+}
+
+

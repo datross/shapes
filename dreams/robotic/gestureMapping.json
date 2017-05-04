@@ -1,0 +1,17 @@
+{
+	"left-grab" : "grabLeft",
+	"right-grab" : "grabRight",
+
+	"left-xmove" : "xmoveLeft",
+	"right-xmove" : "xmoveRight",
+
+	"left-ymove" : "ymoveLeft",
+	"right-ymove" : "ymoveRight",
+	
+	"left-zmove" : "zmoveLeft",
+
+	"top" : "",
+
+	"left-pinch" : "pinchLeft",
+	"right-pinch" : "pinchRight"
+}
