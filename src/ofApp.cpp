@@ -187,8 +187,9 @@ void ofApp::executeActions() {
 void ofApp::transitDream() {
 	FileManager::getInstance().nextDream_UpdateWorld();
 	ActionFactory::getInstance().reset();
-	deepActionController->updateActions();
+	deepActionController->reset();
 	gestureController->updateLinkTable();
+	actions.clear();
 }
 
 void ofApp::handleDream() {

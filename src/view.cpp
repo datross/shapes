@@ -19,6 +19,7 @@ void View::setGlitch(ofxPostGlitch * pg) {
 	postGlitch->setup(&fbo);
 }
 
+
 ofxPostGlitch * View::getGlitch() {
 	return postGlitch;
 }
