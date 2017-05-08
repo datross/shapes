@@ -79,7 +79,7 @@ Shape* World::addShape(Shape & shape) {
 }
 
 Shape* World::addShape(Shape* shape) {
-	shapes_dreams[current_dream].push_front(shared_ptr<Shape>(shape));
+	shapes_dreams[current_dream].push_back(shared_ptr<Shape>(shape));
 	return shapes_dreams[current_dream].begin()->get();
 }
 

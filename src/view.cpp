@@ -78,10 +78,10 @@ void View::removeFx(int id) {
 
 void View::updateFbo(){
 	fbo.begin();
-	// TODO blending
-	//ofEnableAlphaBlending();
-	ofClear(0,0,0,0);
+	ofEnableAlphaBlending();
+	ofClear(255,255,255,255);
 	drawWorld();
+	ofDisableAlphaBlending();
 	fbo.end();
 }
 
@@ -93,6 +93,6 @@ void View::drawFbo(){
 	
 // 	ofEnableAlphaBlending();
 // 	ofSetColor(veilColor);
-// 	ofDrawRectangle(0,0,1920,1080);
+// 	ofDrawRectangle(50,50,1920,1080);
 // 	ofDisableAlphaBlending();
 }

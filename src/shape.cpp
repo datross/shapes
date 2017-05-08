@@ -17,9 +17,8 @@ Shape::Shape(ofVec2f pos) {
 Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r,float t, std::string _id) {
 	initDefault(pos, _speed, _scale, r);
 	path = _path;
-// 	ofColor color = ofColor(path.getFillColor().r,path.getFillColor().g, path.getFillColor().b, t*255);
-// 	ofColor color = ofColor(path.getFillColor().r,path.getFillColor().g, path.getFillColor().b, 255);
-// 	path.setColor(color);
+	ofColor color = ofColor(path.getFillColor().r,path.getFillColor().g, path.getFillColor().b, t*255);
+	path.setColor(color);
 	originColor = path.getFillColor();
 	id = _id;
 }
@@ -104,7 +103,7 @@ void Shape::draw(){
 	ofTranslate(position.x, position.y, 0.);
 	ofRotate(rotation);
 	ofScale(scale.x, scale.y, 1.);
-
+	
 	path.draw();
 
 	ofPopMatrix();
