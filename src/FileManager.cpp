@@ -49,9 +49,9 @@ ofxSVG FileManager::loadSVGFile(string path) {
 
 ofVideoPlayer FileManager::loadMovBackground(string path){
 	ofVideoPlayer background;
-	path =  sessionDirectory.getAbsolutePath() + "/background/" + path + ".mov";
-	cout << "Loading file : " << path << endl;
-	background.load(path);
+	// path =  sessionDirectory.getAbsolutePath() + "/background/" + path + ".mov";
+	// cout << "Loading file : " << path << endl;
+	// background.load(path);
 	return background;
 }
 

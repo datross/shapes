@@ -21,8 +21,9 @@ void ofApp::setup(){
 
 	ofBackground(255,255,255);
 	ofSetFrameRate(60);
+	ofEnableAlphaBlending(); 
 
-	FileManager::getInstance().setCurrentDream("childish");
+	FileManager::getInstance().setCurrentDream("robotic");
 
 	DreamBuilder dreamBuilder;
 	dreamBuilder.buildWorld(world);
