@@ -82,7 +82,7 @@ bool FileManager::nextDream_building() {
 	return !end;
 }
 
-bool FileManager::nextDream_UpdateWorld() {
+void FileManager::nextDream_UpdateWorld() {
 	nextDream_building();
 	World::getInstance().setCurrentDream(dream_index);
 }

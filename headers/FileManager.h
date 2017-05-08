@@ -103,7 +103,7 @@ namespace idl {
 		/*
 		 * @brief Change current dream and update world
 		 */
-		bool nextDream_UpdateWorld();
+		void nextDream_UpdateWorld();
 	};
 	
 }
