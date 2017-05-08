@@ -40,7 +40,7 @@ namespace idl {
 	public:
 		Shape();
 		Shape(ofVec2f pos);
-		Shape(ofPath & path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r, std::string _id);
+		Shape(ofPath & path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r, float t, std::string _id);
 		Shape(ofPath & path, ofVec2f pos);
 		
 		void setOriginPosition(ofVec2f pos);

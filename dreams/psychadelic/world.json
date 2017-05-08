@@ -1,0 +1,165 @@
+{
+  "shapes": [
+    {
+      "path": "whiteMedium",
+      "opacity" : "1",
+      "id" : "white circle",
+      "position": "-609 -204",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, {
+      "path": "whiteBig",
+      "opacity" : "1",
+      "id" : "white circle",
+      "position": "569 420",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "blueSmall",
+      "opacity" : "1",
+      "id" : "blue circle",
+      "position": "-165 -35",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, {
+      "path": "blueMedium",
+      "opacity" : "1",
+      "id" : "blue circle",
+      "position": "627 -218",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },{
+      "path": "redSmall",
+      "opacity" : "1",
+      "id" : "red circle",
+      "position": "-789 -401",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "redMedium",
+      "opacity" : "1",
+      "id" : "red circle",
+      "position": "684 -349",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, {
+      "path": "redBig",
+      "opacity" : "1",
+      "id" : "red circle",
+      "position": "-245 47",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, {
+      "path": "greenSmall",
+      "opacity" : "1",
+      "id" : "green circle",
+      "position": "-715 -486",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "greenMedium",
+      "opacity" : "1",
+      "id" : "green circle",
+      "position": "-191 70",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, {
+      "path": "greenBig",
+      "opacity" : "1",
+      "id" : "green circle",
+      "position": "606 380",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    } , 
+    {
+      "path": "psych1",
+      "opacity" : "1",
+      "id" : "psych",
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "psych2",
+      "opacity" : "1",
+      "id" : "psych",
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "psych3",
+      "opacity" : "1",
+      "id" : "psych",
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "psych4",
+      "opacity" : "1",
+      "id" : "psych",
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "psych5",
+      "opacity" : "1",
+      "id" : "psych",
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "psych6",
+      "opacity" : "1",
+      "id" : "psych",
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "psych7",
+      "opacity" : "1",
+      "id" : "psych",
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }, {
+      "path": "background_psych",
+      "opacity" : "1",
+      "id" : "background",
+      "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "0 0"
+    }
+  ],
+  "background": {
+    "path": "robotic"
+  }, 
+    "masks": {
+    "path": "robotic"
+  }
+}

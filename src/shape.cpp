@@ -14,9 +14,12 @@ Shape::Shape(ofVec2f pos) {
 	initDefault(pos);
 }
 
-Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r, std::string _id) {
+Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r,float t, std::string _id) {
 	initDefault(pos, _speed, _scale, r);
 	path = _path;
+// 	ofColor color = ofColor(path.getFillColor().r,path.getFillColor().g, path.getFillColor().b, t*255);
+// 	ofColor color = ofColor(path.getFillColor().r,path.getFillColor().g, path.getFillColor().b, 255);
+// 	path.setColor(color);
 	originColor = path.getFillColor();
 	id = _id;
 }
@@ -116,9 +119,9 @@ void Shape::bezierNoise(ofVec2f movement){
 		ofPoint random(ofRandom(-movement.x, movement.x),ofRandom(-movement.y, movement.y), 0);
 		std::vector<ofPoint> points = (*it).getVertices();
 		path.moveTo(points.at(0) + random);
-//		ofPoint randomX(ofRandom(-points.at(0).x, points.at(0).x),ofRandom(-points.at(0).y, points.at(0).y), 0);
-//		ofPoint randomY(ofRandom(-points.back().x, points.back().x),ofRandom(-points.back().y, points.back().y), 0);
-//		path.bezierTo(randomX, randomY, points.back());
+		ofPoint randomX(ofRandom(-points.at(0).x, points.at(0).x),ofRandom(-points.at(0).y, points.at(0).y), 0);
+		ofPoint randomY(ofRandom(-points.back().x, points.back().x),ofRandom(-points.back().y, points.back().y), 0);
+		path.bezierTo(randomX, randomY, points.back());
 		for (std::vector<ofPoint>::iterator itPoints = points.begin() ; itPoints != points.end(); ++itPoints){
 			path.lineTo((*itPoints) + random);
 		}

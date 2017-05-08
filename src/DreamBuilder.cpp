@@ -16,6 +16,7 @@ Shape * DreamBuilder::parseShape(json j) {
 				parseVec2(j["speed"]),
 				parseVec2(j["scale"]),
 				parseFloat(j["rotation"]),
+				parseFloat(j["opacity"]),
 				j["id"]);
 }
 
