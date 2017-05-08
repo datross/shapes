@@ -44,7 +44,13 @@ ofPoint parsePoint(string s){
 }
 
 ofColor parseColor(string s){
-	return vec3ToColor(parseVec3(s));
+  	auto v = split(s, ' ');
+	ofColor color(parseFloat(v[0]), 
+		      parseFloat(v[1]), 
+		      parseFloat(v[2]));
+	if(v.size() == 4)
+	  color.a = parseFloat(v[3]);
+	return color;
 }
 
 vector<string> parseIds(string s){
@@ -56,12 +62,19 @@ ofVec2f clampVec2(ofVec2f v, float inf, float sup) {
 }
 
 ofColor pourcentVec3ToColor(ofVec3f v) {
-	return ofColor(255 * v.x, 255 * v.y, 255 * v.z);
+	return ofColor(255 * v.x, 255 * v.y, 255 * v.z, 255 * v.x);
 }
 
 ofColor vec3ToColor(ofVec3f v) {
 	return ofColor(v.x, v.y, v.z);
 }
+
+ofColor multiplyOfColor(ofColor a, ofColor b) {
+	ofColor c = a * b;
+	c.a = (float)(a.a * b.a) / 255.;
+	return c;
+}
+
 
 float distance(ofVec2f v1, ofVec2f v2) {
 	return sqrt((v1.x - v2.x)*(v1.x - v2.x) + (v1.y - v2.y)*(v1.y - v2.y));

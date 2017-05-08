@@ -81,6 +81,9 @@ void ofApp::update(){
 
 	/* update every world's element */
 	world.update();
+	
+	/* wait for transition */
+	handleDream();
 
 	/* draw world on fbo */
 	View::getInstance().updateFbo();
@@ -186,6 +189,10 @@ void ofApp::transitDream() {
 	ActionFactory::getInstance().reset();
 	deepActionController->updateActions();
 	gestureController->updateLinkTable();
+}
+
+void ofApp::handleDream() {
+// 	View::getInstance().setVeilColor(ofColor(90,90,90));
 }
 
 

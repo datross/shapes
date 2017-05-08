@@ -89,6 +89,10 @@ void View::drawFbo(){
 	for(auto& fx : FXs)
 		fx.second->apply();
 	postGlitch->generateFx();
-	ofSetColor(veilColor);
 	fbo.draw(0,0);
+	
+// 	ofEnableAlphaBlending();
+// 	ofSetColor(veilColor);
+// 	ofDrawRectangle(0,0,1920,1080);
+// 	ofDisableAlphaBlending();
 }

@@ -52,14 +52,13 @@ void DreamBuilder::buildWorld(World& world) {
 		    Shape * shape = parseShape(*it);
 		    world.addShape(shape);
 	    }
-
-	    /*Loading all Actions*/
-	    ActionFactory::getInstance();
-
-	    /*Loading sound Modifier*/
-	    OscWrapper::getInstance();
 	} while(FileManager::getInstance().nextDream_building());
 	world.setCurrentDream(0);
+	/*Loading all Actions*/
+	ActionFactory::getInstance();
+
+	/*Loading sound Modifier*/
+	OscWrapper::getInstance();
 }
 
 
