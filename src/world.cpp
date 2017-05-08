@@ -1,11 +1,17 @@
 #include "world.h"
+#include <iostream>
 
 using namespace idl;
 using namespace std;
 
 World::World()
 : selector(shapes.begin()), timePrec(ofGetElapsedTimef()) {
+    current_dream = -1;
+}
 
+void World::pushNewDream() {
+  shapes_dreams.push_back(list<shared_ptr<Shape> >());
+  current_dream = shapes_dreams.size() -1;
 }
 
 World & idl::World::getInstance(){
@@ -19,26 +25,26 @@ void World::clear() {
 }
 
 Shape * World::currentShape() {
-	return selector->get();
+	return *selector;
 }
 
 // ofVideoPlayer& World::currentBackground() {
 // 	return background;
 // }
 
-void World::setup(){
-	const int nb_x = 46,
-		nb_y = 32;
-	for (unsigned x = 0; x < nb_x; ++x) {
-		for (unsigned y = 0; y < nb_y; ++y) {
-			ofPath p; 
-			p.rectangle(0, 0, 20, 20);
-			p.setColor(ofColor(0, 100, 150));
-			ofVec2f pos(x * ofGetWidth() / nb_x, y * ofGetHeight() / nb_y);
-			shapes.push_back(shared_ptr<Shape>(new Shape(p, pos)));	
-		}
-	}
-}
+// void World::setup(){
+// 	const int nb_x = 46,
+// 		nb_y = 32;
+// 	for (unsigned x = 0; x < nb_x; ++x) {
+// 		for (unsigned y = 0; y < nb_y; ++y) {
+// 			ofPath p; 
+// 			p.rectangle(0, 0, 20, 20);
+// 			p.setColor(ofColor(0, 100, 150));
+// 			ofVec2f pos(x * ofGetWidth() / nb_x, y * ofGetHeight() / nb_y);
+// 			shapes.push_back(shared_ptr<Shape>(new Shape(p, pos)));	
+// 		}
+// 	}
+// }
 
 
 bool World::endShape(){
@@ -68,13 +74,13 @@ void World::update() {
 }
 
 Shape* World::addShape(Shape & shape) {
-	shapes.push_front(shared_ptr<Shape>(new Shape(shape)));
-	return shapes.begin()->get();
+	shapes_dreams[current_dream].push_front(shared_ptr<Shape>(new Shape(shape)));
+	return shapes_dreams[current_dream].begin()->get();
 }
 
 Shape* World::addShape(Shape* shape) {
-	shapes.push_front(shared_ptr<Shape>(shape));
-	return shapes.begin()->get();
+	shapes_dreams[current_dream].push_front(shared_ptr<Shape>(shape));
+	return shapes_dreams[current_dream].begin()->get();
 }
 
 void World::addMask(Shape& shape) {
@@ -84,5 +90,17 @@ void World::addMask(Shape& shape) {
 // void World::addBackground(ofVideoPlayer& video) {
 // 	background = video;
 // }
+
+void World::setCurrentDream(unsigned dream) {
+    if(dream >= shapes_dreams.size()){
+      cerr<<"index out of range"<<endl;
+      return;
+    }
+    current_dream = dream;
+    shapes.clear();
+    for(auto s : shapes_dreams[current_dream]) {
+      shapes.push_front(s.get());
+    }
+}
 
 

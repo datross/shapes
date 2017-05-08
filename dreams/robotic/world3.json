@@ -1,0 +1,434 @@
+{
+  "shapes": [
+    {
+      "path": "ArcBottom_circle1",
+      "id" : "snake whole circle over",
+      "position": "-760 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "snake whole circle under",
+      "position": "-760 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "snake whole bottom-path under",
+      "position": "-760 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "snake whole under",
+      "position": "-760 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle5",
+      "id" : "snake whole top-path under",
+      "position": "-760 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcTop_circle1",
+      "id" : "snake whole circle over",
+      "position": "-611 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle2",
+      "id" : "snake whole bottom-path over",
+      "position": "-611 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle3",
+      "id" : "snake whole over",
+      "position": "-611 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcTop_circle4",
+      "id" : "snake whole top-path over",
+      "position": "-611 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "snake whole circle under",
+      "position": "-611 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+        {
+      "path": "ArcBottom_circle1",
+      "id" : "snake whole circle over",
+      "position": "-462 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "snake whole circle under",
+      "position": "-462 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "snake whole bottom-path under",
+      "position": "-462 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "snake whole under",
+      "position": "-462 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle5",
+      "id" : "snake whole top-path under",
+      "position": "-462 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle1",
+      "id" : "snake whole circle over",
+      "position": "-313 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle2",
+      "id" : "snake whole bottom-path over",
+      "position": "-313 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle3",
+      "id" : "snake whole over",
+      "position": "-313 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcTop_circle4",
+      "id" : "snake whole top-path over",
+      "position": "-313 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "snake whole circle under",
+      "position": "-313 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "snake whole circle over",
+      "position": "-164 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "snake whole circle under",
+      "position": "-164 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "snake whole bottom-path under",
+      "position": "-164 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "snake whole under",
+      "position": "-164 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "snake whole top-path under",
+      "position": "-164 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle1",
+      "id" : "snake whole circle over",
+      "position": "-15 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle2",
+      "id" : "snake whole bottom-path over",
+      "position": "-15 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle3",
+      "id" : "snake whole over",
+      "position": "-15 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcTop_circle4",
+      "id" : "snake whole top-path over",
+      "position": "-15 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "snake whole circle under",
+      "position": "-15 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "snake whole circle over",
+      "position": "134 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "snake whole circle under",
+      "position": "134 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "snake whole bottom-path under",
+      "position": "134 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "snake whole under",
+      "position": "134 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "snake whole top-path under",
+      "position": "134 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle1",
+      "id" : "snake whole circle over",
+      "position": "283 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle2",
+      "id" : "snake whole bottom-path over",
+      "position": "283 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle3",
+      "id" : "snake whole over",
+      "position": "283 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcTop_circle4",
+      "id" : "snake whole top-path over",
+      "position": "283 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcTop_circle5",
+      "id" : "snake whole circle under",
+      "position": "283 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle1",
+      "id" : "snake whole circle over",
+      "position": "432 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle2",
+      "id" : "snake whole circle under",
+      "position": "432 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "ArcBottom_circle3",
+      "id" : "snake whole bottom-path under",
+      "position": "432 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle4",
+      "id" : "snake whole under",
+      "position": "432 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "ArcBottom_circle5",
+      "id" : "snake whole top-path under",
+      "position": "432 -1",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+  	{
+      "path": "BlackLine",
+      "id" : "whole middleLine",
+       "position": "0 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "BlackArc",
+      "id" : "snake whole arc-ext",
+       "position": "432 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "RedArc",
+      "id" : "snake whole arc-ext",
+       "position": "-760 0",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "LineCircle1",
+      "id" : "lineCircle",
+       "position": "294 -508",
+      "scale": "2 2",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "LineCircle2",
+      "id" : "lineCircle",
+       "position": "672 -372",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "LineCircle3",
+      "id" : "lineCircle",
+       "position": "470 -198",
+      "scale": "0.5 0.5",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "LineCircle4",
+      "id" : "lineCircle",
+       "position": "-768 122",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "LineCircle5",
+      "id" : "lineCircle",
+       "position": "138 294",
+      "scale": "1 1",
+      "rotation": "0",
+      "speed": "2 1"
+    }
+  ],
+  "background": {
+    "path": "childish"
+  },
+    "masks": {
+    "path": "robotic"
+  }
+}

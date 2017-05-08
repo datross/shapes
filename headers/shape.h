@@ -68,6 +68,8 @@ namespace idl {
 		
 		//void resetTransform();
 		
+		ofPath & getPath() { return path; }
+		
 		void draw();
 	};
 

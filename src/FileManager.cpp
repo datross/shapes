@@ -2,6 +2,7 @@
 #include "Utility.h"
 #include <fstream>
 #include <iostream>
+#include <world.h>
 
 using namespace idl;
 using namespace std;
@@ -74,9 +75,17 @@ void FileManager::setCurrentDream(string _currentDream) {
 	currentDream = _currentDream;
 }
 
-void FileManager::nextDream() {
+bool FileManager::nextDream_building() {
+	bool end = (dream_index == dreams.size() - 1);
 	dream_index = (dream_index + 1) % dreams.size();
 	currentDream = dreams[dream_index];
+	return !end;
 }
+
+bool FileManager::nextDream_UpdateWorld() {
+	nextDream_building();
+	World::getInstance().setCurrentDream(dream_index);
+}
+
 
 

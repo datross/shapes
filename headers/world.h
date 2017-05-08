@@ -10,8 +10,10 @@
 namespace idl {
 
 class World {
-	std::list<std::shared_ptr<Shape>> shapes;
-	std::list<std::shared_ptr<Shape>>::iterator selector;
+	int current_dream;
+	std::vector< std::list<std::shared_ptr<Shape> > > shapes_dreams;
+	std::list<Shape*> shapes;
+	std::list<Shape*>::iterator selector;
 	
 	std::list<Shape> masks;
 // 	ofVideoPlayer background;
@@ -22,11 +24,16 @@ class World {
 public:
 	static World& getInstance();
 	
+	/* builing functions */
+	void pushNewDream();
+	
+	void setCurrentDream(unsigned dream);
+	
 	/* Makes the world empty */
 	void clear();
 		
 	/* TODO remove this */
-	void setup();
+// 	void setup();
 
 	/*Returns a reference to the background*/
 // 	ofVideoPlayer& currentBackground();

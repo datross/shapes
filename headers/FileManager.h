@@ -98,7 +98,12 @@ namespace idl {
 		/**
 		 * @brief Change current dream
 		 */
-		void nextDream();
+		bool nextDream_building();
+		
+		/*
+		 * @brief Change current dream and update world
+		 */
+		bool nextDream_UpdateWorld();
 	};
 	
 }

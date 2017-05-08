@@ -182,11 +182,10 @@ void ofApp::executeActions() {
 }
 
 void ofApp::transitDream() {
-	FileManager::getInstance().nextDream();
+	FileManager::getInstance().nextDream_UpdateWorld();
+	ActionFactory::getInstance().reset();
 	deepActionController->updateActions();
 	gestureController->updateLinkTable();
-	DreamBuilder dreamBuilder;
-	dreamBuilder.buildWorld(World::getInstance());
 }
 
 
