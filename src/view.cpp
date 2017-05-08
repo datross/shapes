@@ -7,6 +7,7 @@ using namespace std;
 View::View()
 	: hud(false), fullScreen(false), freeId(0) {
 	fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight(), GL_RGBA);
+	veilColor = ofColor(0,0,0,0);
 }
 
 View & View::getInstance() {
@@ -91,8 +92,8 @@ void View::drawFbo(){
 	postGlitch->generateFx();
 	fbo.draw(0,0);
 	
-// 	ofEnableAlphaBlending();
-// 	ofSetColor(veilColor);
-// 	ofDrawRectangle(50,50,1920,1080);
-// 	ofDisableAlphaBlending();
+	ofEnableAlphaBlending();
+	ofSetColor(veilColor);
+	ofDrawRectangle(0,0,1920,1080);
+	ofDisableAlphaBlending();
 }

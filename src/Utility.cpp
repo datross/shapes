@@ -75,6 +75,18 @@ ofColor multiplyOfColor(ofColor a, ofColor b) {
 	return c;
 }
 
+ofColor substractOfColor(ofColor a, ofColor b) {
+	ofColor c = a - b;
+	c.a = max(0, a.a - b.a);
+	return c;
+}
+
+ofColor addOfColor(ofColor a, ofColor b) {
+	ofColor c = a + b;
+	c.a = min(255, a.a + b.a);
+	return c;
+}
+
 
 float distance(ofVec2f v1, ofVec2f v2) {
 	return sqrt((v1.x - v2.x)*(v1.x - v2.x) + (v1.y - v2.y)*(v1.y - v2.y));
