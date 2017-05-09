@@ -196,6 +196,7 @@ void ofApp::transitDream() {
 
 void ofApp::handleDream() {
 	float opacity = 0;
+	bool changing = false;
 	
 	float d = ofGetElapsedTimef() - startTransitionTime;
 	if(transitState == true) {
@@ -203,15 +204,18 @@ void ofApp::handleDream() {
 	    opacity = d / TRANSITION_FADE_DURATION;
 	  } else {
 	    transitDream();
+		startTransitionTime = ofGetElapsedTimef() - TRANSITION_FADE_DURATION;
 	    transitState = false;
 	  }
-
+		changing = false;
 	}
 	
 	if(d > TRANSITION_FADE_DURATION && d < 2* TRANSITION_FADE_DURATION) {
 	    opacity = 1 - (d - TRANSITION_FADE_DURATION) / TRANSITION_FADE_DURATION;
+		changing = false;
 	}
 	
+	if(changing)
 	View::getInstance().setVeilColor(ofColor(0,0,0,255 * opacity));
 }
 
