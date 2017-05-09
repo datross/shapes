@@ -29,7 +29,8 @@ void View::drawShape(Shape& shape) {
 
 void View::drawBackground(ofVideoPlayer& video) {
 	ofColor(255, 255, 255);
-	video.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
+
+	//video.draw(0,0, ofGetWindowWidth(), ofGetWindowHeight());
 }
 
 void View::drawWorld() {
@@ -80,7 +81,7 @@ void View::updateFbo(){
 	fbo.begin();
 	// TODO blending
 	//ofEnableAlphaBlending();
-	ofClear(0,0,0,0);
+	ofClear(249,241,220,255);
 	drawWorld();
 	fbo.end();
 }
