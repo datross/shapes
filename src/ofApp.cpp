@@ -48,6 +48,7 @@ void ofApp::setup(){
 	
 	/* not in a transition state */
 	transitState = 0;
+	startTransitionTime = - TRANSITION_FADE_DURATION - 1;
 }
 
 //--------------------------------------------------------------
@@ -216,8 +217,13 @@ void ofApp::handleDream() {
 		changing = true;
 	}
 	
-	if(changing)
-	View::getInstance().setVeilColor(ofColor(0,0,0,255 * opacity));
+	if(changing) {
+		ofColor v = View::getInstance().getVeilColor();
+		View::getInstance().setVeilColor(ofColor(max((float)v.r, 0.0f),
+												 max((float)v.g, 0.f),
+												 max((float)v.b, 0.f),
+												 max((float)v.a, 255.f * opacity)));
+	}
 }
 
 
