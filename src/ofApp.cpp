@@ -45,6 +45,9 @@ void ofApp::setup(){
 
 	/* soundListener points toward the global sound buffer */
 	SoundListener::getInstance().setInputBuffer(&generalInputBuffer);
+	
+	/* not in a transition state */
+	transitState = 0;
 }
 
 //--------------------------------------------------------------
@@ -108,7 +111,7 @@ void ofApp::keyPressed(int key){
 		case 'f': View::getInstance().toggleFullScreen(); break;
 		case 'k' : OscWrapper::getInstance().stop(); break;
 		case 'l' : OscWrapper::getInstance().play(); break;
-		case 't' : transitDream(); break;
+		case 't' : startTransitionTime = ofGetElapsedTimef(); transitState = true; break; 
 		case OF_KEY_RETURN : OscWrapper::getInstance().printAll(); break;
 		default: break;
 	}
@@ -193,7 +196,24 @@ void ofApp::transitDream() {
 }
 
 void ofApp::handleDream() {
-// 	View::getInstance().setVeilColor(ofColor(90,90,90));
+	float opacity = 0;
+	
+	float d = ofGetElapsedTimef() - startTransitionTime;
+	if(transitState == true) {
+	  if(d < TRANSITION_FADE_DURATION) {
+	    opacity = d / TRANSITION_FADE_DURATION;
+	  } else {
+	    transitDream();
+	    transitState = false;
+	  }
+
+	}
+	
+	if(d > TRANSITION_FADE_DURATION && d < 2* TRANSITION_FADE_DURATION) {
+	    opacity = 1 - (d - TRANSITION_FADE_DURATION) / TRANSITION_FADE_DURATION;
+	}
+	
+	View::getInstance().setVeilColor(ofColor(0,0,0,255 * opacity));
 }
 
 

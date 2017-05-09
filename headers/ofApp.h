@@ -26,6 +26,9 @@
 #include <memory>
 #include "ofxMidi.h"
 
+
+#define TRANSITION_FADE_DURATION 3
+
 class ofApp : public ofBaseApp {
 public:
 
@@ -88,11 +91,16 @@ private:
 	/* execute every actions, and delete the outdated ones */
 	void executeActions();
 	
+	// dream transition //////////////////////////////////////
+	
 	/* does dream transition */
 	void transitDream();
 	
 	/* handle dream transition */
 	void handleDream();
+	bool transitState; // 0 : no transition
+			   // 1 : transition
+	float startTransitionTime;
 };
 
 #endif
