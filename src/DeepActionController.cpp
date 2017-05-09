@@ -21,6 +21,7 @@ void DeepActionController::reset() {
 	sleep.clear();
 	awake.clear();
 	deep.clear();
+	cleanCurrentActions();
 	updateActions();
 	init();
 }
