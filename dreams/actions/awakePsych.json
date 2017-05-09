@@ -1,0 +1,14 @@
+{
+	"duration" : -1,
+	"modifiers" :
+	[
+
+
+		
+		{
+			"type" : "dependante veil",
+			"color" : "0 0 0 0",
+			"seed" : "time linearFade 0 1 0.5"
+		}
+	]
+}

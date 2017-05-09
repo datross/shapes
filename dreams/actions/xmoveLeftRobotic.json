@@ -1,0 +1,124 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+	{
+		"type" : "selection dependante rotation",
+				    "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "full"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "orange"
+					}
+				]
+			},
+		"angle" : 2,
+		"individual_origin" : true,
+		"pivot" : "-960 540",
+		"seed" : "leap left speedX"
+	},
+
+		{
+		"type" : "selection dependante rotation",
+				    "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "75"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "orange"
+					}
+				]
+			},
+		"angle" : 3,
+		"individual_origin" : true,
+		"pivot" : "-960 540",
+		"seed" : "leap left speedX"
+	},
+
+		{
+		"type" : "selection dependante rotation",
+				    "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "50"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "orange"
+					}
+				]
+			},
+		"angle" : 4,
+		"individual_origin" : true,
+		"pivot" : "-960 540",
+		"seed" : "leap left speedX"
+	},
+
+		{
+		"type" : "selection dependante rotation",
+				    "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "25"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "orange"
+					}
+				]
+			},
+		"angle" : 4.5,
+		"individual_origin" : true,
+		"pivot" : "-960 540",
+		"seed" : "leap left speedX"
+	},
+
+	{
+		"type" : "selection dependante scale",
+				    "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "full"
+					},
+					 {
+					 	"type" : "random",
+						"threshold" : 0.3
+					}
+				]
+			},
+		"scale" : "5 13",
+     		"individual_origin" : false,
+     		"pivot" : "0 0",
+		"seed" : "leap left normal"
+	},
+	{
+		"type" : "selection dependante color",
+				"selection" : {
+						"type" : "byId",
+						"id" : "background"
+			},
+		"color" : "150 132 148 255",
+		"seed" : "leap left normal"
+	}
+
+
+	
+	]
+}

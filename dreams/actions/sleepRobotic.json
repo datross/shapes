@@ -1,0 +1,121 @@
+{
+	"duration" : -1,
+	"modifiers" :
+	[
+		{
+	        "type" : "dependante glitch",
+		    "glitch-type" : "cutslider"
+    	},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "drum-freq",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "perc-vol",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "baby-angry-vol",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "melody-vol",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "ep-vol",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "left-freq",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "left-rev",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "left-dly",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "left-repeat",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "right-freq",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "right-rev",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "right-dly",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+		  "value" : 127,
+			"controller" : "right-repeat",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "right-corpus",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "right-gater",
+			"seed" : "time linearFade 1 0 2"
+		},
+
+		{
+			"type" : "dependante veil",
+			"color" : "0 0 0 128",
+			"seed" : "time linearFade 0 1 3"
+		}
+	]
+}

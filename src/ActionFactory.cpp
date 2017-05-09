@@ -46,13 +46,13 @@ ActionFactory & idl::ActionFactory::getInstance(){
 }
 
 void ActionFactory::reset() {
-    actions.clear();
-    init();
+	actions.clear();
+	init();
 }
 
 void ActionFactory::init() {
-    std::map<std::string, json> jActions;
-    FileManager fileManager = FileManager::getInstance();
-    fileManager.initActions(jActions);
-    preComputeActions(jActions);
+	std::map<std::string, json> jActions;
+	FileManager fileManager = FileManager::getInstance();
+	fileManager.initActions(jActions);
+	preComputeActions(jActions);
 }

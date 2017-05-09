@@ -1,0 +1,22 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+    {
+      "type": "dependante sound",
+      "value": 127,
+      "controller": "right-gater",
+      "seed": "leap left positionZ"
+    },
+    {
+      "type" : "selection dependante rotation",
+	    "selection" : { "type" : "byId", "id" : "snake" },
+		"angle" : 20,
+		"pivot" : "0 0",
+		"individual_origin" : true,
+		"seed" : "leap left positionZ"
+    }
+	]
+}
