@@ -1,0 +1,23 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+
+		{
+	        "type" : "selection dependante scale",
+	        "selection" : {
+			"type" : "composite intersection",
+			"selections" : [
+				{ "type" : "random",
+				"threshold" : 0.8 } ,
+				{ "type" : "byId", "id" : "psych" } ]
+		},
+		"scale" : "12 4",
+		"individual_origin" : false,
+		"pivot" : "960 540",
+		"seed" : "leap right pinch"
+    	}
+	]
+}

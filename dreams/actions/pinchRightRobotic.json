@@ -1,0 +1,41 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+		{
+	        "type" : "dependante sound",
+		    "value" : 127,
+			"controller" : "right-repeat",
+		    "seed" : "leap right pinch"
+    	},
+
+			{
+	        "type" : "selection dependante rotation",
+			"selection" : {
+				"type" : "random",
+				"threshold" : 0.8
+			},
+		"angle" : 1,
+		"individual_origin" : true,
+		"pivot" : "960 540",
+		"seed" : "leap right pinch"
+    	},
+
+    	{
+	        "type" : "selection dependante scale",
+			"selection" : {
+				"type" : "random",
+				"threshold" : 0.8
+			},
+		"scale" : "5 5",
+		"individual_origin" : false,
+		"pivot" : "960 540",
+		"seed" : "leap right pinch"
+	},
+	{
+		"type" : "midi"
+	}
+	]
+}

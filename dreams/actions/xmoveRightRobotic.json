@@ -1,0 +1,139 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+	{
+		"type" : "selection dependante expand",
+		"selection" : {
+			"type" : "byId",
+			"id" : "full"
+		},
+		"p1" : "960 95",
+		"p2" : "960 0",
+		"force" : -5,
+		"seed" : "leap right speedX"
+	},
+	{
+		"type" : "selection dependante expand",
+		"selection" : {
+			"type" : "byId",
+			"id" : "75"
+		},
+		"p1" : "960 95",
+		"p2" : "960 2",
+		"force" : -4,
+		"seed" : "leap right speedX"
+	},
+	{
+		"type" : "selection dependante expand",
+		"selection" : {
+			"type" : "byId",
+			"id" : "50"
+		},
+		"p1" : "960 95",
+		"p2" : "960 2",
+		"force" : -3,
+		"seed" : "leap right speedX"
+	},
+	{
+		"type" : "selection dependante expand",
+		"selection" : {
+			"type" : "byId",
+			"id" : "25"
+		},
+		"p1" : "960 95",
+		"p2" : "960 2",
+		"force" : -2,
+		"seed" : "leap right speedX"
+	},
+
+			 {
+			"type" : "selection dependante scale",
+			"selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "full"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "gris"
+					}
+				]
+			},
+				  "scale" : "10 10",
+                  "individual_origin" : true,
+                  "pivot" : "0 0",
+                  "seed" : "leap right normal"
+			 }, 
+
+			 {
+			"type" : "selection dependante scale",
+			"selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "noir"
+					},
+					 {
+					 	"type" : "random",
+						"threshold" : 0.4
+					}
+				]
+			},
+				  "scale" : "12 -20",
+                  "individual_origin" : true,
+                  "pivot" : "0 0",
+                  "seed" : "leap right normalX"
+			 },
+			  {
+			"type" : "selection dependante scale",
+			"selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "bleu"
+					},
+					 {
+					 	"type" : "random",
+						"threshold" : 0.1
+					}
+				]
+			},
+				  "scale" : "10 -12",
+                  "individual_origin" : true,
+                  "pivot" : "0 0",
+                  "seed" : "leap right normalY"
+			 },
+			  {
+			"type" : "selection dependante expand",
+			"selections" : [
+					{
+						"type" : "byId",
+						"id" : "carre"
+					},
+					  {
+					 	"type" : "random",
+						"threshold" : 0.4
+					}
+				],
+					
+				"p1" : "-700 95",
+				"p2" : "-100 2",
+				"force" : -4,
+				"seed" : "leap right speedX"
+			 }
+
+
+
+
+
+
+
+	]
+}

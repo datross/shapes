@@ -1,0 +1,15 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+    {
+      "type" : "selection dependante rotation",
+	    "selection" : { "type" : "byId", "id" : "snake" },
+		"angle" : 20,
+		"pivot" : "0 0",
+		"individual_origin" : true,
+		"seed" : "leap left positionZ"
+    }
+	]
+}

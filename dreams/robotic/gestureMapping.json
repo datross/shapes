@@ -1,17 +1,17 @@
 {
-	"left-grab" : "grabLeft",
-	"right-grab" : "grabRight",
+	"left-grab" : "grabLeftRobotic",
+	"right-grab" : "grabRightRobotic",
 
-	"left-xmove" : "xmoveLeft",
-	"right-xmove" : "xmoveRight",
+	"left-xmove" : "xmoveLeftRobotic",
+	"right-xmove" : "xmoveRightRobotic",
 
-	"left-ymove" : "ymoveLeft",
-	"right-ymove" : "ymoveRight",
+	"left-ymove" : "ymoveLeftRobotic",
+	"right-ymove" : "ymoveRightRobotic",
 	
-	"left-zmove" : "zmoveLeft",
+	"left-zmove" : "zmoveLeftRobotic",
 
 	"top" : "",
 
-	"left-pinch" : "pinchLeft",
-	"right-pinch" : "pinchRight"
+	"left-pinch" : "pinchLeftRobotic",
+	"right-pinch" : "pinchRightRobotic"
 }

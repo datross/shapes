@@ -1,0 +1,53 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+		{
+	        "type" : "selection dependante move",
+			"selection" : {
+                        "type" : "byId",
+                        "id" : "5"
+            },
+			"movement" : "0 6",
+			"seed" : "leap right speedY"
+    	},
+    	{
+	        "type" : "selection dependante rotation",
+			"selection" : {
+                        "type" : "byId",
+                        "id" : "5"
+            },
+			"angle" : 7,
+			"individual_origin" : true,
+			"pivot" : "0 0",
+			"seed" : "leap right speedY"
+    	},
+
+    	{
+	        "type" : "selection dependante move",
+			"selection" : {
+                        "type" : "byId",
+                        "id" : "6"
+            },
+			"movement" : "0 -6",
+			"seed" : "leap right speedY"
+    	},
+    	{
+	        "type" : "selection dependante rotation",
+			"selection" : {
+                        "type" : "byId",
+                        "id" : "6"
+            },
+			"angle" : -6,
+			"individual_origin" : true,
+			"pivot" : "0 0",
+			"seed" : "leap right speedY"
+    	}
+
+
+
+
+	]
+}

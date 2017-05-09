@@ -1,0 +1,29 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+		{
+	        "type" : "selection dependante color",
+			"selection" : {
+				"type" : "byId",
+				"id" : "psych"
+			},
+		"color" : "0 0 0 255",
+		"seed" : "leap right grab"
+    	},
+    	{
+	        "type" : "selection dependante color",
+			"selection" : {
+				"type" : "byId",
+				"id" : "background"
+			},
+		"color" : "250 250 250 255",
+		"seed" : "leap right grab"
+    	}
+
+
+
+	]
+}
