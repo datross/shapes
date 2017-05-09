@@ -193,6 +193,9 @@ void ofApp::transitDream() {
 	ActionFactory::getInstance().reset();
 	deepActionController->reset();
 	gestureController->updateLinkTable();
+	for (auto &a : actions) {
+		a->suicide();
+	}
 	actions.clear();
 }
 
