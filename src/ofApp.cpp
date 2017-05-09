@@ -208,12 +208,12 @@ void ofApp::handleDream() {
 		startTransitionTime = ofGetElapsedTimef() - TRANSITION_FADE_DURATION;
 	    transitState = false;
 	  }
-		changing = false;
+		changing = true;
 	}
 	
 	if(d > TRANSITION_FADE_DURATION && d < 2* TRANSITION_FADE_DURATION) {
 	    opacity = 1 - (d - TRANSITION_FADE_DURATION) / TRANSITION_FADE_DURATION;
-		changing = false;
+		changing = true;
 	}
 	
 	if(changing)
