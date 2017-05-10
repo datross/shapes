@@ -11,7 +11,7 @@ using namespace idl;
 int main(int argc, char * argv[]){
 	//ofAppGlutWindow window;
 	//ofSetupOpenGL(&window, 1920,1080,OF_WINDOW);			// <-------- setup the GL context
-	ofSetupOpenGL(1920, 1080, OF_WINDOW);
+	ofSetupOpenGL(1920, 1080, OF_GAME_MODE);
 	
 	/* Init FileManager */
 	

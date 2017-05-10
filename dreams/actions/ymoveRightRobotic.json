@@ -1,0 +1,55 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+	{
+		"type" : "selection dependante expand",
+		"selection" : {
+			"type" : "byId",
+			"id" : "full"
+		},
+		"p1" : "-85 540",
+		"p2" : "85 540",
+		"force" : 5,
+		"seed" : "leap right speedY"
+	},
+	{
+		"type" : "selection dependante expand",
+		"selection" : {
+			"type" : "byId",
+			"id" : "75"
+		},
+			"p1" : "-85 540",
+		"p2" : "85 540",
+		"force" : 4,
+		"seed" : "leap right speedY"
+	},
+	{
+		"type" : "selection dependante expand",
+		"selection" : {
+			"type" : "byId",
+			"id" : "50"
+		},
+		"p1" : "-85 540",
+		"p2" : "85 540",
+		"force" : 3,
+		"seed" : "leap right speedY"
+	},
+	{
+		"type" : "selection dependante expand",
+		"selection" : {
+			"type" : "byId",
+			"id" : "25"
+		},
+		"p1" : "-85 540",
+		"p2" : "85 540",
+		"force" : 2,
+		"seed" : "leap right speedY"
+	}
+
+
+
+	]
+}

@@ -6,10 +6,7 @@ using namespace idl;
 using namespace std;
 
 ActionFactory::ActionFactory(){
-  std::map<std::string, json> jActions;
-  FileManager fileManager = FileManager::getInstance();
-  fileManager.initActions(jActions);
-  preComputeActions(jActions);
+  init();
 }
 
 ActionFactory::~ActionFactory()
@@ -46,4 +43,16 @@ shared_ptr<Action> ActionFactory::create(string type){
 ActionFactory & idl::ActionFactory::getInstance(){
   static ActionFactory instance;
   return instance;
+}
+
+void ActionFactory::reset() {
+	actions.clear();
+	init();
+}
+
+void ActionFactory::init() {
+	std::map<std::string, json> jActions;
+	FileManager fileManager = FileManager::getInstance();
+	fileManager.initActions(jActions);
+	preComputeActions(jActions);
 }

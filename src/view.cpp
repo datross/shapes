@@ -7,6 +7,7 @@ using namespace std;
 View::View()
 	: hud(false), fullScreen(false), freeId(0) {
 	fbo.allocate(ofGetWindowWidth(), ofGetWindowHeight(), GL_RGBA);
+	veilColor = ofColor(0,0,0,0);
 }
 
 View & View::getInstance() {
@@ -18,6 +19,7 @@ void View::setGlitch(ofxPostGlitch * pg) {
 	postGlitch = pg;
 	postGlitch->setup(&fbo);
 }
+
 
 ofxPostGlitch * View::getGlitch() {
 	return postGlitch;
@@ -33,9 +35,9 @@ void View::drawBackground(ofVideoPlayer& video) {
 }
 
 void View::drawWorld() {
-	drawBackground(World::getInstance().currentBackground());
+// 	drawBackground(World::getInstance().currentBackground());
 	for(World::getInstance().firstShape(); !World::getInstance().endShape(); World::getInstance().nextShape()) {
-		drawShape(World::getInstance().currentShape());
+		drawShape(*(World::getInstance().currentShape()));
 	}
 }
 
@@ -78,10 +80,10 @@ void View::removeFx(int id) {
 
 void View::updateFbo(){
 	fbo.begin();
-	// TODO blending
-	//ofEnableAlphaBlending();
-	ofClear(0,0,0,0);
+	ofEnableAlphaBlending();
+	ofClear(255,255,255,255);
 	drawWorld();
+	ofDisableAlphaBlending();
 	fbo.end();
 }
 
@@ -89,6 +91,10 @@ void View::drawFbo(){
 	for(auto& fx : FXs)
 		fx.second->apply();
 	postGlitch->generateFx();
-	ofSetColor(veilColor);
 	fbo.draw(0,0);
+	
+	ofEnableAlphaBlending();
+	ofSetColor(veilColor);
+	ofDrawRectangle(0,0,1920,1080);
+	ofDisableAlphaBlending();
 }

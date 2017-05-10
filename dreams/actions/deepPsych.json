@@ -1,0 +1,89 @@
+{
+	"duration" : -1,
+	"modifiers" :
+	[
+	
+		
+		{
+	        "type" : "selection dependante rotation",
+			  "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "circle"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "white"
+					}
+				]
+			},
+		"angle" : 90,
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 0 1 0.3 0"
+    	},
+    	{
+	        "type" : "selection dependante rotation",
+			  "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "circle"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "green"
+					}
+				]
+			},
+		"angle" : 50,
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 0 1 0.3 0"
+    	},
+    	{
+	        "type" : "selection dependante rotation",
+			  "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "circle"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "red"
+					}
+				]
+			},
+		"angle" : 60,
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 0 1 0.3 0"
+    	},
+    	{
+	        "type" : "selection dependante rotation",
+			  "selection" : {
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "circle"
+					},
+					 {
+					 	"type" : "byId",
+						"id" : "blue"
+					}
+				]
+			},
+		"angle" : 45,
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 0 1 0.3 0"
+    	}
+
+	]
+}

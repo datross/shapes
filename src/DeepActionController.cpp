@@ -7,9 +7,26 @@ using namespace std;
 const static float NO_HAND_DURATION = 5;
 
 DeepActionController::DeepActionController(DeviceListener& _deviceListener) : deviceListener(_deviceListener) {
+	init();
+}
+
+void DeepActionController::init() {
 	awakeState = false;
 	startTime = true;
 	fallingAsleep = false;
+	updateActions();
+}
+
+void DeepActionController::reset() {
+	sleep.clear();
+	awake.clear();
+	deep.clear();
+	cleanCurrentActions();
+	updateActions();
+	init();
+}
+
+void DeepActionController::updateActions() {
 	json j = FileManager::getInstance().loadJSONFile("deepActionsIndex", true);
 	for(auto& d : j["deep"]) {
 		deep.push_back(d.get<string>());

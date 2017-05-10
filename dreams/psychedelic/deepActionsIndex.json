@@ -1,0 +1,14 @@
+{
+	"deep" :
+		[
+			"deepPsych"
+		],
+	"sleep" :
+		[
+			"sleepPsych"
+		],
+	"awake" :
+		[
+			"awakePsych"
+		]
+}

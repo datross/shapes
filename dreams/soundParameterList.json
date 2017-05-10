@@ -1,4 +1,14 @@
 {
+	"dreams": {
+		"childish": 1,
+		"robotic": 2,
+		"psychedelic": 3,
+		"transitions": {
+			"childish": 4,
+			"robotic": 4,
+			"psychedelic": 4
+		}
+	},
   "left-freq": {
     "track" : "BassDrumFxTrack",
     "device" : "masterRack",
@@ -94,4 +104,6 @@
     "device" : "Volume",
     "parameter" : "Gain"
   }
+
+
 }

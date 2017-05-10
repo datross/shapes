@@ -24,11 +24,15 @@ namespace idl {
 		bool checkState();
 		void cleanCurrentActions();
 		void addAction(string s);
-		
+		void init();
+
 	public:
 		DeepActionController(DeviceListener & deviceListener);
 		
 		std::vector<std::shared_ptr<Action> > ComputeActions();
+		
+		void updateActions();
+		void reset();
 	};
 	
 }

@@ -22,8 +22,6 @@ void ofApp::setup(){
 	ofBackground(255,255,255);
 	ofSetFrameRate(60);
 
-	FileManager::getInstance().setCurrentDream("childish");
-
 	DreamBuilder dreamBuilder;
 	dreamBuilder.buildWorld(world);
 
@@ -38,15 +36,19 @@ void ofApp::setup(){
 	deepActionController.reset(new DeepActionController(deviceListener));
 
 	/* open audio channels */
-	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
+	//ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
 
-	ofSoundStreamStart();
+	//ofSoundStreamStart();
 
 	/* pre-allocate global buffer */
 	generalInputBuffer.allocate(IDL_BUFFER_SIZE, 2);
 
 	/* soundListener points toward the global sound buffer */
 	SoundListener::getInstance().setInputBuffer(&generalInputBuffer);
+	
+	/* not in a transition state */
+	transitState = 0;
+	startTransitionTime = - TRANSITION_FADE_DURATION - 1;
 }
 
 //--------------------------------------------------------------
@@ -83,6 +85,9 @@ void ofApp::update(){
 
 	/* update every world's element */
 	world.update();
+	
+	/* wait for transition */
+	handleDream();
 
 	/* draw world on fbo */
 	View::getInstance().updateFbo();
@@ -107,9 +112,16 @@ void ofApp::keyPressed(int key){
 		case 'f': View::getInstance().toggleFullScreen(); break;
 		case 'k' : OscWrapper::getInstance().stop(); break;
 		case 'l' : OscWrapper::getInstance().play(); break;
+		case 't': startTransition(); break;
 		case OF_KEY_RETURN : OscWrapper::getInstance().printAll(); break;
 		default: break;
 	}
+}
+
+void ofApp::startTransition(){
+	startTransitionTime = ofGetElapsedTimef(); 
+	transitState = true;
+	OscWrapper::getInstance().playTransition();
 }
 
 //--------------------------------------------------------------
@@ -181,3 +193,46 @@ void ofApp::executeActions() {
 	}
 // 	cout << "exe 2" << endl;
 }
+
+void ofApp::transitDream() {
+	FileManager::getInstance().nextDream_UpdateWorld();
+	ActionFactory::getInstance().reset();
+	deepActionController->reset();
+	gestureController->updateLinkTable();
+	for (auto &a : actions) {
+		a->suicide();
+	}
+	actions.clear();
+}
+
+void ofApp::handleDream() {
+	float opacity = 0;
+	bool changing = false;
+	
+	float d = ofGetElapsedTimef() - startTransitionTime;
+	if(transitState == true) {
+	  if(d < TRANSITION_FADE_DURATION) {
+	    opacity = d / TRANSITION_FADE_DURATION;
+	  } else {
+	    transitDream();
+		startTransitionTime = ofGetElapsedTimef() - TRANSITION_FADE_DURATION;
+	    transitState = false;
+	  }
+		changing = true;
+	}
+	
+	if(d > TRANSITION_FADE_DURATION && d < 2* TRANSITION_FADE_DURATION) {
+	    opacity = 1 - (d - TRANSITION_FADE_DURATION) / TRANSITION_FADE_DURATION;
+		changing = true;
+	}
+	
+	if(changing) {
+		ofColor v = View::getInstance().getVeilColor();
+		View::getInstance().setVeilColor(ofColor(max((float)v.r, 0.0f),
+												 max((float)v.g, 0.f),
+												 max((float)v.b, 0.f),
+												 max((float)v.a, 255.f * opacity)));
+	}
+}
+
+

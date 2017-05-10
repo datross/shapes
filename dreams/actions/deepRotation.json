@@ -2,23 +2,24 @@
 	"duration" : -1,
 	"modifiers" :
 	[
+	
 		{
 	        "type" : "selection dependante move",
 		 "selection" : {
 				"type" : "byId",
-				"id" : "snake"
+				"id" : "lineCircle"
 			},
 		"movement" : "350 0"
     	},
 
+
 		{
-	        "type" : "selection dependante move",
+	        "type" : "selection dependante bezierNoise",
 		 "selection" : {
 				"type" : "byId",
 				"id" : "vertical-line"
 			},
-		"movement" : "-500 540",
-		 "seed" : "time sinusoide 0 1 3 0"
+		"movement" : "-500 540"
     	},
 
 			{
@@ -28,11 +29,11 @@
 				"selections" : [
 					{
 						"type" : "byId",
-						"id" : "horizontal-line"
+						"id" : "orange"
 					},
 					 {
 					 	"type" : "byId",
-						"id" : "green"
+						"id" : "colone1"
 					}
 				]
 			},
@@ -45,7 +46,7 @@
 	{
 		"type" : "selection dependante rotation",
 		"selection" : {"type" : "byId", "id" : "whole"},
-		"angle" : 0.4,
+		"angle" : 0.05,
 		"individual_origin" : false,
 		"pivot" : "0 0",
 		"seed" : "time sinusoide 0 1 0.3 0"

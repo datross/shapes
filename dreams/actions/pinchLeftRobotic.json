@@ -1,0 +1,11 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+		{
+	        "type" : "dependante glitch",
+		    "glitch-type" : "noise"
+    	}
+	]
+}

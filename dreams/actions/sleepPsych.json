@@ -1,0 +1,17 @@
+{
+	"duration" : -1,
+	"modifiers" :
+	[
+		{
+	        "type" : "dependante glitch",
+		    "glitch-type" : "twist"
+    	},
+
+
+		{
+			"type" : "dependante veil",
+			"color" : "0 0 0 100",
+			"seed" : "time linearFade 0 1 3"
+		}
+	]
+}

@@ -29,6 +29,8 @@ namespace idl {
 		GestureController(DeviceListener & deviceListener);
 		
 		std::vector<std::shared_ptr<Action> > ComputeActions();
+		
+		void updateLinkTable();
 	};
 }
 

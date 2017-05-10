@@ -1,0 +1,1037 @@
+
+src/ModifierScale.cpp,255
+Scalator::Scalator(shared_ptr<Selection> _selection, ofVec2f _scale, bool _individual_origin, ofPoint _pivot, std::shared_ptr<Seed> _seed)Scalator9,109
+ofVec2f Scalator::getMoveScale(Shape & s){getMoveScale16,429
+void Scalator::apply() {apply20,522
+
+src/ofApp.cpp,858
+void ofApp::setup(){setup15,280
+void ofApp::update(){update53,1224
+void ofApp::draw(){draw91,2179
+void ofApp::keyPressed(int key){keyPressed104,2415
+void ofApp::keyReleased(int key){keyReleased116,2839
+void ofApp::mouseMoved(int x, int y ){mouseMoved124,2965
+void ofApp::mouseDragged(int x, int y, int button){mouseDragged129,3073
+void ofApp::mousePressed(int x, int y, int button){mousePressed134,3194
+void ofApp::mouseReleased(int x, int y, int button){mouseReleased139,3356
+void ofApp::mouseEntered(int x, int y){mouseEntered144,3478
+void ofApp::mouseExited(int x, int y){mouseExited149,3587
+void ofApp::windowResized(int w, int h){windowResized154,3695
+void ofApp::gotMessage(ofMessage msg){gotMessage159,3805
+void ofApp::dragEvent(ofDragInfo dragInfo){dragEvent164,3913
+void ofApp::executeActions() {executeActions168,3961
+
+src/SeedFactory.cpp,446
+SeedFactory::SeedFactory(){SeedFactory14,257
+void SeedFactory::addFunction(string type, function<ofVec3f(SeedTime&)> f,  std::vector<Setting> defaultsSettings) {addFunction22,467
+SeedFactory::~SeedFactory(){~SeedFactory26,638
+vector<Setting> parseSettings(vector<string> vecStr) {parseSettings35,807
+shared_ptr<Seed> SeedFactory::createSeed(string type) {createSeed43,1025
+SeedFactory& SeedFactory::getInstance() {getInstance107,3228
+
+src/ModifierVeil.cpp,215
+ModifierVeil::ModifierVeil(shared_ptr< Seed > seed, ofColor _color): PostFxModifier(seed), color(_color) {ModifierVeil8,109
+void ModifierVeil::apply() {apply12,270
+void idl::ModifierVeil::reset() {reset18,478
+
+src/Gesture.cpp,226
+idl::Gesture::Gesture() {Gesture5,48
+idl::Gesture::Gesture(bool _isLeft, GestureType _type, float _value) {Gesture8,80
+idl::Gesture::~Gesture() {~Gesture14,214
+std::string Gesture::getTypeString() {getTypeString17,247
+
+src/modifierSelection.cpp,99
+ModifierSelection::ModifierSelection(std::shared_ptr<Selection> _selection)ModifierSelection5,54
+
+src/SeedTimeFunctor.cpp,183
+SeedTimeFunctor::SeedTimeFunctor(std::function< ofVec3f(SeedTime&) > functor, std::vector<Setting> settings) SeedTimeFunctor5,52
+ofVec3f SeedTimeFunctor::getValue(){getValue9,207
+
+src/ModifierExpand.cpp,202
+ModifierExpand::ModifierExpand(std::shared_ptr<Selection> _selection, std::shared_ptr<Seed> _seed, ofVec2f _a, ofVec2f _b, float _value)ModifierExpand9,110
+void ModifierExpand::apply() {apply13,331
+
+src/DeepActionController.cpp,501
+const static float NO_HAND_DURATION = 5;NO_HAND_DURATION7,103
+DeepActionController::DeepActionController(DeviceListener& _deviceListener) : deviceListener(_deviceListener) {DeepActionController9,145
+bool DeepActionController::checkState(){checkState25,603
+void DeepActionController::cleanCurrentActions(){cleanCurrentActions49,1101
+void DeepActionController::addAction(string s){addAction57,1258
+vector< shared_ptr< Action > > DeepActionController::ComputeActions() {ComputeActions63,1397
+
+src/view.cpp,789
+View::View()View7,82
+View & View::getInstance() {getInstance12,209
+void View::setGlitch(ofxPostGlitch * pg) {setGlitch17,282
+ofxPostGlitch * View::getGlitch() {getGlitch22,372
+void View::drawShape(Shape& shape) {drawShape26,431
+void View::drawBackground(ofVideoPlayer& video) {drawBackground30,486
+void View::drawWorld() {drawWorld35,623
+void View::toggleHud() {toggleHud42,873
+void View::drawHud() {drawHud46,914
+void View::toggleFullScreen() {toggleFullScreen52,1026
+void View::setVeilColor(ofColor color) {setVeilColor57,1118
+ofColor View::getVeilColor() {getVeilColor61,1182
+int View::addFx(std::shared_ptr<PostFx> fx){addFx65,1235
+void View::removeFx(int id) {removeFx72,1354
+void View::updateFbo(){updateFbo79,1459
+void View::drawFbo(){drawFbo88,1591
+
+src/OscWrapper.cpp,411
+static const string JSON_FILE = "soundParameterList";JSON_FILE5,47
+OscWrapper & idl::OscWrapper::getInstance(){getInstance7,102
+void idl::OscWrapper::update(){update12,197
+void OscWrapper::sendValue(string parameter, float value){sendValue16,254
+OscWrapper::OscWrapper()OscWrapper32,903
+OscWrapper::~OscWrapper(){~OscWrapper43,1181
+float OscWrapper::getOriginValue(string p){getOriginValue47,1220
+
+src/GestureController.cpp,280
+GestureController::GestureController(DeviceListener & _deviceListener)GestureController7,95
+shared_ptr<Action> GestureController::ComputeAction(idl::Gesture gesture) {ComputeAction11,282
+vector<shared_ptr<Action > > GestureController::ComputeActions() {ComputeActions21,634
+
+src/DeviceListener.cpp,1246
+LeapDevice::LeapDevice() : ofxLeapMotion() {}LeapDevice10,183
+LeapDevice & idl::LeapDevice::getInstance(){getInstance12,232
+float LeapDevice::grabStrength(unsigned hand) {grabStrength17,332
+float LeapDevice::pinchStrength(unsigned hand) {pinchStrength28,550
+float LeapDevice::xPos(int hand) {xPos39,770
+float LeapDevice::yPos(int hand) {yPos50,980
+float LeapDevice::zPos(int hand){zPos62,1192
+float LeapDevice::xNormal(int hand) {xNormal73,1401
+float LeapDevice::yNormal(int hand) {yNormal84,1606
+float LeapDevice::zNormal(int hand) {zNormal95,1811
+float LeapDevice::xVelocity(int hand) {xVelocity106,2016
+float LeapDevice::yVelocity(int hand) {yVelocity117,2225
+float LeapDevice::zVelocity(int hand) {zVelocity128,2434
+bool idl::LeapDevice::hasHand(){hasHand139,2643
+int idl::LeapDevice::getRightHand(){getRightHand143,2710
+int idl::LeapDevice::getLeftHand(){getLeftHand157,2927
+DeviceListener::DeviceListener() : leapDevice(LeapDevice::getInstance()){DeviceListener173,3215
+void DeviceListener::setup() {setup176,3295
+DeviceListener::~DeviceListener() {~DeviceListener181,3383
+vector<idl::Gesture> DeviceListener::getGestures(){getGestures184,3425
+bool DeviceListener::connectLeap()connectLeap208,4411
+
+src/MidiModifier.cpp,140
+MidiModifier::MidiModifier()MidiModifier5,49
+MidiModifier::~MidiModifier()~MidiModifier11,119
+void MidiModifier::apply() {apply15,154
+
+src/ModifierShapeCreator.cpp,214
+ShapeCreator::ShapeCreator(Shape& s, shared_ptr<Seed> seed) : shape(s), DependanteModifier(seed){ShapeCreator6,76
+ShapeCreator::~ShapeCreator(){~ShapeCreator10,179
+void idl::ShapeCreator::apply(){apply14,214
+
+src/Action.cpp,422
+Action::Action(float _duration,  std::vector< std::shared_ptr<Modifier> > _modifiers, std::string key) : duration(_duration), modifiers(_modifiers), id(key), die(false) {Action7,64
+Action::~Action(){~Action11,272
+bool Action::execute() {execute14,294
+void Action::apply(){apply23,539
+void Action::suicide() {suicide29,650
+void Action::resetModifiers() {resetModifiers34,712
+void Action::reset() {reset40,796
+
+src/PostFx.cpp,62
+PostFx::PostFx(){PostFx5,43
+PostFx::~PostFx(){~PostFx9,65
+
+src/SeedSoundSpectrum.cpp,226
+SeedSoundSpectrum::SeedSoundSpectrum(SoundListener * soundListener, float inf_1, float sup_1, float inf_2, float sup_2, float inf_3, float sup_3)SeedSoundSpectrum9,117
+ofVec3f SeedSoundSpectrum::getValue() {getValue16,486
+
+src/SoundControler.cpp,112
+SoundControler::SoundControler() {SoundControler5,51
+SoundControler::~SoundControler() {~SoundControler9,90
+
+src/DependanteModifier.cpp,168
+DependanteModifier::DependanteModifier(std::shared_ptr<Seed> s) : seed(s){DependanteModifier5,55
+DependanteModifier::~DependanteModifier(){~DependanteModifier9,134
+
+src/ModifierColor.cpp,147
+Colorizer::Colorizer(shared_ptr<Selection> selection, ofColor& _color, shared_ptr<Seed> seed)Colorizer6,71
+void Colorizer::apply(){apply10,232
+
+src/ModifierBezierNoise.cpp,179
+namespace idl {idl13,160
+Noisator::Noisator(std::shared_ptr<Selection> _selection,Noisator15,177
+void Noisator::apply(){apply22,405
+Noisator::~Noisator() {~Noisator29,650
+
+src/FileManager.cpp,582
+FileManager::FileManager(string path)FileManager9,129
+FileManager & FileManager::getInstance(string path) {getInstance17,333
+void FileManager::init(string path) {init22,444
+json FileManager::loadJSONFile(string file, bool dreamDir) {loadJSONFile26,505
+ofxSVG FileManager::loadSVGFile(string path) {loadSVGFile42,889
+ofVideoPlayer FileManager::loadMovBackground(string path){loadMovBackground50,1093
+void FileManager::initActions(std::map<std::string, json>& actions){initActions58,1348
+void FileManager::setCurrentDream(string _currentDream) {setCurrentDream67,1654
+
+src/SoundModifier.cpp,147
+SoundModifier::SoundModifier(shared_ptr<Seed> s) : DependanteModifier(s){SoundModifier5,50
+SoundModifier::~SoundModifier()~SoundModifier10,129
+
+src/world.cpp,612
+World::World()World6,63
+World & idl::World::getInstance(){getInstance11,142
+void World::clear() {clear16,222
+Shape & World::currentShape() {currentShape20,264
+ofVideoPlayer& World::currentBackground() {currentBackground24,318
+void World::setup(){setup28,385
+bool World::endShape(){endShape45,735
+bool World::firstShape(){firstShape49,796
+bool World::nextShape(){nextShape56,903
+void World::update() {update61,965
+void World::addShape(Shape & shape) {addShape71,1156
+void World::addMask(Shape& shape) {addMask75,1224
+void World::addBackground(ofVideoPlayer& video) {addBackground79,1288
+
+src/SeedSoundEnvelope.cpp,147
+SeedSoundEnvelope::SeedSoundEnvelope(SoundListener * soundListener)SeedSoundEnvelope5,54
+ofVec3f SeedSoundEnvelope::getValue() {getValue10,156
+
+src/SeedSound.cpp,69
+SeedSound::SeedSound(SoundListener * _soundListener) SeedSound5,46
+
+src/shape.cpp,911
+static const float DEFAULT_ROTATION = 0.;DEFAULT_ROTATION12,224
+Shape::Shape()Shape14,267
+Shape::Shape(ofPath & _path, ofVec2f pos, ofVec2f _speed, ofVec2f _scale, float r, std::string _id)Shape22,390
+ofColor Shape::getColor() {getColor42,916
+ofColor Shape::getOriginColor() {getOriginColor46,976
+void Shape::setColor(ofColor c) {setColor50,1034
+Shape::Shape(ofPath& _path, ofVec2f pos) : Shape(){Shape54,1094
+void Shape::addForce(ofVec2f a) {addForce59,1181
+void Shape::addScaleForce(ofVec2f a) {addScaleForce63,1245
+void Shape::addRotationForce(float a) {addRotationForce67,1324
+void Shape::addPosition(ofVec2f p) {addPosition71,1410
+void Shape::addRotation(float r){addRotation75,1466
+void Shape::addScale(ofVec2f s){addScale79,1519
+void Shape::draw(){draw83,1568
+void Shape::bezierNoise(ofVec2f movement){bezierNoise96,1795
+void Shape::update(float timeStep) {update121,2779
+
+src/ModifierFactory.cpp,334
+ModifierFactory::ModifierFactory() {ModifierFactory22,501
+ModifierFactory & idl::ModifierFactory::getInstance(){getInstance26,542
+shared_ptr<Seed> getSeed(json& jModifier) {getSeed31,652
+shared_ptr<Modifier> ModifierFactory::create(json& jModifier) {create42,920
+ModifierFactory::~ModifierFactory(){~ModifierFactory126,3820
+
+src/Seed.cpp,213
+Seed::Seed()Seed5,41
+Seed::~Seed()~Seed9,100
+ofVec3f Seed::current() const {current13,119
+ofVec3f Seed::prec() const {prec17,176
+ofVec3f Seed::step() const {step21,227
+void Seed::update(){update25,293
+
+src/SelectionFactory.cpp,288
+SelectionFactory & idl::SelectionFactory::getInstance(){getInstance8,96
+shared_ptr<Selection> idl::SelectionFactory::create(json& jSelection) {create13,209
+SelectionFactory::SelectionFactory(){SelectionFactory65,1753
+SelectionFactory::~SelectionFactory(){~SelectionFactory68,1794
+
+src/Utility.cpp,612
+vector<string> split(const string& str, char separator) {split6,62
+float energy(const std::vector<float> signal) {energy16,258
+float parseFloat(string s) {parseFloat24,418
+ofVec2f parseVec2(string s) {parseVec230,545
+ofVec3f parseVec3(string s) {parseVec335,656
+ofPoint parsePoint(string s){parsePoint41,788
+ofColor parseColor(string s){parseColor46,881
+vector<string> parseIds(string s){parseIds50,949
+ofVec2f clampVec2(ofVec2f v, float inf, float sup) {clampVec254,1009
+ofColor pourcentVec3ToColor(ofVec3f v) {pourcentVec3ToColor58,1130
+ofColor vec3ToColor(ofVec3f v) {vec3ToColor62,1224
+
+src/SeedLeap.cpp,154
+SeedLeap::SeedLeap(HandSide h, string f): hand(h) {SeedLeap9,120
+SeedLeap::~SeedLeap(){~SeedLeap28,853
+ofVec3f SeedLeap::getValue() {getValue32,880
+
+src/ModifierGlitch.cpp,257
+ModifierGlitch::ModifierGlitch(string type,shared_ptr<Seed> seed): PostFxModifier(seed) {ModifierGlitch7,90
+ModifierGlitch::~ModifierGlitch() {~ModifierGlitch20,765
+void ModifierGlitch::reset() {reset23,804
+void ModifierGlitch::apply() {apply27,898
+
+src/ActionFactory.cpp,446
+ActionFactory::ActionFactory(){ActionFactory8,118
+ActionFactory::~ActionFactory()~ActionFactory15,317
+void ActionFactory::preComputeActions(std::map<std::string, json>& jActions) {preComputeActions19,354
+shared_ptr<Action> ActionFactory::createAction(json jAction, string key) {createAction25,518
+shared_ptr<Action> ActionFactory::create(string type){create40,1138
+ActionFactory & idl::ActionFactory::getInstance(){getInstance46,1303
+
+src/ModifierRotation.cpp,192
+Rotator::Rotator(std::shared_ptr<Selection> _selection, float _angle, bool _individual_origin, ofPoint _pivot, std::shared_ptr<Seed> _seed)Rotator10,115
+void Rotator::apply() {apply15,379
+
+src/PostFxModifier.cpp,133
+PostFxModifier::PostFxModifier(std::shared_ptr< Seed > _seed, PostFx* postFxEffect): DependanteModifier(_seed) {PostFxModifier5,51
+
+src/main.cpp,47
+int main(int argc, char * argv[]){main11,158
+
+src/SeedConstant.cpp,186
+SeedConstant::SeedConstant(ofVec3f _value) SeedConstant5,49
+SeedConstant::SeedConstant(float x, float y, float z)SeedConstant9,123
+ofVec3f SeedConstant::getValue() {getValue14,218
+
+src/SeedTime.cpp,320
+SeedTime::SeedTime(std::vector<Setting> _settings)SeedTime6,65
+void SeedTime::start() {start11,154
+float SeedTime::getStartTime() {getStartTime15,216
+float SeedTime::getAge(){getAge19,271
+float& SeedTime::getSetting(unsigned i) {getSetting23,341
+unsigned SeedTime::getSettingsCount() {getSettingsCount27,407
+
+src/selection.cpp,549
+Selection::Selection(): world(World::getInstance()) {Selection7,88
+void Selection::uniform(float weight){uniform11,146
+void Selection::radial(float weight, ofPoint point, float radius){radial17,322
+void Selection::byId(string id){byId30,686
+void Selection::byColor(string _color){byColor43,1038
+void Selection::random(float threshold){random51,1298
+void Selection::intersection(vector<shared_ptr<Selection>> s){intersection60,1556
+vector<ShapeSelected> Selection::intersectionTwo(Selection& s1, Selection& s2){intersectionTwo71,1886
+
+src/ModifierSoundSetter.cpp,228
+ModifierSoundSetter::ModifierSoundSetter(shared_ptr<Seed> s, float v, string p) ModifierSoundSetter6,77
+ModifierSoundSetter::~ModifierSoundSetter(){~ModifierSoundSetter10,206
+void ModifierSoundSetter::apply() {apply13,254
+
+src/DreamBuilder.cpp,245
+DreamBuilder::DreamBuilder() {DreamBuilder9,141
+Shape DreamBuilder::parseShape(json j) {parseShape12,175
+ofPath DreamBuilder::pathFromSvg(std::string path) {pathFromSvg24,451
+void DreamBuilder::buildWorld(World& world) {buildWorld35,786
+
+src/ModifierMove.cpp,156
+Movator::Movator(std::shared_ptr<Selection> _selection, ofVec2f _movement, std::shared_ptr<Seed> _seed)Movator11,128
+void Movator::apply() {apply16,308
+
+src/modifier.cpp,73
+Modifier::Modifier()Modifier5,45
+Modifier::~Modifier()~Modifier10,72
+
+src/Hud.cpp,159
+Hud::Hud() Hud6,61
+Hud& Hud::getInstance() {getInstance11,167
+void Hud::draw(bool visible) {	draw16,226
+void Hud::addEntry(string str) {addEntry34,639
+
+src/DependanteSelectionModifier.cpp,299
+DependanteSelectionModifier::DependanteSelectionModifier(std::shared_ptr<Selection> s, std::shared_ptr<Seed> _seed) : ModifierSelection(s), DependanteModifier(_seed) {DependanteSelectionModifier6,65
+DependanteSelectionModifier::~DependanteSelectionModifier() {~DependanteSelectionModifier10,239
+
+src/SoundListener.cpp,443
+SoundListener::SoundListener() {SoundListener6,67
+SoundListener& SoundListener::getInstance() {getInstance14,270
+SoundListener::~SoundListener() {~SoundListener19,369
+void SoundListener::setInputBuffer(const ofSoundBuffer* b) {setInputBuffer22,406
+void SoundListener::updateAnalyzeChannel() {updateAnalyzeChannel30,597
+void SoundListener::analyze() {analyze36,793
+const SoundData & SoundListener::getData() const {getData50,1205
+
+Makefile,47
+    OF_ROOT=$(realpath ../../..)OF_ROOT9,236
+
+headers/ModifierRotation.h,253
+#define MODIFIER_ROTATION_HMODIFIER_ROTATION_H2,28
+namespace idl {idl8,143
+class Rotator : public DependanteSelectionModifier {Rotator10,161
+	float angle;angle12,223
+	bool individual_origin;individual_origin13,237
+	ofPoint pivot;pivot14,262
+
+headers/Utility.h,99
+#define UTILITY_HUTILITY_H2,18
+T sign(float a) {sign22,317
+dst convert(src s) {convert38,609
+
+headers/SoundControler.h,117
+#define SOUND_CONTROLER_HSOUND_CONTROLER_H2,26
+namespace idl {idl4,53
+class SoundControler {SoundControler6,70
+
+headers/ModifierScale.h,250
+#define MODIFIER_SCALE_HMODIFIER_SCALE_H2,25
+namespace idl {idl7,119
+class Scalator : public DependanteSelectionModifier {Scalator9,136
+	ofVec2f scale;scale11,199
+	bool individual_origin;individual_origin12,215
+	ofPoint pivot;pivot13,240
+
+headers/selection.h,323
+#define SELECTION_HSELECTION_H2,20
+namespace idl {idl11,137
+typedef std::pair<Shape*, float> ShapeSelected;ShapeSelected13,155
+class Selection {Selection16,205
+	std::vector<ShapeSelected> shapes;shapes17,223
+	World& world;world18,259
+	std::vector<ShapeSelected>& getShapes() { return shapes; }getShapes22,298
+
+headers/SeedTime.h,267
+#define SEED_TIMESEED_TIME2,18
+namespace idl {idl6,56
+	typedef float Setting;Setting8,74
+	class SeedTime : public Seed {SeedTime13,195
+		float startTime;startTime18,293
+		std::vector<Setting> settings;settings23,383
+		virtual void reset() {reset70,1210
+
+headers/ofApp.h,822
+#define OF_APP_HOF_APP_H2,17
+class ofApp : public ofBaseApp {ofApp29,587
+	void audioIn(ofSoundBuffer &buffer) {audioIn49,1135
+	void audioOut(ofSoundBuffer &buffer) {audioOut52,1210
+	vector <ofxLeapMotionSimpleHand> simpleHands;simpleHands61,1412
+	ofPoint cursor;cursor62,1459
+	float env;env63,1476
+	std::shared_ptr<idl::Seed> s1, s2;s164,1488
+	std::shared_ptr<idl::Seed> s1, s2;s264,1488
+	idl::DeviceListener deviceListener;deviceListener69,1633
+	ofSoundBuffer generalInputBuffer;generalInputBuffer72,1715
+	std::list<std::shared_ptr<idl::Action> > actions;actions75,1787
+	std::shared_ptr<idl::GestureController> gestureController;gestureController78,1865
+	std::shared_ptr<idl::DeepActionController> deepActionController;deepActionController81,1955
+	ofxPostGlitch postGlitch;postGlitch84,2071
+
+headers/world.h,292
+#define WORLD_HWORLD_H2,16
+namespace idl {idl10,91
+class World {World12,108
+	std::list<Shape> shapes;shapes13,122
+	std::list<Shape>::iterator selector;selector14,148
+	std::list<Shape> masks;masks16,188
+	ofVideoPlayer background;background17,213
+	float timePrec;timePrec19,241
+
+headers/SeedFactory.h,233
+#define SEED_FACTORY_HSEED_FACTORY_H2,23
+namespace idl {idl15,230
+	class SeedFactory {SeedFactory21,423
+		std::map<std::string, std::pair<std::function<ofVec3f(SeedTime&)>, std::vector<Setting> > > functions;functions58,1428
+
+headers/ModifierColor.h,174
+#define MODIFIER_COLOR_HMODIFIER_COLOR_H2,25
+namespace idl {idl9,140
+class Colorizer : public DependanteSelectionModifier {Colorizer11,158
+	ofColor color;color12,213
+
+headers/shape.h,1530
+#define SHAPE_HSHAPE_H2,16
+namespace idl {idl6,54
+#define DAMPNESS_POSITION DAMPNESS_POSITION8,72
+#define DAMPNESS_SCALE DAMPNESS_SCALE9,102
+#define DAMPNESS_ROTATION DAMPNESS_ROTATION10,129
+#define GRAVITY_ORIGIN_POSITION GRAVITY_ORIGIN_POSITION11,158
+#define GRAVITY_ORIGIN_SCALE GRAVITY_ORIGIN_SCALE12,193
+#define GRAVITY_ORIGIN_ROTATION GRAVITY_ORIGIN_ROTATION13,226
+	class Shape{Shape15,262
+		ofVec2f position, speed, acceleration;position17,303
+		ofVec2f position, speed, acceleration;speed17,303
+		ofVec2f position, speed, acceleration;acceleration17,303
+		ofVec2f positionOrigin;positionOrigin18,344
+		ofVec2f scale, scaleSpeed, scaleAcceleration;scale20,373
+		ofVec2f scale, scaleSpeed, scaleAcceleration;scaleSpeed20,373
+		ofVec2f scale, scaleSpeed, scaleAcceleration;scaleAcceleration20,373
+		ofVec2f scaleOrigin;scaleOrigin21,421
+		float rotation, rotationSpeed, rotationAcceleration;rotation23,447
+		float rotation, rotationSpeed, rotationAcceleration;rotationSpeed23,447
+		float rotation, rotationSpeed, rotationAcceleration;rotationAcceleration23,447
+		float rotationOrigin;rotationOrigin24,502
+		float mass, massRotation, massScale;mass26,529
+		float mass, massRotation, massScale;massRotation26,529
+		float mass, massRotation, massScale;massScale26,529
+		std::string id;id28,569
+		ofPath path;path31,611
+		ofColor originColor;originColor32,626
+		ofVec2f getPosition() { return position; }getPosition51,1101
+		std::string getId() {return id; }getId52,1146
+
+headers/ModifierFactory.h,124
+#define MODIFIER_FACTORY_HMODIFIER_FACTORY_H2,27
+namespace idl {idl8,121
+	class ModifierFactory {ModifierFactory9,137
+
+headers/DeepActionController.h,651
+#define DEEP_ACTION_CONTROLLER_HDEEP_ACTION_CONTROLLER_H2,33
+namespace idl {idl9,161
+	class DeepActionController {DeepActionController11,179
+		DeviceListener & deviceListener;deviceListener13,219
+		std::vector<std::string> deep;deep15,257
+		std::vector<std::string> sleep;sleep16,290
+		std::vector<std::string> awake;awake17,324
+		std::vector< std::shared_ptr<Action> > currentActions;currentActions19,361
+		bool awakeState, startTime, fallingAsleep;awakeState21,421
+		bool awakeState, startTime, fallingAsleep;startTime21,421
+		bool awakeState, startTime, fallingAsleep;fallingAsleep21,421
+		float noHandTime;noHandTime22,466
+
+headers/PostFx.h,86
+#define POST_FX_HPOST_FX_H2,18
+namespace idl {idl6,84
+class PostFx {PostFx8,101
+
+headers/json.hpp,19687
+#define NLOHMANN_JSON_HPPNLOHMANN_JSON_HPP30,1402
+    #define CLANG_VERSION CLANG_VERSION61,2967
+    #define GCC_VERSION GCC_VERSION66,3233
+    #define JSON_DEPRECATED JSON_DEPRECATED86,3936
+    #define JSON_DEPRECATED JSON_DEPRECATED88,4016
+    #define JSON_DEPRECATEDJSON_DEPRECATED90,4073
+namespace nlohmannnlohmann98,4205
+struct has_mapped_typehas_mapped_type119,4730
+    static constexpr bool value =value127,4896
+class basic_jsonbasic_json221,9318
+    static allocator_type get_allocator()get_allocator280,11298
+    enum class value_t : uint8_tvalue_t743,29513
+        null,            ///< null valuenull745,29552
+        object,          ///< object (unordered set of name/value pairs)object746,29593
+        array,           ///< array (ordered collection of values)array747,29666
+        string,          ///< string valuestring748,29733
+        boolean,         ///< boolean valueboolean749,29776
+        number_integer,  ///< number value (signed integer)number_integer750,29820
+        number_unsigned, ///< number value (unsigned integer)number_unsigned751,29880
+        number_float,    ///< number value (floating-point)number_float752,29942
+    static T* create(Args&& ... args)create761,30192
+    union json_valuejson_value802,31662
+        object_t* object;object805,31746
+        array_t* array;array807,31828
+        string_t* string;string809,31909
+        boolean_t boolean;boolean811,31955
+        number_integer_t number_integer;number_integer813,32011
+        number_unsigned_t number_unsigned;number_unsigned815,32090
+        number_float_t number_float;number_float817,32169
+        json_value(boolean_t v) noexcept : boolean(v) {}boolean822,32326
+        json_value(number_integer_t v) noexcept : number_integer(v) {}number_integer824,32429
+        json_value(number_unsigned_t v) noexcept : number_unsigned(v) {}number_unsigned826,32547
+        json_value(number_float_t v) noexcept : number_float(v) {}number_float828,32673
+        json_value(value_t t)json_value830,32797
+        json_value(const string_t& value)json_value884,34129
+        json_value(const object_t& value)json_value890,34274
+        json_value(const array_t& value)json_value896,34418
+    void assert_invariant() constassert_invariant911,34922
+    enum class parse_event_t : uint8_tparse_event_t933,35589
+        object_start,object_start936,35703
+        object_end,object_end938,35795
+        array_start,array_start940,35883
+        array_end,array_end942,35973
+        key,key944,36050
+    basic_json(const value_t value_type)basic_json1054,40975
+        : basic_json(value_t::null)basic_json1079,41733
+    basic_json(const object_t& val)basic_json1103,42345
+    basic_json(const CompatibleObjectType& val)basic_json1138,43753
+    basic_json(const array_t& val)basic_json1166,44519
+    basic_json(const CompatibleArrayType& val)basic_json1206,46430
+    basic_json(const string_t& val)basic_json1236,47316
+    basic_json(const typename string_t::value_type* val)basic_json1262,48059
+    basic_json(const CompatibleStringType& val)basic_json1293,49095
+        : m_type(value_t::boolean), m_value(val)m_value1314,49557
+        : m_type(value_t::number_integer), m_value(val)m_value1346,50738
+          m_value(static_cast<number_integer_t>(val))static_cast1378,51906
+          m_value(static_cast<number_integer_t>(val))static_cast1415,53375
+        : m_type(value_t::number_unsigned), m_value(val)m_value1441,54210
+          m_value(static_cast<number_unsigned_t>(val))static_cast1473,55492
+        : m_type(value_t::number_float), m_value(val)m_value1503,56461
+        : basic_json(number_float_t(val))number_float_t1550,58187
+    basic_json(std::initializer_list<basic_json> init,basic_json1624,61553
+    static basic_json array(std::initializer_list<basic_json> init =array1707,64627
+    static basic_json object(std::initializer_list<basic_json> init =object1747,66215
+    basic_json(size_type cnt, const basic_json& val)basic_json1771,67037
+    basic_json(InputIT first, InputIT last)basic_json1818,69189
+    explicit basic_json(std::istream& i, const parser_callback_t cb = nullptr)basic_json1936,72973
+    basic_json(const basic_json& other)basic_json1968,73905
+          m_value(std::move(other.m_value))move2047,75801
+    reference& operator=(basic_json other) noexcept (noexcept2082,76828
+    ~basic_json()~basic_json2115,77776
+    string_t dump(const int indent = -1) constdump2187,79695
+    T get_impl(T*) constget_impl2577,90665
+    object_t get_impl(object_t*) constget_impl2590,90967
+    T get_impl(T*) constget_impl2609,91652
+    std::vector<T> get_impl(std::vector<T>*) constget_impl2631,92369
+    T get_impl(T*) constget_impl2654,93159
+    array_t get_impl(array_t*) constget_impl2667,93456
+    T get_impl(T*) constget_impl2682,93858
+    T get_impl(T*) constget_impl2697,94238
+    constexpr boolean_t get_impl(boolean_t*) constget_impl2724,94889
+    static ReferenceType get_ref_impl(ThisType& obj)get_ref_impl2827,98196
+    ValueType get() constget2887,100248
+    ReferenceType get_ref()get_ref3044,106226
+    ReferenceType get_ref() constget_ref3057,106672
+    operator ValueType() constoperator ValueType3098,108467
+    reference at(size_type idx)at3137,109467
+    const_reference at(size_type idx) constat3180,110733
+    reference at(const typename object_t::key_type& key)at3227,112206
+    const_reference at(const typename object_t::key_type& key) constat3274,113673
+    reference operator[](size_type idx)operator []3320,115090
+    const_reference operator[](size_type idx) constoperator []3368,116487
+    reference operator[](const typename object_t::key_type& key)operator []3408,117773
+    const_reference operator[](const typename object_t::key_type& key) constoperator []3459,119311
+    reference operator[](T * (&key)[n])operator []3501,120739
+    const_reference operator[](T * (&key)[n]) constoperator []3536,121829
+    reference operator[](T* key)operator []3569,122934
+    const_reference operator[](T* key) constoperator []3621,124432
+    ValueType value(const typename object_t::key_type& key, ValueType default_value) constvalue3685,126737
+    string_t value(const typename object_t::key_type& key, const char* default_value) constvalue3711,127480
+    ValueType value(const json_pointer& ptr, ValueType default_value) constvalue3759,129231
+    string_t value(const json_pointer& ptr, const char* default_value) constvalue3784,129928
+    reference front()front3814,130914
+    const_reference front() constfront3822,131022
+    reference back()back3857,132004
+    const_reference back() constback3867,132147
+    IteratorType erase(IteratorType pos)erase3923,134403
+    IteratorType erase(IteratorType first, IteratorType last)erase4030,138295
+    size_type erase(const typename object_t::key_type& key)erase4118,141182
+    void erase(const size_type idx)erase4155,142380
+    iterator find(typename object_t::key_type key)find4205,143723
+    const_iterator find(typename object_t::key_type key) constfind4221,144061
+    size_type count(typename object_t::key_type key) constcount4254,145015
+    static iteration_proxy<iterator> iterator_wrapper(reference cont)iterator_wrapper4559,153799
+    static iteration_proxy<const_iterator> iterator_wrapper(const_reference cont)iterator_wrapper4567,153986
+    void push_back(basic_json&& val)push_back4882,162758
+    reference operator+=(basic_json&& val)operator +=4908,163464
+    void push_back(const basic_json& val)push_back4918,163666
+    reference operator+=(const basic_json& val)operator +=4942,164284
+    void push_back(const typename object_t::value_type& val)push_back4968,165117
+    reference operator+=(const typename object_t::value_type& val)operator +=4992,165782
+    void push_back(std::initializer_list<basic_json> init)push_back5023,166959
+    reference operator+=(std::initializer_list<basic_json> init)operator +=5040,167440
+    void emplace_back(Args&& ... args)emplace_back5068,168402
+    std::pair<iterator, bool> emplace(Args&& ... args)emplace5116,170234
+    iterator insert(const_iterator pos, const basic_json& val)insert5164,171781
+    iterator insert(const_iterator pos, basic_json&& val)insert5190,172566
+    iterator insert(const_iterator pos, size_type cnt, const basic_json& val)insert5219,173508
+    iterator insert(const_iterator pos, const_iterator first, const_iterator last)insert5271,175426
+    iterator insert(const_iterator pos, std::initializer_list<basic_json> ilist)insert5329,177445
+    void swap(reference other) noexcept (noexcept5366,178607
+    void swap(array_t& other)swap5398,179642
+    void swap(object_t& other)swap5431,180545
+    void swap(string_t& other)swap5464,181452
+    friend std::ostream& operator<<(std::ostream& o, const basic_json& j)operator <<5908,195814
+    friend std::ostream& operator>>(const basic_json& j, std::ostream& o)operator >>5940,196990
+    static basic_json parse(T (&array)[N],T5983,198232
+                            const parser_callback_t cb = nullptr)cb5984,198275
+    json_value m_value = {};m_value8092,271547
+    class primitive_iterator_tprimitive_iterator_t8109,272066
+        static constexpr difference_type begin_value = 0;begin_value8149,273030
+        static constexpr difference_type end_value = begin_value + 1;end_value8150,273088
+        difference_type m_it = std::numeric_limits<std::ptrdiff_t>::denorm_min();m_it8153,273203
+    struct internal_iteratorinternal_iterator8163,273519
+        typename object_t::iterator object_iterator;object_iterator8166,273592
+        typename array_t::iterator array_iterator;array_iterator8168,273682
+        primitive_iterator_t primitive_iterator;primitive_iterator8170,273782
+        internal_iterator() noexceptnoexcept8173,273886
+            : object_iterator(), array_iterator(), primitive_iterator()primitive_iterator8174,273923
+    class iteration_proxyiteration_proxy8180,274105
+        class iteration_proxy_internaliteration_proxy_internal8184,274191
+            IteratorType anchor;anchor8188,274288
+            size_t array_index = 0;array_index8190,274384
+                : anchor(it)anchor8194,274511
+            iteration_proxy_internal& operator*()operator *8198,274622
+            iteration_proxy_internal& operator++()operator ++8204,274795
+            bool operator!= (const iteration_proxy_internal& o) constoperator !=8213,275028
+            typename basic_json::string_t key() constkey8219,275213
+            typename IteratorType::reference value() constvalue8246,276030
+        typename IteratorType::reference container;container8253,276205
+        explicit iteration_proxy(typename IteratorType::reference cont)iteration_proxy8257,276327
+    class iter_impl : public std::iterator<std::random_access_iterator_tag, U>iter_impl8295,277756
+            : m_object(object)m_object8331,279426
+        operator const_iterator() constoperator const_iterator8365,280476
+            : m_object(other.m_object), m_it(other.m_it)m_it8384,280942
+        iter_impl& operator=(iter_impl other) noexcept(noexcept8392,281182
+        reference operator*() constoperator *8477,283760
+        pointer operator->() constoperator ->8518,285000
+        iter_impl operator++(int)operator ++8554,286089
+        iter_impl& operator++()operator ++8565,286356
+        iter_impl operator--(int)operator --8597,287153
+        iter_impl& operator--()operator --8608,287420
+        bool operator==(const iter_impl& other) constoperator ==8640,288216
+        bool operator!=(const iter_impl& other) constoperator !=8673,289249
+        bool operator<(const iter_impl& other) constoperator <8682,289495
+        bool operator<=(const iter_impl& other) constoperator <=8715,290542
+        bool operator>(const iter_impl& other) constoperator >8724,290800
+        bool operator>=(const iter_impl& other) constoperator >=8733,291059
+        iter_impl& operator+=(difference_type i)operator +=8742,291300
+        iter_impl& operator-=(difference_type i)operator -=8773,292122
+        iter_impl operator+(difference_type i)operator +8782,292352
+        iter_impl operator-(difference_type i)operator -8793,292637
+        difference_type operator-(const iter_impl& other) constoperator -8804,292917
+        reference operator[](difference_type n) constoperator []8831,293722
+        typename object_t::key_type key() constkey8870,294868
+        reference value() constvalue8888,295370
+        pointer m_object = nullptr;m_object8895,295507
+        internal_iterator m_it = internal_iterator();m_it8897,295602
+    class json_reverse_iterator : public std::reverse_iterator<Base>json_reverse_iterator8918,296428
+            : base_iterator(it)base_iterator8928,296878
+            : base_iterator(it)base_iterator8933,297038
+        json_reverse_iterator operator++(int)operator ++8937,297116
+        json_reverse_iterator& operator++()operator ++8943,297265
+        json_reverse_iterator operator--(int)operator --8950,297431
+        json_reverse_iterator& operator--()operator --8956,297580
+        json_reverse_iterator& operator+=(difference_type i)operator +=8963,297740
+        json_reverse_iterator operator+(difference_type i) constoperator +8970,297918
+        json_reverse_iterator operator-(difference_type i) constoperator -8978,298124
+        difference_type operator-(const json_reverse_iterator& other) constoperator -8986,298325
+        reference operator[](difference_type n) constoperator []8992,298502
+        typename object_t::key_type key() constkey8998,298668
+        reference value() constvalue9005,298848
+    class lexerlexer9025,299338
+        enum class token_typetoken_type9029,299413
+            uninitialized,   ///< indicating the scanner is uninitializeduninitialized9031,299453
+            literal_true,    ///< the `true` literalliteral_true9032,299527
+            literal_false,   ///< the `false` literalliteral_false9033,299580
+            literal_null,    ///< the `null` literalliteral_null9034,299634
+            value_string,    ///< a string -- use get_string() for actual valuevalue_string9035,299687
+            value_number,    ///< a number -- use get_number() for actual valuevalue_number9036,299767
+            begin_array,     ///< the character for array begin `[`begin_array9037,299847
+            begin_object,    ///< the character for object begin `{`begin_object9038,299915
+            end_array,       ///< the character for array end `]`end_array9039,299984
+            end_object,      ///< the character for object end `}`end_object9040,300050
+            name_separator,  ///< the name separator `:`name_separator9041,300117
+            value_separator, ///< the value separator `,`value_separator9042,300174
+            parse_error,     ///< indicating a parse errorparse_error9043,300232
+            : m_content(buff)m_content9052,300586
+        explicit lexer(std::istream& s)lexer9060,300803
+        static string_t to_unicode(const std::size_t codepoint1,to_unicode9109,302568
+        static std::string token_type_name(const token_type t)token_type_name9174,305680
+        token_type scan()scan9235,308283
+        void fill_line_buffer(size_t n = 0)fill_line_buffer10189,343013
+        string_t get_token_string() constget_token_string10251,345715
+        string_t get_string() constget_string10315,348758
+        long double str_to_float_t(long double* /* type */, char** endptr) conststr_to_float_t10443,353808
+        double str_to_float_t(double* /* type */, char** endptr) conststr_to_float_t10461,354479
+        float str_to_float_t(float* /* type */, char** endptr) conststr_to_float_t10479,355139
+        void get_number(basic_json& result) constget_number10505,356376
+        std::istream* m_stream = nullptr;m_stream10614,360315
+        const lexer_char_t* m_content = nullptr;m_content10620,360549
+        const lexer_char_t* m_start = nullptr;m_start10622,360657
+        const lexer_char_t* m_marker = nullptr;m_marker10624,360753
+        const lexer_char_t* m_cursor = nullptr;m_cursor10626,360843
+        const lexer_char_t* m_limit = nullptr;m_limit10628,360936
+        token_type last_token_type = token_type::end_of_input;last_token_type10630,361015
+    class parserparser10638,361182
+        parser(const char* buff, const parser_callback_t cb = nullptr)parser10642,361270
+        parser(std::istream& is, const parser_callback_t cb = nullptr)parser10648,361533
+        parser(IteratorType first, IteratorType last, const parser_callback_t cb = nullptr)parser10657,361988
+        basic_json parse()parse10664,362315
+        basic_json parse_internal(bool keep)parse_internal10681,362834
+        typename lexer::token_type get_token()get_token10875,369906
+        void expect(typename lexer::token_type t) constexpect10881,370046
+        void unexpect(typename lexer::token_type t) constunexpect10894,370599
+        int depth = 0;depth10908,371136
+        const parser_callback_t callback = nullptr;callback10910,371189
+        typename lexer::token_type last_token = lexer::token_type::uninitialized;last_token10912,371285
+        lexer m_lexer;m_lexer10914,371389
+    class json_pointerjson_pointer10929,371772
+        explicit json_pointer(const std::string& s = "")json_pointer10957,372835
+        operator std::string() constoperator std::string10987,373763
+        std::string pop_back()pop_back10994,373921
+        bool is_root() constis_root11007,374278
+        json_pointer top() consttop11012,374373
+        reference get_and_create(reference j) constget_and_create11029,374838
+        reference get_unchecked(pointer ptr) constget_unchecked11104,377779
+        reference get_checked(pointer ptr) constget_checked11171,380308
+        const_reference get_unchecked(const_pointer ptr) constget_unchecked11223,382181
+        const_reference get_checked(const_pointer ptr) constget_checked11267,383859
+        static std::vector<std::string> split(const std::string& reference_string)split11312,385576
+        static void replace_substring(std::string& s,replace_substring11385,388546
+        static std::string escape(std::string s)escape11400,389139
+        static void unescape(std::string& s)unescape11409,389409
+        static void flatten(const std::string& reference_string,flatten11424,390012
+        static basic_json unflatten(const basic_json& value)unflatten11482,392054
+    reference operator[](const json_pointer& ptr)operator []11555,394608
+    const_reference operator[](const json_pointer& ptr) constoperator []11582,395510
+    reference at(const json_pointer& ptr)at11607,396252
+    const_reference at(const json_pointer& ptr) constat11632,396984
+    basic_json flatten() constflatten11659,397867
+    basic_json unflatten() constunflatten11693,399067
+    basic_json patch(const basic_json& json_patch) constpatch11743,400832
+    static basic_json diff(const basic_json& source,diff12036,410972
+namespace stdstd12193,416198
+                 nlohmann::json& j2) noexcept(noexcept12202,416339
+struct hash<nlohmann::json>hash12212,416619
+    std::size_t operator()(const nlohmann::json& j) constoperator ()12219,416739
+inline nlohmann::json operator "" _json(const char* s, std::size_t n)_json12241,417339
+inline nlohmann::json::json_pointer operator "" _json_pointer(const char* s, std::size_t n)_json_pointer12259,417866
+
+headers/SeedConstant.h,190
+#define SEED_CONSTANT_HSEED_CONSTANT_H2,24
+namespace idl {idl6,68
+class SeedConstant : public Seed {SeedConstant8,86
+  virtual void reset(){}reset12,220
+	ofVec3f value;value14,254
+
+headers/ActionFactory.h,191
+#define ACTION_FACTORY_HACTION_FACTORY_H2,25
+namespace idl {idl10,148
+	class ActionFactory	{ActionFactory11,164
+	std::map<std::string, std::shared_ptr<Action> > actions;actions20,382
+
+headers/Modifier.h,131
+#define MODIFIER_HMODIFIER_H2,19
+namespace idl {idl6,60
+class Modifier {Modifier8,77
+    virtual void reset(){}reset13,165
+
+headers/SeedSoundSpectrum.h,181
+#define SEED_SOUND_SPECTRUMSEED_SOUND_SPECTRUM2,28
+namespace idl {idl6,81
+	class SeedSoundSpectrum: public SeedSound {SeedSoundSpectrum11,169
+		ofVec2f bands[3];bands13,224
+
+headers/SeedTimeFunctor.h,195
+#define SEED_FUNCTOR_HSEED_FUNCTOR_H2,23
+namespace idl {idl8,110
+	class SeedTimeFunctor : public SeedTime {SeedTimeFunctor14,262
+		std::function<ofVec3f(SeedTime&)> functor;functor20,379
+
+headers/SeedSoundEnvelope.h,151
+#define SEED_SOUND_ENVELOPPESEED_SOUND_ENVELOPPE2,29
+namespace idl {idl6,83
+	class SeedSoundEnvelope : public SeedSound {SeedSoundEnvelope11,162
+
+headers/GestureController.h,226
+#define GESTURE_CONTROLLER_HGESTURE_CONTROLLER_H2,29
+namespace idl {idl10,176
+	class GestureController {GestureController15,276
+		DeviceListener & deviceListener;deviceListener17,313
+		json linkTable;linkTable22,418
+
+headers/ModifierExpand.h,235
+#define MODIFIER_EXPAND_HMODIFIER_EXPAND_H2,26
+namespace idl {idl7,113
+	class ModifierExpand : public DependanteSelectionModifier {ModifierExpand9,131
+		ofVec2f a, b;a11,202
+		ofVec2f a, b;b11,202
+		float value;value12,218
+
+headers/FileManager.h,214
+#define FILE_MANAGER_HFILE_MANAGER_H2,23
+namespace idl {idl15,199
+	class FileManager {FileManager20,292
+		ofDirectory sessionDirectory;sessionDirectory26,400
+		std::string currentDream;currentDream31,495
+
+headers/ModifierShapeCreator.h,187
+#define MODIFIER_SHAPE_CREATOR_HMODIFIER_SHAPE_CREATOR_H2,33
+namespace idl {idl7,119
+	class ShapeCreator : public DependanteModifier {ShapeCreator9,136
+		Shape& shape;shape16,299
+
+headers/DependanteModifier.h,204
+#define DEPENDANTE_MODIFIER_HDEPENDANTE_MODIFIER_H2,30
+namespace idl {idl9,140
+	class DependanteModifier : public virtual Modifier{DependanteModifier10,156
+		std::shared_ptr<Seed> seed;seed12,221
+
+headers/DeviceListener.h,906
+#define DEVICELISTENER_HDEVICELISTENER_H2,26
+#define THRESHOLD_GRAB THRESHOLD_GRAB9,128
+#define THRESHOLD_PINCH THRESHOLD_PINCH10,154
+namespace idl {idl12,183
+	enum HandSide { LEFT, RIGHT };HandSide14,202
+	enum HandSide { LEFT, RIGHT };LEFT14,202
+	enum HandSide { LEFT, RIGHT };RIGHT14,202
+	enum SeedLeapInfoFlag {SeedLeapInfoFlag15,235
+		POS,POS16,261
+		POSX,POSX17,269
+		POSY,POSY18,278
+		POSZ,POSZ19,287
+		GRAB,GRAB20,296
+		PINCH,PINCH21,305
+		STRENGTH,STRENGTH22,315
+		NORMALX,NORMALX23,328
+		NORMALY,NORMALY24,340
+		NORMALZ,NORMALZ25,352
+		NORMAL,NORMAL26,364
+		SPEEDX,SPEEDX27,375
+		SPEEDY,SPEEDY28,386
+		SPEEDZ,SPEEDZ29,397
+		SPEEDSPEED30,408
+class LeapDevice : public ofxLeapMotion {LeapDevice34,468
+class DeviceListener{DeviceListener59,1034
+	LeapDevice& leapDevice;leapDevice60,1057
+	LeapDevice& getLeap(){ return leapDevice; }getLeap66,1151
+
+headers/SeedLeap.h,214
+#define SEED_LEAP_HSEED_LEAP_H2,20
+namespace idl{idl7,88
+	class SeedLeap : public Seed {SeedLeap9,104
+		HandSide hand;hand11,146
+		SeedLeapInfoFlag flag;flag12,163
+    virtual void reset(){}reset17,284
+
+headers/Action.h,402
+#define ACTION_HACTION_H2,17
+namespace idl {idl9,95
+	class Action {Action11,113
+		std::string getId() { return id; }getId20,313
+		std::string id;id23,361
+		float duration;duration24,379
+		float birthTime;birthTime25,397
+		std::vector< std::shared_ptr<Modifier> > modifiers;modifiers26,416
+		bool die;die27,470
+		void setBirthTime(float time) { birthTime = time; }setBirthTime29,483
+
+headers/SoundModifier.h,144
+#define SOUND_MODIFIER_HSOUND_MODIFIER_H2,25
+namespace idl {idl9,154
+class SoundModifier : public DependanteModifier {SoundModifier11,175
+
+headers/OscWrapper.h,418
+#define OSCWRAPPER_HOSCWRAPPER_H2,21
+namespace idl {idl8,98
+class OscWrapper {OscWrapper10,115
+	json soundParameterList;soundParameterList12,143
+	std::map<string, float> originalValues;originalValues15,200
+	ofxAbletonLive abletonSet;abletonSet17,271
+	void play() { abletonSet.play(); }play22,359
+	void stop() { abletonSet.stop(); }stop23,395
+	void printAll() { abletonSet.printAll(); }printAll24,431
+
+headers/modifierSelection.h,213
+#define MODIFIER_SELECTION_HMODIFIER_SELECTION_H2,29
+namespace idl {idl7,105
+class ModifierSelection : public virtual Modifier {ModifierSelection9,122
+	std::shared_ptr<Selection> selection;selection11,186
+
+headers/ModifierSoundSetter.h,287
+#define MODIFIER_SOUND_SETTER_HMODIFIER_SOUND_SETTER_H2,32
+namespace idl {idl7,94
+	class ModifierSoundSetter : public SoundModifier {ModifierSoundSetter8,110
+		float value, origalValue;value9,162
+		float value, origalValue;origalValue9,162
+		string parameter;parameter10,190
+
+headers/DreamBuilder.h,113
+#define DREAM_BUILDER_HDREAM_BUILDER_H2,24
+namespace idl {idl9,144
+	class DreamBuilder {DreamBuilder11,161
+
+headers/SoundListener.h,444
+#define SOUNDLISTENER_HSOUNDLISTENER_H2,24
+#define IDL_BUFFER_SIZE IDL_BUFFER_SIZE9,127
+namespace idl {idl11,156
+struct SoundData {SoundData14,220
+	std::vector<float> spectrum;spectrum15,239
+	float enveloppe;enveloppe16,269
+class SoundListenerSoundListener19,291
+	ofxFft* fft;fft22,322
+	SoundData data;data23,336
+	const ofSoundBuffer * soundBuffer;soundBuffer26,406
+	std::vector<float> analyzeChannel;analyzeChannel29,484
+
+headers/seedFunctions.h,233
+#define SEED_FUNCTIONS_HSEED_FUNCTIONS_H2,25
+namespace idl {idl14,204
+	ofVec3f sinusoide(SeedTime& seed) {sinusoide23,316
+	ofVec3f linearFade(SeedTime& seed) {linearFade35,690
+	ofVec3f wiggle(SeedTime& seed) {wiggle50,1042
+
+headers/PostFxModifier.h,192
+#define POST_FX_MODIFIER_HPOST_FX_MODIFIER_H2,27
+namespace idl {idl7,108
+class PostFxModifier : public DependanteModifier {PostFxModifier9,125
+	PostFx *postFxEffect;postFxEffect12,186
+
+headers/ModifierBezierNoise.h,200
+#define SRC_MODIFIERBEZIERNOISE_H_SRC_MODIFIERBEZIERNOISE_H_9,122
+namespace idl {idl15,244
+class Noisator : public DependanteSelectionModifier {Noisator17,261
+	ofVec2f movement;movement19,324
+
+headers/DependanteSelectionModifier.h,229
+#define DEPENDENTE_SELECTION_MODIFIER_HDEPENDENTE_SELECTION_MODIFIER_H2,40
+namespace idl {idl10,182
+class DependanteSelectionModifier : public ModifierSelection, public DependanteModifier {DependanteSelectionModifier12,199
+
+headers/ModifierGlitch.h,195
+#define MODIFIER_GLITCH_HMODIFIER_GLITCH_H2,26
+namespace idl {idl8,127
+	class ModifierGlitch : public PostFxModifier {ModifierGlitch10,145
+		ofxPostGlitchType glitchType;glitchType12,203
+
+headers/Gesture.h,623
+#define GESTURE_HGESTURE_H2,19
+namespace idl {idl7,82
+	enum GestureType { GestureType10,137
+		GestureGrab, GestureGrab11,159
+		GestureXMove, GestureXMove12,176
+		GestureYMove, GestureYMove13,194
+		GestureTap, GestureTap14,212
+		GesturePinchGesturePinch15,228
+	class GestureGesture19,317
+		bool isLeft;isLeft21,337
+		GestureType type;type22,353
+		float value;value23,374
+		bool        isRight()  const { return !isLeft; }isRight30,489
+		GestureType getType()  const { return type;    }getType31,541
+		float       getValue() const { return value;   }getValue32,593
+		void print() {print37,700
+
+headers/MidiModifier.h,163
+#define MIDI_MODIFIER_HMIDI_MODIFIER_H2,24
+namespace idl {idl7,96
+class MidiModifier : public ModifierMidiModifier10,114
+	ofxMidiOut midiOut;midiOut19,230
+
+headers/ModifierVeil.h,227
+#define MODIFIER_VEIL_HMODIFIER_VEIL_H2,24
+namespace idl {idl7,98
+	class ModifierVeil : public PostFxModifier {ModifierVeil9,116
+		ofColor color, colorOrigin;color11,172
+		ofColor color, colorOrigin;colorOrigin11,172
+
+headers/Hud.h,341
+#define HUD_HHUD_H2,14
+#define HUD_LEFT_MARGIN HUD_LEFT_MARGIN10,108
+#define HUD_TOP_MARGIN HUD_TOP_MARGIN11,135
+namespace idl {idl13,161
+class Hud {Hud15,178
+	std::vector<std::string> lines;lines17,199
+	float timePrec;timePrec18,232
+	ofTrueTypeFont font;font20,251
+	void addEntry(std::string key, T value) {addEntry30,408
+
+headers/SeedSound.h,208
+#define SEED_SOUND_HSEED_SOUND_H2,21
+namespace idl {idl14,241
+	class SeedSound : public Seed {SeedSound15,257
+		SoundListener * soundListener;soundListener19,374
+		virtual void reset(){}reset22,460
+
+headers/view.h,329
+#define VIEW_HVIEW_H2,15
+namespace idl {idl11,141
+class View {	View13,158
+	bool hud;hud15,181
+	bool fullScreen;fullScreen16,192
+	std::map<int, std::shared_ptr<PostFx> > FXs;FXs17,210
+	int freeId;freeId18,256
+	ofFbo fbo;fbo19,269
+	ofxPostGlitch * postGlitch;postGlitch20,281
+	ofColor veilColor;veilColor21,310
+
+headers/Seed.h,180
+#define SEED_HSEED_H2,15
+namespace idl {idl6,71
+class Seed {Seed8,88
+	ofVec3f valuePrec, valueCurrent;valuePrec19,286
+	ofVec3f valuePrec, valueCurrent;valueCurrent19,286
+
+headers/ModifierMove.h,174
+#define MODIFIER_MOVE_HMODIFIER_MOVE_H2,24
+namespace idl {idl9,155
+class Movator : public DependanteSelectionModifier {Movator11,172
+	ofVec2f movement;movement13,234
+
+headers/SelectionFactory.h,126
+#define SELECTION_FACTORY_HSELECTION_FACTORY_H2,28
+namespace idl {idl8,124
+	class SelectionFactorySelectionFactory9,140

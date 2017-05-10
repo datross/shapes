@@ -1,0 +1,45 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+
+		{
+	        "type" : "selection dependante move",
+			"selection" : {
+                        "type" : "byId",
+                        "id" : "7"
+            },
+			"movement" : "0 4",
+			"seed" : "leap left speedY"
+    	}, {
+	        "type" : "selection dependante rotation",
+			"selection" : {
+                        "type" : "byId",
+                        "id" : "2"
+            },
+			"angle" : 4,
+			"individual_origin" : true,
+			"pivot" : "0 0",
+			"seed" : "leap right speedY"
+    	},
+		{
+	        "type" : "selection dependante move",
+			"selection" : {
+                        "type" : "byId",
+                        "id" : "3"
+            },
+			"movement" : "0 -4",
+			"seed" : "leap left speedY"
+    	},{
+	        "type" : "selection dependante move",
+			"selection" : {
+                        "type" : "byId",
+                        "id" : "2"
+            },
+			"movement" : "0 -4",
+			"seed" : "leap left speedY"
+    	}
+
+	]
+}

@@ -1,0 +1,48 @@
+{
+    "duration" : 0,
+
+    "modifiers" :
+    [
+        {
+            "type" : "selection dependante scale",
+             "selection" : {
+                "type" : "composite intersection",
+                "selections" : [
+                    {
+                        "type" : "byId",
+                        "id" : "psych"
+                    },
+                     {
+                        "type" : "random",
+                        "threshold" : 0.6
+                    }
+                ]
+            },
+            "scale" : "-26 -26",
+            "individual_origin" : true,
+            "pivot" : "0 0",
+            "seed" : "leap left grab"
+        },
+
+        {
+            "type" : "selection dependante scale",
+             "selection" : {
+                "type" : "composite intersection",
+                "selections" : [
+                    {
+                        "type" : "byId",
+                        "id" : "psych"
+                    },
+                     {
+                        "type" : "random",
+                        "threshold" : 0.6
+                    }
+                ]
+            },
+            "scale" : "-4 28",
+            "individual_origin" : true,
+            "pivot" : "0 0",
+            "seed" : "leap left grab"
+        }
+    ]
+}

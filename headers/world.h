@@ -10,11 +10,13 @@
 namespace idl {
 
 class World {
-	std::list<Shape> shapes;
-	std::list<Shape>::iterator selector;
+	int current_dream;
+	std::vector< std::list<std::shared_ptr<Shape> > > shapes_dreams;
+	std::list<Shape*> shapes;
+	std::list<Shape*>::iterator selector;
 	
 	std::list<Shape> masks;
-	ofVideoPlayer background;
+// 	ofVideoPlayer background;
 
 	float timePrec;
 	
@@ -22,17 +24,23 @@ class World {
 public:
 	static World& getInstance();
 	
+	/* builing functions */
+	void pushNewDream();
+	
+	void setCurrentDream(unsigned dream);
+	
 	/* Makes the world empty */
 	void clear();
 		
 	/* TODO remove this */
-	void setup();
+// 	void setup();
 
 	/*Returns a reference to the background*/
-	ofVideoPlayer& currentBackground();
+// 	ofVideoPlayer& currentBackground();
 		
 	/* Returns a reference to the current shape. */
-	Shape & currentShape();
+	Shape * currentShape();
+
 	/* Returns true if selector is at the end. */
 	bool endShape();
 	/* Select the first shape. Returns false if there isn't one. */
@@ -40,10 +48,11 @@ public:
 	/* Select next shape. Returns false of end is reached. */
 	bool nextShape();
 	/* Add a shape to the world. */
-	void addShape(Shape& shape);
+	Shape* addShape(Shape& shape);
+	Shape* addShape(Shape* shape);
 
 	/* Add a background video to the world */
-	void addBackground(ofVideoPlayer& video);
+// 	void addBackground(ofVideoPlayer& video);
 
 	/* Add a mask to the world */
 	void addMask(Shape& shape);

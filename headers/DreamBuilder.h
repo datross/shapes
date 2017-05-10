@@ -10,7 +10,7 @@ namespace idl {
 
 	class DreamBuilder {
 	private:
-		Shape parseShape(json j);
+		Shape * parseShape(json j);
 		
 		/**
 		 * @brief Creates an ofPath from a svg file.

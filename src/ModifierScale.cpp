@@ -23,16 +23,16 @@ void Scalator::apply() {
 	
 	if(individual_origin) {
 		for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
-			tmp.x = seed->current().x * it->second * scale.x;
-			tmp.y = seed->current().y * it->second * scale.y;
-			it->first->addScaleForce(tmp);
+			tmp.x = seed->current().x * it->weight * scale.x;
+			tmp.y = seed->current().y * it->weight * scale.y;
+			it->shape->addScaleForce(tmp);
 		}
 	} else {
 		for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
-			move = getMoveScale(*(it->first));
-			tmp.x = seed->current().x * it->second * scale.x * move.x;
-			tmp.y = seed->current().y * it->second * scale.y * move.y;
-			it->first->addForce(tmp);
+			move = getMoveScale(*(it->shape));
+			tmp.x = seed->current().x * it->weight * scale.x * move.x;
+			tmp.y = seed->current().y * it->weight * scale.y * move.y;
+			it->shape->addForce(tmp);
 		}
 	}
 }

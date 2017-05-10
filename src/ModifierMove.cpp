@@ -17,7 +17,7 @@ void Movator::apply() {
 	seed->update();
 
 	for(auto it = selection->getShapes().begin(); it != selection->getShapes().end(); ++it) {
-		it->first->addForce(ofVec2f(movement.x*seed->current().x, movement.y*seed->current().y)*it->second);
+		it->shape->addForce(ofVec2f(movement.x*seed->current().x, movement.y*seed->current().y)*it->weight);
 	}
 }
 

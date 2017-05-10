@@ -1,0 +1,16 @@
+{
+	"duration" : 0,
+
+	"modifiers" :
+	[
+		{
+			"type" : "selection dependante color",
+			"selection" : {
+				"type" : "byId",
+				"id" : "middleLine"
+			},
+			"color" : "255 255 255",
+			"seed" : "leap left pinch"
+		}
+	]
+}
