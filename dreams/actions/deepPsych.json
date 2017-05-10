@@ -3,11 +3,7 @@
 	"modifiers" :
 	[
 	
-		{
-    	        "type" : "dependante glitch",
-    		    "glitch-type" : "noise"
-        },
-
+		
 		{
 	        "type" : "selection dependante rotation",
 			  "selection" : {
