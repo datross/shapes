@@ -1,5 +1,7 @@
 #include "FileManager.h"
 #include "Utility.h"
+#include "OscWrapper.h"
+
 #include <fstream>
 #include <iostream>
 #include <world.h>
@@ -85,6 +87,7 @@ bool FileManager::nextDream_building() {
 void FileManager::nextDream_UpdateWorld() {
 	nextDream_building();
 	World::getInstance().setCurrentDream(dream_index);
+	OscWrapper::getInstance().changeScene(currentDream);
 }
 
 

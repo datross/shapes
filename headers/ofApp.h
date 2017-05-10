@@ -101,6 +101,7 @@ private:
 	bool transitState; // 0 : no transition
 			   // 1 : transition
 	float startTransitionTime;
+	void startTransition();
 };
 
 #endif

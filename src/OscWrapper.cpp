@@ -51,10 +51,20 @@ float OscWrapper::getOriginValue(string p){
 	return tmp->second;
 }
 
-void OscWrapper::changeScene(std::string dream){
+void OscWrapper::changeScene(std::string dream) {
 #if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
 	json dreamSounds = soundParameterList["dreams"];
-	int index = dreamSounds.get<int>(dream);
+	int index = dreamSounds[dream].get<int>();
+	abletonSet.selectScene(index);
+#endif
+}
+
+
+void OscWrapper::playTransition() {
+#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
+	json transSounds = soundParameterList["dreams"]["transitions"];
+	string dream = FileManager::getInstance().getCurrentDream();
+	int index = transSounds[dream].get<int>();
 	abletonSet.selectScene(index);
 #endif
 }

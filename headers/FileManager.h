@@ -104,6 +104,11 @@ namespace idl {
 		 * @brief Change current dream and update world
 		 */
 		void nextDream_UpdateWorld();
+
+		/*
+		* @brief Return current Dream
+		*/
+		std::string getCurrentDream() { return currentDream; }
 	};
 	
 }

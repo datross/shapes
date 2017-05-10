@@ -36,9 +36,9 @@ void ofApp::setup(){
 	deepActionController.reset(new DeepActionController(deviceListener));
 
 	/* open audio channels */
-	ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
+	//ofSoundStreamSetup(2, 2, 44100, IDL_BUFFER_SIZE, 4);
 
-	ofSoundStreamStart();
+	//ofSoundStreamStart();
 
 	/* pre-allocate global buffer */
 	generalInputBuffer.allocate(IDL_BUFFER_SIZE, 2);
@@ -112,10 +112,16 @@ void ofApp::keyPressed(int key){
 		case 'f': View::getInstance().toggleFullScreen(); break;
 		case 'k' : OscWrapper::getInstance().stop(); break;
 		case 'l' : OscWrapper::getInstance().play(); break;
-		case 't' : startTransitionTime = ofGetElapsedTimef(); transitState = true; break; 
+		case 't': startTransition(); break;
 		case OF_KEY_RETURN : OscWrapper::getInstance().printAll(); break;
 		default: break;
 	}
+}
+
+void ofApp::startTransition(){
+	startTransitionTime = ofGetElapsedTimef(); 
+	transitState = true;
+	OscWrapper::getInstance().playTransition();
 }
 
 //--------------------------------------------------------------

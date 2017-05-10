@@ -3,7 +3,11 @@
 		"childish": 1,
 		"robotic": 2,
 		"psychedelic": 3,
-		"transition": 4
+		"transitions": {
+			"childish": 4,
+			"robotic": 4,
+			"psychedelic": 4
+		}
 	},
   "left-freq": {
     "track" : "BassDrumFxTrack",
