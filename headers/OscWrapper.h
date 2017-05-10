@@ -24,6 +24,7 @@ public:
 	void printAll() { abletonSet.printAll(); }
 	float getOriginValue(string p);
 	void sendValue(string parameter, float value);
+	void changeScene(std::string dream);
 };
 }
 

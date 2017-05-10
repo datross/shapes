@@ -50,3 +50,11 @@ float OscWrapper::getOriginValue(string p){
 		return 0.;
 	return tmp->second;
 }
+
+void OscWrapper::changeScene(std::string dream){
+#if defined(_WIN64) || defined(_WIN32) || defined(__MACH__)
+	json dreamSounds = soundParameterList["dreams"];
+	int index = dreamSounds.get<int>(dream);
+	abletonSet.selectScene(index);
+#endif
+}

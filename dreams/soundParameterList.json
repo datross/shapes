@@ -1,4 +1,10 @@
 {
+	"dreams": {
+		"childish": 1,
+		"robotic": 2,
+		"psychedelic": 3,
+		"transition": 4
+	},
   "left-freq": {
     "track" : "BassDrumFxTrack",
     "device" : "masterRack",
