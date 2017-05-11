@@ -3,6 +3,12 @@
 
 	"modifiers" :
 	[
+		{
+	        "type" : "dependante sound",
+		    "value" : 127,
+			"controller" : "roboticHighsRdx",
+		    "seed" : "leap right pinch"
+    	},			
 
 		{
 	        "type" : "dependante sound",

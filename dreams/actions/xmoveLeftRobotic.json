@@ -5,6 +5,20 @@
 	[
 
 	{
+	        "type" : "dependante sound",
+		    "value" : 127,
+			"controller" : "roboticLowsDly",
+		   "seed" : "leap left positionX"
+		 },
+
+	{
+	        "type" : "dependante sound",
+		    "value" : 127,
+			"controller" : "roboticLowsFreqShift",
+		   "seed" : "leap left normal"
+		 },	 
+
+	{
 		"type" : "selection dependante rotation",
 				    "selection" : {
 				"type" : "composite intersection",

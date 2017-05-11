@@ -3,6 +3,19 @@
 
 	"modifiers" :
 	[
+	{
+	        "type" : "dependante sound",
+		    "value" : 127,
+			"controller" : "roboticHighsDly",
+		   "seed" : "leap right positionX"
+	},
+
+	{
+	        "type" : "dependante sound",
+		    "value" : 127,
+			"controller" : "roboticHighsFreqShift",
+		   "seed" : "leap right normal"
+		 },	
 
 	{
 		"type" : "selection dependante expand",
