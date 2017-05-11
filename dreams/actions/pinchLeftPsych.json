@@ -11,12 +11,6 @@
 			},
 			"color" : "255 255 255",
 			"seed" : "leap left pinch"
-		},
-		{
-	        "type" : "dependante sound",
-		    "value" : 127,
-			"controller" : "roboticLowRdx",
-		    "seed" : "leap left pinch"
-    	}		
+		}	
 	]
 }

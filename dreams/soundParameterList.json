@@ -1,8 +1,8 @@
 {
 	"dreams": {
 		"childish": 1,
-		"robotic": 2,
-		"psychedelic": 3,
+		"robotic": 9,
+		"psychedelic": 18,
 		"transitions": {
 			"childish": 4,
 			"robotic": 4,
@@ -103,6 +103,102 @@
     "track" : "childishEP",
     "device" : "Volume",
     "parameter" : "Gain"
+  },
+
+  "roboticLowsRdx" : {
+    "track" : "roboticLows",
+    "device" : "roboticRack",
+    "parameter" : "RDX"
+  },
+
+  "roboticLowsDly" : {
+    "track" : "roboticLows",
+    "device" : "roboticRack",
+    "parameter" : "DLY"
+  },
+
+  "roboticLowsRev" : {
+    "track" : "roboticLows",
+    "device" : "roboticRack",
+    "parameter" : "REV"
+  },
+
+  "roboticLowsFreqShift" : {
+    "track" : "roboticLows",
+    "device" : "roboticRack",
+    "parameter" : "FREQ-SHIFT"
+  },
+
+  "roboticHighsRdx" : {
+    "track" : "roboticHighs",
+    "device" : "roboticRack",
+    "parameter" : "RDX"
+  },
+
+  "roboticHighsDly" : {
+    "track" : "roboticHighs",
+    "device" : "roboticRack",
+    "parameter" : "DLY"
+  },
+
+  "roboticHighsRev" : {
+    "track" : "roboticHighs",
+    "device" : "roboticRack",
+    "parameter" : "REV"
+  },
+
+  "roboticHighsFreqShift": {
+    "track": "roboticHighs",
+    "device": "roboticRack",
+    "parameter": "FREQ-SHIFT"
+  },
+
+  "psycheLowsRdx" : {
+    "track" : "psycheLows",
+    "device" : "roboticRack",
+    "parameter" : "RDX" 
+  },
+
+  "psycheLowsDly" : {
+    "track" : "psycheLows",
+    "device" : "roboticRack",
+    "parameter" : "DLY"
+  },
+
+  "psycheLowsRev" : {
+    "track" : "psycheLows",
+    "device" : "roboticRack",
+    "parameter" : "REV"
+  },
+
+  "psycheLowsFreqShift" : {
+    "track" : "psycheLows",
+    "device" : "roboticRack",
+    "parameter" : "FREQ-SHIFT"
+  },
+
+  "psycheHighsRdx" : {
+    "track" : "psycheHighs",
+    "device" : "roboticRack",
+    "parameter" : "RDX"
+  },
+
+  "psycheHighsDly" : {
+    "track" : "psycheHighs",
+    "device" : "roboticRack",
+    "parameter" : "DLY"
+  },
+
+  "psycheHighsRev" : {
+    "track" : "psycheHighs",
+    "device" : "roboticRack",
+    "parameter" : "REV"
+  },
+
+  "psycheHighsFreqShift" : {
+    "track" : "psycheHighs",
+    "device" : "roboticRack",
+    "parameter" : "FREQ-SHIFT"
   }
 
 
