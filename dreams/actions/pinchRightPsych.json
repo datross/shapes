@@ -14,10 +14,27 @@
 				"threshold" : 0.8 } ,
 				{ "type" : "byId", "id" : "psych" } ]
 		},
-		"scale" : "12 4",
+		"scale" : "50 50",
 		"individual_origin" : false,
 		"pivot" : "960 540",
 		"seed" : "leap right pinch"
-    	}
+    	},
+
+    {
+      "type" : "selection dependante rotation",
+	    "selection" : { "type" : "byId", "id" : "ext" },
+		"angle" : 20,
+		"pivot" : "0 0",
+		"individual_origin" : true,
+		"seed" : "leap right pinch"
+    },
+     {
+      "type" : "selection dependante scale",
+	    "selection" : { "type" : "byId", "id" : "ext" },
+		"scale" : "20 20",
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "leap right pinch"
+    }
 	]
 }

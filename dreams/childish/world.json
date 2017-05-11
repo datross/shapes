@@ -478,6 +478,96 @@
       "speed": "2 1"
     },
     {
+      "path": "cercle2",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "-600 -300",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "cercle2",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "-900 200",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "cercle2",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "500 400",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "cercle2",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "450 -450",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "cercle2",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "600 450",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "cercle2",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "120 -350",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+     {
+      "path": "cercle2",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "-200 -250",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "cercle1",
+      "opacity" : "1",
+      "id" : "cercleRed",
+      "position": "800 250",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "cercle1",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "-800 -450",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
+      "path": "cercle1",
+      "opacity" : "1",
+      "id" : "cercleGreen",
+      "position": "750 -300",
+      "scale": "0 0",
+      "rotation": "0",
+      "speed": "2 1"
+    },
+    {
       "path": "background_childish",
       "id" : "background",
       "opacity" : "1",

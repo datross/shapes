@@ -4,25 +4,54 @@
 	[
 	
 		{
+			"type" : "selection dependante scale",
+			"selection" : {
+				
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "lineCircle"
+					},
+					 {
+					 	"type" : "random",
+						"threshold" : 0.5
+					}
+				]
+			},
+			 "scale" : "2 2",
+                  "individual_origin" : true,
+                  "pivot" : "0 0",
+                  "seed" : "time sinusoide 0 1 0.3 2"
+			
+		},
+		{
+			"type" : "selection dependante rotation",
+			"selection" : {
+				"type" : "byId",
+				"id" : "lineCircle"
+			},
+
+			"angle" : 80,
+			"individual_origin" : true,
+			"pivot" : "0 0",
+			"seed" : "time sinusoide 0 1 0.3 1"
+				 
+		},
+    	{
 	        "type" : "selection dependante move",
 		 "selection" : {
 				"type" : "byId",
 				"id" : "lineCircle"
 			},
-		"movement" : "350 0"
+		"angle" : 16,
+		"individual_origin" : false,
+		"pivot" : "0 0",
+		"seed" : "time sinusoide 0 1 0.3 0"
     	},
 
 
 		{
-	        "type" : "selection dependante bezierNoise",
-		 "selection" : {
-				"type" : "byId",
-				"id" : "vertical-line"
-			},
-		"movement" : "-500 540"
-    	},
-
-			{
 	        "type" : "selection dependante scale",
 		    "selection" : {
 				"type" : "composite intersection",
@@ -45,7 +74,7 @@
 
 	{
 		"type" : "selection dependante rotation",
-		"selection" : {"type" : "byId", "id" : "whole"},
+		"selection" : {"type" : "byId", "id" : "snake"},
 		"angle" : 0.05,
 		"individual_origin" : false,
 		"pivot" : "0 0",
