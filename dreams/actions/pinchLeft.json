@@ -17,6 +17,27 @@
 		    "value" : 127,
 			"controller" : "left-repeat",
 		    "seed" : "leap left pinch"
+    	},
+    	{
+	      "type" : "selection dependante scale",
+		"selection" : {
+				
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "cercleRed"
+					},
+					 {
+					 	"type" : "random",
+						"threshold" : 0.5
+					}
+				]
+			},
+		"scale" : "4 4",
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "leap left pinch"
     	}
 	]
 }

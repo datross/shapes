@@ -17,7 +17,7 @@
 				"type" : "random",
 				"threshold" : 0.8
 			},
-		"angle" : 1,
+		"angle" : 30,
 		"individual_origin" : true,
 		"pivot" : "960 540",
 		"seed" : "leap right pinch"
@@ -34,6 +34,28 @@
 		"pivot" : "960 540",
 		"seed" : "leap right pinch"
 	},
+    {
+	      "type" : "selection dependante scale",
+		"selection" : {
+				
+				"type" : "composite intersection",
+				"selections" : [
+					{
+						"type" : "byId",
+						"id" : "cercleGreen"
+					},
+					 {
+					 	"type" : "random",
+						"threshold" : 0.5
+					}
+				]
+			},
+		"scale" : "3 3",
+		"individual_origin" : true,
+		"pivot" : "0 0",
+		"seed" : "leap right pinch"
+    	},
+
 	{
 		"type" : "midi"
 	}

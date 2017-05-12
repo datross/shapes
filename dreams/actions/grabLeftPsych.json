@@ -39,7 +39,7 @@
                     }
                 ]
             },
-            "scale" : "-4 28",
+            "scale" : "40 40",
             "individual_origin" : true,
             "pivot" : "0 0",
             "seed" : "leap left grab"
