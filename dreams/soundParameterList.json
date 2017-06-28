@@ -147,6 +147,18 @@
     "parameter" : "REV"
   },
 
+  "roboticDrums-vol" : {
+    "track" : "roboticDrums",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
+
+  "roboticMelody-vol" : {
+    "track" : "roboticMelody",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
+
   "roboticHighsFreqShift": {
     "track": "roboticHighs",
     "device": "roboticRack",
@@ -199,6 +211,30 @@
     "track" : "psycheHighs",
     "device" : "roboticRack",
     "parameter" : "FREQ-SHIFT"
+  },
+
+  "leadMalsainPsyche" : {
+    "track" : "leadMalsain",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  } ,
+
+  "cricketPsyche" : {
+    "track" : "cricket",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
+
+  "zeldaPsyche" : {
+    "track" : "zelda",
+    "device" : "Volume",
+    "parameter" : "Gain"
+  },
+
+  "cavernePsyche" : {
+    "track" : "caverne",
+    "device" : "Volume",
+    "parameter" : "Gain"
   }
 
 

@@ -4,6 +4,40 @@
 	[
 
 
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "cavernePsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "cricketPsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "leadMalsainPsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "zeldaPsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "cavernePsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
 		
 		{
 			"type" : "dependante veil",

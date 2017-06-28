@@ -38,6 +38,18 @@
 			"controller" : "ep-vol",
 			"seed" : "time linearFade 0 1 0.5"
 		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "roboticDrums-vol",
+			"seed" : "time linearFade 1 0 2"
+		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "roboticMelody-vol",
+			"seed" : "time linearFade 1 0 2"
+		},
 
 		{
 			"type" : "dependante veil",

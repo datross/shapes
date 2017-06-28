@@ -7,6 +7,82 @@
 		    "glitch-type" : "twist"
     	},
 
+    	{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "cavernePsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "cricketPsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "leadMalsainPsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
+
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "zeldaPsyche",
+			"seed" : "time linearFade 0 1 0.5"
+		},
+
+    	{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "psycheLowsRdx",
+			"seed" : "time linearFade 1 0 2"
+		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "psycheLowsDly",
+			"seed" : "time linearFade 1 0 2"
+		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "psycheLowsRev",
+			"seed" : "time linearFade 1 0 2"
+		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "psycheLowsFreqShift",
+			"seed" : "time linearFade 1 0 2"
+		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "psycheHighsRdx",
+			"seed" : "time linearFade 1 0 2"
+		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "psycheHighsDly",
+			"seed" : "time linearFade 1 0 2"
+		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "psycheHighsRev",
+			"seed" : "time linearFade 1 0 2"
+		},
+		{
+			"type" : "dependante sound",
+			"value" : 127,
+			"controller" : "psycheHighsFreqShift",
+			"seed" : "time linearFade 1 0 2"
+		},
 
 		{
 			"type" : "dependante veil",
